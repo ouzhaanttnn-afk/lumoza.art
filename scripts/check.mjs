@@ -13,6 +13,7 @@ export async function checkSite(root) {
   }
   const files = new Set([
     ...links.filter(link => link.startsWith('/')),
+    ...[...html.matchAll(/\bsrc="(\/[^\"]+)"/g)].map(match => match[1]),
     ...[...css.matchAll(/url\("([^"]+)"\)/g)].map(match => match[1])
   ]);
   for (const file of files) await access(resolve(root, file.replace(/^\//, '')));

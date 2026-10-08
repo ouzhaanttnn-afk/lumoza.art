@@ -50,10 +50,10 @@ em { font-family: var(--serif); font-weight: 400; }
 .skip-link { position: fixed; top: 1rem; left: 1rem; z-index: 10; padding: .75rem 1rem; color: var(--background); background: var(--text); transform: translateY(-200%); }
 .skip-link:focus { transform: translateY(0); }
 
-.site-header { display: flex; align-items: center; justify-content: space-between; min-height: 104px; border-bottom: 1px solid var(--border); gap: 2rem; }
+.site-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; min-height: 104px; border-bottom: 1px solid var(--border); gap: 1rem 2rem; padding-block: 1rem; }
 .brand { display: inline-flex; align-items: center; gap: .65rem; font-size: 1.4rem; line-height: 1; font-weight: 600; letter-spacing: -.06em; min-height: 44px; }
 .brand-mark { width: 25px; height: 25px; fill: none; stroke: var(--accent); stroke-width: 2.5; }
-.main-nav { display: flex; align-items: center; gap: 2.25rem; font-size: .875rem; }
+.main-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 2.25rem; font-size: .875rem; }
 .main-nav a { display: inline-flex; min-height: 44px; align-items: center; transition: color .2s; }
 .main-nav a:hover { color: var(--accent); }
 .main-nav .nav-contact { margin-left: 1.25rem; gap: 1rem; }
@@ -64,7 +64,7 @@ em { font-family: var(--serif); font-weight: 400; }
 .hero-wordmark { font-size: 24.4cqw; font-weight: 600; letter-spacing: -.078em; line-height: 1.03; padding-block: 2.1rem 2.9rem; white-space: nowrap; }
 .wordmark-period { color: var(--accent); margin-left: -.02em; }
 .hero-intro { display: grid; grid-template-columns: 1.35fr 1fr; gap: 5rem; align-items: center; }
-.hero h1 { font-size: clamp(2.5rem, 4.45vw, 4.5rem); line-height: 1.08; letter-spacing: -.055em; font-weight: 400; }
+.hero h1 { font-size: clamp(2.5rem, 4.45vw, 4.5rem); line-height: 1.08; letter-spacing: -.055em; font-weight: 400; overflow-wrap: anywhere; }
 .hero h1 em { font-size: 1.18em; letter-spacing: -.025em; }
 .hero-description { max-width: 365px; margin-top: .65rem; }
 .hero-description p { font-size: 1.125rem; color: var(--muted); line-height: 1.7; }
@@ -85,10 +85,11 @@ em { font-family: var(--serif); font-weight: 400; }
 .art-index { position: absolute; top: 1.6rem; left: 1.75rem; font-size: .75rem; letter-spacing: .12em; opacity: .6; }
 .art-studio { position: absolute; bottom: 1.4rem; left: 1.75rem; font-size: .75rem; letter-spacing: .04em; opacity: .6; }
 .art-line { position: absolute; bottom: 1.75rem; right: 1.75rem; width: 2rem; height: 1px; background: currentColor; opacity: .6; }
-.mihenk-art { background: #34362e; color: #dfdfcd; }
-.mihenk-composition { display: grid; place-items: center; }
-.mihenk-monogram { font-family: var(--serif); font-style: italic; font-size: clamp(9rem, 15.5vw, 14rem); font-weight: 400; line-height: .82; letter-spacing: -.13em; padding-right: .13em; }
-.mihenk-wordmark { font-size: .875rem; letter-spacing: .55em; margin-top: 2.5rem; padding-left: .55em; }
+.mihenk-art { background: #231923; color: var(--text); padding: 0; border-color: #463631; }
+.project-cover { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 16%; transition: transform .4s ease; }
+.mihenk-art:hover .project-cover { transform: scale(1.025); }
+.cover-label { position: absolute; inset: auto 0 0; display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.75rem; background: #171816ed; color: var(--text); font-size: .75rem; letter-spacing: .06em; }
+.cover-label > span { color: var(--accent); font-size: 1.2rem; }
 .son-ocak-art { background: #28221e; color: #c7956f; border-color: #483a30; }
 .son-ocak-composition { margin-inline: auto; font-size: clamp(3rem, 6.7vw, 6rem); font-weight: 500; line-height: .98; letter-spacing: -.06em; }
 .son-ocak-composition > span { display: block; }
@@ -107,7 +108,11 @@ em { font-family: var(--serif); font-weight: 400; }
 .additional-project { border-top: 1px solid var(--border); padding-top: 1.5rem; min-width: 0; }
 .additional-project-meta { display: flex; align-items: flex-start; flex-wrap: wrap; gap: 1rem; }
 .additional-project-meta > .eyebrow { flex-basis: 100%; color: var(--muted); }
-.additional-project h3 { font-weight: 400; font-size: 1.75rem; letter-spacing: -.045em; line-height: 1.15; margin-top: 2rem; overflow-wrap: anywhere; }
+.additional-project-identity { display: flex; align-items: center; gap: 1rem; margin-top: 2rem; }
+.project-icon, .project-lettermark { width: 64px; height: 64px; border-radius: .75rem; flex-shrink: 0; }
+.project-icon { object-fit: cover; }
+.project-lettermark { display: grid; place-items: center; border: 1px solid #4a3b30; color: var(--accent); background: var(--surface); font-size: 1.5rem; letter-spacing: -.08em; }
+.additional-project h3 { font-weight: 400; font-size: clamp(1.375rem, 2vw, 1.75rem); letter-spacing: -.045em; line-height: 1.15; overflow-wrap: anywhere; }
 .additional-project h3 span { display: block; color: var(--accent); font-family: var(--serif); font-style: italic; font-size: 1.05em; letter-spacing: -.01em; margin-top: .4rem; }
 .additional-project p { color: var(--muted); font-size: 1rem; line-height: 1.7; margin-top: 1.25rem; }
 
@@ -156,6 +161,11 @@ em { font-family: var(--serif); font-weight: 400; }
   .hero-intro { gap: 2.5rem; }
   .hero-description p { font-size: 1rem; }
   .approach-layout, .about-layout { gap: 3rem; }
+  .more-work-grid { grid-template-columns: 1fr; }
+  .additional-project-meta { align-items: center; justify-content: space-between; }
+  .additional-project-meta > .eyebrow { flex-basis: auto; }
+  .additional-project-identity { margin-top: 1.5rem; }
+  .additional-project p { max-width: 560px; }
   .main-nav { gap: 1.5rem; }
   .main-nav .nav-contact { margin-left: .5rem; }
 }
@@ -186,9 +196,7 @@ em { font-family: var(--serif); font-weight: 400; }
   .more-work-grid { grid-template-columns: 1fr; gap: 2rem; margin-top: 3rem; }
   .additional-project-meta { align-items: center; justify-content: space-between; }
   .additional-project-meta > .eyebrow { flex-basis: auto; }
-  .additional-project h3 { margin-top: 1.5rem; }
   .work-art { height: auto; aspect-ratio: 1.3; }
-  .mihenk-monogram { font-size: clamp(8rem, 34vw, 14rem); }
   .son-ocak-composition { font-size: clamp(3.5rem, 16vw, 6rem); }
   .work-caption { padding-top: 1rem; }
   .approach-layout, .about-layout { grid-template-columns: 1fr; gap: 2.75rem; margin-top: 2.5rem; }
@@ -220,7 +228,8 @@ em { font-family: var(--serif); font-weight: 400; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  a { transition: none !important; }
+  a, .project-cover { transition: none !important; }
+  .mihenk-art:hover .project-cover { transform: none; }
 }
 @media print {
   :root { color-scheme: light; --background: #fff; --surface: #f5f5f3; --text: #171816; --muted: #555; --border: #ccc; --accent: #765034; }
