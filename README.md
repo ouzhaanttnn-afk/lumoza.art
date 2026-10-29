@@ -1,6 +1,6 @@
 # Lumoza
 
-Independent AI-native game and product studio. A fast single-page website built with HTML and CSS, without application dependencies or client-side JavaScript. It uses a light interface with a full-colour world for each game.
+Independent game and product studio. A fast single-page website built with HTML and CSS, without application dependencies or client-side JavaScript. It uses a light interface with a full-colour world for each game.
 
 ## Local preview
 
