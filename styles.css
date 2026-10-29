@@ -30,6 +30,8 @@ ul{padding:0;list-style:none}
 .main-nav{display:flex;align-items:center;gap:.4rem;font-size:.9375rem}
 .main-nav a{display:inline-flex;align-items:center;min-height:44px;padding-inline:.9rem;border-radius:999px;color:var(--muted);transition:color .2s,background .2s}
 .main-nav a:hover{color:var(--ink)}
+.main-nav .lang-switch{font-size:.875rem;border:1px solid var(--line);color:var(--ink)}
+.main-nav .lang-switch:hover{border-color:var(--brand);color:var(--brand)}
 .main-nav .nav-contact{margin-left:.4rem;background:var(--brand);color:#fff}
 .main-nav .nav-contact:hover{color:#fff;background:var(--brand-deep)}
 
@@ -160,6 +162,9 @@ ul{padding:0;list-style:none}
 .studio-head{grid-template-columns:1fr;gap:1.25rem}
 .principles{grid-template-columns:1fr;gap:1.75rem}
 .dev-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+.main-nav a[href="#games"],.main-nav a[href="#studio"]{display:none}
 }
 @media(max-width:520px){
 body{font-size:1rem}

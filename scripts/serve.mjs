@@ -18,7 +18,7 @@ const server = createServer(async (request, response) => {
       return;
     }
     const pathname = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);
-    const target = resolve(root, `.${pathname === '/' ? '/index.html' : pathname}`);
+    const target = resolve(root, `.${pathname.endsWith('/') ? `${pathname}index.html` : pathname}`);
     if (!target.startsWith(root + sep)) {
       response.writeHead(403);
       response.end('Forbidden');
@@ -26,7 +26,7 @@ const server = createServer(async (request, response) => {
     }
     // Serve only site files; package/config/source files are never public.
     const relative = target.slice(root.length + 1).split(sep).join('/');
-    if (!['index.html', '404.html', 'styles.css', 'robots.txt', 'sitemap.xml'].includes(relative) && !relative.startsWith('assets/')) {
+    if (!['index.html', 'tr/index.html', '404.html', 'styles.css', 'robots.txt', 'sitemap.xml'].includes(relative) && !relative.startsWith('assets/')) {
       throw Object.assign(new Error('Not found'), { code: 'ENOENT' });
     }
     if (!(await stat(target)).isFile()) throw Object.assign(new Error('Not found'), { code: 'ENOENT' });
