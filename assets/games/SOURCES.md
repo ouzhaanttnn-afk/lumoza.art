@@ -14,3 +14,5 @@ The five icons were matched against the user's supplied phone screenshot. Son Oc
 MİHENKAYNAK's public App Store listing: https://apps.apple.com/tr/app/mi-henkaynak/id6808742428
 
 TradeUp App Store listing: https://apps.apple.com/tr/app/tradeup-zero-to-home/id6811362281
+
+- `bimquest-icon.webp`: the owner's `ouzhaanttnn-afk/b-mquest` repository, `app/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-512@2x.png`.
