@@ -32,6 +32,6 @@ The production domain is https://lumoza.art. Keep the existing Google Workspace 
 
 ## Edit content
 
-Change text and links in `index.html`, presentation in `styles.css`, and images in `assets/games/`. Project statuses distinguish the released MİHENKAYNAK from games still in development. Add App Store links only when the app is publicly available.
+Change text and links in `index.html`, presentation in `styles.css`, and images in `assets/games/`. Project statuses distinguish released games (MİHENKAYNAK, TradeUp), the coming-soon Son Ocak and games still in development. Add App Store links only when the app is publicly available.
 
 Fonts are self-hosted Instrument Sans and Instrument Serif, with their licenses in `assets/fonts/`. Game artwork comes from the owner's existing game websites; source URLs are documented in `assets/games/SOURCES.md`. All site content and navigation remain available without JavaScript.
