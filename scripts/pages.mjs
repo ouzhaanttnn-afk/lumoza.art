@@ -202,6 +202,12 @@ const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&
 const ext = (href, text, t, cls = '', aria = '') =>
   `<a${cls ? ` class="${cls}"` : ''} href="${href}" target="_blank" rel="noopener noreferrer"${aria ? ` aria-label="${esc(aria)}${esc(t.newTab)}"` : ''}>${text}${aria ? '' : `<span class="visually-hidden">${esc(t.newTab)}</span>`}</a>`;
 
+// Hearthwalker's embers: fixed positions and timings so the page is the same on every build.
+const EMBERS = Array.from({ length: 32 }, (_, i) => {
+  const x = (i * 37 + 11) % 100, size = [5, 7, 9, 6, 11, 8][i % 6], dur = 6 + ((i * 7) % 6), delay = -((i * 1.37) % dur), drift = ((i * 23) % 80) - 40;
+  return `<span style="--x:${x}%;--s:${size}px;--t:${dur}s;--d:${delay.toFixed(2)}s;--dx:${drift}px"></span>`;
+}).join('');
+
 function stage(t, key, o) {
   const g = key === 'alvera' ? t.web : t.games[key];
   const screens = g.shots;
@@ -225,6 +231,7 @@ function stage(t, key, o) {
   return `
       <article class="game world-${key}" aria-labelledby="g-${key}"${data}>
         <div class="stage">
+          ${key === 'son' ? `<div class="embers" aria-hidden="true">${EMBERS}</div>` : ''}
           <div class="pane pane-l">${leftPane}</div>
           <div class="pane pane-r">${rightPane}</div>
           <div class="info">
