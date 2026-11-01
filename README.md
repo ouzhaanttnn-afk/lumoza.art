@@ -1,6 +1,6 @@
 # Lumoza
 
-Independent game and product studio. A fast single-page website built with HTML and CSS, without application dependencies or client-side JavaScript. It uses a light interface with a full-colour world for each game.
+Independent game and product studio. A fast single-page website in English and Turkish, built with HTML and CSS plus one small script (the screen switcher in each game section). No application dependencies. It uses a light interface with a full-colour world for each game.
 
 ## Local preview
 
@@ -32,8 +32,8 @@ The production domain is https://lumoza.art. Keep the existing Google Workspace 
 
 ## Edit content
 
-Change text and links in `index.html`, presentation in `styles.css` (design tokens are CSS variables at the top; each game section sets its own colours through the `.world-*` classes), the social preview in `assets/og.png`, and images in `assets/games/`. Project statuses distinguish released games (MİHENKAYNAK, TradeUp), the coming-soon Son Ocak and games still in development. Add App Store links only when the app is publicly available.
+Edit copy and structure in `scripts/pages.mjs` (it generates `index.html` and `tr/index.html`), presentation in `styles.css` (design tokens are CSS variables at the top; each game section sets its own colours through the `.world-*` classes), the social preview in `assets/og.png`, and images in `assets/games/`. Project statuses distinguish released games (MİHENKAYNAK, TradeUp), the coming-soon Hearthwalker: Son Ocak and games still in development. Add App Store links only when the app is publicly available.
 
-Fonts are self-hosted Instrument Sans and Instrument Serif, with their licenses in `assets/fonts/`. Game artwork comes from the owner's existing game websites; source URLs are documented in `assets/games/SOURCES.md`. All site content and navigation remain available without JavaScript.
+Fonts are self-hosted Instrument Sans and Instrument Serif, with their licenses in `assets/fonts/`. Game artwork comes from the owner's existing game websites; source URLs are documented in `assets/games/SOURCES.md`. All site content and navigation remain available without JavaScript. Design tooling for contributors is documented in `docs/design-skills.md`.
 
 Brand assets (logo mark, app icon, wordmark) are in `assets/brand/`; `assets/favicon-48.png` and `assets/apple-touch-icon.png` are generated from the app icon.

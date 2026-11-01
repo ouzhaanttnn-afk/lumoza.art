@@ -8,7 +8,7 @@ const production = process.argv.includes('--production');
 const root = resolve(project, production ? 'dist' : '.');
 const portArgument = process.argv.indexOf('--port');
 const port = Number(portArgument !== -1 ? process.argv[portArgument + 1] : process.env.PORT || 4173);
-const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.txt': 'text/plain; charset=utf-8', '.xml': 'application/xml; charset=utf-8', '.webp': 'image/webp', '.png': 'image/png' };
+const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.svg': 'image/svg+xml', '.js': 'text/javascript; charset=utf-8', '.jpg': 'image/jpeg', '.woff2': 'font/woff2', '.txt': 'text/plain; charset=utf-8', '.xml': 'application/xml; charset=utf-8', '.webp': 'image/webp', '.png': 'image/png' };
 
 const server = createServer(async (request, response) => {
   try {
@@ -26,7 +26,7 @@ const server = createServer(async (request, response) => {
     }
     // Serve only site files; package/config/source files are never public.
     const relative = target.slice(root.length + 1).split(sep).join('/');
-    if (!['index.html', 'tr/index.html', '404.html', 'styles.css', 'robots.txt', 'sitemap.xml'].includes(relative) && !relative.startsWith('assets/')) {
+    if (!['index.html', 'tr/index.html', '404.html', 'styles.css', 'main.js', 'robots.txt', 'sitemap.xml'].includes(relative) && !relative.startsWith('assets/')) {
       throw Object.assign(new Error('Not found'), { code: 'ENOENT' });
     }
     if (!(await stat(target)).isFile()) throw Object.assign(new Error('Not found'), { code: 'ENOENT' });
