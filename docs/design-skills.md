@@ -81,7 +81,7 @@ The owner disliked the pinned "Lumo / za" halves and the floating app screens in
 
 ## Visual identity auditors (written for this project)
 
-Five read-only agents in `.claude/agents/`, each with one lens, the same input rules (screenshots at 1440, 768 and 390 px before judging), the same evidence rule and the same report format (score 0-10, what works, ranked findings with fixes, hand-offs, not checked):
+Seven read-only agents in `.claude/agents/`, each with one lens, the same input rules (screenshots at 1440, 768 and 390 px before judging), the same evidence rule and the same report format (score 0-10, what works, ranked findings with fixes, hand-offs, not checked):
 
 | Agent | Lens |
 | --- | --- |
@@ -90,5 +90,7 @@ Five read-only agents in `.claude/agents/`, each with one lens, the same input r
 | `colour-contrast-auditor` | Palette roles, WCAG contrast computed on real backgrounds, colour blindness, media fit |
 | `layout-composition-auditor` | First screen, hierarchy, grid, spacing, balance, responsive, scroll length |
 | `voice-content-auditor` | Message, voice, CTAs, claims and proof, status truthfulness, languages, alt text |
+| `imagery-art-direction-auditor` | Pictures as one family: treatment, quality, honesty, credits and licences |
+| `motion-interaction-auditor` | Signature motion, readability while moving, feedback states, reduced motion, keyboard, browser support |
 
-`/identity-review <target>` (`.claude/commands/identity-review.md`) runs all five in parallel and merges them into one verdict, a score table, the top five fixes and the conflicts between lenses. The agents never edit files. Copy `.claude/agents/*auditor.md` and the command into another project, or into `~/.claude/` on your own machine, to use them everywhere.
+`/identity-review <target>` (`.claude/commands/identity-review.md`) runs all seven in parallel and merges them into one verdict, a score table, the top five fixes and the conflicts between lenses. The agents never edit files. Copy `.claude/agents/*auditor.md` and the command into another project, or into `~/.claude/` on your own machine, to use them everywhere.

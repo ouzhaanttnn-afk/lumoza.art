@@ -13,7 +13,7 @@ Pick by intent; load only what the task needs.
 | Colour, type, layout, copy polish | `better-colors`, `better-typography`, `better-layout`, `better-writing`, `better-interface` |
 | Accessibility or mobile fixes | `better-accessibility`, `better-layout` |
 | Screenshot or Figma to code | `build-design` |
-| Visual identity review of any page | `/identity-review <url or path>` runs five read-only auditors in parallel: `identity-brand-auditor`, `typography-auditor`, `colour-contrast-auditor`, `layout-composition-auditor`, `voice-content-auditor` (`.claude/agents/`) |
+| Visual identity review of any page | `/identity-review <url or path>` runs seven read-only auditors in parallel: `identity-brand-auditor`, `typography-auditor`, `colour-contrast-auditor`, `layout-composition-auditor`, `voice-content-auditor`, `imagery-art-direction-auditor`, `motion-interaction-auditor` (`.claude/agents/`) |
 
 Details, versions and test results: `docs/design-skills.md`.
 
