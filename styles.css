@@ -44,16 +44,13 @@ button{font:inherit;color:inherit}
 .bar-mark img{width:30px;height:30px}
 .bar-lang{background:#1d24420f}
 
-/* The pinned name: it stays, the panels and the games pass beneath it. */
 .run{position:relative}
-.pin{position:sticky;top:0;height:100svh;z-index:10;pointer-events:none;color:var(--ink);font-size:min(var(--display),19svh);font-weight:700;letter-spacing:-.05em;line-height:.85}
-.pin-a{pointer-events:auto;position:absolute;left:var(--m);top:var(--m);font-size:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit}
-.pin-b{position:absolute;right:var(--m);bottom:max(var(--m),env(safe-area-inset-bottom));color:#fff}
-.panel{position:relative;min-height:100svh}
+.panel{position:relative;min-height:clamp(560px,84svh,780px)}
 
 /* Hero: the name on the left, a live stage of the games on the right whose colour walks through each game's world. */
-.hero{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--m);background:var(--bg);overflow:hidden;margin-top:-100svh}
-.hero-copy{position:relative;z-index:2;grid-column:3/7;align-self:start;padding-top:42svh;display:flex;flex-direction:column;align-items:flex-start;gap:1.5rem}
+.hero{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--m);background:var(--bg);overflow:hidden}
+.hero-copy{position:relative;z-index:2;grid-column:1/7;align-self:center;padding:12svh var(--m);display:flex;flex-direction:column;align-items:flex-start;gap:1.5rem}
+.hero-title{font-size:min(11vw,22svh);font-weight:700;letter-spacing:-.06em;line-height:.9;margin-bottom:.5rem}
 .lead{font-size:var(--lead);line-height:1.5;max-width:34ch}
 .hero-links{display:flex;flex-direction:column;align-items:flex-start;gap:.25rem}
 .hero-links .text-link{font-size:var(--small)}
@@ -61,21 +58,18 @@ button{font:inherit;color:inherit}
 .blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;pointer-events:none} /* taste-skill-ignore: owner asked for a livelier hero */
 .blob-a{width:46%;aspect-ratio:1;left:-8%;top:6%;background:#e1e620;animation:drift 19s ease-in-out infinite}
 .blob-b{width:52%;aspect-ratio:1;right:-12%;bottom:-6%;background:#ff6fb1;animation:drift 23s ease-in-out infinite reverse}
-.ph{position:absolute;height:min(60svh,600px);width:auto;aspect-ratio:540/1169;object-fit:cover;border-radius:26px;animation:float 7s ease-in-out infinite}
-.ph-c{--ch:min(66svh,660px);height:var(--ch);left:calc(50% - var(--ch)*.231);top:calc(50% - var(--ch)/2 - 2svh);z-index:3}
-.ph-l{left:5%;top:30%;--r:-7deg;z-index:2;animation-delay:-2s;height:min(50svh,500px)}
-.ph-r{right:5%;top:24%;--r:6deg;z-index:2;animation-delay:-4s;height:min(50svh,500px);aspect-ratio:390/844}
-.ic{position:absolute;width:clamp(56px,6vw,88px);height:auto;border-radius:22%;z-index:4;animation:float 6s ease-in-out infinite}
-.ic-a{left:4%;top:10%;--r:-8deg}
-.ic-b{right:6%;bottom:16%;--r:8deg;animation-delay:-3s}
-.ic-c{left:14%;bottom:12%;--r:-4deg;animation-delay:-1.5s}
+.logo-float{position:absolute;left:50%;top:50%;width:min(58%,500px);height:auto;margin:calc(min(58%,500px)/-2) 0 0 calc(min(58%,500px)/-2);border-radius:22.5%;z-index:3;animation:float 7s ease-in-out infinite}
+.ring{position:absolute;left:50%;top:50%;border:1.5px solid #ffffff59;border-radius:50%;pointer-events:none;animation:spin 40s linear infinite}
+.ring-a{width:78%;aspect-ratio:1;margin:-39% 0 0 -39%}
+.ring-b{width:104%;aspect-ratio:1.0;margin:-52% 0 0 -52%;animation-duration:64s;animation-direction:reverse;border-color:#ffffff33}
+@keyframes spin{to{transform:rotate(360deg)}}
 @keyframes world{0%,100%{background-color:#4a2266}25%{background-color:#17612e}50%{background-color:#0f5262}75%{background-color:#173a73}}
 @keyframes drift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(8%,10%) scale(1.15)}}
 @keyframes float{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-14px) rotate(var(--r,0deg))}}
 
-/* The shelf: light on the left, an indigo field on the right, so the pinned "za" reads on both panels. */
-.shelf{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--m);align-content:center;align-items:center;padding-block:26svh;background:var(--surface);padding-inline:var(--m)}
-.shelf-field{grid-column:7/13;align-self:stretch;margin:-26svh calc(-1*var(--m)) -26svh 0;padding:26svh calc(var(--m) + 12px) 26svh calc(var(--m)*2);background:var(--accent);display:flex;align-items:center}
+/* The shelf: light on the left, an indigo field on the right, so the white and ink text both read. */
+.shelf{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--m);grid-template-rows:minmax(0,1fr);align-content:stretch;align-items:center;padding-block:18svh;background:var(--surface);padding-inline:var(--m)}
+.shelf-field{grid-column:7/13;align-self:stretch;margin:-18svh calc(-1*var(--m)) -18svh 0;padding:18svh calc(var(--m) + 12px) 18svh calc(var(--m)*2);background:var(--accent);display:flex;align-items:center}
 .shelf-head{grid-column:3/7;display:flex;flex-direction:column;gap:1.25rem}
 .shelf-head h2{font-size:var(--h2);font-weight:600;letter-spacing:-.03em;line-height:1.15}
 .shelf-list{flex:1;display:flex;flex-direction:column;gap:1.5rem;color:#fff}
@@ -212,8 +206,9 @@ button{font:inherit;color:inherit}
   .actions{bottom:2.5svh}
 }
 @media(max-width:900px){
-  .hero-copy{grid-column:2/7}
-  .shelf{padding-block:22svh 16svh}
+  .hero-copy{grid-column:1/7}
+  .hero-title{font-size:min(10vw,22svh)}
+  .shelf{padding-block:22svh 16svh;grid-template-rows:none;align-content:center}
   .shelf-head{grid-column:1/13}
   .shelf-field{grid-column:1/-1;margin:3rem calc(-1*var(--m)) -16svh;padding:3rem calc(var(--m) + 8px) 16svh}
   .studio{grid-template-columns:1fr;padding-left:0}
@@ -225,17 +220,13 @@ button{font:inherit;color:inherit}
   .footer-links:nth-of-type(2){grid-column:7/13}
 }
 @media(max-width:640px){
-  .pin{font-size:15vw}
-  .pin-a{left:var(--m);top:var(--m)}
-  .pin-b{right:var(--m);bottom:var(--m)}
   .bar-nav a[href="#games"],.bar-nav a[href="#studio"],.bar-nav .bar-mark{display:none}
   .bar-nav{padding:.3rem .4rem}
   .hero{display:flex;flex-direction:column}
-  .hero-copy{padding:20svh var(--m) 0;gap:1.1rem}
+  .hero-copy{padding:16svh var(--m) 0;gap:1.1rem}
+  .hero-title{font-size:min(24vw,16svh)}
   .hero-stage{position:relative;width:100%;height:46svh;margin-top:auto}
-  .ph-c{--ch:34svh}
-  .ph-l,.ph-r{height:25svh;top:34%}
-  .ic{width:52px}
+  .logo-float{width:min(40%,180px);margin:calc(min(40%,180px)/-2) 0 0 calc(min(40%,180px)/-2)}
   .shelf-list img{width:64px;height:64px;border-radius:16px}
   .shelf-list li{gap:.9rem}
   .shelf .button{padding-inline:1.1rem}
@@ -280,7 +271,7 @@ button{font:inherit;color:inherit}
   .bar-nav{-webkit-backdrop-filter:none;backdrop-filter:none;background:#fff} /* taste-skill-ignore */
 }
 @media print{
-  .bar,.pin{display:none}
+  .bar{display:none}
   .game{height:auto}
   .stage{position:static;height:auto;display:block}
   .pane{display:none}

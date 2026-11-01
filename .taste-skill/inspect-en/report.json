@@ -1,6 +1,6 @@
 {
- "url": "http://localhost:4182/",
- "at": "2026-11-01T16:28:20.341Z",
+ "url": "http://localhost:4191/",
+ "at": "2026-11-01T16:44:02.653Z",
  "allow": [],
  "viewports": [
   {
@@ -9,22 +9,22 @@
    "load": "load",
    "screens": 12,
    "filled": [
-    0.61,
-    1,
+    0.7,
+    0.99,
     0.91,
-    0.91,
-    0.91,
-    0.91,
-    0.94,
-    0.75,
-    0.97,
-    0.73,
-    0.68,
+    0.99,
+    0.96,
+    0.96,
+    0.98,
+    0.8,
+    0.92,
+    0.63,
+    0.8,
     1
    ],
    "motion": {
-    "elements": 45,
-    "css": 45,
+    "elements": 43,
+    "css": 43,
     "transitions": 0,
     "scripted": 0,
     "videos": 0,
@@ -36,10 +36,10 @@
      "h": 900
     },
     "page": {
-     "height": 11140,
-     "screens": 12.4,
-     "words": 607,
-     "img": 23,
+     "height": 10852,
+     "screens": 12.1,
+     "words": 606,
+     "img": 18,
      "video": 0,
      "canvas": 0,
      "svg": 0,
@@ -48,18 +48,18 @@
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 14,
+     "realPictures": 12,
      "videoCount": 0,
      "uiPictures": 0,
      "pictureSamples": [
-      "trade-1.webp",
-      "bimquest-2.webp",
-      "mihenk-1.webp",
+      "lumoza-app-icon-720.webp",
       "mihenk-1.webp",
       "mihenk-2.webp",
       "trade-1.webp",
       "trade-2.webp",
-      "son-ocak-icon.webp"
+      "son-ocak-icon.webp",
+      "son-ocak-icon.webp",
+      "bimquest-1.webp"
      ],
      "blendText": 0,
      "sideScrollers": 0,
@@ -68,52 +68,52 @@
      "videosNoPoster": 0
     },
     "hero": {
-     "text": "Lumo",
+     "text": "Lumoza",
      "words": 1,
-     "chars": 4,
+     "chars": 6,
      "lines": 1,
-     "size": 144,
-     "vw": 10,
+     "size": 158.4,
+     "vw": 11,
      "font": "Instrument Sans",
      "weight": 700,
-     "tracking": -0.05,
-     "leading": 0.85,
+     "tracking": -0.06,
+     "leading": 0.9,
      "upper": false,
      "italic": false,
      "mono": false,
      "align": "left",
      "position": "left",
-     "widthRatio": 0.25,
-     "top": 32,
+     "widthRatio": 0.38,
+     "top": 152,
      "tag": "h1",
      "kind": "heading"
     },
     "h1": {
-     "text": "Lumo",
+     "text": "Lumoza",
      "words": 1,
      "lines": 1,
-     "size": 144,
+     "size": 158.4,
      "font": "Instrument Sans"
     },
     "headings": [
      {
-      "text": "Lumo",
+      "text": "Lumoza",
       "words": 1,
-      "chars": 4,
+      "chars": 6,
       "lines": 1,
-      "size": 144,
-      "vw": 10,
+      "size": 158.4,
+      "vw": 11,
       "font": "Instrument Sans",
       "weight": 700,
-      "tracking": -0.05,
-      "leading": 0.85,
+      "tracking": -0.06,
+      "leading": 0.9,
       "upper": false,
       "italic": false,
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.25,
-      "top": 32,
+      "widthRatio": 0.38,
+      "top": 152,
       "tag": "h1",
       "kind": "heading"
      },
@@ -134,7 +134,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.3,
-      "top": 1305,
+      "top": 1089,
       "tag": "h2",
       "kind": "heading"
      },
@@ -155,7 +155,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 2394,
+      "top": 2106,
       "tag": "h3",
       "kind": "heading"
      },
@@ -176,7 +176,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 3654,
+      "top": 3366,
       "tag": "h3",
       "kind": "heading"
      },
@@ -197,7 +197,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 4914,
+      "top": 4626,
       "tag": "h3",
       "kind": "heading"
      },
@@ -218,7 +218,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 6174,
+      "top": 5886,
       "tag": "h3",
       "kind": "heading"
      },
@@ -239,7 +239,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 6840,
+      "top": 6552,
       "tag": "h2",
       "kind": "heading"
      },
@@ -260,7 +260,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.31,
-      "top": 7261,
+      "top": 6973,
       "tag": "h3",
       "kind": "heading"
      },
@@ -281,7 +281,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.13,
-      "top": 7261,
+      "top": 6973,
       "tag": "h3",
       "kind": "heading"
      },
@@ -302,7 +302,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 8131,
+      "top": 7843,
       "tag": "h3",
       "kind": "heading"
      },
@@ -323,7 +323,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.48,
-      "top": 8997,
+      "top": 8709,
       "tag": "h2",
       "kind": "heading"
      },
@@ -344,7 +344,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.96,
-      "top": 9908,
+      "top": 9620,
       "tag": "a",
       "kind": "heading"
      },
@@ -365,7 +365,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.96,
-      "top": 10434,
+      "top": 10146,
       "tag": "p",
       "kind": "statement"
      },
@@ -386,7 +386,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.39,
-      "top": 10835,
+      "top": 10547,
       "tag": "a",
       "kind": "heading"
      }
@@ -415,9 +415,10 @@
       20,
       35,
       144,
+      158,
       324
      ],
-     "sizeCount": 6,
+     "sizeCount": 7,
      "notLoaded": [],
      "body": {
       "font": "Instrument Sans",
@@ -466,17 +467,17 @@
        }
       },
       {
-       "color": "#115654",
+       "color": "#115653",
        "top": 0,
        "hsl": {
-        "h": 178,
+        "h": 177,
         "s": 0.67,
         "l": 0.2
        }
       },
       {
        "color": "#e4e8f6",
-       "top": 900,
+       "top": 756,
        "hsl": {
         "h": 227,
         "s": 0.5,
@@ -485,7 +486,7 @@
       },
       {
        "color": "#3346d3",
-       "top": 960,
+       "top": 756,
        "hsl": {
         "h": 233,
         "s": 0.65,
@@ -494,7 +495,7 @@
       },
       {
        "color": "#4a2266",
-       "top": 1728,
+       "top": 1440,
        "hsl": {
         "h": 275,
         "s": 0.5,
@@ -503,7 +504,7 @@
       },
       {
        "color": "#3b1a52",
-       "top": 1512,
+       "top": 1224,
        "hsl": {
         "h": 275,
         "s": 0.52,
@@ -512,7 +513,7 @@
       },
       {
        "color": "#17612e",
-       "top": 2988,
+       "top": 2700,
        "hsl": {
         "h": 139,
         "s": 0.62,
@@ -521,7 +522,7 @@
       },
       {
        "color": "#114d24",
-       "top": 2772,
+       "top": 2484,
        "hsl": {
         "h": 139,
         "s": 0.64,
@@ -530,7 +531,7 @@
       },
       {
        "color": "#0f5262",
-       "top": 4248,
+       "top": 3960,
        "hsl": {
         "h": 192,
         "s": 0.73,
@@ -539,7 +540,7 @@
       },
       {
        "color": "#963f16",
-       "top": 4032,
+       "top": 3744,
        "hsl": {
         "h": 19,
         "s": 0.74,
@@ -604,13 +605,13 @@
      "gradientText": 0,
      "hairlines": 0,
      "hairlineSamples": [],
-     "outlinedBoxes": 0,
+     "outlinedBoxes": 2,
      "dashed": 0,
      "blurred": 1,
-     "roundedBoxes": 2,
+     "roundedBoxes": 4,
      "boxRadius": 50,
      "squareMedia": 1,
-     "roundedMedia": 13,
+     "roundedMedia": 11,
      "mediaRadius": 22,
      "textShadow": 0,
      "cardRows": []
@@ -619,14 +620,6 @@
      {
       "type": "img",
       "ratio": 0.13
-     },
-     {
-      "type": "img",
-      "ratio": 0.1
-     },
-     {
-      "type": "img",
-      "ratio": 0.09
      }
     ],
     "nav": {
@@ -645,48 +638,29 @@
      "w": 1440,
      "h": 900
     },
-    "pageH": 11140,
+    "pageH": 10852,
     "margins": {
      "left": 32,
      "right": 32
     },
     "sections": [
      {
-      "sel": "div.pin",
-      "tag": "div",
-      "top": 0,
-      "height": 900,
-      "words": 2,
-      "media": 0,
-      "middle": 874,
-      "heading": {
-       "text": "Lumo",
-       "size": 144,
-       "tag": "h1"
-      },
-      "left": 32,
-      "right": 32,
-      "textLeft": 32,
-      "textRight": 32,
-      "fullBleed": false,
-      "footer": false,
-      "hero": true,
-      "continues": true,
-      "pinned": true
-     },
-     {
       "sel": "section.panel.hero",
       "tag": "section",
       "top": 0,
-      "height": 900,
-      "words": 34,
-      "media": 3,
-      "middle": 32,
-      "heading": null,
-      "left": 245,
-      "right": 13,
-      "textLeft": 245,
-      "textRight": 743,
+      "height": 756,
+      "words": 35,
+      "media": 1,
+      "middle": 299,
+      "heading": {
+       "text": "Lumoza",
+       "size": 158,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 151,
+      "textLeft": 32,
+      "textRight": 868,
       "fullBleed": false,
       "footer": false,
       "hero": true,
@@ -696,8 +670,8 @@
      {
       "sel": "section.panel.shelf",
       "tag": "section",
-      "top": 900,
-      "height": 900,
+      "top": 756,
+      "height": 756,
       "words": 33,
       "media": 0,
       "middle": 193,
@@ -719,7 +693,7 @@
      {
       "sel": "article.game.world-mihenk",
       "tag": "article",
-      "top": 1800,
+      "top": 1512,
       "height": 1260,
       "words": 69,
       "media": 1,
@@ -742,7 +716,7 @@
      {
       "sel": "article.game.world-trade",
       "tag": "article",
-      "top": 3060,
+      "top": 2772,
       "height": 1260,
       "words": 72,
       "media": 1,
@@ -765,7 +739,7 @@
      {
       "sel": "article.game.world-son",
       "tag": "article",
-      "top": 4320,
+      "top": 4032,
       "height": 1260,
       "words": 46,
       "media": 1,
@@ -788,7 +762,7 @@
      {
       "sel": "article.game.world-bim",
       "tag": "article",
-      "top": 5580,
+      "top": 5292,
       "height": 1260,
       "words": 45,
       "media": 1,
@@ -811,7 +785,7 @@
      {
       "sel": "section.dev",
       "tag": "section",
-      "top": 6840,
+      "top": 6552,
       "height": 697,
       "words": 50,
       "media": 0,
@@ -834,7 +808,7 @@
      {
       "sel": "section.work.work-web",
       "tag": "section",
-      "top": 7537,
+      "top": 7249,
       "height": 1260,
       "words": 46,
       "media": 1,
@@ -857,7 +831,7 @@
      {
       "sel": "section#studio.studio",
       "tag": "section",
-      "top": 8797,
+      "top": 8509,
       "height": 927,
       "words": 88,
       "media": 1,
@@ -880,7 +854,7 @@
      {
       "sel": "section#contact.contact",
       "tag": "section",
-      "top": 9724,
+      "top": 9436,
       "height": 678,
       "words": 14,
       "media": 0,
@@ -903,7 +877,7 @@
      {
       "sel": "footer.site-footer",
       "tag": "footer",
-      "top": 10403,
+      "top": 10115,
       "height": 737,
       "words": 60,
       "media": 0,
@@ -924,12 +898,17 @@
       "pinned": false
      }
     ],
-    "gaps": [],
+    "gaps": [
+     {
+      "top": 592,
+      "height": 384
+     }
+    ],
     "h1s": [
      {
-      "text": "Lumo",
-      "size": 144,
-      "top": 32,
+      "text": "Lumoza",
+      "size": 158,
+      "top": 152,
       "firstScreen": true
      }
     ],
@@ -937,7 +916,7 @@
     "edges": [
      {
       "x": 32,
-      "n": 9
+      "n": 10
      },
      {
       "x": 501,
@@ -957,10 +936,6 @@
      },
      {
       "x": 164,
-      "n": 1
-     },
-     {
-      "x": 245,
       "n": 1
      },
      {
@@ -989,12 +964,12 @@
     "stage": false,
     "explains": true,
     "slivers": [],
-    "voidShare": 0.13,
+    "voidShare": 0.33,
     "voidBox": {
      "x": 0,
-     "y": 180,
-     "w": 240,
-     "h": 720
+     "y": 600,
+     "w": 1440,
+     "h": 300
     }
    },
    "app": null,
@@ -1006,22 +981,22 @@
    "load": "load",
    "screens": 12,
    "filled": [
-    0.56,
+    0.75,
     1,
     0.88,
     0.88,
     0.89,
-    0.8,
-    0.88,
-    0.75,
-    1,
     0.86,
-    0.57,
+    0.88,
+    0.83,
+    0.87,
+    0.44,
+    0.8,
     1
    ],
    "motion": {
-    "elements": 45,
-    "css": 45,
+    "elements": 43,
+    "css": 43,
     "transitions": 0,
     "scripted": 0,
     "videos": 0,
@@ -1033,10 +1008,10 @@
      "h": 1024
     },
     "page": {
-     "height": 12981,
-     "screens": 12.7,
-     "words": 607,
-     "img": 23,
+     "height": 12589,
+     "screens": 12.3,
+     "words": 606,
+     "img": 18,
      "video": 0,
      "canvas": 0,
      "svg": 0,
@@ -1045,18 +1020,18 @@
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 14,
+     "realPictures": 12,
      "videoCount": 0,
      "uiPictures": 0,
      "pictureSamples": [
-      "trade-1.webp",
-      "bimquest-2.webp",
-      "mihenk-1.webp",
+      "lumoza-app-icon-720.webp",
       "mihenk-1.webp",
       "mihenk-2.webp",
       "trade-1.webp",
       "trade-2.webp",
-      "son-ocak-icon.webp"
+      "son-ocak-icon.webp",
+      "son-ocak-icon.webp",
+      "bimquest-1.webp"
      ],
      "blendText": 0,
      "sideScrollers": 0,
@@ -1065,28 +1040,28 @@
      "videosNoPoster": 0
     },
     "hero": {
-     "text": "Lumo",
+     "text": "Lumoza",
      "words": 1,
-     "chars": 4,
+     "chars": 6,
      "lines": 1,
      "size": 76.8,
      "vw": 10,
      "font": "Instrument Sans",
      "weight": 700,
-     "tracking": -0.05,
-     "leading": 0.85,
+     "tracking": -0.06,
+     "leading": 0.9,
      "upper": false,
      "italic": false,
      "mono": false,
      "align": "left",
      "position": "left",
-     "widthRatio": 0.25,
-     "top": 17,
+     "widthRatio": 0.34,
+     "top": 205,
      "tag": "h1",
      "kind": "heading"
     },
     "h1": {
-     "text": "Lumo",
+     "text": "Lumoza",
      "words": 1,
      "lines": 1,
      "size": 76.8,
@@ -1094,23 +1069,23 @@
     },
     "headings": [
      {
-      "text": "Lumo",
+      "text": "Lumoza",
       "words": 1,
-      "chars": 4,
+      "chars": 6,
       "lines": 1,
       "size": 76.8,
       "vw": 10,
       "font": "Instrument Sans",
       "weight": 700,
-      "tracking": -0.05,
-      "leading": 0.85,
+      "tracking": -0.06,
+      "leading": 0.9,
       "upper": false,
       "italic": false,
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.25,
-      "top": 17,
+      "widthRatio": 0.34,
+      "top": 205,
       "tag": "h1",
       "kind": "heading"
      },
@@ -1131,7 +1106,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.96,
-      "top": 1323,
+      "top": 1005,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1152,7 +1127,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 2611,
+      "top": 2219,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1173,7 +1148,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 4045,
+      "top": 3653,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1194,7 +1169,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 5478,
+      "top": 5087,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1215,7 +1190,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 6912,
+      "top": 6520,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1236,7 +1211,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 7782,
+      "top": 7391,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1257,7 +1232,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.47,
-      "top": 8111,
+      "top": 7719,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1278,7 +1253,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.19,
-      "top": 8497,
+      "top": 8105,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1299,7 +1274,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 9291,
+      "top": 8899,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1320,7 +1295,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.96,
-      "top": 10269,
+      "top": 9877,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1341,7 +1316,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.96,
-      "top": 11964,
+      "top": 11573,
       "tag": "a",
       "kind": "heading"
      },
@@ -1362,7 +1337,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.96,
-      "top": 12259,
+      "top": 11867,
       "tag": "p",
       "kind": "statement"
      },
@@ -1383,7 +1358,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.96,
-      "top": 12522,
+      "top": 12130,
       "tag": "a",
       "kind": "heading"
      }
@@ -1463,17 +1438,17 @@
        }
       },
       {
-       "color": "#115653",
+       "color": "#115752",
        "top": 0,
        "hsl": {
-        "h": 177,
+        "h": 176,
         "s": 0.67,
         "l": 0.2
        }
       },
       {
        "color": "#e4e8f6",
-       "top": 1024,
+       "top": 780,
        "hsl": {
         "h": 227,
         "s": 0.5,
@@ -1482,7 +1457,7 @@
       },
       {
        "color": "#3346d3",
-       "top": 1450,
+       "top": 1132,
        "hsl": {
         "h": 233,
         "s": 0.65,
@@ -1491,7 +1466,7 @@
       },
       {
        "color": "#4a2266",
-       "top": 1966,
+       "top": 1574,
        "hsl": {
         "h": 275,
         "s": 0.5,
@@ -1500,7 +1475,7 @@
       },
       {
        "color": "#3b1a52",
-       "top": 1720,
+       "top": 1329,
        "hsl": {
         "h": 275,
         "s": 0.52,
@@ -1509,7 +1484,7 @@
       },
       {
        "color": "#17612e",
-       "top": 3400,
+       "top": 3008,
        "hsl": {
         "h": 139,
         "s": 0.62,
@@ -1518,7 +1493,7 @@
       },
       {
        "color": "#114d24",
-       "top": 3154,
+       "top": 2762,
        "hsl": {
         "h": 139,
         "s": 0.64,
@@ -1527,7 +1502,7 @@
       },
       {
        "color": "#0f5262",
-       "top": 4833,
+       "top": 4442,
        "hsl": {
         "h": 192,
         "s": 0.73,
@@ -1536,7 +1511,7 @@
       },
       {
        "color": "#963f16",
-       "top": 4588,
+       "top": 4196,
        "hsl": {
         "h": 19,
         "s": 0.74,
@@ -1601,31 +1576,18 @@
      "gradientText": 0,
      "hairlines": 0,
      "hairlineSamples": [],
-     "outlinedBoxes": 0,
+     "outlinedBoxes": 2,
      "dashed": 0,
      "blurred": 1,
-     "roundedBoxes": 2,
+     "roundedBoxes": 4,
      "boxRadius": 50,
      "squareMedia": 1,
-     "roundedMedia": 6,
-     "mediaRadius": 26,
+     "roundedMedia": 4,
+     "mediaRadius": 22,
      "textShadow": 0,
      "cardRows": []
     },
-    "heroMedia": [
-     {
-      "type": "img",
-      "ratio": 0.26
-     },
-     {
-      "type": "img",
-      "ratio": 0.19
-     },
-     {
-      "type": "img",
-      "ratio": 0.18
-     }
-    ],
+    "heroMedia": [],
     "nav": {
      "links": 5,
      "fixed": true,
@@ -1642,48 +1604,29 @@
      "w": 768,
      "h": 1024
     },
-    "pageH": 12981,
+    "pageH": 12589,
     "margins": {
      "left": 17,
-     "right": 17
+     "right": 29
     },
     "sections": [
-     {
-      "sel": "div.pin",
-      "tag": "div",
-      "top": 0,
-      "height": 1024,
-      "words": 2,
-      "media": 0,
-      "middle": 466,
-      "heading": {
-       "text": "Lumo",
-       "size": 77,
-       "tag": "h1"
-      },
-      "left": 17,
-      "right": 17,
-      "textLeft": 17,
-      "textRight": 17,
-      "fullBleed": false,
-      "footer": false,
-      "hero": true,
-      "continues": true,
-      "pinned": true
-     },
      {
       "sel": "section.panel.hero",
       "tag": "section",
       "top": 0,
-      "height": 1024,
-      "words": 34,
-      "media": 3,
-      "middle": 0,
-      "heading": null,
-      "left": 65,
-      "right": 0,
-      "textLeft": 65,
-      "textRight": 296,
+      "height": 780,
+      "words": 35,
+      "media": 1,
+      "middle": 107,
+      "heading": {
+       "text": "Lumoza",
+       "size": 77,
+       "tag": "h1"
+      },
+      "left": 17,
+      "right": 81,
+      "textLeft": 17,
+      "textRight": 411,
       "fullBleed": false,
       "footer": false,
       "hero": true,
@@ -1693,8 +1636,8 @@
      {
       "sel": "section.panel.shelf",
       "tag": "section",
-      "top": 1024,
-      "height": 1024,
+      "top": 780,
+      "height": 876,
       "words": 33,
       "media": 0,
       "middle": 282,
@@ -1716,7 +1659,7 @@
      {
       "sel": "article.game.world-mihenk",
       "tag": "article",
-      "top": 2048,
+      "top": 1656,
       "height": 1434,
       "words": 69,
       "media": 1,
@@ -1739,7 +1682,7 @@
      {
       "sel": "article.game.world-trade",
       "tag": "article",
-      "top": 3482,
+      "top": 3090,
       "height": 1434,
       "words": 72,
       "media": 1,
@@ -1762,7 +1705,7 @@
      {
       "sel": "article.game.world-son",
       "tag": "article",
-      "top": 4915,
+      "top": 4523,
       "height": 1434,
       "words": 46,
       "media": 1,
@@ -1785,7 +1728,7 @@
      {
       "sel": "article.game.world-bim",
       "tag": "article",
-      "top": 6349,
+      "top": 5957,
       "height": 1434,
       "words": 45,
       "media": 1,
@@ -1808,7 +1751,7 @@
      {
       "sel": "section.dev",
       "tag": "section",
-      "top": 7782,
+      "top": 7391,
       "height": 945,
       "words": 50,
       "media": 0,
@@ -1831,7 +1774,7 @@
      {
       "sel": "section.work.work-web",
       "tag": "section",
-      "top": 8728,
+      "top": 8336,
       "height": 1434,
       "words": 46,
       "media": 1,
@@ -1854,7 +1797,7 @@
      {
       "sel": "section#studio.studio",
       "tag": "section",
-      "top": 10161,
+      "top": 9770,
       "height": 1343,
       "words": 88,
       "media": 1,
@@ -1877,7 +1820,7 @@
      {
       "sel": "section#contact.contact",
       "tag": "section",
-      "top": 11505,
+      "top": 11113,
       "height": 737,
       "words": 14,
       "media": 0,
@@ -1900,7 +1843,7 @@
      {
       "sel": "footer.site-footer",
       "tag": "footer",
-      "top": 12242,
+      "top": 11850,
       "height": 739,
       "words": 60,
       "media": 0,
@@ -1923,15 +1866,19 @@
     ],
     "gaps": [
      {
-      "top": 11652,
+      "top": 560,
+      "height": 444
+     },
+     {
+      "top": 11260,
       "height": 368
      }
     ],
     "h1s": [
      {
-      "text": "Lumo",
+      "text": "Lumoza",
       "size": 77,
-      "top": 17,
+      "top": 205,
       "firstScreen": true
      }
     ],
@@ -1939,7 +1886,7 @@
     "edges": [
      {
       "x": 17,
-      "n": 17
+      "n": 18
      },
      {
       "x": 384,
@@ -1948,10 +1895,6 @@
      {
       "x": 35,
       "n": 2
-     },
-     {
-      "x": 65,
-      "n": 1
      },
      {
       "x": 88,
@@ -1991,22 +1934,22 @@
    "load": "load",
    "screens": 12,
    "filled": [
-    0.65,
-    1,
-    0.89,
-    0.9,
-    0.93,
-    0.81,
-    0.86,
     0.75,
     1,
     0.89,
-    0.51,
-    0.93
+    0.91,
+    0.88,
+    0.81,
+    0.91,
+    0.82,
+    1,
+    0.89,
+    0.54,
+    0.96
    ],
    "motion": {
-    "elements": 45,
-    "css": 45,
+    "elements": 43,
+    "css": 43,
     "transitions": 0,
     "scripted": 0,
     "videos": 0,
@@ -2018,10 +1961,10 @@
      "h": 844
     },
     "page": {
-     "height": 11428,
+     "height": 11386,
      "screens": 13.5,
-     "words": 605,
-     "img": 23,
+     "words": 604,
+     "img": 18,
      "video": 0,
      "canvas": 0,
      "svg": 0,
@@ -2030,18 +1973,18 @@
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 13,
+     "realPictures": 12,
      "videoCount": 0,
      "uiPictures": 0,
      "pictureSamples": [
-      "trade-1.webp",
-      "mihenk-1.webp",
+      "lumoza-app-icon-720.webp",
       "mihenk-1.webp",
       "mihenk-2.webp",
       "trade-1.webp",
       "trade-2.webp",
       "son-ocak-icon.webp",
-      "son-ocak-icon.webp"
+      "son-ocak-icon.webp",
+      "bimquest-1.webp"
      ],
      "blendText": 0,
      "sideScrollers": 0,
@@ -2050,52 +1993,52 @@
      "videosNoPoster": 0
     },
     "hero": {
-     "text": "Lumo",
+     "text": "Lumoza",
      "words": 1,
-     "chars": 4,
+     "chars": 6,
      "lines": 1,
-     "size": 58.5,
-     "vw": 15,
+     "size": 93.6,
+     "vw": 24,
      "font": "Instrument Sans",
      "weight": 700,
-     "tracking": -0.05,
-     "leading": 0.85,
+     "tracking": -0.06,
+     "leading": 0.9,
      "upper": false,
      "italic": false,
      "mono": false,
      "align": "left",
-     "position": "left",
-     "widthRatio": 0.38,
-     "top": 16,
+     "position": "center",
+     "widthRatio": 0.82,
+     "top": 135,
      "tag": "h1",
      "kind": "heading"
     },
     "h1": {
-     "text": "Lumo",
+     "text": "Lumoza",
      "words": 1,
      "lines": 1,
-     "size": 58.5,
+     "size": 93.6,
      "font": "Instrument Sans"
     },
     "headings": [
      {
-      "text": "Lumo",
+      "text": "Lumoza",
       "words": 1,
-      "chars": 4,
+      "chars": 6,
       "lines": 1,
-      "size": 58.5,
-      "vw": 15,
+      "size": 93.6,
+      "vw": 24,
       "font": "Instrument Sans",
       "weight": 700,
-      "tracking": -0.05,
-      "leading": 0.85,
+      "tracking": -0.06,
+      "leading": 0.9,
       "upper": false,
       "italic": false,
       "mono": false,
       "align": "left",
-      "position": "left",
-      "widthRatio": 0.38,
-      "top": 16,
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 135,
       "tag": "h1",
       "kind": "heading"
      },
@@ -2116,7 +2059,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 1074,
+      "top": 1075,
       "tag": "h2",
       "kind": "heading"
      },
@@ -2137,7 +2080,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 2034,
+      "top": 1992,
       "tag": "h3",
       "kind": "heading"
      },
@@ -2158,7 +2101,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 3216,
+      "top": 3173,
       "tag": "h3",
       "kind": "heading"
      },
@@ -2179,7 +2122,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 4397,
+      "top": 4355,
       "tag": "h3",
       "kind": "heading"
      },
@@ -2200,7 +2143,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 5579,
+      "top": 5536,
       "tag": "h3",
       "kind": "heading"
      },
@@ -2221,7 +2164,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 6414,
+      "top": 6372,
       "tag": "h2",
       "kind": "heading"
      },
@@ -2242,7 +2185,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 6743,
+      "top": 6700,
       "tag": "h3",
       "kind": "heading"
      },
@@ -2263,7 +2206,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.38,
-      "top": 7188,
+      "top": 7145,
       "tag": "h3",
       "kind": "heading"
      },
@@ -2284,7 +2227,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 7791,
+      "top": 7748,
       "tag": "h3",
       "kind": "heading"
      },
@@ -2305,7 +2248,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 8722,
+      "top": 8680,
       "tag": "h2",
       "kind": "heading"
      },
@@ -2326,7 +2269,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 10320,
+      "top": 10278,
       "tag": "a",
       "kind": "heading"
      },
@@ -2347,7 +2290,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 10541,
+      "top": 10499,
       "tag": "p",
       "kind": "statement"
      },
@@ -2368,7 +2311,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 10698,
+      "top": 10656,
       "tag": "a",
       "kind": "heading"
      }
@@ -2398,8 +2341,8 @@
       18,
       28,
       42,
-      59,
-      82
+      82,
+      94
      ],
      "sizeCount": 8,
      "notLoaded": [],
@@ -2413,10 +2356,10 @@
      },
      "measureChars": 45,
      "max": {
-      "size": 81.9,
-      "vw": 21,
+      "size": 93.6,
+      "vw": 24,
       "font": "Instrument Sans",
-      "text": "Lumoza."
+      "text": "Lumoza"
      },
      "monoShare": 0,
      "monoProseShare": 0,
@@ -2451,7 +2394,7 @@
       },
       {
        "color": "#125751",
-       "top": 456,
+       "top": 501,
        "hsl": {
         "h": 175,
         "s": 0.66,
@@ -2460,7 +2403,7 @@
       },
       {
        "color": "#e4e8f6",
-       "top": 844,
+       "top": 889,
        "hsl": {
         "h": 227,
         "s": 0.5,
@@ -2469,7 +2412,7 @@
       },
       {
        "color": "#3346d3",
-       "top": 1201,
+       "top": 1202,
        "hsl": {
         "h": 233,
         "s": 0.65,
@@ -2478,7 +2421,7 @@
       },
       {
        "color": "#4a2266",
-       "top": 1620,
+       "top": 1578,
        "hsl": {
         "h": 275,
         "s": 0.5,
@@ -2487,7 +2430,7 @@
       },
       {
        "color": "#3b1a52",
-       "top": 1418,
+       "top": 1376,
        "hsl": {
         "h": 275,
         "s": 0.52,
@@ -2496,7 +2439,7 @@
       },
       {
        "color": "#17612e",
-       "top": 2802,
+       "top": 2760,
        "hsl": {
         "h": 139,
         "s": 0.62,
@@ -2505,7 +2448,7 @@
       },
       {
        "color": "#114d24",
-       "top": 2600,
+       "top": 2557,
        "hsl": {
         "h": 139,
         "s": 0.64,
@@ -2514,7 +2457,7 @@
       },
       {
        "color": "#0f5262",
-       "top": 3984,
+       "top": 3941,
        "hsl": {
         "h": 192,
         "s": 0.73,
@@ -2523,7 +2466,7 @@
       },
       {
        "color": "#963f16",
-       "top": 3781,
+       "top": 3739,
        "hsl": {
         "h": 19,
         "s": 0.74,
@@ -2588,10 +2531,10 @@
      "gradientText": 0,
      "hairlines": 0,
      "hairlineSamples": [],
-     "outlinedBoxes": 0,
+     "outlinedBoxes": 2,
      "dashed": 0,
      "blurred": 1,
-     "roundedBoxes": 2,
+     "roundedBoxes": 4,
      "boxRadius": 50,
      "squareMedia": 1,
      "roundedMedia": 2,
@@ -2599,16 +2542,7 @@
      "textShadow": 0,
      "cardRows": []
     },
-    "heroMedia": [
-     {
-      "type": "img",
-      "ratio": 0.12
-     },
-     {
-      "type": "img",
-      "ratio": 0.08
-     }
-    ],
+    "heroMedia": [],
     "nav": {
      "links": 2,
      "fixed": true,
@@ -2625,46 +2559,27 @@
      "w": 390,
      "h": 844
     },
-    "pageH": 11428,
+    "pageH": 11386,
     "margins": {
      "left": 12,
      "right": 12
     },
     "sections": [
      {
-      "sel": "div.pin",
-      "tag": "div",
-      "top": 0,
-      "height": 844,
-      "words": 2,
-      "media": 0,
-      "middle": 154,
-      "heading": {
-       "text": "Lumo",
-       "size": 59,
-       "tag": "h1"
-      },
-      "left": 16,
-      "right": 16,
-      "textLeft": 16,
-      "textRight": 16,
-      "fullBleed": false,
-      "footer": false,
-      "hero": true,
-      "continues": true,
-      "pinned": true
-     },
-     {
       "sel": "section.panel.hero",
       "tag": "section",
       "top": 0,
-      "height": 844,
-      "words": 34,
-      "media": 3,
+      "height": 889,
+      "words": 35,
+      "media": 1,
       "middle": 0,
-      "heading": null,
-      "left": 7,
-      "right": 9,
+      "heading": {
+       "text": "Lumoza",
+       "size": 94,
+       "tag": "h1"
+      },
+      "left": 16,
+      "right": 34,
       "textLeft": 16,
       "textRight": 34,
       "fullBleed": false,
@@ -2676,8 +2591,8 @@
      {
       "sel": "section.panel.shelf",
       "tag": "section",
-      "top": 844,
-      "height": 844,
+      "top": 889,
+      "height": 756,
       "words": 33,
       "media": 0,
       "middle": 0,
@@ -2699,7 +2614,7 @@
      {
       "sel": "article.game.world-mihenk",
       "tag": "article",
-      "top": 1688,
+      "top": 1646,
       "height": 1182,
       "words": 69,
       "media": 1,
@@ -2722,7 +2637,7 @@
      {
       "sel": "article.game.world-trade",
       "tag": "article",
-      "top": 2870,
+      "top": 2827,
       "height": 1182,
       "words": 72,
       "media": 1,
@@ -2745,7 +2660,7 @@
      {
       "sel": "article.game.world-son",
       "tag": "article",
-      "top": 4051,
+      "top": 4009,
       "height": 1182,
       "words": 46,
       "media": 1,
@@ -2768,7 +2683,7 @@
      {
       "sel": "article.game.world-bim",
       "tag": "article",
-      "top": 5233,
+      "top": 5190,
       "height": 1182,
       "words": 45,
       "media": 1,
@@ -2791,7 +2706,7 @@
      {
       "sel": "section.dev",
       "tag": "section",
-      "top": 6414,
+      "top": 6372,
       "height": 1030,
       "words": 50,
       "media": 0,
@@ -2814,7 +2729,7 @@
      {
       "sel": "section.work.work-web",
       "tag": "section",
-      "top": 7445,
+      "top": 7402,
       "height": 1182,
       "words": 46,
       "media": 1,
@@ -2837,7 +2752,7 @@
      {
       "sel": "section#studio.studio",
       "tag": "section",
-      "top": 8626,
+      "top": 8584,
       "height": 1291,
       "words": 88,
       "media": 1,
@@ -2860,7 +2775,7 @@
      {
       "sel": "section#contact.contact",
       "tag": "section",
-      "top": 9917,
+      "top": 9875,
       "height": 608,
       "words": 14,
       "media": 0,
@@ -2883,7 +2798,7 @@
      {
       "sel": "footer.site-footer",
       "tag": "footer",
-      "top": 10525,
+      "top": 10483,
       "height": 903,
       "words": 60,
       "media": 0,
@@ -2906,15 +2821,19 @@
     ],
     "gaps": [
      {
-      "top": 10064,
-      "height": 312
+      "top": 764,
+      "height": 308
+     },
+     {
+      "top": 10020,
+      "height": 316
      }
     ],
     "h1s": [
      {
-      "text": "Lumo",
-      "size": 59,
-      "top": 16,
+      "text": "Lumoza",
+      "size": 94,
+      "top": 135,
       "firstScreen": true
      }
     ],
@@ -2960,6 +2879,17 @@
  "findings": [
   {
    "level": "WARN",
+   "id": "outlined-box",
+   "width": 1440,
+   "message": "2 box(es) drawn with a 1px outline.",
+   "fix": "Prefer a filled surface or no box.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
    "id": "no-footage",
    "width": 1440,
    "message": "No video anywhere on the page.",
@@ -2977,9 +2907,26 @@
   },
   {
    "level": "WARN",
+   "id": "blank-gap",
+   "width": 1440,
+   "message": "A 384px stretch at 592px holds nothing.",
+   "fix": "Check that it is a deliberate rest (once per page at most); otherwise close it to the normal section gap.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "hero-void",
+   "width": 1440,
+   "message": "33% of the first screen is one empty block (1440×300px at 0,600).",
+   "fix": "Place the void on purpose or fill it: move the picture, the film or one fact into it, grow the headline to meet it, or shrink the screen to its content. A void reads as placed only when something closes it on the far side and it is the screen's one rest."
+  },
+  {
+   "level": "WARN",
    "id": "pinned-over-picture",
    "width": 1440,
-   "message": "Pinned large text slides across pictures while the page scrolls: \"EUP\" (screen 5, 24% over a picture); \"WALKER\" (screen 7, 38% over a picture)",
+   "message": "Pinned large text slides across pictures while the page scrolls: \"EUP\" (screen 5, 23% over a picture); \"WALKER\" (screen 6, 33% over a picture)",
    "fix": "Jurors read a pinned title crossing drawings or photographs as a collision. Keep the pictures in the column the title does not occupy, or unpin it.",
    "alsoAt": [
     768,

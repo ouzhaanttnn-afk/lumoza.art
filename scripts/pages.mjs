@@ -70,7 +70,7 @@ const copy = {
         alts: ['The mission dashboard with chapters and the first mission', 'The first mission with a 2D floor plan and a 3D model', 'A room-boundary mission with wall height and thickness fields', 'The mission guide with a Revit path and hints']
       }
     },
-    heroStage: 'Screens from MİHENKAYNAK, TradeUp and BIMQUEST, with the icons of MİHENKAYNAK, TradeUp and Hearthwalker.',
+    heroStage: 'The Lumoza logo, a white L with a gold spark on an indigo tile, floating over a colour that changes with each of our games.',
     webTitle: 'On the web',
     web: {
       id: 'alvera', name: 'Alvera', tagline: 'Value is timeless.',
@@ -161,7 +161,7 @@ const copy = {
         alts: ['Bölümler ve ilk görevle görev paneli', '2B kat planı ve 3B modelle ilk görev', 'Duvar yüksekliği ve kalınlığı alanlarıyla oda sınırı görevi', 'Revit yolu ve ipuçlarıyla görev rehberi']
       }
     },
-    heroStage: 'MİHENKAYNAK, TradeUp ve BIMQUEST’ten ekranlar; MİHENKAYNAK, TradeUp ve Hearthwalker ikonlarıyla.',
+    heroStage: 'Lumoza logosu: indigo bir karoda beyaz bir L ve altın bir kıvılcım; arkasındaki renk oyunlarımızın renkleri arasında değişiyor.',
     webTitle: 'Web’de',
     web: {
       id: 'alvera', name: 'Alvera', tagline: 'Değer zamansızdır.',
@@ -296,10 +296,10 @@ ${t.lang === 'en' ? `    <script>try{var l=localStorage.getItem('lumoza-lang');i
 
     <main id="main">
       <div class="run">
-        <div class="pin"><h1 class="pin-a" aria-label="${esc(t.h1)}">Lumo</h1><span class="pin-b" aria-hidden="true">za</span></div>
 
         <section class="panel hero" aria-label="${esc(t.h1)}">
           <div class="hero-copy">
+            <h1 class="hero-title" aria-label="${esc(t.h1)}">Lumoza</h1>
             <p class="lead">${esc(t.lead)}</p>
             <a class="button" href="#games">${esc(t.seeGames)}</a>
             <ul class="hero-links">
@@ -308,12 +308,8 @@ ${t.lang === 'en' ? `    <script>try{var l=localStorage.getItem('lumoza-lang');i
           </div>
           <div class="hero-stage" role="img" aria-label="${esc(t.heroStage)}">
             <span class="blob blob-a"></span><span class="blob blob-b"></span>
-            <img class="ph ph-l" src="/assets/screens/trade-1.webp" alt="" width="540" height="1169" decoding="async">
-            <img class="ph ph-r" src="/assets/screens/bimquest-2.webp" alt="" width="390" height="844" decoding="async">
-            <img class="ph ph-c" src="/assets/screens/mihenk-1.webp" alt="" width="540" height="1169" decoding="async" fetchpriority="high">
-            <img class="ic ic-a" src="/assets/games/mihenkaynak-icon.webp" alt="" width="512" height="512" decoding="async">
-            <img class="ic ic-b" src="/assets/games/tradeup-icon.webp" alt="" width="512" height="512" decoding="async">
-            <img class="ic ic-c" src="/assets/games/son-ocak-icon.webp" alt="" width="512" height="512" decoding="async">
+            <span class="ring ring-a"></span><span class="ring ring-b"></span>
+            <img class="logo-float" src="/assets/brand/lumoza-app-icon-720.webp" alt="" width="720" height="720" decoding="async" fetchpriority="high">
           </div>
         </section>
 

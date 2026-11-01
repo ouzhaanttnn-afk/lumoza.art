@@ -74,3 +74,7 @@ Automatic: nothing runs by itself (no hooks). Manual: every skill is invoked by 
 - Weaknesses: the torn titles cross the next game's pictures while stages hand over (inspector WARN); the contact screen is mostly colour field with one large address; no footage; the three small `Son Ocak` crops are drawn from one icon at 2x and are soft.
 - Not done: scroll-scene gate (`scenes.mjs`) because the page has no scroll scenes from the taste library; Safari and Firefox were not tested (the torn effect needs scroll-driven animations; without them the titles simply stay aligned).
 - Allowed exceptions, as requested by the owner: Liquid Glass bar and plates, indigo accent, sulfur hover.
+
+## Later change
+
+The owner disliked the pinned "Lumo / za" halves and the floating app screens in the hero. The name is now one plain "Lumoza" title, and the hero stage floats only the Lumoza logo over the colour that changes with each game. The torn game titles stay.
