@@ -5,8 +5,8 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const STORE = {
-  mihenk: 'https://apps.apple.com/tr/app/mi-henkaynak/id6808742428',
-  trade: 'https://apps.apple.com/tr/app/tradeup-zero-to-home/id6811362281'
+  mihenk: 'https://apps.apple.com/app/mi-henkaynak/id6808742428',
+  trade: 'https://apps.apple.com/app/tradeup-zero-to-home/id6811362281'
 };
 const SITE = { trade: 'https://trade-up-zero-to-home.vercel.app/', tray: 'https://tepsi-telasi.vercel.app/' };
 const EMAIL = 'alpertosun@lumoza.art';
@@ -16,7 +16,7 @@ const shots = (name, count) => Array.from({ length: count }, (_, i) => `/assets/
 const copy = {
   en: {
     lang: 'en', path: '/', other: { href: '/tr/', label: 'Türkçe', lang: 'tr', aria: 'Siteyi Türkçe görüntüle' },
-    title: 'Lumoza — Independent game & product studio',
+    title: 'Lumoza — Independent game studio in Ankara',
     description: 'Lumoza is an independent game studio in Ankara, Türkiye, building with design, code and AI. MİHENKAYNAK and TradeUp are on the App Store; Hearthwalker: Son Ocak is coming soon.',
     ogDescription: 'Independent games and digital products built with design, code and AI. Based in Ankara, Türkiye.',
     ogAlt: 'Lumoza — independent games, built with care.',
@@ -31,7 +31,7 @@ const copy = {
       { href: STORE.trade, text: 'TradeUp on the App Store' }
     ],
     heroArt: 'The MİHENKAYNAK loading screen with the gold logo on a purple jeweller’s counter.',
-    shelfTitle: 'On the App Store', shelfLead: 'Two games are out. A third is coming soon.',
+    shelfTitle: 'Our iOS games', shelfLead: 'Two games are out. A third is coming soon.',
     shelf: [
       { icon: 'mihenkaynak-icon', name: 'MİHENKAYNAK', line: 'Goldsmith shop simulation', action: 'View', href: STORE.mihenk, aria: 'View MİHENKAYNAK on the App Store' },
       { icon: 'tradeup-icon', name: 'TradeUp: Zero to Home', line: 'Secondhand trading simulation', action: 'View', href: STORE.trade, aria: 'View TradeUp: Zero to Home on the App Store' },
@@ -45,7 +45,7 @@ const copy = {
         text: 'A portrait goldsmith shop simulation. Test and weigh gold, bargain with customers whose patience and budgets differ, and grow your shop’s reputation in a market where gold and currency prices move.',
         facts: 'iOS · Simulation · Turkish and English · Free, with optional upgrades',
         store: 'View on the App Store', shots: shots('mihenk', 7), href: STORE.mihenk,
-        alts: ['A customer asks for 7.5 grams of gold at the counter', 'The shop dashboard with cash, risks and the day’s sales', 'The finance view with cash, profit and stock lines', 'A restock dialog listing gold bars and coins', 'The stock list with price, margin and sell-through for each piece', 'The workshop with repairs and custom engraving orders', 'The market view with premium packs']
+        alts: ['A customer asks for 7.5 grams of gold at the counter', 'The shop dashboard with cash, risks and the day’s sales', 'The finance view with cash, profit and stock lines', 'A restock dialog listing gram gold and Turkish gold coins', 'The stock list with price, margin and sell-through for each piece', 'The workshop with repairs and custom engraving orders', 'The market view with premium packs']
       },
       trade: {
         id: 'trade', name: 'TradeUp', tagline: 'Read the market. Trade your way up.',
@@ -86,6 +86,7 @@ const copy = {
     next: 'Next screens', nextAria: 'Show the next screens',
     devTitle: 'In development',
     dev: [
+      { id: 'bim', icon: 'bimquest-icon', name: 'BIMQUEST', genre: 'Educational game, in testing on TestFlight', text: 'A mobile game that teaches Revit through play: seven chapters from BIM basics to views and documentation, with a live 2D plan and a 3D model to build.' },
       { id: 'street', icon: 'street-striker-icon', name: 'Street Striker: Zero to Legend', genre: 'Arcade RPG', text: 'Street fighting meets RPG progression, with equipment, training and roguelite skills shaping each fight.' },
       { id: 'tray', icon: 'trayful-icon', name: 'Trayful Café', genre: 'Physics puzzle', text: 'One tray, one clamp and 24 café puzzles. Balance your ingredients and choose the order of every delivery.', link: SITE.tray, linkText: 'Project website' }
     ],
@@ -102,12 +103,12 @@ const copy = {
     city: 'Ankara, Türkiye', top: 'Back to top',
     footerPlaces: 'Reach the studio', footerGames: 'Games', footerSite: 'Site',
     footerLinks: { mihenk: 'MİHENKAYNAK on the App Store', trade: 'TradeUp on the App Store', son: 'Hearthwalker: Son Ocak, coming soon' },
-    credit: 'Photograph “Ankara Sunset” by Ömer Ünlü, CC BY 2.0, via Wikimedia Commons.',
+    creditA: 'Photograph “Ankara Sunset” by Ömer Ünlü, via', creditB: ', cropped.',
     legal: '© 2026 Lumoza. Revit is a trademark of Autodesk, Inc. BIMQUEST is an independent project.'
   },
   tr: {
     lang: 'tr', path: '/tr/', other: { href: '/', label: 'English', lang: 'en', aria: 'View this site in English' },
-    title: 'Lumoza — Bağımsız oyun ve ürün stüdyosu',
+    title: 'Lumoza — Ankara’da bağımsız oyun stüdyosu',
     description: 'Lumoza, Ankara merkezli bağımsız bir oyun stüdyosudur; tasarım, kod ve yapay zekâyla geliştirir. MİHENKAYNAK ve TradeUp App Store’da; Hearthwalker: Son Ocak yakında.',
     ogDescription: 'Tasarım, kod ve yapay zekâyla geliştirilen bağımsız oyunlar ve dijital ürünler. Ankara, Türkiye.',
     ogAlt: 'Lumoza — özenle yapılmış bağımsız oyunlar.',
@@ -122,7 +123,7 @@ const copy = {
       { href: STORE.trade, text: 'TradeUp, App Store’da' }
     ],
     heroArt: 'Mor bir kuyumcu tezgâhında altın logolu MİHENKAYNAK açılış ekranı.',
-    shelfTitle: 'App Store’da', shelfLead: 'İki oyun yayında. Üçüncüsü yakında.',
+    shelfTitle: 'iOS oyunlarımız', shelfLead: 'İki oyun yayında. Üçüncüsü yakında.',
     shelf: [
       { icon: 'mihenkaynak-icon', name: 'MİHENKAYNAK', line: 'Kuyumcu dükkânı simülasyonu', action: 'Görüntüle', href: STORE.mihenk, aria: 'MİHENKAYNAK’ı App Store’da görüntüle' },
       { icon: 'tradeup-icon', name: 'TradeUp: Zero to Home', line: 'İkinci el ticaret simülasyonu', action: 'Görüntüle', href: STORE.trade, aria: 'TradeUp: Zero to Home’u App Store’da görüntüle' },
@@ -136,7 +137,7 @@ const copy = {
         text: 'Dikey oynanan bir kuyumcu dükkânı simülasyonu. Altını test et ve tart, sabrı ve bütçesi farklı müşterilerle pazarlık et, altın ve döviz fiyatlarının oynadığı bir piyasada dükkânının itibarını büyüt.',
         facts: 'iOS · Simülasyon · Türkçe ve İngilizce · Ücretsiz, isteğe bağlı paketlerle',
         store: 'App Store’da görüntüle', shots: shots('mihenk', 7), href: STORE.mihenk,
-        alts: ['Tezgâhta 7,5 gram altın isteyen bir müşteri', 'Nakit, riskler ve günün satışlarıyla dükkân paneli', 'Nakit, kâr ve stok satırlarıyla finans ekranı', 'Altın bilezik ve sikkeleri listeleyen stok temin penceresi', 'Her parçanın fiyatı, marjı ve satış hızıyla stok listesi', 'Tamir ve özel gravür siparişleriyle atölye', 'Premium paketlerin göründüğü market ekranı']
+        alts: ['Tezgâhta 7,5 gram altın isteyen bir müşteri', 'Nakit, riskler ve günün satışlarıyla dükkân paneli', 'Nakit, kâr ve stok satırlarıyla finans ekranı', 'Gram altın ve ziynet altınlarını listeleyen stok temin penceresi', 'Her parçanın fiyatı, marjı ve satış hızıyla stok listesi', 'Tamir ve özel gravür siparişleriyle atölye', 'Premium paketlerin göründüğü market ekranı']
       },
       trade: {
         id: 'trade', name: 'TradeUp', tagline: 'Piyasayı oku. Basamak basamak yüksel.',
@@ -177,6 +178,7 @@ const copy = {
     next: 'Sonraki ekranlar', nextAria: 'Sonraki ekranları göster',
     devTitle: 'Geliştirme aşamasında',
     dev: [
+      { id: 'bim', icon: 'bimquest-icon', name: 'BIMQUEST', genre: 'Eğitici oyun, TestFlight’ta test ediliyor', text: 'Revit’i oyun oynayarak öğreten bir mobil oyun: BIM temellerinden görünüm ve dokümantasyona yedi bölüm; kurabileceğin canlı bir 2B plan ve 3B model.' },
       { id: 'street', icon: 'street-striker-icon', name: 'Street Striker: Zero to Legend', genre: 'Arcade RPG', text: 'Sokak dövüşü, RPG ilerlemesiyle buluşuyor; ekipman, antrenman ve roguelite yetenekler her dövüşü şekillendiriyor.' },
       { id: 'tray', icon: 'trayful-icon', name: 'Trayful Café', genre: 'Fizik bulmacası', text: 'Tek tepsi, tek kıskaç ve 24 kafe bulmacası. Malzemelerini dengele, her siparişin sırasını sen seç.', link: SITE.tray, linkText: 'Proje sitesi' }
     ],
@@ -193,7 +195,7 @@ const copy = {
     city: 'Ankara, Türkiye', top: 'Başa dön',
     footerPlaces: 'Stüdyoya ulaşın', footerGames: 'Oyunlar', footerSite: 'Site',
     footerLinks: { mihenk: 'MİHENKAYNAK, App Store’da', trade: 'TradeUp, App Store’da', son: 'Hearthwalker: Son Ocak, yakında' },
-    credit: '“Ankara Sunset” fotoğrafı: Ömer Ünlü, CC BY 2.0, Wikimedia Commons üzerinden.',
+    creditA: '“Ankara Sunset” fotoğrafı: Ömer Ünlü,', creditB: ', kırpılmıştır.',
     legal: '© 2026 Lumoza. Revit, Autodesk, Inc.’in ticari markasıdır. BIMQUEST bağımsız bir projedir.'
   }
 };
@@ -212,8 +214,8 @@ function stage(t, key, o) {
   const leftPane = key === 'alvera' ? pic(g.pics[0]) : key === 'son'
     ? `<img class="icon-lg" src="/assets/games/son-ocak-icon.webp" alt="${esc(g.iconAlt)}" width="512" height="512" loading="lazy" decoding="async">`
     : left;
-  const rightPane = key === 'alvera' ? pic(g.pics[1]) : key === 'son' ? `<span class="detail"><img src="/assets/games/son-ocak-icon.webp" alt="" width="512" height="512" loading="lazy" decoding="async"></span>` : right;
-  const sub = g.sub ? `<p class="sub">${esc(g.sub)}</p>` : '';
+  const rightPane = key === 'alvera' ? pic(g.pics[1]) : key === 'son' ? `<p class="pane-note">${esc(g.pane)}</p>` : right;
+  const sub = g.sub ? `<p class="sub" lang="tr">${esc(g.sub)}</p>` : '';
   const actions = [];
   if (g.href) actions.push(ext(g.href, esc(g.store), t, 'button'));
   if (g.siteHref) actions.push(ext(g.siteHref, esc(g.site), t, 'text-link'));
@@ -286,7 +288,7 @@ ${t.lang === 'en' ? `    <script>try{var l=localStorage.getItem('lumoza-lang');i
 
     <header class="bar">
       <nav class="bar-nav glass" aria-label="${esc(t.navAria)}">
-        <a class="bar-mark" href="#top" aria-label="${esc(t.homeAria)}"><img src="/assets/brand/lumoza-mark.webp" alt="" width="36" height="36"></a>
+        <a class="bar-mark" href="#top" aria-label="${esc(t.homeAria)}"><img src="/assets/brand/lumoza-icon-96.webp" alt="" width="36" height="36"></a>
         <a href="#games">${esc(t.nav.games)}</a>
         <a href="#studio">${esc(t.nav.studio)}</a>
         <a href="#contact">${esc(t.nav.contact)}</a>
@@ -335,7 +337,6 @@ ${t.lang === 'en' ? `    <script>try{var l=localStorage.getItem('lumoza-lang');i
 ${stage(t, 'mihenk')}
 ${stage(t, 'trade')}
 ${stage(t, 'son')}
-${stage(t, 'bim')}
       </section>
 
       <section class="dev" aria-labelledby="dev-title">
@@ -376,12 +377,16 @@ ${stage(t, 'alvera')}
       <section class="contact" id="contact" aria-labelledby="contact-title">
         <h2 id="contact-title">${esc(t.contactTitle)}</h2>
         <a class="email" href="mailto:${EMAIL}"><span>${EMAIL.split('@')[0]}@</span><span>${EMAIL.split('@')[1]}</span></a>
-        <p class="contact-city">${esc(t.city)}</p>
+        <div class="contact-side">
+          <p class="contact-city">${esc(t.city)}</p>
+          ${ext(STORE.mihenk, esc(t.footerLinks.mihenk), t, 'text-link')}
+          ${ext(STORE.trade, esc(t.footerLinks.trade), t, 'text-link')}
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p class="footer-name" aria-hidden="true">Lumoza.</p>
+      <p class="footer-name" aria-hidden="true">Lumoza</p>
       <div class="footer-grid">
         <div class="footer-places">
           <p class="footer-label">${esc(t.footerPlaces)}</p>
@@ -403,7 +408,7 @@ ${stage(t, 'alvera')}
       </div>
       <div class="footer-legal">
         <p>${esc(t.legal)}</p>
-        <p>${esc(t.credit)}</p>
+        <p>${esc(t.creditA)} ${ext('https://commons.wikimedia.org/wiki/File:Ankara_Sunset_-_20904494950.jpg', 'Wikimedia Commons', t)}, ${ext('https://creativecommons.org/licenses/by/2.0/', 'CC BY 2.0', t)}${esc(t.creditB)}</p>
         <a class="to-top" href="#top">${esc(t.top)}</a>
       </div>
     </footer>

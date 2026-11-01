@@ -18,7 +18,10 @@ for (const game of document.querySelectorAll('.game[data-screens]')) {
   live.setAttribute('aria-live', 'polite');
   game.querySelector('.actions').append(live);
   const pair = () => document.documentElement.lang === 'tr' ? `${index + 1}. ve ${((index + 1) % screens.length) + 1}. ekran, toplam ${screens.length}` : `Screens ${index + 1} and ${((index + 1) % screens.length) + 1} of ${screens.length}`;
-  for (const s of screens) new Image().src = s.src;
+  // Fetch the other screens only when someone shows interest in the button.
+  const warm = () => { for (const s of screens) new Image().src = s.src; };
+  button.addEventListener('pointerenter', warm, { once: true });
+  button.addEventListener('focus', warm, { once: true });
   button.addEventListener('click', () => {
     index = (index + 1) % screens.length;
     shots.forEach((img, i) => {

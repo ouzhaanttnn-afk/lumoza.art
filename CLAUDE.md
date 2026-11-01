@@ -20,7 +20,7 @@ Details, versions and test results: `docs/design-skills.md`.
 ## Rules for this project
 
 - Brand is fixed: indigo `#3346d3`, the L-and-spark mark in `assets/brand/`, Instrument Sans, and one flat colour field per game taken from its icon. Do not change them without being asked.
-- The owner asked for a Liquid Glass touch (header bar, fact plates) and sulfur `#E1E620` on hover only. These are the only allowed exceptions to the taste skill's no-glass, no-gradient rules; they carry `taste-skill-ignore` comments in `styles.css`.
+- The owner asked for a Liquid Glass touch (header bar, fact plates) and sulfur `#E1E620` on hover only (resting link underlines use the text colour). These are the only allowed exceptions to the taste skill's no-glass, no-gradient rules; they carry `taste-skill-ignore` comments in `styles.css`.
 - The hero stage is deliberately lively (colour walking through each game's world, the floating Lumoza logo with two slow rings and two soft blurred colour blobs; no pinned split name, no floating app screens; the owner asked for it after liking alverakuyumculuk.com). Keep it flat everywhere else.
 - The English page sends Turkish browsers to `/tr/` once (inline script in the head); an explicit language click is remembered in `localStorage` (`lumoza-lang`).
 - AI stays a small mention (the studio sentence, one principle, page descriptions). Never in headlines.
