@@ -30,7 +30,7 @@ No two project skills share a name. The plugin skills available in some environm
 
 1. Plan: `python3 .claude/skills/ui-ux-pro-max/scripts/search.py "<brief>" --design-system -p "Lumoza"`. Its dark/black palette suggestion was rejected (brand and owner preference); its pattern and accessibility checklist were kept.
 2. Art direction: `node .claude/skills/design-taste-frontend/scripts/draw.mjs …` dealt "The pinned poster" (seed 61957078, saved in `.taste-skill/direction.json`). The idea sentence: the studio's name stays pinned while each game's own screens and colour pass beneath it, and each game's name is torn at the seam.
-3. Build: `scripts/pages.mjs` + `styles.css`, real pictures only (App Store screenshots, the BIMQUEST repository's own screenshots, one credited Wikimedia photograph).
+3. Build: `scripts/pages.mjs` + `styles.css`, real pictures only (App Store screenshots, the BIMQUEST repository's own screenshots; a credited Wikimedia photo of Ankara was used until 2026-11-01, then replaced by a wall of the studio's game icons).
 4. Audit: `node …/inspect.mjs` at 1440, 768 and 390; `…/lint.mjs`; `impeccable detect`.
 5. Polish: rules from `better-accessibility`, `better-colors`, `better-typography`, `better-layout` applied by hand (focus visibility under the fixed bar, label-in-name, live region for the screen switcher, contrast table, 44px targets, short-viewport fallback).
 

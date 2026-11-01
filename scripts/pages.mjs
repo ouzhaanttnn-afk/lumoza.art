@@ -98,12 +98,11 @@ const copy = {
       { h: 'Explore with AI', p: 'Use AI to explore possibilities and support iteration, with human judgment guiding the work.' }
     ],
     founder: 'Oğuzhan Alper Tosun', founderRole: 'Founder and product designer',
-    photoAlt: 'Ankara at dusk, with the city’s rooftops and hills under an orange sky', photoCaption: 'Ankara at dusk.',
+    wallLabel: 'Our games so far', wallOut: 'on the App Store', wallNext: 'on the way',
     contactTitle: 'Press, partnerships or a question about our games? Write to us.',
     city: 'Ankara, Türkiye', top: 'Back to top',
     footerPlaces: 'Reach the studio', footerGames: 'Games', footerSite: 'Site',
     footerLinks: { mihenk: 'MİHENKAYNAK on the App Store', trade: 'TradeUp on the App Store', son: 'Hearthwalker: Son Ocak, coming soon' },
-    creditA: 'Photograph “Ankara Sunset” by Ömer Ünlü, via', creditB: ', cropped.',
     legal: '© 2026 Lumoza. Revit is a trademark of Autodesk, Inc. BIMQUEST is an independent project.'
   },
   tr: {
@@ -190,12 +189,11 @@ const copy = {
       { h: 'Yapay zekâyla keşfet', p: 'Olasılıkları keşfetmek ve denemeleri hızlandırmak için yapay zekâyı kullan; yönü insan kararı belirlesin.' }
     ],
     founder: 'Oğuzhan Alper Tosun', founderRole: 'Kurucu ve ürün tasarımcısı',
-    photoAlt: 'Turuncu bir gökyüzü altında Ankara’nın çatıları ve tepeleri, akşamüstü', photoCaption: 'Akşamüstü Ankara.',
+    wallLabel: 'Şimdiye kadarki oyunlarımız', wallOut: 'App Store’da', wallNext: 'yolda',
     contactTitle: 'Basın, iş birliği ya da oyunlarımızla ilgili bir soru mu? Bize yazın.',
     city: 'Ankara, Türkiye', top: 'Başa dön',
     footerPlaces: 'Stüdyoya ulaşın', footerGames: 'Oyunlar', footerSite: 'Site',
     footerLinks: { mihenk: 'MİHENKAYNAK, App Store’da', trade: 'TradeUp, App Store’da', son: 'Hearthwalker: Son Ocak, yakında' },
-    creditA: '“Ankara Sunset” fotoğrafı: Ömer Ünlü,', creditB: ', kırpılmıştır.',
     legal: '© 2026 Lumoza. Revit, Autodesk, Inc.’in ticari markasıdır. BIMQUEST bağımsız bir projedir.'
   }
 };
@@ -368,10 +366,17 @@ ${stage(t, 'alvera')}
           </ul>
           <p class="founder"><strong>${esc(t.founder)}</strong><span>${esc(t.founderRole)}</span></p>
         </div>
-        <figure class="studio-photo">
-          <img src="/assets/places/ankara-sunset.webp" alt="${esc(t.photoAlt)}" width="1920" height="907" loading="lazy" decoding="async">
-          <figcaption>${esc(t.photoCaption)}</figcaption>
-        </figure>
+        <ul class="studio-wall" aria-label="${esc(t.wallLabel)}">
+          <li><img src="/assets/games/mihenkaynak-icon.webp" alt="MİHENKAYNAK" width="512" height="512" loading="lazy" decoding="async"></li>
+          <li><img src="/assets/games/tradeup-icon.webp" alt="TradeUp: Zero to Home" width="512" height="512" loading="lazy" decoding="async"></li>
+          <li class="wall-count"><strong>2</strong><span>${esc(t.wallOut)}</span></li>
+          <li><img src="/assets/games/son-ocak-icon.webp" alt="Hearthwalker: Son Ocak" width="512" height="512" loading="lazy" decoding="async"></li>
+          <li class="wall-logo"><img src="/assets/brand/lumoza-app-icon-720.webp" alt="Lumoza" width="720" height="720" loading="lazy" decoding="async"></li>
+          <li><img src="/assets/games/bimquest-icon.webp" alt="BIMQUEST" width="512" height="512" loading="lazy" decoding="async"></li>
+          <li class="wall-count"><strong>4</strong><span>${esc(t.wallNext)}</span></li>
+          <li><img src="/assets/games/street-striker-icon.webp" alt="Street Striker: Zero to Legend" width="512" height="512" loading="lazy" decoding="async"></li>
+          <li><img src="/assets/games/trayful-icon.webp" alt="Trayful Café" width="192" height="192" loading="lazy" decoding="async"></li>
+        </ul>
       </section>
 
       <section class="contact" id="contact" aria-labelledby="contact-title">
@@ -408,7 +413,6 @@ ${stage(t, 'alvera')}
       </div>
       <div class="footer-legal">
         <p>${esc(t.legal)}</p>
-        <p>${esc(t.creditA)} ${ext('https://commons.wikimedia.org/wiki/File:Ankara_Sunset_-_20904494950.jpg', 'Wikimedia Commons', t)}, ${ext('https://creativecommons.org/licenses/by/2.0/', 'CC BY 2.0', t)}${esc(t.creditB)}</p>
         <a class="to-top" href="#top">${esc(t.top)}</a>
       </div>
     </footer>
