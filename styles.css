@@ -136,6 +136,20 @@ button{font:inherit;color:inherit}
 @keyframes ember{0%{transform:translate(0,0) scale(1);opacity:0}8%{opacity:1}55%{opacity:.85}100%{transform:translate(var(--dx),-85svh) scale(.3);opacity:0}}
 @keyframes hearth{0%,100%{opacity:.7}35%{opacity:1}60%{opacity:.85}}
 
+/* Ambient layers for the other worlds (the owner asked for one per game after the embers). Behind the copy, off under reduced motion. */
+.fx{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.fx span{position:absolute;left:var(--x);opacity:0}
+.stage .shot,.stage .icon-lg,.pane-note{position:relative;z-index:2}
+/* MİHENKAYNAK: flakes of gold leaf drift down and turn in the light. */
+.fx-mihenk span{top:-20px;width:calc(var(--s)*.7);height:calc(var(--s)*1.1);border-radius:2px;background:linear-gradient(135deg,#fff0c2,#e2b45f 45%,#a8762f);box-shadow:0 0 10px #f1c98f88;animation:leaf var(--t) linear var(--d) infinite} /* taste-skill-ignore: gold leaf is the game's subject */
+@keyframes leaf{0%{transform:translate(0,0) rotate(var(--r)) rotateY(0);opacity:0}10%{opacity:.95}85%{opacity:.8}100%{transform:translate(var(--dx),105svh) rotate(calc(var(--r) + 260deg)) rotateY(540deg);opacity:0}}
+/* TradeUp: small up-ticks rise like prices on a live market. */
+.fx-trade span{bottom:-24px;width:0;height:0;border-left:calc(var(--s)*.55) solid transparent;border-right:calc(var(--s)*.55) solid transparent;border-bottom:var(--s) solid #c9ec7e;filter:drop-shadow(0 0 6px #c9ec7eaa);animation:tick var(--t) cubic-bezier(.3,.6,.4,1) var(--d) infinite} /* taste-skill-ignore */
+@keyframes tick{0%{transform:translateY(0);opacity:0}12%{opacity:.9}70%{opacity:.6}100%{transform:translateY(-95svh);opacity:0}}
+/* Alvera: four-point sparkles flash where a stone would catch the light. */
+.fx-alvera span{top:var(--y);width:calc(var(--s)*1.6);height:calc(var(--s)*1.6);background:#fff6df;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);filter:drop-shadow(0 0 8px #f1d9a8);animation:glint calc(var(--t)*.45) ease-in-out var(--d) infinite} /* taste-skill-ignore */
+@keyframes glint{0%,55%,100%{transform:scale(0) rotate(0);opacity:0}70%{transform:scale(1.2) rotate(45deg);opacity:1}85%{transform:scale(.5) rotate(90deg);opacity:.7}}
+
 /* In development */
 .dev{background:var(--bg)}
 .dev h2{padding:clamp(56px,6vw,88px) var(--m) clamp(24px,3vw,40px);font-size:var(--h2);font-weight:600;letter-spacing:-.03em;line-height:1.15}

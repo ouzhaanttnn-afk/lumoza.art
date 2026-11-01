@@ -208,6 +208,15 @@ const EMBERS = Array.from({ length: 32 }, (_, i) => {
   return `<span style="--x:${x}%;--s:${size}px;--t:${dur}s;--d:${delay.toFixed(2)}s;--dx:${drift}px"></span>`;
 }).join('');
 
+// A small ambient layer for every world, taken from what the game is about:
+// gold leaf falling in the goldsmith's shop, price ticks rising in TradeUp, stones catching the light for Alvera.
+const particles = (n, seed) => Array.from({ length: n }, (_, i) => {
+  const k = i * seed;
+  const x = (k * 37 + 11) % 100, y = (k * 53 + 7) % 90, s = [6, 9, 12, 8, 14, 10][i % 6], t = 7 + ((k * 7) % 7), d = -((k * 1.37) % t), dx = ((k * 23) % 80) - 40, r = (k * 47) % 360;
+  return `<span style="--x:${x}%;--y:${y}%;--s:${s}px;--t:${t}s;--d:${d.toFixed(2)}s;--dx:${dx}px;--r:${r}deg"></span>`;
+}).join('');
+const FX = { mihenk: particles(26, 1), trade: particles(22, 3), alvera: particles(30, 5) };
+
 function stage(t, key, o) {
   const g = key === 'alvera' ? t.web : t.games[key];
   const screens = g.shots;
@@ -231,7 +240,7 @@ function stage(t, key, o) {
   return `
       <article class="game world-${key}" aria-labelledby="g-${key}"${data}>
         <div class="stage">
-          ${key === 'son' ? `<div class="embers" aria-hidden="true">${EMBERS}</div>` : ''}
+          ${key === 'son' ? `<div class="embers" aria-hidden="true">${EMBERS}</div>` : FX[key] ? `<div class="fx fx-${key}" aria-hidden="true">${FX[key]}</div>` : ''}
           <div class="pane pane-l">${leftPane}</div>
           <div class="pane pane-r">${rightPane}</div>
           <div class="info">

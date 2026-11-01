@@ -23,7 +23,7 @@ Details, versions and test results: `docs/design-skills.md`.
 - The owner asked for a Liquid Glass touch (header bar, fact plates) and sulfur `#E1E620` on hover only (resting link underlines use the text colour). These are the only allowed exceptions to the taste skill's no-glass, no-gradient rules; they carry `taste-skill-ignore` comments in `styles.css`.
 - The hero stage is deliberately lively (colour walking through each game's world, the floating Lumoza logo with two slow rings and two soft blurred colour blobs; no pinned split name, no floating app screens; the owner asked for it after liking alverakuyumculuk.com). Keep it flat everywhere else.
 - The English page sends Turkish browsers to `/tr/` once (inline script in the head); an explicit language click is remembered in `localStorage` (`lumoza-lang`).
-- The owner loves the torn game titles that slide apart while scrolling and the rising embers behind Hearthwalker. Keep both.
+- The owner loves the torn game titles that slide apart while scrolling and the ambient layer behind each game (embers for Hearthwalker, falling gold leaf for MİHENKAYNAK, rising price ticks for TradeUp, stone glints for Alvera). Keep them.
 - AI stays a small mention (the studio sentence, one principle, page descriptions). Never in headlines.
 - Every page change ships in English and Turkish.
 - Gates before pushing: `npm run check`, `node .claude/skills/design-taste-frontend/scripts/lint.mjs index.html styles.css main.js`, and the inspector (needs Chrome; as root set `CHROME_PATH` to a wrapper that adds `--no-sandbox`).
