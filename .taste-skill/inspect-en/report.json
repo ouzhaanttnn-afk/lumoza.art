@@ -1,0 +1,3023 @@
+{
+ "url": "http://localhost:4182/",
+ "at": "2026-11-01T16:28:20.341Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.61,
+    1,
+    0.91,
+    0.91,
+    0.91,
+    0.91,
+    0.94,
+    0.75,
+    0.97,
+    0.73,
+    0.68,
+    1
+   ],
+   "motion": {
+    "elements": 45,
+    "css": 45,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 11140,
+     "screens": 12.4,
+     "words": 607,
+     "img": 23,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 7,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 14,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "trade-1.webp",
+      "bimquest-2.webp",
+      "mihenk-1.webp",
+      "mihenk-1.webp",
+      "mihenk-2.webp",
+      "trade-1.webp",
+      "trade-2.webp",
+      "son-ocak-icon.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Lumo",
+     "words": 1,
+     "chars": 4,
+     "lines": 1,
+     "size": 144,
+     "vw": 10,
+     "font": "Instrument Sans",
+     "weight": 700,
+     "tracking": -0.05,
+     "leading": 0.85,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.25,
+     "top": 32,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Lumo",
+     "words": 1,
+     "lines": 1,
+     "size": 144,
+     "font": "Instrument Sans"
+    },
+    "headings": [
+     {
+      "text": "Lumo",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 144,
+      "vw": 10,
+      "font": "Instrument Sans",
+      "weight": 700,
+      "tracking": -0.05,
+      "leading": 0.85,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.25,
+      "top": 32,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "On the App Store",
+      "words": 4,
+      "chars": 16,
+      "lines": 1,
+      "size": 34.6,
+      "vw": 2.4,
+      "font": "Instrument Sans",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.3,
+      "top": 1305,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "MİHEN KAYNAK",
+      "words": 2,
+      "chars": 12,
+      "lines": 2,
+      "size": 144,
+      "vw": 10,
+      "font": "Instrument Sans",
+      "weight": 700,
+      "tracking": -0.04,
+      "leading": 0.8,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 2394,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "TRAD EUP",
+      "words": 2,
+      "chars": 8,
+      "lines": 2,
+      "size": 144,
+      "vw": 10,
+      "font": "Instrument Sans",
+      "weight": 700,
+      "tracking": -0.04,
+      "leading": 0.8,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 3654,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "HEARTH WALKER",
+      "words": 2,
+      "chars": 13,
+      "lines": 2,
+      "size": 144,
+      "vw": 10,
+      "font": "Instrument Sans",
+      "weight": 700,
+      "tracking": -0.04,
+      "leading": 0.8,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 4914,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "BIMQ UEST",
+      "words": 2,
+      "chars": 9,
+      "lines": 2,
+      "size": 144,
+      "vw": 10,
+      "font": "Instrument Sans",
+      "weight": 700,
+      "tracking": -0.04,
+      "leading": 0.8,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 6174,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "In development",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 34.6,
+      "vw": 2.4,
+      "font": "Instrument Sans",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 6840,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Street Striker: Zero to Legend",
+      "words": 5,
+      "chars": 30,
+      "lines": 1,
+      "size": 34.6,
+      "vw": 2.4,
+      "font": "Instrument Sans",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.31,
+      "top": 7261,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Trayful Café",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 34.6,
+      "vw": 2.4,
+      "font": "Instrument Sans",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.13,
+      "top": 7261,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "ALV ERA",
+      "words": 2,
+      "chars": 7,
+      "lines": 2,
+      "size": 144,
+      "vw": 10,
+      "font": "Instrument Sans",
+      "weight": 700,
+      "tracking": -0.04,
+      "leading": 0.8,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 8131,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "A small studio in Ankara.",
+      "words": 5,
+      "chars": 25,
+      "lines": 1,
+      "size": 34.6,
+      "vw": 2.4,
+      "font": "Instrument Sans",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.48,
+      "top": 8997,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "alpertosun@ lumoza.art",
+      "words": 2,
+      "chars": 22,
+      "lines": 2,
+      "size": 144,
+      "vw": 10,
+      "font": "Instrument Sans",
+      "weight": 600,
+      "tracking": -0.05,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 9908,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "Lumoza.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 324,
+      "vw": 22.5,
+      "font": "Instrument Sans",
+      "weight": 700,
+      "tracking": -0.06,
+      "leading": 0.8,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 10434,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "alpertosun@lumoza.art",
+      "words": 1,
+      "chars": 21,
+      "lines": 1,
+      "size": 34.6,
+      "vw": 2.4,
+      "font": "Instrument Sans",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.39,
+      "top": 10835,
+      "tag": "a",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 14,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Instrument Sans",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      14,
+      17,
+      20,
+      35,
+      144,
+      324
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": {
+      "font": "Instrument Sans",
+      "size": 17,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": null
+     },
+     "measureChars": 52,
+     "max": {
+      "size": 324,
+      "vw": 22.5,
+      "font": "Instrument Sans",
+      "text": "Lumoza."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f3f5fb",
+     "bodyBgHsl": {
+      "h": 225,
+      "s": 0.5,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f3f5fb",
+       "top": 0,
+       "hsl": {
+        "h": 225,
+        "s": 0.5,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#115654",
+       "top": 0,
+       "hsl": {
+        "h": 178,
+        "s": 0.67,
+        "l": 0.2
+       }
+      },
+      {
+       "color": "#e4e8f6",
+       "top": 900,
+       "hsl": {
+        "h": 227,
+        "s": 0.5,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#3346d3",
+       "top": 960,
+       "hsl": {
+        "h": 233,
+        "s": 0.65,
+        "l": 0.51
+       }
+      },
+      {
+       "color": "#4a2266",
+       "top": 1728,
+       "hsl": {
+        "h": 275,
+        "s": 0.5,
+        "l": 0.27
+       }
+      },
+      {
+       "color": "#3b1a52",
+       "top": 1512,
+       "hsl": {
+        "h": 275,
+        "s": 0.52,
+        "l": 0.21
+       }
+      },
+      {
+       "color": "#17612e",
+       "top": 2988,
+       "hsl": {
+        "h": 139,
+        "s": 0.62,
+        "l": 0.24
+       }
+      },
+      {
+       "color": "#114d24",
+       "top": 2772,
+       "hsl": {
+        "h": 139,
+        "s": 0.64,
+        "l": 0.18
+       }
+      },
+      {
+       "color": "#0f5262",
+       "top": 4248,
+       "hsl": {
+        "h": 192,
+        "s": 0.73,
+        "l": 0.22
+       }
+      },
+      {
+       "color": "#963f16",
+       "top": 4032,
+       "hsl": {
+        "h": 19,
+        "s": 0.74,
+        "l": 0.34
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.71
+      },
+      {
+       "color": "#141a36",
+       "share": 0.14
+      },
+      {
+       "color": "#464e70",
+       "share": 0.1
+      },
+      {
+       "color": "#f1c98f",
+       "share": 0.01
+      },
+      {
+       "color": "#c9ec7e",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#3346d3",
+      "hsl": {
+       "h": 233,
+       "s": 0.65,
+       "l": 0.51
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 8,
+     "inHero": 2,
+     "radius": "pill",
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "See our games"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 2,
+     "boxRadius": 50,
+     "squareMedia": 1,
+     "roundedMedia": 13,
+     "mediaRadius": 22,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.13
+     },
+     {
+      "type": "img",
+      "ratio": 0.1
+     },
+     {
+      "type": "img",
+      "ratio": 0.09
+     }
+    ],
+    "nav": {
+     "links": 5,
+     "fixed": true,
+     "height": 56,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "instrument sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 11140,
+    "margins": {
+     "left": 32,
+     "right": 32
+    },
+    "sections": [
+     {
+      "sel": "div.pin",
+      "tag": "div",
+      "top": 0,
+      "height": 900,
+      "words": 2,
+      "media": 0,
+      "middle": 874,
+      "heading": {
+       "text": "Lumo",
+       "size": 144,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "section.panel.hero",
+      "tag": "section",
+      "top": 0,
+      "height": 900,
+      "words": 34,
+      "media": 3,
+      "middle": 32,
+      "heading": null,
+      "left": 245,
+      "right": 13,
+      "textLeft": 245,
+      "textRight": 743,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.panel.shelf",
+      "tag": "section",
+      "top": 900,
+      "height": 900,
+      "words": 33,
+      "media": 0,
+      "middle": 193,
+      "heading": {
+       "text": "On the App Store",
+       "size": 35,
+       "tag": "h2"
+      },
+      "left": 266,
+      "right": 52,
+      "textLeft": 266,
+      "textRight": 52,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "article.game.world-mihenk",
+      "tag": "article",
+      "top": 1800,
+      "height": 1260,
+      "words": 69,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "KAYNAK",
+       "size": 144,
+       "tag": "h3"
+      },
+      "left": 252,
+      "right": 147,
+      "textLeft": 286,
+      "textRight": 147,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "article.game.world-trade",
+      "tag": "article",
+      "top": 3060,
+      "height": 1260,
+      "words": 72,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "EUP",
+       "size": 144,
+       "tag": "h3"
+      },
+      "left": 252,
+      "right": 451,
+      "textLeft": 336,
+      "textRight": 451,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "article.game.world-son",
+      "tag": "article",
+      "top": 4320,
+      "height": 1260,
+      "words": 46,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "WALKER",
+       "size": 144,
+       "tag": "h3"
+      },
+      "left": 32,
+      "right": 134,
+      "textLeft": 164,
+      "textRight": 134,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "article.game.world-bim",
+      "tag": "article",
+      "top": 5580,
+      "height": 1260,
+      "words": 45,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "UEST",
+       "size": 144,
+       "tag": "h3"
+      },
+      "left": 252,
+      "right": 368,
+      "textLeft": 367,
+      "textRight": 368,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "section.dev",
+      "tag": "section",
+      "top": 6840,
+      "height": 697,
+      "words": 50,
+      "media": 0,
+      "middle": 273,
+      "heading": {
+       "text": "In development",
+       "size": 35,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 273,
+      "textLeft": 32,
+      "textRight": 273,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.work.work-web",
+      "tag": "section",
+      "top": 7537,
+      "height": 1260,
+      "words": 46,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "ERA",
+       "size": 144,
+       "tag": "h3"
+      },
+      "left": 32,
+      "right": 446,
+      "textLeft": 32,
+      "textRight": 446,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "section#studio.studio",
+      "tag": "section",
+      "top": 8797,
+      "height": 927,
+      "words": 88,
+      "media": 1,
+      "middle": 217,
+      "heading": {
+       "text": "A small studio in Ankara.",
+       "size": 35,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 0,
+      "textLeft": 32,
+      "textRight": 546,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#contact.contact",
+      "tag": "section",
+      "top": 9724,
+      "height": 678,
+      "words": 14,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "alpertosun@",
+       "size": 144,
+       "tag": "span"
+      },
+      "left": 32,
+      "right": 626,
+      "textLeft": 32,
+      "textRight": 626,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 10403,
+      "height": 737,
+      "words": 60,
+      "media": 0,
+      "middle": 104,
+      "heading": {
+       "text": "Lumoza.",
+       "size": 324,
+       "tag": "p"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Lumo",
+      "size": 144,
+      "top": 32,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 32,
+      "n": 9
+     },
+     {
+      "x": 501,
+      "n": 5
+     },
+     {
+      "x": 720,
+      "n": 5
+     },
+     {
+      "x": 520,
+      "n": 2
+     },
+     {
+      "x": 752,
+      "n": 2
+     },
+     {
+      "x": 164,
+      "n": 1
+     },
+     {
+      "x": 245,
+      "n": 1
+     },
+     {
+      "x": 266,
+      "n": 1
+     },
+     {
+      "x": 286,
+      "n": 1
+     },
+     {
+      "x": 336,
+      "n": 1
+     },
+     {
+      "x": 367,
+      "n": 1
+     },
+     {
+      "x": 460,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 30,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.13,
+    "voidBox": {
+     "x": 0,
+     "y": 180,
+     "w": 240,
+     "h": 720
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.56,
+    1,
+    0.88,
+    0.88,
+    0.89,
+    0.8,
+    0.88,
+    0.75,
+    1,
+    0.86,
+    0.57,
+    1
+   ],
+   "motion": {
+    "elements": 45,
+    "css": 45,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 12981,
+     "screens": 12.7,
+     "words": 607,
+     "img": 23,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 7,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 14,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "trade-1.webp",
+      "bimquest-2.webp",
+      "mihenk-1.webp",
+      "mihenk-1.webp",
+      "mihenk-2.webp",
+      "trade-1.webp",
+      "trade-2.webp",
+      "son-ocak-icon.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Lumo",
+     "words": 1,
+     "chars": 4,
+     "lines": 1,
+     "size": 76.8,
+     "vw": 10,
+     "font": "Instrument Sans",
+     "weight": 700,
+     "tracking": -0.05,
+     "leading": 0.85,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.25,
+     "top": 17,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Lumo",
+     "words": 1,
+     "lines": 1,
+     "size": 76.8,
+     "font": "Instrument Sans"
+    },
+    "headings": [
+     {
+      "text": "Lumo",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 76.8,
+      "vw": 10,
+      "font": "Instrument Sans",
+      "weight": 700,
+      "tracking": -0.05,
+      "leading": 0.85,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.25,
+      "top": 17,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "On the App Store",
+      "words": 4,
+      "chars": 16,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Instrument Sans",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 1323,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "MİHEN KAYNAK",
+      "words": 2,
+      "chars": 12,
+      "lines": 2,
+      "size": 76.8,
+      "vw": 10,
+      "font": "Instrument Sans",
+      "weight": 700,
+      "tracking": -0.04,
+      "leading": 0.8,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 2611,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "TRAD EUP",
+      "words": 2,
+      "chars": 8,
+      "lines": 2,
+      "size": 76.8,
+      "vw": 10,
+      "font": "Instrument Sans",
+      "weight": 700,
+      "tracking": -0.04,
+      "leading": 0.8,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 4045,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "HEARTH WALKER",
+      "words": 2,
+      "chars": 13,
+      "lines": 2,
+      "size": 76.8,
+      "vw": 10,
+      "font": "Instrument Sans",
+      "weight": 700,
+      "tracking": -0.04,
+      "leading": 0.8,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 5478,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "BIMQ UEST",
+      "words": 2,
+      "chars": 9,
+      "lines": 2,
+      "size": 76.8,
+      "vw": 10,
+      "font": "Instrument Sans",
+      "weight": 700,
+      "tracking": -0.04,
+      "leading": 0.8,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 6912,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "In development",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Instrument Sans",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 7782,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Street Striker: Zero to Legend",
+      "words": 5,
+      "chars": 30,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Instrument Sans",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 8111,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Trayful Café",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Instrument Sans",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.19,
+      "top": 8497,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "ALV ERA",
+      "words": 2,
+      "chars": 7,
+      "lines": 2,
+      "size": 76.8,
+      "vw": 10,
+      "font": "Instrument Sans",
+      "weight": 700,
+      "tracking": -0.04,
+      "leading": 0.8,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 9291,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "A small studio in Ankara.",
+      "words": 5,
+      "chars": 25,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Instrument Sans",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 10269,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "alpertosun@ lumoza.art",
+      "words": 2,
+      "chars": 22,
+      "lines": 2,
+      "size": 76.8,
+      "vw": 10,
+      "font": "Instrument Sans",
+      "weight": 600,
+      "tracking": -0.05,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 11964,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "Lumoza.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 172.8,
+      "vw": 22.5,
+      "font": "Instrument Sans",
+      "weight": 700,
+      "tracking": -0.06,
+      "leading": 0.8,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 12259,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "alpertosun@lumoza.art",
+      "words": 1,
+      "chars": 21,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Instrument Sans",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 12522,
+      "tag": "a",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 14,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Instrument Sans",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      14,
+      17,
+      18,
+      28,
+      77,
+      173
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": {
+      "font": "Instrument Sans",
+      "size": 17,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": null
+     },
+     "measureChars": 86,
+     "max": {
+      "size": 172.8,
+      "vw": 22.5,
+      "font": "Instrument Sans",
+      "text": "Lumoza."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f3f5fb",
+     "bodyBgHsl": {
+      "h": 225,
+      "s": 0.5,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f3f5fb",
+       "top": 0,
+       "hsl": {
+        "h": 225,
+        "s": 0.5,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#115653",
+       "top": 0,
+       "hsl": {
+        "h": 177,
+        "s": 0.67,
+        "l": 0.2
+       }
+      },
+      {
+       "color": "#e4e8f6",
+       "top": 1024,
+       "hsl": {
+        "h": 227,
+        "s": 0.5,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#3346d3",
+       "top": 1450,
+       "hsl": {
+        "h": 233,
+        "s": 0.65,
+        "l": 0.51
+       }
+      },
+      {
+       "color": "#4a2266",
+       "top": 1966,
+       "hsl": {
+        "h": 275,
+        "s": 0.5,
+        "l": 0.27
+       }
+      },
+      {
+       "color": "#3b1a52",
+       "top": 1720,
+       "hsl": {
+        "h": 275,
+        "s": 0.52,
+        "l": 0.21
+       }
+      },
+      {
+       "color": "#17612e",
+       "top": 3400,
+       "hsl": {
+        "h": 139,
+        "s": 0.62,
+        "l": 0.24
+       }
+      },
+      {
+       "color": "#114d24",
+       "top": 3154,
+       "hsl": {
+        "h": 139,
+        "s": 0.64,
+        "l": 0.18
+       }
+      },
+      {
+       "color": "#0f5262",
+       "top": 4833,
+       "hsl": {
+        "h": 192,
+        "s": 0.73,
+        "l": 0.22
+       }
+      },
+      {
+       "color": "#963f16",
+       "top": 4588,
+       "hsl": {
+        "h": 19,
+        "s": 0.74,
+        "l": 0.34
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.71
+      },
+      {
+       "color": "#141a36",
+       "share": 0.14
+      },
+      {
+       "color": "#464e70",
+       "share": 0.1
+      },
+      {
+       "color": "#f1c98f",
+       "share": 0.01
+      },
+      {
+       "color": "#c9ec7e",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#3346d3",
+      "hsl": {
+       "h": 233,
+       "s": 0.65,
+       "l": 0.51
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 8,
+     "inHero": 2,
+     "radius": "pill",
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "See our games"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 1,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 2,
+     "boxRadius": 50,
+     "squareMedia": 1,
+     "roundedMedia": 6,
+     "mediaRadius": 26,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.26
+     },
+     {
+      "type": "img",
+      "ratio": 0.19
+     },
+     {
+      "type": "img",
+      "ratio": 0.18
+     }
+    ],
+    "nav": {
+     "links": 5,
+     "fixed": true,
+     "height": 56,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "instrument sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 12981,
+    "margins": {
+     "left": 17,
+     "right": 17
+    },
+    "sections": [
+     {
+      "sel": "div.pin",
+      "tag": "div",
+      "top": 0,
+      "height": 1024,
+      "words": 2,
+      "media": 0,
+      "middle": 466,
+      "heading": {
+       "text": "Lumo",
+       "size": 77,
+       "tag": "h1"
+      },
+      "left": 17,
+      "right": 17,
+      "textLeft": 17,
+      "textRight": 17,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "section.panel.hero",
+      "tag": "section",
+      "top": 0,
+      "height": 1024,
+      "words": 34,
+      "media": 3,
+      "middle": 0,
+      "heading": null,
+      "left": 65,
+      "right": 0,
+      "textLeft": 65,
+      "textRight": 296,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.panel.shelf",
+      "tag": "section",
+      "top": 1024,
+      "height": 1024,
+      "words": 33,
+      "media": 0,
+      "middle": 282,
+      "heading": {
+       "text": "On the App Store",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 17,
+      "right": 33,
+      "textLeft": 17,
+      "textRight": 33,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "article.game.world-mihenk",
+      "tag": "article",
+      "top": 2048,
+      "height": 1434,
+      "words": 69,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "KAYNAK",
+       "size": 77,
+       "tag": "h3"
+      },
+      "left": 17,
+      "right": 62,
+      "textLeft": 17,
+      "textRight": 62,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "article.game.world-trade",
+      "tag": "article",
+      "top": 3482,
+      "height": 1434,
+      "words": 72,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "EUP",
+       "size": 77,
+       "tag": "h3"
+      },
+      "left": 17,
+      "right": 44,
+      "textLeft": 17,
+      "textRight": 44,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "article.game.world-son",
+      "tag": "article",
+      "top": 4915,
+      "height": 1434,
+      "words": 46,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "WALKER",
+       "size": 77,
+       "tag": "h3"
+      },
+      "left": 17,
+      "right": 42,
+      "textLeft": 17,
+      "textRight": 42,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "article.game.world-bim",
+      "tag": "article",
+      "top": 6349,
+      "height": 1434,
+      "words": 45,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "UEST",
+       "size": 77,
+       "tag": "h3"
+      },
+      "left": 17,
+      "right": 36,
+      "textLeft": 17,
+      "textRight": 36,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "section.dev",
+      "tag": "section",
+      "top": 7782,
+      "height": 945,
+      "words": 50,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "In development",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 17,
+      "right": 316,
+      "textLeft": 17,
+      "textRight": 316,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.work.work-web",
+      "tag": "section",
+      "top": 8728,
+      "height": 1434,
+      "words": 46,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "ERA",
+       "size": 77,
+       "tag": "h3"
+      },
+      "left": 17,
+      "right": 29,
+      "textLeft": 17,
+      "textRight": 29,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "section#studio.studio",
+      "tag": "section",
+      "top": 10161,
+      "height": 1343,
+      "words": 88,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "A small studio in Ankara.",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 17,
+      "right": 259,
+      "textLeft": 17,
+      "textRight": 259,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#contact.contact",
+      "tag": "section",
+      "top": 11505,
+      "height": 737,
+      "words": 14,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "alpertosun@",
+       "size": 77,
+       "tag": "span"
+      },
+      "left": 17,
+      "right": 334,
+      "textLeft": 17,
+      "textRight": 334,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 12242,
+      "height": 739,
+      "words": 60,
+      "media": 0,
+      "middle": 40,
+      "heading": {
+       "text": "Lumoza.",
+       "size": 173,
+       "tag": "p"
+      },
+      "left": 17,
+      "right": 17,
+      "textLeft": 17,
+      "textRight": 17,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 11652,
+      "height": 368
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Lumo",
+      "size": 77,
+      "top": 17,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 17,
+      "n": 17
+     },
+     {
+      "x": 384,
+      "n": 5
+     },
+     {
+      "x": 35,
+      "n": 2
+     },
+     {
+      "x": 65,
+      "n": 1
+     },
+     {
+      "x": 88,
+      "n": 1
+     },
+     {
+      "x": 153,
+      "n": 1
+     },
+     {
+      "x": 179,
+      "n": 1
+     },
+     {
+      "x": 196,
+      "n": 1
+     },
+     {
+      "x": 245,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 30,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.65,
+    1,
+    0.89,
+    0.9,
+    0.93,
+    0.81,
+    0.86,
+    0.75,
+    1,
+    0.89,
+    0.51,
+    0.93
+   ],
+   "motion": {
+    "elements": 45,
+    "css": 45,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 11428,
+     "screens": 13.5,
+     "words": 605,
+     "img": 23,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 7,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 13,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "trade-1.webp",
+      "mihenk-1.webp",
+      "mihenk-1.webp",
+      "mihenk-2.webp",
+      "trade-1.webp",
+      "trade-2.webp",
+      "son-ocak-icon.webp",
+      "son-ocak-icon.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Lumo",
+     "words": 1,
+     "chars": 4,
+     "lines": 1,
+     "size": 58.5,
+     "vw": 15,
+     "font": "Instrument Sans",
+     "weight": 700,
+     "tracking": -0.05,
+     "leading": 0.85,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.38,
+     "top": 16,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Lumo",
+     "words": 1,
+     "lines": 1,
+     "size": 58.5,
+     "font": "Instrument Sans"
+    },
+    "headings": [
+     {
+      "text": "Lumo",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 58.5,
+      "vw": 15,
+      "font": "Instrument Sans",
+      "weight": 700,
+      "tracking": -0.05,
+      "leading": 0.85,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.38,
+      "top": 16,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "On the App Store",
+      "words": 4,
+      "chars": 16,
+      "lines": 1,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Instrument Sans",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 1074,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "MİHEN KAYNAK",
+      "words": 2,
+      "chars": 12,
+      "lines": 2,
+      "size": 41.6,
+      "vw": 10.7,
+      "font": "Instrument Sans",
+      "weight": 700,
+      "tracking": -0.04,
+      "leading": 0.8,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 2034,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "TRAD EUP",
+      "words": 2,
+      "chars": 8,
+      "lines": 2,
+      "size": 41.6,
+      "vw": 10.7,
+      "font": "Instrument Sans",
+      "weight": 700,
+      "tracking": -0.04,
+      "leading": 0.8,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 3216,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "HEARTH WALKER",
+      "words": 2,
+      "chars": 13,
+      "lines": 2,
+      "size": 41.6,
+      "vw": 10.7,
+      "font": "Instrument Sans",
+      "weight": 700,
+      "tracking": -0.04,
+      "leading": 0.8,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 4397,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "BIMQ UEST",
+      "words": 2,
+      "chars": 9,
+      "lines": 2,
+      "size": 41.6,
+      "vw": 10.7,
+      "font": "Instrument Sans",
+      "weight": 700,
+      "tracking": -0.04,
+      "leading": 0.8,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 5579,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "In development",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Instrument Sans",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 6414,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Street Striker: Zero to Legend",
+      "words": 5,
+      "chars": 30,
+      "lines": 2,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Instrument Sans",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 6743,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Trayful Café",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Instrument Sans",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.38,
+      "top": 7188,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "ALV ERA",
+      "words": 2,
+      "chars": 7,
+      "lines": 2,
+      "size": 41.6,
+      "vw": 10.7,
+      "font": "Instrument Sans",
+      "weight": 700,
+      "tracking": -0.04,
+      "leading": 0.8,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 7791,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "A small studio in Ankara.",
+      "words": 5,
+      "chars": 25,
+      "lines": 1,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Instrument Sans",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 8722,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "alpertosun@ lumoza.art",
+      "words": 2,
+      "chars": 22,
+      "lines": 2,
+      "size": 41.6,
+      "vw": 10.7,
+      "font": "Instrument Sans",
+      "weight": 600,
+      "tracking": -0.05,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 10320,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "Lumoza.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 81.9,
+      "vw": 21,
+      "font": "Instrument Sans",
+      "weight": 700,
+      "tracking": -0.06,
+      "leading": 0.8,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 10541,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "alpertosun@lumoza.art",
+      "words": 1,
+      "chars": 21,
+      "lines": 1,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Instrument Sans",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 10698,
+      "tag": "a",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 14,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Instrument Sans",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      14,
+      16,
+      17,
+      18,
+      28,
+      42,
+      59,
+      82
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "Instrument Sans",
+      "size": 16,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": null
+     },
+     "measureChars": 45,
+     "max": {
+      "size": 81.9,
+      "vw": 21,
+      "font": "Instrument Sans",
+      "text": "Lumoza."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f3f5fb",
+     "bodyBgHsl": {
+      "h": 225,
+      "s": 0.5,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f3f5fb",
+       "top": 0,
+       "hsl": {
+        "h": 225,
+        "s": 0.5,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#125751",
+       "top": 456,
+       "hsl": {
+        "h": 175,
+        "s": 0.66,
+        "l": 0.21
+       }
+      },
+      {
+       "color": "#e4e8f6",
+       "top": 844,
+       "hsl": {
+        "h": 227,
+        "s": 0.5,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#3346d3",
+       "top": 1201,
+       "hsl": {
+        "h": 233,
+        "s": 0.65,
+        "l": 0.51
+       }
+      },
+      {
+       "color": "#4a2266",
+       "top": 1620,
+       "hsl": {
+        "h": 275,
+        "s": 0.5,
+        "l": 0.27
+       }
+      },
+      {
+       "color": "#3b1a52",
+       "top": 1418,
+       "hsl": {
+        "h": 275,
+        "s": 0.52,
+        "l": 0.21
+       }
+      },
+      {
+       "color": "#17612e",
+       "top": 2802,
+       "hsl": {
+        "h": 139,
+        "s": 0.62,
+        "l": 0.24
+       }
+      },
+      {
+       "color": "#114d24",
+       "top": 2600,
+       "hsl": {
+        "h": 139,
+        "s": 0.64,
+        "l": 0.18
+       }
+      },
+      {
+       "color": "#0f5262",
+       "top": 3984,
+       "hsl": {
+        "h": 192,
+        "s": 0.73,
+        "l": 0.22
+       }
+      },
+      {
+       "color": "#963f16",
+       "top": 3781,
+       "hsl": {
+        "h": 19,
+        "s": 0.74,
+        "l": 0.34
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.71
+      },
+      {
+       "color": "#141a36",
+       "share": 0.14
+      },
+      {
+       "color": "#464e70",
+       "share": 0.1
+      },
+      {
+       "color": "#f1c98f",
+       "share": 0.01
+      },
+      {
+       "color": "#c9ec7e",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#3346d3",
+      "hsl": {
+       "h": 233,
+       "s": 0.65,
+       "l": 0.51
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 8,
+     "inHero": 2,
+     "radius": "pill",
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "See our games"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 1,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 2,
+     "boxRadius": 50,
+     "squareMedia": 1,
+     "roundedMedia": 2,
+     "mediaRadius": 22,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.12
+     },
+     {
+      "type": "img",
+      "ratio": 0.08
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": true,
+     "height": 56,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "instrument sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 11428,
+    "margins": {
+     "left": 12,
+     "right": 12
+    },
+    "sections": [
+     {
+      "sel": "div.pin",
+      "tag": "div",
+      "top": 0,
+      "height": 844,
+      "words": 2,
+      "media": 0,
+      "middle": 154,
+      "heading": {
+       "text": "Lumo",
+       "size": 59,
+       "tag": "h1"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 16,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "section.panel.hero",
+      "tag": "section",
+      "top": 0,
+      "height": 844,
+      "words": 34,
+      "media": 3,
+      "middle": 0,
+      "heading": null,
+      "left": 7,
+      "right": 9,
+      "textLeft": 16,
+      "textRight": 34,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.panel.shelf",
+      "tag": "section",
+      "top": 844,
+      "height": 844,
+      "words": 33,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "On the App Store",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 25,
+      "textLeft": 16,
+      "textRight": 25,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "article.game.world-mihenk",
+      "tag": "article",
+      "top": 1688,
+      "height": 1182,
+      "words": 69,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "MİHEN",
+       "size": 42,
+       "tag": "h3"
+      },
+      "left": 12,
+      "right": 29,
+      "textLeft": 16,
+      "textRight": 29,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "article.game.world-trade",
+      "tag": "article",
+      "top": 2870,
+      "height": 1182,
+      "words": 72,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "TRAD",
+       "size": 42,
+       "tag": "h3"
+      },
+      "left": 12,
+      "right": 18,
+      "textLeft": 16,
+      "textRight": 18,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "article.game.world-son",
+      "tag": "article",
+      "top": 4051,
+      "height": 1182,
+      "words": 46,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "HEARTH",
+       "size": 42,
+       "tag": "h3"
+      },
+      "left": 16,
+      "right": 26,
+      "textLeft": 16,
+      "textRight": 26,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "article.game.world-bim",
+      "tag": "article",
+      "top": 5233,
+      "height": 1182,
+      "words": 45,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "BIMQ",
+       "size": 42,
+       "tag": "h3"
+      },
+      "left": 12,
+      "right": 29,
+      "textLeft": 16,
+      "textRight": 29,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "section.dev",
+      "tag": "section",
+      "top": 6414,
+      "height": 1030,
+      "words": 50,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "In development",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 33,
+      "textLeft": 16,
+      "textRight": 33,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.work.work-web",
+      "tag": "section",
+      "top": 7445,
+      "height": 1182,
+      "words": 46,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "ALV",
+       "size": 42,
+       "tag": "h3"
+      },
+      "left": 16,
+      "right": 20,
+      "textLeft": 16,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "section#studio.studio",
+      "tag": "section",
+      "top": 8626,
+      "height": 1291,
+      "words": 88,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "A small studio in Ankara.",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 18,
+      "textLeft": 16,
+      "textRight": 18,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#contact.contact",
+      "tag": "section",
+      "top": 9917,
+      "height": 608,
+      "words": 14,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "alpertosun@",
+       "size": 42,
+       "tag": "span"
+      },
+      "left": 16,
+      "right": 17,
+      "textLeft": 16,
+      "textRight": 17,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 10525,
+      "height": 903,
+      "words": 60,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Lumoza.",
+       "size": 82,
+       "tag": "p"
+      },
+      "left": 16,
+      "right": 28,
+      "textLeft": 16,
+      "textRight": 28,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 10064,
+      "height": 312
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Lumo",
+      "size": 59,
+      "top": 16,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 16,
+      "n": 18
+     },
+     {
+      "x": 195,
+      "n": 5
+     },
+     {
+      "x": 34,
+      "n": 3
+     },
+     {
+      "x": 84,
+      "n": 2
+     },
+     {
+      "x": 70,
+      "n": 1
+     },
+     {
+      "x": 120,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 30,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "lopsided",
+   "width": 1440,
+   "message": "A section keeps its content on one side and leaves 626px of the width empty: \"alpertosun@\".",
+   "fix": "Fill the other side with what the section has (its picture, a second column, the figure), or defend the void in one sentence.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "pinned-over-picture",
+   "width": 1440,
+   "message": "Pinned large text slides across pictures while the page scrolls: \"EUP\" (screen 5, 24% over a picture); \"WALKER\" (screen 7, 38% over a picture)",
+   "fix": "Jurors read a pinned title crossing drawings or photographs as a collision. Keep the pictures in the column the title does not occupy, or unpin it.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/home/user/lumoza.art/.taste-skill/inspect-en/desktop-fold.jpg",
+   "pages": [
+    "/home/user/lumoza.art/.taste-skill/inspect-en/desktop-page-01.jpg",
+    "/home/user/lumoza.art/.taste-skill/inspect-en/desktop-page-02.jpg",
+    "/home/user/lumoza.art/.taste-skill/inspect-en/desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/home/user/lumoza.art/.taste-skill/inspect-en/tablet-fold.jpg",
+   "pages": [
+    "/home/user/lumoza.art/.taste-skill/inspect-en/tablet-page-01.jpg",
+    "/home/user/lumoza.art/.taste-skill/inspect-en/tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/home/user/lumoza.art/.taste-skill/inspect-en/mobile-fold.jpg",
+   "pages": [
+    "/home/user/lumoza.art/.taste-skill/inspect-en/mobile-page-01.jpg",
+    "/home/user/lumoza.art/.taste-skill/inspect-en/mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

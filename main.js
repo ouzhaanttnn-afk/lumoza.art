@@ -1,3 +1,10 @@
+// Remember an explicit language choice so the English page does not send Turkish browsers back to /tr/.
+for (const a of document.querySelectorAll('a[hreflang]')) {
+  a.addEventListener('click', () => {
+    try { localStorage.setItem('lumoza-lang', a.getAttribute('hreflang')); } catch {}
+  });
+}
+
 // The only script: each game's two screens can be swapped for the next pair.
 // Without it the page shows the first two screens and everything else works.
 for (const game of document.querySelectorAll('.game[data-screens]')) {

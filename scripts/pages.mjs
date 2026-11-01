@@ -70,6 +70,19 @@ const copy = {
         alts: ['The mission dashboard with chapters and the first mission', 'The first mission with a 2D floor plan and a 3D model', 'A room-boundary mission with wall height and thickness fields', 'The mission guide with a Revit path and hints']
       }
     },
+    heroStage: 'Screens from MİHENKAYNAK, TradeUp and BIMQUEST, with the icons of MİHENKAYNAK, TradeUp and Hearthwalker.',
+    webTitle: 'On the web',
+    web: {
+      id: 'alvera', name: 'Alvera', tagline: 'Value is timeless.',
+      status: 'Online at alverakuyumculuk.com.',
+      text: 'A website for a jewellery store in Mamak, Ankara: its gold and diamond catalogue, today’s gold prices with a gram calculator, and the store’s details.',
+      facts: 'Website · Ankara, Mamak · Turkish',
+      store: 'Visit alverakuyumculuk.com', href: 'https://www.alverakuyumculuk.com/',
+      pics: [
+        { src: '/assets/screens/alvera-1.webp', alt: 'The Alvera Kuyumculuk home page with its gold logo and the line “Değer zamansızdır”', w: 1000, h: 625, cls: 'shot shot-wide' },
+        { src: '/assets/screens/alvera-2.webp', alt: 'The same home page on a phone', w: 390, h: 844, cls: 'shot' }
+      ]
+    },
     next: 'Next screens', nextAria: 'Show the next screens',
     devTitle: 'In development',
     dev: [
@@ -148,6 +161,19 @@ const copy = {
         alts: ['Bölümler ve ilk görevle görev paneli', '2B kat planı ve 3B modelle ilk görev', 'Duvar yüksekliği ve kalınlığı alanlarıyla oda sınırı görevi', 'Revit yolu ve ipuçlarıyla görev rehberi']
       }
     },
+    heroStage: 'MİHENKAYNAK, TradeUp ve BIMQUEST’ten ekranlar; MİHENKAYNAK, TradeUp ve Hearthwalker ikonlarıyla.',
+    webTitle: 'Web’de',
+    web: {
+      id: 'alvera', name: 'Alvera', tagline: 'Değer zamansızdır.',
+      status: 'alverakuyumculuk.com’da yayında.',
+      text: 'Ankara Mamak’taki bir kuyumcu dükkânı için web sitesi: altın ve pırlanta seçkisi, gram hesaplayıcılı güncel altın fiyatları ve mağaza bilgileri.',
+      facts: 'Web sitesi · Ankara, Mamak · Türkçe',
+      store: 'alverakuyumculuk.com’u ziyaret et', href: 'https://www.alverakuyumculuk.com/',
+      pics: [
+        { src: '/assets/screens/alvera-1.webp', alt: 'Altın logolu ve “Değer zamansızdır” başlıklı Alvera Kuyumculuk ana sayfası', w: 1000, h: 625, cls: 'shot shot-wide' },
+        { src: '/assets/screens/alvera-2.webp', alt: 'Aynı ana sayfa telefonda', w: 390, h: 844, cls: 'shot' }
+      ]
+    },
     next: 'Sonraki ekranlar', nextAria: 'Sonraki ekranları göster',
     devTitle: 'Geliştirme aşamasında',
     dev: [
@@ -177,15 +203,16 @@ const ext = (href, text, t, cls = '', aria = '') =>
   `<a${cls ? ` class="${cls}"` : ''} href="${href}" target="_blank" rel="noopener noreferrer"${aria ? ` aria-label="${esc(aria)}${esc(t.newTab)}"` : ''}>${text}${aria ? '' : `<span class="visually-hidden">${esc(t.newTab)}</span>`}</a>`;
 
 function stage(t, key, o) {
-  const g = t.games[key];
+  const g = key === 'alvera' ? t.web : t.games[key];
   const screens = g.shots;
   const left = screens ? `<img class="shot" data-shot src="${screens[0]}" alt="${esc(g.alts[0])}" width="540" height="1169" loading="lazy" decoding="async">` : '';
   const right = screens ? `<img class="shot" data-shot src="${screens[1]}" alt="${esc(g.alts[1])}" width="540" height="1169" loading="lazy" decoding="async">` : '';
   const data = screens ? ` data-screens='${JSON.stringify(screens.map((src, i) => ({ src, alt: g.alts[i] })))}'` : '';
-  const leftPane = key === 'son'
+  const pic = (x) => `<img class="${x.cls}" src="${x.src}" alt="${esc(x.alt)}" width="${x.w}" height="${x.h}" loading="lazy" decoding="async">`;
+  const leftPane = key === 'alvera' ? pic(g.pics[0]) : key === 'son'
     ? `<img class="icon-lg" src="/assets/games/son-ocak-icon.webp" alt="${esc(g.iconAlt)}" width="512" height="512" loading="lazy" decoding="async">`
     : left;
-  const rightPane = key === 'son' ? `<span class="detail"><img src="/assets/games/son-ocak-icon.webp" alt="" width="512" height="512" loading="lazy" decoding="async"></span>` : right;
+  const rightPane = key === 'alvera' ? pic(g.pics[1]) : key === 'son' ? `<span class="detail"><img src="/assets/games/son-ocak-icon.webp" alt="" width="512" height="512" loading="lazy" decoding="async"></span>` : right;
   const sub = g.sub ? `<p class="sub">${esc(g.sub)}</p>` : '';
   const actions = [];
   if (g.href) actions.push(ext(g.href, esc(g.store), t, 'button'));
@@ -193,7 +220,7 @@ function stage(t, key, o) {
   if (key === 'son') actions.push(`<a class="button" href="mailto:${EMAIL}?subject=${encodeURIComponent(g.launchSubject)}">${esc(g.launch)}</a>`);
   if (screens) actions.push(`<button class="next" type="button" data-next aria-label="${esc(t.nextAria)}">${esc(t.next)}</button>`);
   const word = Array.from(g.name.toUpperCase());
-  const cut = { mihenk: 5, trade: 4, son: 6, bim: 4 }[key];
+  const cut = { mihenk: 5, trade: 4, son: 6, bim: 4, alvera: 3 }[key];
   const half = [esc(word.slice(0, cut).join('')), esc(word.slice(cut).join(''))];
   return `
       <article class="game world-${key}" aria-labelledby="g-${key}"${data}>
@@ -252,7 +279,7 @@ function render(t) {
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <link rel="preload" href="/assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/styles.css">
-    <script type="application/ld+json">${jsonld}</script>
+${t.lang === 'en' ? `    <script>try{var l=localStorage.getItem('lumoza-lang');if(l==='tr'||(!l&&/^tr/i.test(navigator.language))){location.replace('/tr/'+location.hash)}}catch(e){}</script>\n` : ''}    <script type="application/ld+json">${jsonld}</script>
   </head>
   <body id="top">
     <a class="skip-link" href="#main">${esc(t.skip)}</a>
@@ -275,11 +302,19 @@ function render(t) {
           <div class="hero-copy">
             <p class="lead">${esc(t.lead)}</p>
             <a class="button" href="#games">${esc(t.seeGames)}</a>
+            <ul class="hero-links">
+              ${t.heroLinks.map(l => `<li>${ext(l.href, esc(l.text), t, 'text-link')}</li>`).join('\n              ')}
+            </ul>
           </div>
-          <ul class="hero-links">
-            ${t.heroLinks.map(l => `<li>${ext(l.href, esc(l.text), t, 'text-link')}</li>`).join('\n            ')}
-          </ul>
-          <figure class="hero-art"><img src="/assets/games/mihenkaynak-cover.webp" alt="${esc(t.heroArt)}" width="941" height="1672" decoding="async" fetchpriority="high"></figure>
+          <div class="hero-stage" role="img" aria-label="${esc(t.heroStage)}">
+            <span class="blob blob-a"></span><span class="blob blob-b"></span>
+            <img class="ph ph-l" src="/assets/screens/trade-1.webp" alt="" width="540" height="1169" decoding="async">
+            <img class="ph ph-r" src="/assets/screens/bimquest-2.webp" alt="" width="390" height="844" decoding="async">
+            <img class="ph ph-c" src="/assets/screens/mihenk-1.webp" alt="" width="540" height="1169" decoding="async" fetchpriority="high">
+            <img class="ic ic-a" src="/assets/games/mihenkaynak-icon.webp" alt="" width="512" height="512" decoding="async">
+            <img class="ic ic-b" src="/assets/games/tradeup-icon.webp" alt="" width="512" height="512" decoding="async">
+            <img class="ic ic-c" src="/assets/games/son-ocak-icon.webp" alt="" width="512" height="512" decoding="async">
+          </div>
         </section>
 
         <section class="panel shelf" aria-labelledby="shelf-title">
@@ -287,6 +322,7 @@ function render(t) {
             <h2 id="shelf-title">${esc(t.shelfTitle)}</h2>
             <p class="lead">${esc(t.shelfLead)}</p>
           </div>
+          <div class="shelf-field">
           <ul class="shelf-list">
             ${t.shelf.map(s => `<li>
               <img src="/assets/games/${s.icon}.webp" alt="" width="512" height="512" loading="lazy" decoding="async">
@@ -294,6 +330,7 @@ function render(t) {
               ${s.href ? ext(s.href, esc(s.action), t, 'button', s.aria) : `<span class="shelf-soon">${esc(s.action)}</span>`}
             </li>`).join('\n            ')}
           </ul>
+          </div>
         </section>
       </div>
 
@@ -318,6 +355,11 @@ ${stage(t, 'bim')}
             </div>
           </article>`).join('\n          ')}
         </div>
+      </section>
+
+      <section class="work work-web" aria-labelledby="web-title">
+        <h2 class="work-title" id="web-title">${esc(t.webTitle)}</h2>
+${stage(t, 'alvera')}
       </section>
 
       <section class="studio" id="studio" aria-labelledby="studio-title">

@@ -46,31 +46,48 @@ button{font:inherit;color:inherit}
 
 /* The pinned name: it stays, the panels and the games pass beneath it. */
 .run{position:relative}
-.pin{position:sticky;top:0;height:100svh;z-index:10;pointer-events:none;color:var(--ink);font-size:var(--display);font-weight:700;letter-spacing:-.05em;line-height:.85}
+.pin{position:sticky;top:0;height:100svh;z-index:10;pointer-events:none;color:var(--ink);font-size:min(var(--display),19svh);font-weight:700;letter-spacing:-.05em;line-height:.85}
 .pin-a{pointer-events:auto;position:absolute;left:var(--m);top:var(--m);font-size:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit}
-.pin-b{position:absolute;right:var(--m);bottom:var(--m)}
+.pin-b{position:absolute;right:var(--m);bottom:max(var(--m),env(safe-area-inset-bottom));color:#fff}
 .panel{position:relative;min-height:100svh}
 
-/* Hero */
-.hero{margin-top:-100svh;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--m);background:var(--bg);overflow:hidden}
-.hero-copy{grid-column:3/9;align-self:start;padding-top:44svh;display:flex;flex-direction:column;align-items:flex-start;gap:1.75rem}
+/* Hero: the name on the left, a live stage of the games on the right whose colour walks through each game's world. */
+.hero{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--m);background:var(--bg);overflow:hidden;margin-top:-100svh}
+.hero-copy{position:relative;z-index:2;grid-column:3/7;align-self:start;padding-top:42svh;display:flex;flex-direction:column;align-items:flex-start;gap:1.5rem}
 .lead{font-size:var(--lead);line-height:1.5;max-width:34ch}
-.hero-links{position:absolute;right:calc(25% + var(--m));top:50%;display:flex;flex-direction:column;align-items:flex-end;gap:.25rem;text-align:right}
+.hero-links{display:flex;flex-direction:column;align-items:flex-start;gap:.25rem}
 .hero-links .text-link{font-size:var(--small)}
-.hero-art{position:absolute;top:0;right:0;bottom:calc(var(--display)*.85 + 56px);width:25%}
-.hero-art img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.hero-stage{position:absolute;top:0;right:0;bottom:0;width:50%;overflow:hidden;background:#4a2266;animation:world 28s ease-in-out infinite}
+.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;pointer-events:none} /* taste-skill-ignore: owner asked for a livelier hero */
+.blob-a{width:46%;aspect-ratio:1;left:-8%;top:6%;background:#e1e620;animation:drift 19s ease-in-out infinite}
+.blob-b{width:52%;aspect-ratio:1;right:-12%;bottom:-6%;background:#ff6fb1;animation:drift 23s ease-in-out infinite reverse}
+.ph{position:absolute;height:min(60svh,600px);width:auto;aspect-ratio:540/1169;object-fit:cover;border-radius:26px;animation:float 7s ease-in-out infinite}
+.ph-c{--ch:min(66svh,660px);height:var(--ch);left:calc(50% - var(--ch)*.231);top:calc(50% - var(--ch)/2 - 2svh);z-index:3}
+.ph-l{left:5%;top:30%;--r:-7deg;z-index:2;animation-delay:-2s;height:min(50svh,500px)}
+.ph-r{right:5%;top:24%;--r:6deg;z-index:2;animation-delay:-4s;height:min(50svh,500px);aspect-ratio:390/844}
+.ic{position:absolute;width:clamp(56px,6vw,88px);height:auto;border-radius:22%;z-index:4;animation:float 6s ease-in-out infinite}
+.ic-a{left:4%;top:10%;--r:-8deg}
+.ic-b{right:6%;bottom:16%;--r:8deg;animation-delay:-3s}
+.ic-c{left:14%;bottom:12%;--r:-4deg;animation-delay:-1.5s}
+@keyframes world{0%,100%{background-color:#4a2266}25%{background-color:#17612e}50%{background-color:#0f5262}75%{background-color:#173a73}}
+@keyframes drift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(8%,10%) scale(1.15)}}
+@keyframes float{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-14px) rotate(var(--r,0deg))}}
 
-/* The shelf */
-.shelf{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--m);align-content:center;align-items:center;padding-block:28svh;background:var(--surface);padding-inline:var(--m)}
+/* The shelf: light on the left, an indigo field on the right, so the pinned "za" reads on both panels. */
+.shelf{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--m);align-content:center;align-items:center;padding-block:26svh;background:var(--surface);padding-inline:var(--m)}
+.shelf-field{grid-column:7/13;align-self:stretch;margin:-26svh calc(-1*var(--m)) -26svh 0;padding:26svh calc(var(--m) + 12px) 26svh calc(var(--m)*2);background:var(--accent);display:flex;align-items:center}
 .shelf-head{grid-column:3/7;display:flex;flex-direction:column;gap:1.25rem}
 .shelf-head h2{font-size:var(--h2);font-weight:600;letter-spacing:-.03em;line-height:1.15}
-.shelf-list{grid-column:7/12;display:flex;flex-direction:column;gap:1.5rem}
+.shelf-list{flex:1;display:flex;flex-direction:column;gap:1.5rem;color:#fff}
 .shelf-list li{display:flex;align-items:center;gap:1.25rem}
-.shelf-list img{width:88px;height:88px;border-radius:22px;flex-shrink:0}
+.shelf-list img{width:88px;height:88px;border-radius:22px;flex-shrink:0;transition:transform .3s}
+.shelf-list li:hover img{transform:rotate(-5deg) scale(1.06)}
 .shelf-text{display:flex;flex-direction:column;flex:1;min-width:0;line-height:1.35}
 .shelf-text strong{font-size:var(--body);font-weight:600;letter-spacing:-.02em}
-.shelf-text span{color:var(--muted);font-size:var(--small)}
-.shelf-soon{font-size:var(--small);font-weight:500;color:var(--muted);padding-inline:.5rem}
+.shelf-text span{color:#ffffffd9;font-size:var(--small)}
+.shelf .button{background:#fff;color:var(--ink)}
+.shelf .button:hover{background:var(--sulfur)}
+.shelf-soon{font-size:var(--small);font-weight:500;color:#ffffffd9;padding-inline:.5rem}
 
 /* Games: a flat field in each game's own colour, two real screens, the name torn at the seam. */
 .work{position:relative;padding-top:0}
@@ -81,11 +98,15 @@ button{font:inherit;color:inherit}
 .world-trade{--pl:#17612e;--pr:#114d24;--tone:#c9ec7e}
 .world-son{--pl:#0f5262;--pr:#963f16;--tone:#ffd2a8}
 .world-bim{--pl:#173a73;--pr:#0f2b57;--tone:#ffb067}
+.world-alvera{--pl:#6b4a35;--pr:#4d3425;--tone:#f1d9a8}
 .pane{position:relative;top:-20svh;height:140svh;display:flex;align-items:flex-start;justify-content:center;padding-top:calc(20svh + 11svh)}
 .pane-l{background:var(--pl)}
 .pane-r{background:var(--pr)}
 .shot{height:52svh;min-height:340px;width:auto;aspect-ratio:540/1169;border-radius:22px;object-fit:cover;transition:opacity .25s}
 .shot.is-out{opacity:0}
+.world-alvera .pane-l{justify-content:flex-start;padding-left:var(--m)}
+.world-alvera .pane-r{justify-content:flex-end;padding-right:var(--m)}
+.shot-wide{height:auto;width:min(100%,440px);min-height:0;aspect-ratio:1000/625;margin-top:6svh;border-radius:14px;object-fit:cover}
 .icon-lg{height:52svh;min-height:340px;width:auto;aspect-ratio:1;border-radius:22%;object-fit:cover}
 .pane-note{align-self:flex-start;max-width:24ch;margin-top:12svh;font-size:var(--lead);line-height:1.4;color:#fff}
 .tear{z-index:3;position:absolute;left:0;right:0;top:66svh;height:calc(var(--display)*.9);margin:0;font-size:var(--display);font-weight:700;letter-spacing:-.04em;line-height:.8;color:var(--tone);pointer-events:none}
@@ -191,9 +212,10 @@ button{font:inherit;color:inherit}
   .actions{bottom:2.5svh}
 }
 @media(max-width:900px){
-  .hero-copy{grid-column:2/11}
+  .hero-copy{grid-column:2/7}
+  .shelf{padding-block:22svh 16svh}
   .shelf-head{grid-column:1/13}
-  .shelf-list{grid-column:1/13;margin-top:2rem}
+  .shelf-field{grid-column:1/-1;margin:3rem calc(-1*var(--m)) -16svh;padding:3rem calc(var(--m) + 8px) 16svh}
   .studio{grid-template-columns:1fr;padding-left:0}
   .studio-copy{grid-column:1;padding-inline:var(--m)}
   .studio-photo{grid-column:1;min-height:60svh}
@@ -209,15 +231,20 @@ button{font:inherit;color:inherit}
   .bar-nav a[href="#games"],.bar-nav a[href="#studio"],.bar-nav .bar-mark{display:none}
   .bar-nav{padding:.3rem .4rem}
   .hero{display:flex;flex-direction:column}
-  .hero-copy{padding:22svh var(--m) 0;gap:1.25rem}
-  .hero-links{position:static;align-items:flex-start;text-align:left;padding:1rem var(--m) 0}
-  .hero-art{position:static;width:100%;height:38svh;margin-top:auto;margin-bottom:clamp(88px,22svh,150px)}
-  .shelf{padding-block:22svh 18svh}
+  .hero-copy{padding:20svh var(--m) 0;gap:1.1rem}
+  .hero-stage{position:relative;width:100%;height:46svh;margin-top:auto}
+  .ph-c{--ch:34svh}
+  .ph-l,.ph-r{height:25svh;top:34%}
+  .ic{width:52px}
+  .shelf-list img{width:64px;height:64px;border-radius:16px}
+  .shelf-list li{gap:.9rem}
+  .shelf .button{padding-inline:1.1rem}
   .stage{min-height:720px}
   .pane{padding-top:calc(20svh + 11svh)}
   .shot{width:min(88%,176px);height:27svh;min-height:200px;aspect-ratio:auto;object-fit:cover;object-position:50% 18%}
   .world-son .icon-lg,.detail{height:27svh;width:27svh;min-height:200px;min-width:200px;max-width:88%}
   .world-son .pane-l{padding-left:var(--m)}
+  .shot-wide{width:min(88%,176px);height:27svh;min-height:200px;aspect-ratio:auto;margin-top:0;object-position:72% 50%}
   .tear{top:41svh}
   .info{top:calc(41svh + var(--display)*.9 + 16px);gap:.4rem}
   .actions{bottom:2.5svh}
