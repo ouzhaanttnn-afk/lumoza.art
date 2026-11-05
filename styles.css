@@ -77,11 +77,19 @@ button{font:inherit;color:inherit}
 .badge{position:absolute;left:50%;top:0;width:min(46%,340px);margin-left:calc(min(46%,340px)/-2);z-index:3;transform-origin:50% 0;animation:swing 5.5s ease-in-out infinite}
 .cord{display:block;width:3px;height:clamp(60px,16svh,150px);margin:0 auto;background:var(--on);border-radius:2px}
 .clip{display:block;width:30px;height:18px;margin:-2px auto 0;border:3px solid var(--on);border-radius:10px 10px 4px 4px}
-.card{display:flex;flex-direction:column;align-items:center;gap:.4rem;margin-top:-4px;padding:clamp(14px,2vw,24px);border-radius:26px;background:#fff;color:var(--on)}
+/* The card is a pane of Liquid Glass: the stage's colour shows through, a bright rim catches the light, a sheen passes over it. */
+.card{position:relative;display:flex;flex-direction:column;align-items:center;gap:.35rem;margin-top:-4px;padding:clamp(18px,2.2vw,26px) clamp(14px,2vw,24px) clamp(16px,2vw,22px);border-radius:30px;color:var(--on);overflow:hidden;background:linear-gradient(150deg,#ffffff8c 0%,#ffffff40 45%,#ffffff26 100%);border:1px solid #ffffffb3;box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 #ffffff59,inset 0 0 0 1px #ffffff26,0 24px 50px -24px #1d171599;-webkit-backdrop-filter:blur(22px) saturate(1.9) brightness(1.06);backdrop-filter:blur(22px) saturate(1.9) brightness(1.06)} /* taste-skill-ignore: the owner asked for a Liquid Glass card; it hangs and moves, so it carries a shadow */
+.card::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;pointer-events:none;background:linear-gradient(135deg,#fff 0%,#ffffff00 30%,#ffffff00 65%,#ffffffcc 100%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)} /* taste-skill-ignore: glass rim */
+.card::after{content:"";position:absolute;top:-60%;left:-80%;width:60%;height:220%;pointer-events:none;background:linear-gradient(100deg,#ffffff00,#ffffff66 45%,#ffffff00 60%);transform:rotate(18deg);animation:sheen 6.5s ease-in-out infinite} /* taste-skill-ignore */
+@keyframes sheen{0%,62%{left:-80%}88%,100%{left:140%}}
+.card-slot{display:block;width:44px;height:9px;margin-bottom:.55rem;border-radius:999px;background:#1d171538;box-shadow:inset 0 1px 2px #1d171566} /* taste-skill-ignore: punched slot */
+.card-logo{display:block;width:100%;height:auto;filter:drop-shadow(0 10px 18px #1d171540)} /* taste-skill-ignore */
 .card img{width:100%;height:auto;border-radius:22.5%}
 .hero-title,.marquee-track,.tear,.wall-count strong,.email,.footer-name,.card-name{font-family:var(--display-face);letter-spacing:-.015em}
-.card-name{font-size:clamp(1.25rem,2vw,1.75rem);font-weight:700;letter-spacing:-.03em;margin-top:.4rem}
-.card-line{font-size:var(--small)}
+.card-name{font-size:clamp(1.35rem,2.2vw,1.9rem);font-weight:600;margin-top:.55rem;line-height:1}
+.card-line{font-size:var(--small);color:#1d1715cc}
+.card-games{display:flex;gap:6px;margin-top:.6rem}
+.card .card-games img{width:30px;height:30px;border-radius:8px;box-shadow:0 0 0 1.5px #ffffffb3} /* taste-skill-ignore */
 .badge:hover{animation-duration:2.2s}
 @keyframes swing{0%,100%{transform:rotate(5deg)}50%{transform:rotate(-5deg)}}
 @keyframes world{0%,100%{background-color:#B87076}25%{background-color:#709FB8}50%{background-color:#70B8A9}75%{background-color:#B88370}}
@@ -95,7 +103,6 @@ button{font:inherit;color:inherit}
 .hero-stage.is-physics .card.is-grabbed{cursor:grabbing}
 .cord-line{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;overflow:visible}
 .cord-line line{stroke:var(--on);stroke-width:3;stroke-linecap:round}
-.card-logo{display:block;width:100%;height:auto}
 .card-spark{transform-box:fill-box;transform-origin:center;animation:glimmer 3.4s ease-in-out infinite}
 @keyframes glimmer{0%,70%,100%{transform:scale(1) rotate(0)}80%{transform:scale(1.25) rotate(45deg)}90%{transform:scale(.9) rotate(80deg)}}
 
@@ -303,7 +310,9 @@ button{font:inherit;color:inherit}
   .shelf-head,.shelf-field{padding:40px var(--m)}
   .badge{width:min(40%,170px);margin-left:calc(min(40%,170px)/-2)}
   .cord{height:40px}
-  .card{border-radius:18px;padding:10px}
+  .card{border-radius:20px;padding:10px 10px 12px}
+  .card-slot{width:28px;height:6px;margin-bottom:.35rem}
+  .card-games{display:none}
   .card-name{font-size:1rem}
   .card-line{display:none}
   .hero-title{font-size:min(13vw,10svh);max-width:none}
