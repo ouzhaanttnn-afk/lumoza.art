@@ -19,9 +19,9 @@ Details, versions and test results: `docs/design-skills.md`.
 
 ## Rules for this project
 
-- Brand is fixed: indigo `#3346d3`, the L-and-spark mark in `assets/brand/`, Instrument Sans, and one flat colour field per game taken from its icon. Do not change them without being asked.
+- Brand: the L-and-spark mark in `assets/brand/` (indigo tile), Instrument Sans, one flat colour field per game taken from its icon, and the owner's palette for the studio itself (since 2026-11-05): warm dark ground `#2f2826` (never pure black), cream ink `#f4ece0`, accents `#B87076` rose, `#B88370` terracotta, `#709FB8` blue, `#70B8A9` teal, `#635854` taupe; dark text `#1d1715` on the palette fields. Do not change them without being asked.
 - The owner asked for a Liquid Glass touch (header bar, fact plates) and sulfur `#E1E620` on hover only (resting link underlines use the text colour). These are the only allowed exceptions to the taste skill's no-glass, no-gradient rules; they carry `taste-skill-ignore` comments in `styles.css`.
-- The hero stage is deliberately lively (colour walking through each game's world, the floating Lumoza logo with two slow rings and two soft blurred colour blobs; no pinned split name, no floating app screens; the owner asked for it after liking alverakuyumculuk.com). Keep it flat everywhere else.
+- The hero is deliberately lively, inspired by kenjilambert.com: a three-line headline with game icons in parentheses (allowed past the two-line rule: run the inspector with `--allow headline-lines`), and a Lumoza card swinging from a cord over a colour that cycles through the palette. The "OUR GAMES *" marquee, coloured pill tags on games and development cards come from the same direction.
 - The English page sends Turkish browsers to `/tr/` once (inline script in the head); an explicit language click is remembered in `localStorage` (`lumoza-lang`).
 - The owner loves the torn game titles that slide apart while scrolling and the ambient layer behind each game (embers for Hearthwalker, falling gold leaf for MİHENKAYNAK, rising price ticks for TradeUp, stone glints for Alvera). Keep them.
 - AI stays a small mention (the studio sentence, one principle, page descriptions). Never in headlines.

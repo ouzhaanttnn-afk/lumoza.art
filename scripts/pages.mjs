@@ -24,18 +24,21 @@ const copy = {
     skip: 'Skip to content', homeAria: 'Lumoza, back to top', navAria: 'Main navigation',
     nav: { games: 'Games', studio: 'Studio', contact: 'Contact' },
     h1: 'Lumoza, an independent game studio in Ankara',
-    lead: 'Lumoza is an independent game studio in Ankara, Türkiye. Two of our games are on the App Store, and a third is on the way.',
+    lead: 'Lumoza is an independent game studio in Ankara, Türkiye. Two of our games are on the App Store, and two more are on the way.',
+    headline: [['Lumoza', ''], ['icon', 'mihenkaynak-icon'], ['makes', ''], ['games', 'rose'], ['icon', 'tradeup-icon'], ['with', ''], ['care.', 'teal']],
+    marquee: 'Our games',
     seeGames: 'See our games', newTab: ' (opens in a new tab)',
     heroLinks: [
       { href: STORE.mihenk, text: 'MİHENKAYNAK on the App Store' },
       { href: STORE.trade, text: 'TradeUp on the App Store' }
     ],
     heroArt: 'The MİHENKAYNAK loading screen with the gold logo on a purple jeweller’s counter.',
-    shelfTitle: 'Our iOS games', shelfLead: 'Two games are out. A third is coming soon.',
+    shelfTitle: 'Our iOS games', shelfLead: 'Two games are out. Two more are coming soon.',
     shelf: [
       { icon: 'mihenkaynak-icon', name: 'MİHENKAYNAK', line: 'Goldsmith shop simulation', action: 'View', href: STORE.mihenk, aria: 'View MİHENKAYNAK on the App Store' },
       { icon: 'tradeup-icon', name: 'TradeUp: Zero to Home', line: 'Secondhand trading simulation', action: 'View', href: STORE.trade, aria: 'View TradeUp: Zero to Home on the App Store' },
-      { icon: 'son-ocak-icon', name: 'Hearthwalker: Son Ocak', line: 'Survival game', action: 'Coming soon' }
+      { icon: 'son-ocak-icon', name: 'Hearthwalker: Son Ocak', line: 'Survival game', action: 'Coming soon' },
+      { icon: 'street-striker-icon', name: 'Street Striker: Zero to Legend', line: 'Arcade RPG', action: 'Coming soon' }
     ],
     gamesTitle: 'Our games',
     games: {
@@ -43,7 +46,7 @@ const copy = {
         id: 'mihenk', name: 'MİHENKAYNAK', tagline: 'Weigh the gold. Read the customer.',
         status: 'On the App Store since 14 September 2026.',
         text: 'A portrait goldsmith shop simulation. Test and weigh gold, bargain with customers whose patience and budgets differ, and grow your shop’s reputation in a market where gold and currency prices move.',
-        facts: 'iOS · Simulation · Turkish and English · Free, with optional upgrades',
+        facts: 'iOS · Simulation · Turkish and English · Free, with optional upgrades', tags: ['Simulation', 'iOS', 'Android soon'],
         store: 'View on the App Store', shots: shots('mihenk', 7), href: STORE.mihenk,
         alts: ['A customer asks for 7.5 grams of gold at the counter', 'The shop dashboard with cash, risks and the day’s sales', 'The finance view with cash, profit and stock lines', 'A restock dialog listing gram gold and Turkish gold coins', 'The stock list with price, margin and sell-through for each piece', 'The workshop with repairs and custom engraving orders', 'The market view with premium packs']
       },
@@ -51,7 +54,7 @@ const copy = {
         id: 'trade', name: 'TradeUp', tagline: 'Read the market. Trade your way up.',
         status: 'On the App Store since 14 October 2026.',
         text: 'Compare listings by price, condition, interest and seller behaviour. Bargain with two offers, prepare and relist what you buy, and work toward one of five homes in a secondhand market that keeps moving.',
-        facts: 'iOS · Strategy, simulation · Turkish and English · Free, with optional upgrades',
+        facts: 'iOS · Strategy, simulation · Turkish and English · Free, with optional upgrades', tags: ['Strategy', 'Simulation', 'iOS'],
         store: 'View on the App Store', site: 'Project website', shots: shots('trade', 5), href: STORE.trade, siteHref: SITE.trade,
         alts: ['The live market with listings, prices and a filter bar', 'The portfolio with items prepared for sale', 'The path to a first home with savings and house options', 'An item story with a haggle slider and a seller offer', 'Choosing a character and a career style']
       },
@@ -59,7 +62,7 @@ const copy = {
         id: 'son', name: 'Hearthwalker', sub: 'Son Ocak · Kül Yolu', tagline: 'Keep the last fire burning.',
         status: 'Coming soon to the App Store.',
         text: 'A portrait survival game. It is not on the App Store yet, and we will announce the launch here first.',
-        facts: 'iOS · Survival · Portrait', launch: 'Get launch news', launchSubject: 'Hearthwalker Son Ocak launch news',
+        tags: ['Survival', 'Portrait', 'Coming soon'], facts: 'iOS · Survival · Portrait', launch: 'Get launch news', launchSubject: 'Hearthwalker Son Ocak launch news',
         pane: 'We will announce the launch here first.', iconAlt: 'The Hearthwalker app icon, a copper stove with a glowing fire'
       },
       bim: {
@@ -70,13 +73,13 @@ const copy = {
         alts: ['The mission dashboard with chapters and the first mission', 'The first mission with a 2D floor plan and a 3D model', 'A room-boundary mission with wall height and thickness fields', 'The mission guide with a Revit path and hints']
       }
     },
-    heroStage: 'The Lumoza logo, a white L with a gold spark on an indigo tile, floating over a colour that changes with each of our games.',
+    heroStage: 'The Lumoza logo on a card that swings from a cord, over a colour that slowly changes.',
     webTitle: 'On the web',
     web: {
       id: 'alvera', name: 'Alvera', tagline: 'Value is timeless.',
       status: 'Online at alverakuyumculuk.com.',
-      text: 'A website for a jewellery store in Mamak, Ankara: its gold and diamond catalogue, today’s gold prices with a gram calculator, and the store’s details.',
-      facts: 'Website · Ankara, Mamak · Turkish',
+      text: 'A website for a jewellery store in Mamak, Ankara: its gold and diamond collection, today’s gold prices with a gram calculator, the store’s details, and a panel where the shop manages its own catalogue.',
+      facts: 'Website · Ankara, Mamak · Turkish', tags: ['Website', 'Catalogue panel', 'Gold prices'],
       store: 'Visit alverakuyumculuk.com', href: 'https://www.alverakuyumculuk.com/',
       pics: [
         { src: '/assets/screens/alvera-1.webp', alt: 'The Alvera Kuyumculuk home page with its gold logo and the line “Değer zamansızdır”', w: 1000, h: 625, cls: 'shot shot-wide' },
@@ -86,9 +89,9 @@ const copy = {
     next: 'Next screens', nextAria: 'Show the next screens',
     devTitle: 'In development',
     dev: [
-      { id: 'bim', icon: 'bimquest-icon', name: 'BIMQUEST', genre: 'Educational game, in testing on TestFlight', text: 'A mobile game that teaches Revit through play: seven chapters from BIM basics to views and documentation, with a live 2D plan and a 3D model to build.' },
-      { id: 'street', icon: 'street-striker-icon', name: 'Street Striker: Zero to Legend', genre: 'Arcade RPG', text: 'Street fighting meets RPG progression, with equipment, training and roguelite skills shaping each fight.' },
-      { id: 'tray', icon: 'trayful-icon', name: 'Trayful Café', genre: 'Physics puzzle', text: 'One tray, one clamp and 24 café puzzles. Balance your ingredients and choose the order of every delivery.', link: SITE.tray, linkText: 'Project website' }
+      { id: 'bim', icon: 'bimquest-icon', name: 'BIMQUEST', pill: 'In TestFlight', genre: 'Educational game', text: 'A mobile game that teaches Revit through play: seven chapters from BIM basics to views and documentation, with a live 2D plan and a 3D model to build.' },
+      { id: 'street', icon: 'street-striker-icon', name: 'Street Striker: Zero to Legend', pill: 'Coming soon', genre: 'Arcade RPG', text: 'Street fighting meets RPG progression, with equipment, training and roguelite skills shaping each fight.' },
+      { id: 'tray', icon: 'trayful-icon', name: 'Trayful Café', pill: 'In development', genre: 'Physics puzzle', text: 'One tray, one clamp and 24 café puzzles. Balance your ingredients and choose the order of every delivery.', link: SITE.tray, linkText: 'Project website' }
     ],
     studioTitle: 'A small studio in Ankara.',
     studioLead: 'We design, build and ship our own games, and a person makes every decision.',
@@ -115,18 +118,21 @@ const copy = {
     skip: 'İçeriğe geç', homeAria: 'Lumoza, başa dön', navAria: 'Ana gezinme',
     nav: { games: 'Oyunlar', studio: 'Stüdyo', contact: 'İletişim' },
     h1: 'Lumoza, Ankara’da bağımsız bir oyun stüdyosu',
-    lead: 'Lumoza, Ankara’da bağımsız bir oyun stüdyosu. Oyunlarımızdan ikisi App Store’da, üçüncüsü yolda.',
+    lead: 'Lumoza, Ankara’da bağımsız bir oyun stüdyosu. Oyunlarımızdan ikisi App Store’da, iki tanesi daha yolda.',
+    headline: [['Lumoza', ''], ['icon', 'mihenkaynak-icon'], ['özenle', 'teal'], ['icon', 'tradeup-icon'], ['oyun', 'rose'], ['yapar.', '']],
+    marquee: 'Oyunlarımız',
     seeGames: 'Oyunlarımızı keşfet', newTab: ' (yeni sekmede açılır)',
     heroLinks: [
       { href: STORE.mihenk, text: 'MİHENKAYNAK, App Store’da' },
       { href: STORE.trade, text: 'TradeUp, App Store’da' }
     ],
     heroArt: 'Mor bir kuyumcu tezgâhında altın logolu MİHENKAYNAK açılış ekranı.',
-    shelfTitle: 'iOS oyunlarımız', shelfLead: 'İki oyun yayında. Üçüncüsü yakında.',
+    shelfTitle: 'iOS oyunlarımız', shelfLead: 'İki oyun yayında. İki tanesi daha yakında.',
     shelf: [
       { icon: 'mihenkaynak-icon', name: 'MİHENKAYNAK', line: 'Kuyumcu dükkânı simülasyonu', action: 'Görüntüle', href: STORE.mihenk, aria: 'MİHENKAYNAK’ı App Store’da görüntüle' },
       { icon: 'tradeup-icon', name: 'TradeUp: Zero to Home', line: 'İkinci el ticaret simülasyonu', action: 'Görüntüle', href: STORE.trade, aria: 'TradeUp: Zero to Home’u App Store’da görüntüle' },
-      { icon: 'son-ocak-icon', name: 'Hearthwalker: Son Ocak', line: 'Hayatta kalma oyunu', action: 'Yakında' }
+      { icon: 'son-ocak-icon', name: 'Hearthwalker: Son Ocak', line: 'Hayatta kalma oyunu', action: 'Yakında' },
+      { icon: 'street-striker-icon', name: 'Street Striker: Zero to Legend', line: 'Arcade RPG', action: 'Yakında' }
     ],
     gamesTitle: 'Oyunlarımız',
     games: {
@@ -134,7 +140,7 @@ const copy = {
         id: 'mihenk', name: 'MİHENKAYNAK', tagline: 'Altını tart. Müşteriyi oku.',
         status: '14 Eylül 2026’dan beri App Store’da.',
         text: 'Dikey oynanan bir kuyumcu dükkânı simülasyonu. Altını test et ve tart, sabrı ve bütçesi farklı müşterilerle pazarlık et, altın ve döviz fiyatlarının oynadığı bir piyasada dükkânının itibarını büyüt.',
-        facts: 'iOS · Simülasyon · Türkçe ve İngilizce · Ücretsiz, isteğe bağlı paketlerle',
+        facts: 'iOS · Simülasyon · Türkçe ve İngilizce · Ücretsiz, isteğe bağlı paketlerle', tags: ['Simülasyon', 'iOS', 'Android yakında'],
         store: 'App Store’da görüntüle', shots: shots('mihenk', 7), href: STORE.mihenk,
         alts: ['Tezgâhta 7,5 gram altın isteyen bir müşteri', 'Nakit, riskler ve günün satışlarıyla dükkân paneli', 'Nakit, kâr ve stok satırlarıyla finans ekranı', 'Gram altın ve ziynet altınlarını listeleyen stok temin penceresi', 'Her parçanın fiyatı, marjı ve satış hızıyla stok listesi', 'Tamir ve özel gravür siparişleriyle atölye', 'Premium paketlerin göründüğü market ekranı']
       },
@@ -142,7 +148,7 @@ const copy = {
         id: 'trade', name: 'TradeUp', tagline: 'Piyasayı oku. Basamak basamak yüksel.',
         status: '14 Ekim 2026’dan beri App Store’da.',
         text: 'İlanları fiyat, kondisyon, ilgi ve satıcı davranışına göre karşılaştır. İki teklif hakkıyla pazarlık et, aldıklarını hazırla ve yeniden listele; durmadan akan bir ikinci el pazarında beş evden birine ulaş.',
-        facts: 'iOS · Strateji, simülasyon · Türkçe ve İngilizce · Ücretsiz, isteğe bağlı paketlerle',
+        facts: 'iOS · Strateji, simülasyon · Türkçe ve İngilizce · Ücretsiz, isteğe bağlı paketlerle', tags: ['Strateji', 'Simülasyon', 'iOS'],
         store: 'App Store’da görüntüle', site: 'Proje sitesi', shots: shots('trade', 5), href: STORE.trade, siteHref: SITE.trade,
         alts: ['İlanlar, fiyatlar ve filtre çubuğuyla canlı pazar', 'Satışa hazırlanan ürünlerle portföy', 'Birikim ve ev seçenekleriyle ilk eve giden yol', 'Pazarlık çubuğu ve satıcı teklifiyle bir ürünün hikâyesi', 'Karakter ve kariyer tarzı seçimi']
       },
@@ -150,7 +156,7 @@ const copy = {
         id: 'son', name: 'Hearthwalker', sub: 'Son Ocak · Kül Yolu', tagline: 'Son ateşi sönmekten koru.',
         status: 'Yakında App Store’da.',
         text: 'Dikey ekranda oynanan bir hayatta kalma oyunu. Henüz App Store’da değil; çıkışı önce burada duyuracağız.',
-        facts: 'iOS · Hayatta kalma · Dikey', launch: 'Çıkış haberlerini al', launchSubject: 'Hearthwalker Son Ocak çıkış haberleri',
+        tags: ['Hayatta kalma', 'Dikey', 'Yakında'], facts: 'iOS · Hayatta kalma · Dikey', launch: 'Çıkış haberlerini al', launchSubject: 'Hearthwalker Son Ocak çıkış haberleri',
         pane: 'Çıkışı önce burada duyuracağız.', iconAlt: 'Hearthwalker uygulama ikonu: içinde ateş yanan bakır bir soba'
       },
       bim: {
@@ -161,13 +167,13 @@ const copy = {
         alts: ['Bölümler ve ilk görevle görev paneli', '2B kat planı ve 3B modelle ilk görev', 'Duvar yüksekliği ve kalınlığı alanlarıyla oda sınırı görevi', 'Revit yolu ve ipuçlarıyla görev rehberi']
       }
     },
-    heroStage: 'Lumoza logosu: indigo bir karoda beyaz bir L ve altın bir kıvılcım; arkasındaki renk oyunlarımızın renkleri arasında değişiyor.',
+    heroStage: 'Bir ipte sallanan kartın üstünde Lumoza logosu; arkasındaki renk yavaşça değişiyor.',
     webTitle: 'Web’de',
     web: {
       id: 'alvera', name: 'Alvera', tagline: 'Değer zamansızdır.',
       status: 'alverakuyumculuk.com’da yayında.',
-      text: 'Ankara Mamak’taki bir kuyumcu dükkânı için web sitesi: altın ve pırlanta seçkisi, gram hesaplayıcılı güncel altın fiyatları ve mağaza bilgileri.',
-      facts: 'Web sitesi · Ankara, Mamak · Türkçe',
+      text: 'Ankara Mamak’taki bir kuyumcu dükkânı için web sitesi: altın ve pırlanta seçkisi, gram hesaplayıcılı güncel altın fiyatları, mağaza bilgileri ve dükkânın kendi kataloğunu yönettiği bir panel.',
+      facts: 'Web sitesi · Ankara, Mamak · Türkçe', tags: ['Web sitesi', 'Katalog paneli', 'Altın fiyatları'],
       store: 'alverakuyumculuk.com’u ziyaret et', href: 'https://www.alverakuyumculuk.com/',
       pics: [
         { src: '/assets/screens/alvera-1.webp', alt: 'Altın logolu ve “Değer zamansızdır” başlıklı Alvera Kuyumculuk ana sayfası', w: 1000, h: 625, cls: 'shot shot-wide' },
@@ -177,9 +183,9 @@ const copy = {
     next: 'Sonraki ekranlar', nextAria: 'Sonraki ekranları göster',
     devTitle: 'Geliştirme aşamasında',
     dev: [
-      { id: 'bim', icon: 'bimquest-icon', name: 'BIMQUEST', genre: 'Eğitici oyun, TestFlight’ta test ediliyor', text: 'Revit’i oyun oynayarak öğreten bir mobil oyun: BIM temellerinden görünüm ve dokümantasyona yedi bölüm; kurabileceğin canlı bir 2B plan ve 3B model.' },
-      { id: 'street', icon: 'street-striker-icon', name: 'Street Striker: Zero to Legend', genre: 'Arcade RPG', text: 'Sokak dövüşü, RPG ilerlemesiyle buluşuyor; ekipman, antrenman ve roguelite yetenekler her dövüşü şekillendiriyor.' },
-      { id: 'tray', icon: 'trayful-icon', name: 'Trayful Café', genre: 'Fizik bulmacası', text: 'Tek tepsi, tek kıskaç ve 24 kafe bulmacası. Malzemelerini dengele, her siparişin sırasını sen seç.', link: SITE.tray, linkText: 'Proje sitesi' }
+      { id: 'bim', icon: 'bimquest-icon', name: 'BIMQUEST', pill: 'TestFlight’ta', genre: 'Eğitici oyun', text: 'Revit’i oyun oynayarak öğreten bir mobil oyun: BIM temellerinden görünüm ve dokümantasyona yedi bölüm; kurabileceğin canlı bir 2B plan ve 3B model.' },
+      { id: 'street', icon: 'street-striker-icon', name: 'Street Striker: Zero to Legend', pill: 'Yakında', genre: 'Arcade RPG', text: 'Sokak dövüşü, RPG ilerlemesiyle buluşuyor; ekipman, antrenman ve roguelite yetenekler her dövüşü şekillendiriyor.' },
+      { id: 'tray', icon: 'trayful-icon', name: 'Trayful Café', pill: 'Geliştiriliyor', genre: 'Fizik bulmacası', text: 'Tek tepsi, tek kıskaç ve 24 kafe bulmacası. Malzemelerini dengele, her siparişin sırasını sen seç.', link: SITE.tray, linkText: 'Proje sitesi' }
     ],
     studioTitle: 'Ankara’da küçük bir stüdyo.',
     studioLead: 'Kendi oyunlarımızı tasarlıyor, geliştiriyor ve yayınlıyoruz; her kararı bir insan veriyor.',
@@ -245,6 +251,7 @@ function stage(t, key, o) {
           <div class="pane pane-r">${rightPane}</div>
           <div class="info">
             ${sub}
+            ${g.tags ? `<ul class="tags">${g.tags.map((tag, i) => `<li class="tag tag-${i % 3}">${esc(tag)}</li>`).join('')}</ul>` : ''}
             <p class="status">${esc(g.status)}</p>
             <p class="tagline">${esc(g.tagline)}</p>
             <p class="text">${esc(g.text)}</p>
@@ -315,7 +322,9 @@ ${t.lang === 'en' ? `    <script>try{var l=localStorage.getItem('lumoza-lang');i
 
         <section class="panel hero" aria-label="${esc(t.h1)}">
           <div class="hero-copy">
-            <h1 class="hero-title" aria-label="${esc(t.h1)}">Lumoza</h1>
+            <h1 class="hero-title" aria-label="${esc(t.h1)}">${t.headline.map(([w, c]) => w === 'icon'
+              ? `<span class="hl-icon" aria-hidden="true"><span class="paren">(</span><img src="/assets/games/${c}.webp" alt="" width="512" height="512" decoding="async"><span class="paren">)</span></span>`
+              : `<span class="hl-word${c ? ' hl-' + c : ''}" aria-hidden="true">${esc(w)}</span>`).join(' ')}</h1>
             <p class="lead">${esc(t.lead)}</p>
             <a class="button" href="#games">${esc(t.seeGames)}</a>
             <ul class="hero-links">
@@ -324,8 +333,7 @@ ${t.lang === 'en' ? `    <script>try{var l=localStorage.getItem('lumoza-lang');i
           </div>
           <div class="hero-stage" role="img" aria-label="${esc(t.heroStage)}">
             <span class="blob blob-a"></span><span class="blob blob-b"></span>
-            <span class="ring ring-a"></span><span class="ring ring-b"></span>
-            <img class="logo-float" src="/assets/brand/lumoza-app-icon-720.webp" alt="" width="720" height="720" decoding="async" fetchpriority="high">
+            <div class="badge"><span class="cord"></span><span class="clip"></span><span class="card"><img src="/assets/brand/lumoza-app-icon-720.webp" alt="" width="720" height="720" decoding="async" fetchpriority="high"><span class="card-name">Lumoza</span><span class="card-line">Ankara · 2026</span></span></div>
           </div>
         </section>
 
@@ -347,7 +355,8 @@ ${t.lang === 'en' ? `    <script>try{var l=localStorage.getItem('lumoza-lang');i
       </div>
 
       <section class="work" id="games" aria-labelledby="games-title">
-        <h2 class="work-title" id="games-title">${esc(t.gamesTitle)}</h2>
+        <h2 class="visually-hidden" id="games-title">${esc(t.gamesTitle)}</h2>
+        <div class="marquee" aria-hidden="true"><div class="marquee-track">${Array.from({ length: 6 }, () => `<span>${esc(t.marquee.toUpperCase())}</span><span class="star">*</span>`).join('')}</div></div>
 ${stage(t, 'mihenk')}
 ${stage(t, 'trade')}
 ${stage(t, 'son')}
@@ -361,6 +370,7 @@ ${stage(t, 'son')}
             <div>
               <h3 id="d-${d.id}">${esc(d.name)}</h3>
               <p class="genre">${esc(d.genre)}</p>
+              ${d.pill ? `<p class="tag tag-pill">${esc(d.pill)}</p>` : ''}
               <p>${esc(d.text)}</p>
               ${d.link ? ext(d.link, esc(d.linkText), t, 'text-link') : ''}
             </div>
