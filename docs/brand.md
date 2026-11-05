@@ -27,4 +27,5 @@ Approved by the owner on 2026-11-05 as the final logo. Do not redraw, recolour o
 - Smallest size: 16 px (the L still reads; the spark becomes a dot).
 - On the dark ground `#2f2826`, on cream `#f4ece0` and on photographs: use the tile as it is.
 - Never: stretch it, change its colours, put the L without its tile on a busy background, add shadows or outlines, or rebuild it in another typeface.
+- Name (2026-11-05): the studio is **Lumoza Studio** in running text, developer lines and copyright ("© 2026 Lumoza Studio", "Developer: Lumoza Studio (Oğuzhan Alper Tosun)"). The logo and wordmark stay "Lumoza". Older names (Studio Nostos, Nostoscomp) are retired.
 - The wordmark is the word "Lumoza" in Clash Display Semibold/Bold (tracking about −0.015 em), set next to or under the tile. Body text stays Instrument Sans.

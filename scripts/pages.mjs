@@ -17,15 +17,15 @@ const shots = (name, count) => Array.from({ length: count }, (_, i) => `/assets/
 const copy = {
   en: {
     lang: 'en', path: '/', other: { href: '/tr/', label: 'Türkçe', lang: 'tr', aria: 'Siteyi Türkçe görüntüle' },
-    title: 'Lumoza — Independent game studio in Ankara',
-    description: 'Lumoza is an independent game studio in Ankara, Türkiye, building with design, code and AI. MİHENKAYNAK, TradeUp and Hearthwalker are on the App Store.',
+    title: 'Lumoza Studio — Independent games from Ankara',
+    description: 'Lumoza Studio makes independent games in Ankara, Türkiye, building with design, code and AI. MİHENKAYNAK, TradeUp and Hearthwalker are on the App Store.',
     ogDescription: 'Independent games and digital products built with design, code and AI. Based in Ankara, Türkiye.',
-    ogAlt: 'Lumoza — independent games, built with care.',
+    ogAlt: 'Lumoza Studio — independent games, built with care.',
     locale: 'en_US', otherLocale: 'tr_TR',
     skip: 'Skip to content', homeAria: 'Lumoza, back to top', navAria: 'Main navigation',
     nav: { games: 'Games', studio: 'Studio', contact: 'Contact' },
-    h1: 'Lumoza, an independent game studio in Ankara',
-    lead: 'Lumoza is an independent game studio in Ankara, Türkiye. Three of our games are on the App Store, and more are on the way.',
+    h1: 'Lumoza Studio, independent games from Ankara',
+    lead: 'Lumoza Studio makes independent games in Ankara, Türkiye. Three of our games are on the App Store, and more are on the way.',
     headline: [['Lumoza', ''], ['icon', 'mihenkaynak-icon'], ['makes', ''], ['games', 'rose'], ['icon', 'tradeup-icon'], ['with', ''], ['care.', 'teal']],
     marquee: 'Our games',
     seeGames: 'See our games', newTab: ' (opens in a new tab)',
@@ -109,19 +109,19 @@ const copy = {
     city: 'Ankara, Türkiye', top: 'Back to top',
     footerPlaces: 'Reach the studio', footerGames: 'Games', footerSite: 'Site',
     footerLinks: { mihenk: 'MİHENKAYNAK on the App Store', trade: 'TradeUp on the App Store', son: 'Hearthwalker on the App Store' },
-    legal: '© 2026 Lumoza. Revit is a trademark of Autodesk, Inc. BIMQUEST is an independent project.'
+    legal: '© 2026 Lumoza Studio. Revit is a trademark of Autodesk, Inc. BIMQUEST is an independent project.'
   },
   tr: {
     lang: 'tr', path: '/tr/', other: { href: '/', label: 'English', lang: 'en', aria: 'View this site in English' },
-    title: 'Lumoza — Ankara’da bağımsız oyun stüdyosu',
-    description: 'Lumoza, Ankara merkezli bağımsız bir oyun stüdyosudur; tasarım, kod ve yapay zekâyla geliştirir. MİHENKAYNAK, TradeUp ve Hearthwalker App Store’da.',
+    title: 'Lumoza Studio — Ankara’dan bağımsız oyunlar',
+    description: 'Lumoza Studio, Ankara merkezli bağımsız bir oyun stüdyosudur; tasarım, kod ve yapay zekâyla geliştirir. MİHENKAYNAK, TradeUp ve Hearthwalker App Store’da.',
     ogDescription: 'Tasarım, kod ve yapay zekâyla geliştirilen bağımsız oyunlar ve dijital ürünler. Ankara, Türkiye.',
-    ogAlt: 'Lumoza — özenle yapılmış bağımsız oyunlar.',
+    ogAlt: 'Lumoza Studio — özenle yapılmış bağımsız oyunlar.',
     locale: 'tr_TR', otherLocale: 'en_US',
     skip: 'İçeriğe geç', homeAria: 'Lumoza, başa dön', navAria: 'Ana gezinme',
     nav: { games: 'Oyunlar', studio: 'Stüdyo', contact: 'İletişim' },
-    h1: 'Lumoza, Ankara’da bağımsız bir oyun stüdyosu',
-    lead: 'Lumoza, Ankara’da bağımsız bir oyun stüdyosu. Oyunlarımızdan üçü App Store’da, yenileri yolda.',
+    h1: 'Lumoza Studio, Ankara’dan bağımsız oyunlar',
+    lead: 'Lumoza Studio, Ankara’da bağımsız oyunlar yapıyor. Oyunlarımızdan üçü App Store’da, yenileri yolda.',
     headline: [['Lumoza', ''], ['icon', 'mihenkaynak-icon'], ['özenle', 'teal'], ['icon', 'tradeup-icon'], ['oyun', 'rose'], ['yapar.', '']],
     marquee: 'Oyunlarımız',
     seeGames: 'Oyunlarımızı keşfet', newTab: ' (yeni sekmede açılır)',
@@ -205,7 +205,7 @@ const copy = {
     city: 'Ankara, Türkiye', top: 'Başa dön',
     footerPlaces: 'Stüdyoya ulaşın', footerGames: 'Oyunlar', footerSite: 'Site',
     footerLinks: { mihenk: 'MİHENKAYNAK, App Store’da', trade: 'TradeUp, App Store’da', son: 'Hearthwalker, App Store’da' },
-    legal: '© 2026 Lumoza. Revit, Autodesk, Inc.’in ticari markasıdır. BIMQUEST bağımsız bir projedir.'
+    legal: '© 2026 Lumoza Studio. Revit, Autodesk, Inc.’in ticari markasıdır. BIMQUEST bağımsız bir projedir.'
   }
 };
 
@@ -272,7 +272,7 @@ function render(t) {
   const url = `https://lumoza.art${t.path}`;
   const sameAs = t.lang === 'en' ? 'https://lumoza.art/' : 'https://lumoza.art/tr/';
   const jsonld = JSON.stringify({
-    '@context': 'https://schema.org', '@type': 'Organization', name: 'Lumoza', url: sameAs,
+    '@context': 'https://schema.org', '@type': 'Organization', name: 'Lumoza Studio', alternateName: 'Lumoza', url: sameAs,
     logo: 'https://lumoza.art/assets/brand/lumoza-app-icon.png', email: EMAIL,
     description: t.lang === 'en' ? 'Independent game and product studio.' : 'Bağımsız oyun ve ürün stüdyosu.',
     address: { '@type': 'PostalAddress', addressLocality: 'Ankara', addressCountry: 'TR' },
@@ -288,7 +288,7 @@ function render(t) {
     <title>${esc(t.title)}</title>
     <meta name="description" content="${esc(t.description)}">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Lumoza">
+    <meta property="og:site_name" content="Lumoza Studio">
     <meta property="og:locale" content="${t.locale}">
     <meta property="og:locale:alternate" content="${t.otherLocale}">
     <meta property="og:title" content="${esc(t.title)}">
