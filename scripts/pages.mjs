@@ -6,7 +6,8 @@ import { fileURLToPath } from 'node:url';
 
 const STORE = {
   mihenk: 'https://apps.apple.com/app/mi-henkaynak/id6808742428',
-  trade: 'https://apps.apple.com/app/tradeup-zero-to-home/id6811362281'
+  trade: 'https://apps.apple.com/app/tradeup-zero-to-home/id6811362281',
+  son: 'https://apps.apple.com/app/hearthwalker/id6818167497'
 };
 const SITE = { trade: 'https://trade-up-zero-to-home.vercel.app/', tray: 'https://tepsi-telasi.vercel.app/' };
 const EMAIL = 'alpertosun@lumoza.art';
@@ -17,27 +18,28 @@ const copy = {
   en: {
     lang: 'en', path: '/', other: { href: '/tr/', label: 'Türkçe', lang: 'tr', aria: 'Siteyi Türkçe görüntüle' },
     title: 'Lumoza — Independent game studio in Ankara',
-    description: 'Lumoza is an independent game studio in Ankara, Türkiye, building with design, code and AI. MİHENKAYNAK and TradeUp are on the App Store; Hearthwalker: Son Ocak is coming soon.',
+    description: 'Lumoza is an independent game studio in Ankara, Türkiye, building with design, code and AI. MİHENKAYNAK, TradeUp and Hearthwalker are on the App Store.',
     ogDescription: 'Independent games and digital products built with design, code and AI. Based in Ankara, Türkiye.',
     ogAlt: 'Lumoza — independent games, built with care.',
     locale: 'en_US', otherLocale: 'tr_TR',
     skip: 'Skip to content', homeAria: 'Lumoza, back to top', navAria: 'Main navigation',
     nav: { games: 'Games', studio: 'Studio', contact: 'Contact' },
     h1: 'Lumoza, an independent game studio in Ankara',
-    lead: 'Lumoza is an independent game studio in Ankara, Türkiye. Two of our games are on the App Store, and two more are on the way.',
+    lead: 'Lumoza is an independent game studio in Ankara, Türkiye. Three of our games are on the App Store, and more are on the way.',
     headline: [['Lumoza', ''], ['icon', 'mihenkaynak-icon'], ['makes', ''], ['games', 'rose'], ['icon', 'tradeup-icon'], ['with', ''], ['care.', 'teal']],
     marquee: 'Our games',
     seeGames: 'See our games', newTab: ' (opens in a new tab)',
     heroLinks: [
       { href: STORE.mihenk, text: 'MİHENKAYNAK on the App Store' },
-      { href: STORE.trade, text: 'TradeUp on the App Store' }
+      { href: STORE.trade, text: 'TradeUp on the App Store' },
+      { href: STORE.son, text: 'Hearthwalker on the App Store' }
     ],
     heroArt: 'The MİHENKAYNAK loading screen with the gold logo on a purple jeweller’s counter.',
-    shelfTitle: 'Our iOS games', shelfLead: 'Two games are out. Two more are coming soon.',
+    shelfTitle: 'Our iOS games', shelfLead: 'Three games are out. A fourth is coming soon.',
     shelf: [
       { icon: 'mihenkaynak-icon', name: 'MİHENKAYNAK', line: 'Goldsmith shop simulation', action: 'View', href: STORE.mihenk, aria: 'View MİHENKAYNAK on the App Store' },
       { icon: 'tradeup-icon', name: 'TradeUp: Zero to Home', line: 'Secondhand trading simulation', action: 'View', href: STORE.trade, aria: 'View TradeUp: Zero to Home on the App Store' },
-      { icon: 'son-ocak-icon', name: 'Hearthwalker: Son Ocak', line: 'Survival game', action: 'Coming soon' },
+      { icon: 'son-ocak-icon', name: 'Hearthwalker', line: 'Action survival game', action: 'View', href: STORE.son, aria: 'View Hearthwalker on the App Store' },
       { icon: 'street-striker-icon', name: 'Street Striker: Zero to Legend', line: 'Arcade RPG', action: 'Coming soon' }
     ],
     gamesTitle: 'Our games',
@@ -59,11 +61,12 @@ const copy = {
         alts: ['The live market with listings, prices and a filter bar', 'The portfolio with items prepared for sale', 'The path to a first home with savings and house options', 'An item story with a haggle slider and a seller offer', 'Choosing a character and a career style']
       },
       son: {
-        id: 'son', name: 'Hearthwalker', sub: 'Son Ocak · Kül Yolu', tagline: 'Keep the last fire burning.',
-        status: 'Coming soon to the App Store.',
-        text: 'A portrait survival game. It is not on the App Store yet, and we will announce the launch here first.',
-        tags: ['Survival', 'Portrait', 'Coming soon'], facts: 'iOS · Survival · Portrait', launch: 'Get launch news', launchSubject: 'Hearthwalker Son Ocak launch news',
-        pane: 'We will announce the launch here first.', iconAlt: 'The Hearthwalker app icon, a copper stove with a glowing fire'
+        id: 'son', name: 'Hearthwalker', sub: 'Son Ocak', tagline: 'You don’t carry the fire. You are the fire.',
+        status: 'On the App Store since 5 November 2026.',
+        text: 'You are a living hearth from an Anatolian tile workshop. Walk to gather embers, stop to raise your guard, walk on to send the wave into the horde of ash, across 12 maps with 57 powers and 10 hearths.',
+        tags: ['Action', 'Survival', 'iOS'], facts: 'iOS · Action, strategy · English, Turkish and three more · First six maps free, no ads',
+        store: 'View on the App Store', href: STORE.son, shots: shots('hearth', 6),
+        alts: ['The hearth sending a wave of fire into a horde of ash creatures', 'A tile guardian blocking the road on one of the twelve maps', 'Choosing a power such as Ember Stove or Forked Ember', 'The map picker with twelve maps from Ash Forest to the Mother Hearth', 'The Son Ocak home screen with the hearth, its rank and the Endless Road', 'A late run with cracks of fire across the ground']
       },
       bim: {
         id: 'bim', name: 'BIMQUEST', tagline: 'Learn Revit by playing.',
@@ -105,33 +108,34 @@ const copy = {
     contactTitle: 'Press, partnerships or a question about our games? Write to us.',
     city: 'Ankara, Türkiye', top: 'Back to top',
     footerPlaces: 'Reach the studio', footerGames: 'Games', footerSite: 'Site',
-    footerLinks: { mihenk: 'MİHENKAYNAK on the App Store', trade: 'TradeUp on the App Store', son: 'Hearthwalker: Son Ocak, coming soon' },
+    footerLinks: { mihenk: 'MİHENKAYNAK on the App Store', trade: 'TradeUp on the App Store', son: 'Hearthwalker on the App Store' },
     legal: '© 2026 Lumoza. Revit is a trademark of Autodesk, Inc. BIMQUEST is an independent project.'
   },
   tr: {
     lang: 'tr', path: '/tr/', other: { href: '/', label: 'English', lang: 'en', aria: 'View this site in English' },
     title: 'Lumoza — Ankara’da bağımsız oyun stüdyosu',
-    description: 'Lumoza, Ankara merkezli bağımsız bir oyun stüdyosudur; tasarım, kod ve yapay zekâyla geliştirir. MİHENKAYNAK ve TradeUp App Store’da; Hearthwalker: Son Ocak yakında.',
+    description: 'Lumoza, Ankara merkezli bağımsız bir oyun stüdyosudur; tasarım, kod ve yapay zekâyla geliştirir. MİHENKAYNAK, TradeUp ve Hearthwalker App Store’da.',
     ogDescription: 'Tasarım, kod ve yapay zekâyla geliştirilen bağımsız oyunlar ve dijital ürünler. Ankara, Türkiye.',
     ogAlt: 'Lumoza — özenle yapılmış bağımsız oyunlar.',
     locale: 'tr_TR', otherLocale: 'en_US',
     skip: 'İçeriğe geç', homeAria: 'Lumoza, başa dön', navAria: 'Ana gezinme',
     nav: { games: 'Oyunlar', studio: 'Stüdyo', contact: 'İletişim' },
     h1: 'Lumoza, Ankara’da bağımsız bir oyun stüdyosu',
-    lead: 'Lumoza, Ankara’da bağımsız bir oyun stüdyosu. Oyunlarımızdan ikisi App Store’da, iki tanesi daha yolda.',
+    lead: 'Lumoza, Ankara’da bağımsız bir oyun stüdyosu. Oyunlarımızdan üçü App Store’da, yenileri yolda.',
     headline: [['Lumoza', ''], ['icon', 'mihenkaynak-icon'], ['özenle', 'teal'], ['icon', 'tradeup-icon'], ['oyun', 'rose'], ['yapar.', '']],
     marquee: 'Oyunlarımız',
     seeGames: 'Oyunlarımızı keşfet', newTab: ' (yeni sekmede açılır)',
     heroLinks: [
       { href: STORE.mihenk, text: 'MİHENKAYNAK, App Store’da' },
-      { href: STORE.trade, text: 'TradeUp, App Store’da' }
+      { href: STORE.trade, text: 'TradeUp, App Store’da' },
+      { href: STORE.son, text: 'Hearthwalker, App Store’da' }
     ],
     heroArt: 'Mor bir kuyumcu tezgâhında altın logolu MİHENKAYNAK açılış ekranı.',
-    shelfTitle: 'iOS oyunlarımız', shelfLead: 'İki oyun yayında. İki tanesi daha yakında.',
+    shelfTitle: 'iOS oyunlarımız', shelfLead: 'Üç oyun yayında. Dördüncüsü yakında.',
     shelf: [
       { icon: 'mihenkaynak-icon', name: 'MİHENKAYNAK', line: 'Kuyumcu dükkânı simülasyonu', action: 'Görüntüle', href: STORE.mihenk, aria: 'MİHENKAYNAK’ı App Store’da görüntüle' },
       { icon: 'tradeup-icon', name: 'TradeUp: Zero to Home', line: 'İkinci el ticaret simülasyonu', action: 'Görüntüle', href: STORE.trade, aria: 'TradeUp: Zero to Home’u App Store’da görüntüle' },
-      { icon: 'son-ocak-icon', name: 'Hearthwalker: Son Ocak', line: 'Hayatta kalma oyunu', action: 'Yakında' },
+      { icon: 'son-ocak-icon', name: 'Hearthwalker', line: 'Aksiyon, hayatta kalma oyunu', action: 'Görüntüle', href: STORE.son, aria: 'Hearthwalker’ı App Store’da görüntüle' },
       { icon: 'street-striker-icon', name: 'Street Striker: Zero to Legend', line: 'Arcade RPG', action: 'Yakında' }
     ],
     gamesTitle: 'Oyunlarımız',
@@ -153,11 +157,12 @@ const copy = {
         alts: ['İlanlar, fiyatlar ve filtre çubuğuyla canlı pazar', 'Satışa hazırlanan ürünlerle portföy', 'Birikim ve ev seçenekleriyle ilk eve giden yol', 'Pazarlık çubuğu ve satıcı teklifiyle bir ürünün hikâyesi', 'Karakter ve kariyer tarzı seçimi']
       },
       son: {
-        id: 'son', name: 'Hearthwalker', sub: 'Son Ocak · Kül Yolu', tagline: 'Son ateşi sönmekten koru.',
-        status: 'Yakında App Store’da.',
-        text: 'Dikey ekranda oynanan bir hayatta kalma oyunu. Henüz App Store’da değil; çıkışı önce burada duyuracağız.',
-        tags: ['Hayatta kalma', 'Dikey', 'Yakında'], facts: 'iOS · Hayatta kalma · Dikey', launch: 'Çıkış haberlerini al', launchSubject: 'Hearthwalker Son Ocak çıkış haberleri',
-        pane: 'Çıkışı önce burada duyuracağız.', iconAlt: 'Hearthwalker uygulama ikonu: içinde ateş yanan bakır bir soba'
+        id: 'son', name: 'Hearthwalker', sub: 'Son Ocak', tagline: 'Ateşi taşımıyorsun. Ateş sensin.',
+        status: '5 Kasım 2026’dan beri App Store’da.',
+        text: 'Anadolu çini atölyesinden çıkmış canlı bir ocaksın. Yürüyerek köz topla, durup korun, yeniden yürüyüp dalgayı kül sürüsüne gönder: 12 harita, 57 güç ve 10 ocak.',
+        tags: ['Aksiyon', 'Hayatta kalma', 'iOS'], facts: 'iOS · Aksiyon, strateji · Türkçe, İngilizce ve üç dil daha · İlk altı harita ücretsiz, reklamsız',
+        store: 'App Store’da görüntüle', href: STORE.son, shots: shots('hearth', 6),
+        alts: ['Ocağın kül yaratıklarından oluşan sürüye ateş dalgası göndermesi', 'On iki haritadan birinde yolu kesen bir çini muhafızı', 'Köz Sobası veya Çatallı Köz gibi bir güç seçimi', 'Kül Ormanı’ndan Ana Ocak’a on iki haritalık harita seçimi', 'Ocak, rütbesi ve Sonsuz Yol ile Son Ocak ana ekranı', 'Yerde ateş çatlaklarıyla ilerlemiş bir oyun']
       },
       bim: {
         id: 'bim', name: 'BIMQUEST', tagline: 'Revit’i oynayarak öğren.',
@@ -199,7 +204,7 @@ const copy = {
     contactTitle: 'Basın, iş birliği ya da oyunlarımızla ilgili bir soru mu? Bize yazın.',
     city: 'Ankara, Türkiye', top: 'Başa dön',
     footerPlaces: 'Stüdyoya ulaşın', footerGames: 'Oyunlar', footerSite: 'Site',
-    footerLinks: { mihenk: 'MİHENKAYNAK, App Store’da', trade: 'TradeUp, App Store’da', son: 'Hearthwalker: Son Ocak, yakında' },
+    footerLinks: { mihenk: 'MİHENKAYNAK, App Store’da', trade: 'TradeUp, App Store’da', son: 'Hearthwalker, App Store’da' },
     legal: '© 2026 Lumoza. Revit, Autodesk, Inc.’in ticari markasıdır. BIMQUEST bağımsız bir projedir.'
   }
 };
@@ -230,15 +235,15 @@ function stage(t, key, o) {
   const right = screens ? `<img class="shot" data-shot src="${screens[1]}" alt="${esc(g.alts[1])}" width="540" height="1169" loading="lazy" decoding="async">` : '';
   const data = screens ? ` data-screens='${JSON.stringify(screens.map((src, i) => ({ src, alt: g.alts[i] })))}'` : '';
   const pic = (x) => `<img class="${x.cls}" src="${x.src}" alt="${esc(x.alt)}" width="${x.w}" height="${x.h}" loading="lazy" decoding="async">`;
-  const leftPane = key === 'alvera' ? pic(g.pics[0]) : key === 'son'
+  const leftPane = key === 'alvera' ? pic(g.pics[0]) : key === 'son' && !screens
     ? `<img class="icon-lg" src="/assets/games/son-ocak-icon.webp" alt="${esc(g.iconAlt)}" width="512" height="512" loading="lazy" decoding="async">`
     : left;
-  const rightPane = key === 'alvera' ? pic(g.pics[1]) : key === 'son' ? `<p class="pane-note">${esc(g.pane)}</p>` : right;
+  const rightPane = key === 'alvera' ? pic(g.pics[1]) : key === 'son' && !screens ? `<p class="pane-note">${esc(g.pane)}</p>` : right;
   const sub = g.sub ? `<p class="sub" lang="tr">${esc(g.sub)}</p>` : '';
   const actions = [];
   if (g.href) actions.push(ext(g.href, esc(g.store), t, 'button'));
   if (g.siteHref) actions.push(ext(g.siteHref, esc(g.site), t, 'text-link'));
-  if (key === 'son') actions.push(`<a class="button" href="mailto:${EMAIL}?subject=${encodeURIComponent(g.launchSubject)}">${esc(g.launch)}</a>`);
+  if (g.launch) actions.push(`<a class="button" href="mailto:${EMAIL}?subject=${encodeURIComponent(g.launchSubject)}">${esc(g.launch)}</a>`);
   if (screens) actions.push(`<button class="next" type="button" data-next aria-label="${esc(t.nextAria)}">${esc(t.next)}</button>`);
   const word = Array.from(g.name.toUpperCase());
   const cut = { mihenk: 5, trade: 4, son: 6, bim: 4, alvera: 3 }[key];
@@ -401,11 +406,11 @@ ${stage(t, 'alvera')}
         <ul class="studio-wall" aria-label="${esc(t.wallLabel)}">
           <li><img src="/assets/games/mihenkaynak-icon.webp" alt="MİHENKAYNAK" width="512" height="512" loading="lazy" decoding="async"></li>
           <li><img src="/assets/games/tradeup-icon.webp" alt="TradeUp: Zero to Home" width="512" height="512" loading="lazy" decoding="async"></li>
-          <li class="wall-count"><strong>2</strong><span>${esc(t.wallOut)}</span></li>
-          <li><img src="/assets/games/son-ocak-icon.webp" alt="Hearthwalker: Son Ocak" width="512" height="512" loading="lazy" decoding="async"></li>
+          <li class="wall-count"><strong>3</strong><span>${esc(t.wallOut)}</span></li>
+          <li><img src="/assets/games/son-ocak-icon.webp" alt="Hearthwalker" width="512" height="512" loading="lazy" decoding="async"></li>
           <li class="wall-logo"><img src="/assets/brand/lumoza-app-icon-720.webp" alt="Lumoza" width="720" height="720" loading="lazy" decoding="async"></li>
           <li><img src="/assets/games/bimquest-icon.webp" alt="BIMQUEST" width="512" height="512" loading="lazy" decoding="async"></li>
-          <li class="wall-count"><strong>4</strong><span>${esc(t.wallNext)}</span></li>
+          <li class="wall-count"><strong>3</strong><span>${esc(t.wallNext)}</span></li>
           <li><img src="/assets/games/street-striker-icon.webp" alt="Street Striker: Zero to Legend" width="512" height="512" loading="lazy" decoding="async"></li>
           <li><img src="/assets/games/trayful-icon.webp" alt="Trayful Café" width="192" height="192" loading="lazy" decoding="async"></li>
         </ul>
@@ -418,6 +423,7 @@ ${stage(t, 'alvera')}
           <p class="contact-city">${esc(t.city)}</p>
           ${ext(STORE.mihenk, esc(t.footerLinks.mihenk), t, 'text-link')}
           ${ext(STORE.trade, esc(t.footerLinks.trade), t, 'text-link')}
+          ${ext(STORE.son, esc(t.footerLinks.son), t, 'text-link')}
         </div>
       </section>
     </main>
@@ -434,7 +440,7 @@ ${stage(t, 'alvera')}
           <p class="footer-label">${esc(t.footerGames)}</p>
           ${ext(STORE.mihenk, esc(t.footerLinks.mihenk), t)}
           ${ext(STORE.trade, esc(t.footerLinks.trade), t)}
-          <a href="#g-son">${esc(t.footerLinks.son)}</a>
+          ${ext(STORE.son, esc(t.footerLinks.son), t)}
         </nav>
         <nav class="footer-links" aria-label="${esc(t.footerSite)}">
           <p class="footer-label">${esc(t.footerSite)}</p>
@@ -462,7 +468,7 @@ ${stage(t, 'alvera')}
 const UMAMI_ID = '3e47b2d9-33f6-4f79-bcc1-4573aa4d9d38';
 
 // Name the clicks worth counting: which game's store page, project sites, launch news, email, language.
-const GAME_OF = { id6808742428: 'mihenkaynak', id6811362281: 'tradeup' };
+const GAME_OF = { id6808742428: 'mihenkaynak', id6811362281: 'tradeup', id6818167497: 'hearthwalker' };
 function track(html, lang) {
   return html.replace(/<(a|button)\b([^>]*)>/g, (tag, name, attrs) => {
     if (attrs.includes('data-umami-event')) return tag;

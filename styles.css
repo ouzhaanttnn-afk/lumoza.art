@@ -170,8 +170,6 @@ button{font:inherit;color:inherit}
 .stage .button{background:#fff;color:var(--on)}
 .stage .button:hover{background:var(--sulfur)}
 .stage .text-link:hover,.dev-card .text-link:hover,.contact .text-link:hover{color:var(--on)}
-.world-son .pane-l{justify-content:flex-start;padding-left:var(--m)}
-.world-son .pane-r{justify-content:center;align-items:center;padding:0 var(--m)}
 .world-son .icon-lg{height:min(46svh,360px);width:min(46svh,360px);min-height:300px;min-width:300px}
 
 /* Hearthwalker: embers rise from the bottom of the stage, behind everything, and a low glow breathes under them. */
@@ -323,14 +321,10 @@ button{font:inherit;color:inherit}
   .pane{padding-top:calc(20svh + 11svh)}
   .shot{width:min(88%,176px);height:27svh;min-height:200px;aspect-ratio:auto;object-fit:cover;object-position:50% 18%}
   .world-son .icon-lg{height:27svh;width:27svh;min-height:200px;min-width:200px;max-width:88%}
-  .world-son .pane-r .pane-note{display:none}
-  .world-son .pane-l{grid-column:1/-1;justify-content:center;padding-left:0}
-  .world-son .pane-r{display:none}
   .tear-a,.tear-b{animation:none!important}
   .contact{grid-template-columns:1fr}
   .email,.contact-side{grid-column:1}
   .contact-side{margin-top:1.5rem}
-  .world-son .pane-l{padding-left:var(--m)}
   .shot-wide{width:min(88%,176px);height:27svh;min-height:200px;aspect-ratio:auto;margin-top:0;object-position:72% 50%}
   .tear{top:41svh}
   .info{top:calc(41svh + var(--display)*.9 + 16px);gap:.4rem}

@@ -7,7 +7,8 @@ These are the owner's existing assets, optimized to WebP for the studio site.
 - `trayful-icon.webp`: https://tepsi-telasi.vercel.app/assets/icon-192.png
 - `mihenkaynak-icon.webp`: the official App Store icon, retrieved from Apple's public product metadata for app 6808742428.
 - `street-striker-icon.webp`: the owner's `ouzhaanttnn-afk/streetfights` repository, `public/icon.png`.
-- `son-ocak-icon.webp`: the owner's `ouzhaanttnn-afk/Son-Ocak` repository, `store/son-ocak-app-icon-v1.png`.
+- `son-ocak-icon.webp`: the official Hearthwalker App Store icon (app 6818167497), replaced on 2026-11-05.
+- `../screens/hearth-1…6.webp`: Hearthwalker's App Store screenshots.
 
 The five icons were matched against the user's supplied phone screenshot. Son Ocak's repository describes it as a native portrait survival game. The unrelated third-party games visible in that screenshot are not included.
 
@@ -16,3 +17,5 @@ MİHENKAYNAK's public App Store listing: https://apps.apple.com/tr/app/mi-henkay
 TradeUp App Store listing: https://apps.apple.com/tr/app/tradeup-zero-to-home/id6811362281
 
 - `bimquest-icon.webp`: the owner's `ouzhaanttnn-afk/b-mquest` repository, `app/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-512@2x.png`.
+
+Hearthwalker's public App Store listing: https://apps.apple.com/app/hearthwalker/id6818167497
