@@ -67,6 +67,11 @@ button{font:inherit;color:inherit}
 .hl-icon:nth-of-type(2) img{animation-delay:-1.6s}
 @keyframes bob{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-.08em) rotate(6deg)}}
 .lead{font-size:var(--lead);line-height:1.5;max-width:34ch}
+.news{display:inline-flex;align-items:center;gap:.6rem;min-height:44px;padding:.3rem 1rem .3rem .35rem;border-radius:999px;background:var(--surface);font-size:var(--small);font-weight:500;transition:background .2s,color .2s}
+.news img{width:28px;height:28px;border-radius:22.5%}
+.news-tag{padding:.1rem .55rem;border-radius:999px;background:var(--terra-t);color:var(--on);font-weight:600}
+.news:hover{background:var(--sulfur);color:var(--on)}
+.news:focus-visible{border-radius:999px}
 .hero-links{display:flex;flex-direction:column;align-items:flex-start;gap:.25rem}
 .hero-links .text-link{font-size:var(--small)}
 .hero-stage{position:relative;grid-column:2;overflow:hidden;background:var(--rose);animation:world 28s ease-in-out infinite}
@@ -265,6 +270,7 @@ button{font:inherit;color:inherit}
 .hero-copy>:not(.hero-title),.hero-links{animation:arrive .6s cubic-bezier(.2,.7,.2,1) both}
 .hero-copy>.lead{animation-delay:.06s}
 .hero-copy>.button{animation-delay:.12s}
+.hero-copy>.news{animation-delay:.15s}
 .hero-links{animation-delay:.18s}
 @supports (animation-timeline:view()){
   .pane-l{animation:lift linear both;animation-timeline:--g;animation-range:cover 0% cover 100%}

@@ -28,11 +28,11 @@ const copy = {
     lead: 'Lumoza Studio makes independent games in Ankara, Türkiye. Three of our games are on the App Store, and more are on the way.',
     headline: [['Lumoza', ''], ['icon', 'mihenkaynak-icon'], ['makes', ''], ['games', 'rose'], ['icon', 'tradeup-icon'], ['with', ''], ['care.', 'teal']],
     marquee: 'Our games',
+    news: { tag: 'New', text: 'Hearthwalker is out on the App Store' },
     seeGames: 'See our games', newTab: ' (opens in a new tab)',
     heroLinks: [
       { href: STORE.mihenk, text: 'MİHENKAYNAK on the App Store' },
-      { href: STORE.trade, text: 'TradeUp on the App Store' },
-      { href: STORE.son, text: 'Hearthwalker on the App Store' }
+      { href: STORE.trade, text: 'TradeUp on the App Store' }
     ],
     heroArt: 'The MİHENKAYNAK loading screen with the gold logo on a purple jeweller’s counter.',
     shelfTitle: 'Our iOS games', shelfLead: 'Three games are out. A fourth is coming soon.',
@@ -124,11 +124,11 @@ const copy = {
     lead: 'Lumoza Studio, Ankara’da bağımsız oyunlar yapıyor. Oyunlarımızdan üçü App Store’da, yenileri yolda.',
     headline: [['Lumoza', ''], ['icon', 'mihenkaynak-icon'], ['özenle', 'teal'], ['icon', 'tradeup-icon'], ['oyun', 'rose'], ['yapar.', '']],
     marquee: 'Oyunlarımız',
+    news: { tag: 'Yeni', text: 'Hearthwalker App Store’da çıktı' },
     seeGames: 'Oyunlarımızı keşfet', newTab: ' (yeni sekmede açılır)',
     heroLinks: [
       { href: STORE.mihenk, text: 'MİHENKAYNAK, App Store’da' },
-      { href: STORE.trade, text: 'TradeUp, App Store’da' },
-      { href: STORE.son, text: 'Hearthwalker, App Store’da' }
+      { href: STORE.trade, text: 'TradeUp, App Store’da' }
     ],
     heroArt: 'Mor bir kuyumcu tezgâhında altın logolu MİHENKAYNAK açılış ekranı.',
     shelfTitle: 'iOS oyunlarımız', shelfLead: 'Üç oyun yayında. Dördüncüsü yakında.',
@@ -285,6 +285,7 @@ function render(t) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light">
     <meta name="theme-color" content="#f3f5fb">
+    <meta name="apple-itunes-app" content="app-id=${NEWEST_APP}">
     <title>${esc(t.title)}</title>
     <meta name="description" content="${esc(t.description)}">
     <meta property="og:type" content="website">
@@ -338,6 +339,7 @@ ${t.lang === 'en' ? `    <script>try{var l=localStorage.getItem('lumoza-lang');i
               : `<span class="hl-word${c ? ' hl-' + c : ''}" aria-hidden="true">${esc(w)}</span>`).join(' ')}</h1>
             <p class="lead">${esc(t.lead)}</p>
             <a class="button" href="#games">${esc(t.seeGames)}</a>
+            <a class="news" href="${STORE.son}" target="_blank" rel="noopener noreferrer"><img src="/assets/games/son-ocak-icon.webp" alt="" width="28" height="28" decoding="async"><span class="news-tag">${esc(t.news.tag)}</span><span>${esc(t.news.text)}</span><span class="visually-hidden">${esc(t.newTab)}</span></a>
             <ul class="hero-links">
               ${t.heroLinks.map(l => `<li>${ext(l.href, esc(l.text), t, 'text-link')}</li>`).join('\n              ')}
             </ul>
@@ -463,6 +465,10 @@ ${stage(t, 'alvera')}
 </html>
 `;
 }
+
+// The newest game: iPhone Safari shows Apple's own App Store banner for it, and the hero carries a small "New" link.
+// When the next game ships, change NEWEST_APP, the news copy and the link above.
+const NEWEST_APP = '6818167497';
 
 // Umami (cookie-free visitor statistics). Only counts on the live domain, so local previews stay out of the numbers.
 const UMAMI_ID = '3e47b2d9-33f6-4f79-bcc1-4573aa4d9d38';

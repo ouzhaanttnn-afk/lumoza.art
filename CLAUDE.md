@@ -28,6 +28,7 @@ Details, versions and test results: `docs/design-skills.md`.
 - Motion libraries live in `assets/vendor/` (GSAP + ScrollTrigger, Lenis, Matter.js; see `assets/vendor/LICENSES.md`). Matter.js makes the hero card a draggable pendulum; Lenis smooths desktop wheel scrolling; GSAP covers the torn titles where CSS scroll timelines are missing and speeds the marquee with scroll. Everything is skipped under reduced motion and the page works without them.
 - Statistics: Umami Cloud (cookie-free), script in the page head, counting only on lumoza.art. Clicks are named in `scripts/pages.mjs` (`track()`): app-store (with game), project-site, launch-news, email, language, next-screens.
 - Safari is testable here: Playwright WebKit is installed. WebKit cannot reach local servers in this container, so test `dist/` through `page.route` on a fake https origin.
+- Own-game promotion (asked 2026-11-05): the newest game gets Apple's Smart App Banner (`NEWEST_APP` in `scripts/pages.mjs`) and a small "New" link under the hero button (`news` copy). When the next game ships, update both. No third-party ads.
 - The owner wants the site to stay compact: one page per language, short scroll. Do not add sections, pages (game pages, press kit) or new libraries unless asked.
 - AI stays a small mention (the studio sentence, one principle, page descriptions). Never in headlines.
 - Every page change ships in English and Turkish.
