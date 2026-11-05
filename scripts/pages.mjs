@@ -9,7 +9,6 @@ const STORE = {
   trade: 'https://apps.apple.com/app/tradeup-zero-to-home/id6811362281',
   son: 'https://apps.apple.com/app/hearthwalker/id6818167497'
 };
-const SITE = { trade: 'https://trade-up-zero-to-home.vercel.app/', tray: 'https://tepsi-telasi.vercel.app/' };
 const EMAIL = 'alpertosun@lumoza.art';
 
 const shots = (name, count) => Array.from({ length: count }, (_, i) => `/assets/screens/${name}-${i + 1}.webp`);
@@ -57,7 +56,7 @@ const copy = {
         status: 'On the App Store since 14 October 2026.',
         text: 'Compare listings by price, condition, interest and seller behaviour. Bargain with two offers, prepare and relist what you buy, and work toward one of five homes in a secondhand market that keeps moving.',
         facts: 'iOS · Strategy, simulation · Turkish and English · Free, with optional upgrades', tags: ['Strategy', 'Simulation', 'iOS'],
-        store: 'View on the App Store', site: 'Project website', shots: shots('trade', 5), href: STORE.trade, siteHref: SITE.trade,
+        store: 'View on the App Store', shots: shots('trade', 5), href: STORE.trade,
         alts: ['The live market with listings, prices and a filter bar', 'The portfolio with items prepared for sale', 'The path to a first home with savings and house options', 'An item story with a haggle slider and a seller offer', 'Choosing a character and a career style']
       },
       son: {
@@ -94,7 +93,7 @@ const copy = {
     dev: [
       { id: 'bim', icon: 'bimquest-icon', name: 'BIMQUEST', pill: 'In TestFlight', genre: 'Educational game', text: 'A mobile game that teaches Revit through play: seven chapters from BIM basics to views and documentation, with a live 2D plan and a 3D model to build.' },
       { id: 'street', icon: 'street-striker-icon', name: 'Street Striker: Zero to Legend', pill: 'Coming soon', genre: 'Arcade RPG', text: 'Street fighting meets RPG progression, with equipment, training and roguelite skills shaping each fight.' },
-      { id: 'tray', icon: 'trayful-icon', name: 'Trayful Café', pill: 'In development', genre: 'Physics puzzle', text: 'One tray, one clamp and 24 café puzzles. Balance your ingredients and choose the order of every delivery.', link: SITE.tray, linkText: 'Project website' }
+      { id: 'tray', icon: 'trayful-icon', name: 'Trayful Café', pill: 'In development', genre: 'Physics puzzle', text: 'One tray, one clamp and 24 café puzzles. Balance your ingredients and choose the order of every delivery.' }
     ],
     studioTitle: 'A small studio in Ankara.',
     studioLead: 'We design, build and ship our own games, and a person makes every decision.',
@@ -153,7 +152,7 @@ const copy = {
         status: '14 Ekim 2026’dan beri App Store’da.',
         text: 'İlanları fiyat, kondisyon, ilgi ve satıcı davranışına göre karşılaştır. İki teklif hakkıyla pazarlık et, aldıklarını hazırla ve yeniden listele; durmadan akan bir ikinci el pazarında beş evden birine ulaş.',
         facts: 'iOS · Strateji, simülasyon · Türkçe ve İngilizce · Ücretsiz, isteğe bağlı paketlerle', tags: ['Strateji', 'Simülasyon', 'iOS'],
-        store: 'App Store’da görüntüle', site: 'Proje sitesi', shots: shots('trade', 5), href: STORE.trade, siteHref: SITE.trade,
+        store: 'App Store’da görüntüle', shots: shots('trade', 5), href: STORE.trade,
         alts: ['İlanlar, fiyatlar ve filtre çubuğuyla canlı pazar', 'Satışa hazırlanan ürünlerle portföy', 'Birikim ve ev seçenekleriyle ilk eve giden yol', 'Pazarlık çubuğu ve satıcı teklifiyle bir ürünün hikâyesi', 'Karakter ve kariyer tarzı seçimi']
       },
       son: {
@@ -190,7 +189,7 @@ const copy = {
     dev: [
       { id: 'bim', icon: 'bimquest-icon', name: 'BIMQUEST', pill: 'TestFlight’ta', genre: 'Eğitici oyun', text: 'Revit’i oyun oynayarak öğreten bir mobil oyun: BIM temellerinden görünüm ve dokümantasyona yedi bölüm; kurabileceğin canlı bir 2B plan ve 3B model.' },
       { id: 'street', icon: 'street-striker-icon', name: 'Street Striker: Zero to Legend', pill: 'Yakında', genre: 'Arcade RPG', text: 'Sokak dövüşü, RPG ilerlemesiyle buluşuyor; ekipman, antrenman ve roguelite yetenekler her dövüşü şekillendiriyor.' },
-      { id: 'tray', icon: 'trayful-icon', name: 'Trayful Café', pill: 'Geliştiriliyor', genre: 'Fizik bulmacası', text: 'Tek tepsi, tek kıskaç ve 24 kafe bulmacası. Malzemelerini dengele, her siparişin sırasını sen seç.', link: SITE.tray, linkText: 'Proje sitesi' }
+      { id: 'tray', icon: 'trayful-icon', name: 'Trayful Café', pill: 'Geliştiriliyor', genre: 'Fizik bulmacası', text: 'Tek tepsi, tek kıskaç ve 24 kafe bulmacası. Malzemelerini dengele, her siparişin sırasını sen seç.' }
     ],
     studioTitle: 'Ankara’da küçük bir stüdyo.',
     studioLead: 'Kendi oyunlarımızı tasarlıyor, geliştiriyor ve yayınlıyoruz; her kararı bir insan veriyor.',
@@ -242,7 +241,6 @@ function stage(t, key, o) {
   const sub = g.sub ? `<p class="sub" lang="tr">${esc(g.sub)}</p>` : '';
   const actions = [];
   if (g.href) actions.push(ext(g.href, esc(g.store), t, 'button'));
-  if (g.siteHref) actions.push(ext(g.siteHref, esc(g.site), t, 'text-link'));
   if (g.launch) actions.push(`<a class="button" href="mailto:${EMAIL}?subject=${encodeURIComponent(g.launchSubject)}">${esc(g.launch)}</a>`);
   if (screens) actions.push(`<button class="next" type="button" data-next aria-label="${esc(t.nextAria)}">${esc(t.next)}</button>`);
   const word = Array.from(g.name.toUpperCase());
@@ -484,7 +482,7 @@ function track(html, lang) {
     if (store) { event = 'app-store'; extra = ` data-umami-event-game="${GAME_OF[store[1]] || store[1]}"`; }
     else if (href.startsWith('mailto:') && href.includes('subject=')) event = 'launch-news';
     else if (href.startsWith('mailto:')) event = 'email';
-    else if (/vercel\.app|alverakuyumculuk/.test(href)) { event = 'project-site'; extra = ` data-umami-event-site="${new URL(href).hostname}"`; }
+    else if (/alverakuyumculuk/.test(href)) { event = 'project-site'; extra = ` data-umami-event-site="${new URL(href).hostname}"`; }
     else if (attrs.includes('hreflang=')) event = 'language';
     else if (attrs.includes('data-next')) event = 'next-screens';
     if (!event) return tag;
