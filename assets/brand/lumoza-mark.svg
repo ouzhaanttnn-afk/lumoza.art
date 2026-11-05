@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Lumoza">
+  <rect width="512" height="512" rx="115" fill="#B87076"/>
+  <path d="M170 116 V334 Q170 374 210 374 H356" fill="none" stroke="#f4ece0" stroke-width="80" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M330 136 C335 200 346 211 410 216 C346 221 335 232 330 296 C325 232 314 221 250 216 C314 211 325 200 330 136 Z" fill="#70B8A9"/>
+</svg>
