@@ -25,6 +25,7 @@ Details, versions and test results: `docs/design-skills.md`.
 - The English page sends Turkish browsers to `/tr/` once (inline script in the head); an explicit language click is remembered in `localStorage` (`lumoza-lang`).
 - The owner loves the torn game titles that slide apart while scrolling and the ambient layer behind each game (embers for Hearthwalker, falling gold leaf for MİHENKAYNAK, rising price ticks for TradeUp, stone glints for Alvera). Keep them.
 - Motion libraries live in `assets/vendor/` (GSAP + ScrollTrigger, Lenis, Matter.js; see `assets/vendor/LICENSES.md`). Matter.js makes the hero card a draggable pendulum; Lenis smooths desktop wheel scrolling; GSAP covers the torn titles where CSS scroll timelines are missing and speeds the marquee with scroll. Everything is skipped under reduced motion and the page works without them.
+- Statistics: Umami Cloud (cookie-free), script in the page head, counting only on lumoza.art. Clicks are named in `scripts/pages.mjs` (`track()`): app-store (with game), project-site, launch-news, email, language, next-screens.
 - Safari is testable here: Playwright WebKit is installed. WebKit cannot reach local servers in this container, so test `dist/` through `page.route` on a fake https origin.
 - AI stays a small mention (the studio sentence, one principle, page descriptions). Never in headlines.
 - Every page change ships in English and Turkish.

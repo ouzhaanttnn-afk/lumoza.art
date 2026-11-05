@@ -308,6 +308,7 @@ function render(t) {
     <link rel="stylesheet" href="/assets/vendor/lenis.css">
     <link rel="stylesheet" href="/styles.css">
 ${t.lang === 'en' ? `    <script>try{var l=localStorage.getItem('lumoza-lang');if(l==='tr'||(!l&&/^tr/i.test(navigator.language))){location.replace('/tr/'+location.hash)}}catch(e){}</script>\n` : ''}    <script type="application/ld+json">${jsonld}</script>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="${UMAMI_ID}" data-domains="lumoza.art,www.lumoza.art"></script>
   </head>
   <body id="top">
     <a class="skip-link" href="#main">${esc(t.skip)}</a>
@@ -457,10 +458,32 @@ ${stage(t, 'alvera')}
 `;
 }
 
+// Umami (cookie-free visitor statistics). Only counts on the live domain, so local previews stay out of the numbers.
+const UMAMI_ID = '3e47b2d9-33f6-4f79-bcc1-4573aa4d9d38';
+
+// Name the clicks worth counting: which game's store page, project sites, launch news, email, language.
+const GAME_OF = { id6808742428: 'mihenkaynak', id6811362281: 'tradeup' };
+function track(html, lang) {
+  return html.replace(/<(a|button)\b([^>]*)>/g, (tag, name, attrs) => {
+    if (attrs.includes('data-umami-event')) return tag;
+    const href = (attrs.match(/href="([^"]+)"/) || [])[1] || '';
+    let event = '', extra = '';
+    const store = href.match(/apps\.apple\.com\/[^"]*(id\d+)/);
+    if (store) { event = 'app-store'; extra = ` data-umami-event-game="${GAME_OF[store[1]] || store[1]}"`; }
+    else if (href.startsWith('mailto:') && href.includes('subject=')) event = 'launch-news';
+    else if (href.startsWith('mailto:')) event = 'email';
+    else if (/vercel\.app|alverakuyumculuk/.test(href)) { event = 'project-site'; extra = ` data-umami-event-site="${new URL(href).hostname}"`; }
+    else if (attrs.includes('hreflang=')) event = 'language';
+    else if (attrs.includes('data-next')) event = 'next-screens';
+    if (!event) return tag;
+    return `<${name}${attrs} data-umami-event="${event}"${extra} data-umami-event-lang="${lang}">`;
+  });
+}
+
 export async function writePages(root) {
   await mkdir(resolve(root, 'tr'), { recursive: true });
-  await writeFile(resolve(root, 'index.html'), render(copy.en));
-  await writeFile(resolve(root, 'tr/index.html'), render(copy.tr));
+  await writeFile(resolve(root, 'index.html'), track(render(copy.en), 'en'));
+  await writeFile(resolve(root, 'tr/index.html'), track(render(copy.tr), 'tr'));
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
