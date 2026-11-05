@@ -27,6 +27,10 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png">
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <link rel="preload" href="/assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&display=swap">
+    <link rel="stylesheet" href="/assets/vendor/lenis.css">
     <link rel="stylesheet" href="/styles.css">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Lumoza","url":"https://lumoza.art/tr/","logo":"https://lumoza.art/assets/brand/lumoza-app-icon.png","email":"alpertosun@lumoza.art","description":"Bağımsız oyun ve ürün stüdyosu.","address":{"@type":"PostalAddress","addressLocality":"Ankara","addressCountry":"TR"},"founder":{"@type":"Person","name":"Oğuzhan Alper Tosun"}}</script>
   </head>
@@ -58,7 +62,7 @@
           </div>
           <div class="hero-stage" role="img" aria-label="Bir ipte sallanan kartın üstünde Lumoza logosu; arkasındaki renk yavaşça değişiyor.">
             <span class="blob blob-a"></span><span class="blob blob-b"></span>
-            <div class="badge"><span class="cord"></span><span class="clip"></span><span class="card"><img src="/assets/brand/lumoza-app-icon-720.webp" alt="" width="720" height="720" decoding="async" fetchpriority="high"><span class="card-name">Lumoza</span><span class="card-line">Ankara · 2026</span></span></div>
+            <div class="badge"><span class="cord"></span><span class="clip"></span><span class="card"><svg class="card-logo" viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" rx="115" fill="#B87076"/><path d="M170 116 V334 Q170 374 210 374 H356" fill="none" stroke="#f4ece0" stroke-width="80" stroke-linecap="round" stroke-linejoin="round"/><path class="card-spark" d="M330 136 C335 200 346 211 410 216 C346 221 335 232 330 296 C325 232 314 221 250 216 C314 211 325 200 330 136 Z" fill="#70B8A9"/></svg><span class="card-name">Lumoza</span><span class="card-line">Ankara · 2026</span></span></div>
           </div>
         </section>
 
@@ -275,6 +279,10 @@
         <a class="to-top" href="#top">Başa dön</a>
       </div>
     </footer>
+    <script defer src="/assets/vendor/gsap.min.js"></script>
+    <script defer src="/assets/vendor/ScrollTrigger.min.js"></script>
+    <script defer src="/assets/vendor/lenis.min.js"></script>
+    <script defer src="/assets/vendor/matter.min.js"></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

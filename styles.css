@@ -8,7 +8,7 @@
   --bg:#2f2826;--surface:#3a312e;--ink:#f4ece0;--muted:#cbbdb2;--on:#1d1715;--accent:#B87076;--accent-deep:#a35f65;--sulfur:#e1e620;
   --rose:#B87076;--terra:#B88370;--blue:#709FB8;--teal:#70B8A9;--taupe:#635854;
   --rose-t:#e7a3a8;--terra-t:#e2ad98;--blue-t:#9cc6dc;--teal-t:#9ad7c9;
-  --sans:"Instrument Sans",system-ui,Arial,sans-serif;
+  --sans:"Instrument Sans",system-ui,Arial,sans-serif;--display-face:"Clash Display","Instrument Sans",system-ui,sans-serif;
   --display:clamp(2.6rem,10vw,9.5rem);--h2:clamp(1.75rem,2.4vw,2.25rem);--lead:clamp(1.1875rem,1.6vw,1.375rem);--body:1.0625rem;--small:.875rem;
   --m:clamp(16px,2.2vw,32px);--gap:clamp(56px,7vw,104px);
   --col:calc((100vw - 13*var(--m))/12)
@@ -79,6 +79,7 @@ button{font:inherit;color:inherit}
 .clip{display:block;width:30px;height:18px;margin:-2px auto 0;border:3px solid var(--on);border-radius:10px 10px 4px 4px}
 .card{display:flex;flex-direction:column;align-items:center;gap:.4rem;margin-top:-4px;padding:clamp(14px,2vw,24px);border-radius:26px;background:#fff;color:var(--on)}
 .card img{width:100%;height:auto;border-radius:22.5%}
+.hero-title,.marquee-track,.tear,.wall-count strong,.email,.footer-name,.card-name{font-family:var(--display-face);letter-spacing:-.015em}
 .card-name{font-size:clamp(1.25rem,2vw,1.75rem);font-weight:700;letter-spacing:-.03em;margin-top:.4rem}
 .card-line{font-size:var(--small)}
 .badge:hover{animation-duration:2.2s}
@@ -86,6 +87,17 @@ button{font:inherit;color:inherit}
 @keyframes world{0%,100%{background-color:#B87076}25%{background-color:#709FB8}50%{background-color:#70B8A9}75%{background-color:#B88370}}
 @keyframes drift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(8%,10%) scale(1.15)}}
 @keyframes float{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-14px) rotate(var(--r,0deg))}}
+
+/* With Matter.js running, the card is placed by the physics and the cord is drawn as a line. */
+.hero-stage.is-physics .badge{inset:0;width:auto;margin:0;animation:none;transform:none}
+.hero-stage.is-physics .cord,.hero-stage.is-physics .clip{visibility:hidden}
+.hero-stage.is-physics .card{position:absolute;left:0;top:0;margin:0;cursor:grab;touch-action:none;user-select:none;will-change:transform}
+.hero-stage.is-physics .card.is-grabbed{cursor:grabbing}
+.cord-line{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;overflow:visible}
+.cord-line line{stroke:var(--on);stroke-width:3;stroke-linecap:round}
+.card-logo{display:block;width:100%;height:auto}
+.card-spark{transform-box:fill-box;transform-origin:center;animation:glimmer 3.4s ease-in-out infinite}
+@keyframes glimmer{0%,70%,100%{transform:scale(1) rotate(0)}80%{transform:scale(1.25) rotate(45deg)}90%{transform:scale(.9) rotate(80deg)}}
 
 /* The shelf: light on the left, an indigo field on the right, so the white and ink text both read. */
 .shelf{display:grid;grid-template-columns:1fr 1fr;min-height:0;background:var(--surface)}
