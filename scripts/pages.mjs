@@ -11,6 +11,8 @@ const STORE = {
 };
 const EMAIL = 'alpertosun@lumoza.art';
 
+// Landscape games: theme art is shared, in-game screens follow the page language when the game has both.
+const wide = (list, lang) => list.map(n => `/assets/screens/${n.replace('{lang}', lang)}.webp`);
 const shots = (name, count) => Array.from({ length: count }, (_, i) => `/assets/screens/${name}-${i + 1}.webp`);
 
 const copy = {
@@ -34,12 +36,14 @@ const copy = {
       { href: STORE.trade, text: 'TradeUp on the App Store' }
     ],
     heroArt: 'The MİHENKAYNAK loading screen with the gold logo on a purple jeweller’s counter.',
-    shelfTitle: 'Our iOS games', shelfLead: 'Three games are out. A fourth is coming soon.',
+    shelfTitle: 'Our iOS games', shelfLead: 'Three games are out. Three more are coming soon.',
     shelf: [
       { icon: 'mihenkaynak-icon', name: 'MİHENKAYNAK', line: 'Goldsmith shop simulation', action: 'View', href: STORE.mihenk, aria: 'View MİHENKAYNAK on the App Store' },
       { icon: 'tradeup-icon', name: 'TradeUp: Zero to Home', line: 'Secondhand trading simulation', action: 'View', href: STORE.trade, aria: 'View TradeUp: Zero to Home on the App Store' },
       { icon: 'son-ocak-icon', name: 'Hearthwalker', line: 'Action survival game', action: 'View', href: STORE.son, aria: 'View Hearthwalker on the App Store' },
-      { icon: 'street-striker-icon', name: 'Street Striker: Zero to Legend', line: 'Arcade RPG', action: 'Coming soon' }
+      { icon: 'street-striker-icon', name: 'Street Striker: Zero to Legend', line: 'Arcade RPG', action: 'Coming soon' },
+      { icon: 'little-stove-icon', name: 'Little Stove: Cozy Dungeon', line: 'Cozy roguelite', action: 'Coming soon' },
+      { icon: 'sparkle-fleet-icon', name: 'Sparkle Fleet', line: 'Ferry cleaning game', action: 'Coming soon' }
     ],
     gamesTitle: 'Our games',
     games: {
@@ -66,6 +70,24 @@ const copy = {
         tags: ['Action', 'Survival', 'iOS'], facts: 'iOS · Action, strategy · English, Turkish and three more · First six maps free, no ads',
         store: 'View on the App Store', href: STORE.son, shots: shots('hearth', 6),
         alts: ['The hearth sending a wave of fire into a horde of ash creatures', 'A tile guardian blocking the road on one of the twelve maps', 'Choosing a power such as Ember Stove or Forked Ember', 'The map picker with twelve maps from Ash Forest to the Mother Hearth', 'The Son Ocak home screen with the hearth, its rank and the Endless Road', 'A late run with cracks of fire across the ground']
+      },
+      stove: {
+        id: 'stove', name: 'Little Stove', sub: 'Ocakçı', tagline: 'Keep the little stove burning.',
+        status: 'Coming soon to the App Store.',
+        text: 'Carry a living stove from the bottom of the earth up to the surface. Gather coal in the dark, get back before the fire goes out and hold the light against what lives down there, across five chapters and 25 floors with a boss at the end of each chapter.',
+        tags: ['Roguelite', 'Cozy', 'iOS'], facts: 'iPhone · Roguelite, action · English and Turkish · First chapter free, no ads',
+        launch: 'Tell me at launch', launchSubject: 'Little Stove launch',
+        wide: wide(['stove-1-{lang}', 'stove-2', 'stove-3-{lang}', 'stove-4', 'stove-5-{lang}', 'stove-6'], 'en'),
+        alts: ['The keeper beside the little stove and its ring of light on the first floor', 'Chapter art: the keeper and the stove between giant blue crystals', 'Choosing one of three parts to add to the stove', 'Chapter art: a river of lava through a dark cave', 'The opening of chapter one, the Ash Cellar', 'Chapter art: a mossy cave with glowing mushrooms']
+      },
+      sparkle: {
+        id: 'sparkle', name: 'Sparkle Fleet', sub: 'Son Vapur', tagline: 'Every old ferry deserves to shine again.',
+        status: 'Coming soon to the App Store, in testing on TestFlight.',
+        text: 'A first-person cleaning game aboard old passenger ferries. Scrape, brush and pressure-wash the decks and the saloon, empty your hopper, buy better tools in the workshop and send every ferry back out to sea.',
+        tags: ['Cleaning', 'Relaxing', 'iOS'], facts: 'iPhone · Cleaning simulation · Turkish · Played in landscape',
+        launch: 'Tell me at launch', launchSubject: 'Sparkle Fleet launch',
+        wide: wide(['sparkle-1', 'sparkle-2', 'sparkle-3', 'sparkle-4'], 'en'),
+        alts: ['Scraping dirt off the wooden deck by a cabin door', 'The passenger saloon with rows of benches, still dirty', 'Pressure-washing the deck around a mooring bollard', 'The bow of the ferry with the sea and the sky ahead']
       },
       bim: {
         id: 'bim', name: 'BIMQUEST', tagline: 'Learn Revit by playing.',
@@ -130,12 +152,14 @@ const copy = {
       { href: STORE.trade, text: 'TradeUp, App Store’da' }
     ],
     heroArt: 'Mor bir kuyumcu tezgâhında altın logolu MİHENKAYNAK açılış ekranı.',
-    shelfTitle: 'iOS oyunlarımız', shelfLead: 'Üç oyun yayında. Dördüncüsü yakında.',
+    shelfTitle: 'iOS oyunlarımız', shelfLead: 'Üç oyun yayında. Üçü daha yakında geliyor.',
     shelf: [
       { icon: 'mihenkaynak-icon', name: 'MİHENKAYNAK', line: 'Kuyumcu dükkânı simülasyonu', action: 'Görüntüle', href: STORE.mihenk, aria: 'MİHENKAYNAK’ı App Store’da görüntüle' },
       { icon: 'tradeup-icon', name: 'TradeUp: Zero to Home', line: 'İkinci el ticaret simülasyonu', action: 'Görüntüle', href: STORE.trade, aria: 'TradeUp: Zero to Home’u App Store’da görüntüle' },
       { icon: 'son-ocak-icon', name: 'Hearthwalker', line: 'Aksiyon, hayatta kalma oyunu', action: 'Görüntüle', href: STORE.son, aria: 'Hearthwalker’ı App Store’da görüntüle' },
-      { icon: 'street-striker-icon', name: 'Street Striker: Zero to Legend', line: 'Arcade RPG', action: 'Yakında' }
+      { icon: 'street-striker-icon', name: 'Street Striker: Zero to Legend', line: 'Arcade RPG', action: 'Yakında' },
+      { icon: 'little-stove-icon', name: 'Little Stove: Cozy Dungeon', line: 'Sıcacık bir roguelite', action: 'Yakında' },
+      { icon: 'sparkle-fleet-icon', name: 'Sparkle Fleet', line: 'Vapur temizleme oyunu', action: 'Yakında' }
     ],
     gamesTitle: 'Oyunlarımız',
     games: {
@@ -162,6 +186,24 @@ const copy = {
         tags: ['Aksiyon', 'Hayatta kalma', 'iOS'], facts: 'iOS · Aksiyon, strateji · Türkçe, İngilizce ve üç dil daha · İlk altı harita ücretsiz, reklamsız',
         store: 'App Store’da görüntüle', href: STORE.son, shots: shots('hearth', 6),
         alts: ['Ocağın kül yaratıklarından oluşan sürüye ateş dalgası göndermesi', 'On iki haritadan birinde yolu kesen bir çini muhafızı', 'Köz Sobası veya Çatallı Köz gibi bir güç seçimi', 'Kül Ormanı’ndan Ana Ocak’a on iki haritalık harita seçimi', 'Ocak, rütbesi ve Sonsuz Yol ile Son Ocak ana ekranı', 'Yerde ateş çatlaklarıyla ilerlemiş bir oyun']
+      },
+      stove: {
+        id: 'stove', name: 'Little Stove', sub: 'Ocakçı', tagline: 'Küçük ocağı söndürme.',
+        status: 'Yakında App Store’da.',
+        text: 'Yaşayan bir ocağı yerin dibinden yüzeye taşı. Karanlıkta kömür topla, ateş sönmeden geri dön ve aşağıda yaşayanlara karşı ışığı koru: beş bölüm, 25 kat ve her bölümün sonunda bir boss.',
+        tags: ['Roguelite', 'Sıcacık', 'iOS'], facts: 'iPhone · Roguelite, aksiyon · Türkçe ve İngilizce · İlk bölüm ücretsiz, reklamsız',
+        launch: 'Çıkınca haber ver', launchSubject: 'Little Stove çıkış haberi',
+        wide: wide(['stove-1-{lang}', 'stove-2', 'stove-3-{lang}', 'stove-4', 'stove-5-{lang}', 'stove-6'], 'tr'),
+        alts: ['İlk katta küçük ocak, ışık halkası ve yanındaki ocakçı', 'Bölüm resmi: dev mavi kristallerin arasında ocakçı ve ocak', 'Ocağa eklenecek üç parçadan birini seçmek', 'Bölüm resmi: karanlık bir mağaradan akan lav nehri', 'Birinci bölüm Kül Mahzeni’nin açılışı', 'Bölüm resmi: parlayan mantarlarla yosunlu bir mağara']
+      },
+      sparkle: {
+        id: 'sparkle', name: 'Sparkle Fleet', sub: 'Son Vapur', tagline: 'Her eski vapur yeniden parlamayı hak eder.',
+        status: 'Yakında App Store’da, TestFlight’ta test ediliyor.',
+        text: 'Eski yolcu vapurlarında geçen birinci şahıs bir temizlik oyunu. Güverteyi ve salonu kazı, fırçala, basınçlı suyla yıka; hazneni boşalt, atölyede daha iyi aletler al ve her vapuru yeniden denize gönder.',
+        tags: ['Temizlik', 'Rahatlatıcı', 'iOS'], facts: 'iPhone · Temizlik simülasyonu · Türkçe · Yatay oynanır',
+        launch: 'Çıkınca haber ver', launchSubject: 'Sparkle Fleet çıkış haberi',
+        wide: wide(['sparkle-1', 'sparkle-2', 'sparkle-3', 'sparkle-4'], 'tr'),
+        alts: ['Kabin kapısının önünde ahşap güverteden kir kazımak', 'Sıra sıra banklarıyla henüz kirli yolcu salonu', 'Halat babasının çevresini basınçlı suyla yıkamak', 'Önünde deniz ve gökyüzüyle vapurun başı']
       },
       bim: {
         id: 'bim', name: 'BIMQUEST', tagline: 'Revit’i oynayarak öğren.',
@@ -225,29 +267,32 @@ const particles = (n, seed) => Array.from({ length: n }, (_, i) => {
   const x = (k * 37 + 11) % 100, y = (k * 53 + 7) % 90, s = [6, 9, 12, 8, 14, 10][i % 6], t = 7 + ((k * 7) % 7), d = -((k * 1.37) % t), dx = ((k * 23) % 80) - 40, r = (k * 47) % 360;
   return `<span style="--x:${x}%;--y:${y}%;--s:${s}px;--t:${t}s;--d:${d.toFixed(2)}s;--dx:${dx}px;--r:${r}deg"></span>`;
 }).join('');
-const FX = { mihenk: particles(26, 1), trade: particles(22, 3), alvera: particles(30, 5) };
+const FX = { mihenk: particles(26, 1), trade: particles(22, 3), alvera: particles(30, 5), stove: particles(24, 7), sparkle: particles(22, 11) };
 
 function stage(t, key, o) {
   const g = key === 'alvera' ? t.web : t.games[key];
-  const screens = g.shots;
+  // Landscape games show four screens, two stacked in each pane.
+  const land = (src, i) => `<img class="shot-land" data-shot src="${src}" alt="${esc(g.alts[i])}" width="960" height="444" loading="lazy" decoding="async">`;
+  const screens = g.shots || g.wide;
   const left = screens ? `<img class="shot" data-shot src="${screens[0]}" alt="${esc(g.alts[0])}" width="540" height="1169" loading="lazy" decoding="async">` : '';
   const right = screens ? `<img class="shot" data-shot src="${screens[1]}" alt="${esc(g.alts[1])}" width="540" height="1169" loading="lazy" decoding="async">` : '';
   const data = screens ? ` data-screens='${JSON.stringify(screens.map((src, i) => ({ src, alt: g.alts[i] })))}'` : '';
   const pic = (x) => `<img class="${x.cls}" src="${x.src}" alt="${esc(x.alt)}" width="${x.w}" height="${x.h}" loading="lazy" decoding="async">`;
-  const leftPane = key === 'alvera' ? pic(g.pics[0]) : key === 'son' && !screens
+  const leftPane = g.wide ? land(g.wide[0], 0) + land(g.wide[1], 1) : key === 'alvera' ? pic(g.pics[0]) : key === 'son' && !screens
     ? `<img class="icon-lg" src="/assets/games/son-ocak-icon.webp" alt="${esc(g.iconAlt)}" width="512" height="512" loading="lazy" decoding="async">`
     : left;
-  const rightPane = key === 'alvera' ? pic(g.pics[1]) : key === 'son' && !screens ? `<p class="pane-note">${esc(g.pane)}</p>` : right;
+  const rightPane = g.wide ? land(g.wide[2], 2) + land(g.wide[3], 3) : key === 'alvera' ? pic(g.pics[1]) : key === 'son' && !screens ? `<p class="pane-note">${esc(g.pane)}</p>` : right;
   const sub = g.sub ? `<p class="sub" lang="tr">${esc(g.sub)}</p>` : '';
   const actions = [];
   if (g.href) actions.push(ext(g.href, esc(g.store), t, 'button'));
   if (g.launch) actions.push(`<a class="button" href="mailto:${EMAIL}?subject=${encodeURIComponent(g.launchSubject)}">${esc(g.launch)}</a>`);
-  if (screens) actions.push(`<button class="next" type="button" data-next aria-label="${esc(t.nextAria)}">${esc(t.next)}</button>`);
+  if (screens && screens.length > (g.wide ? 4 : 2)) actions.push(`<button class="next" type="button" data-next aria-label="${esc(t.nextAria)}">${esc(t.next)}</button>`);
   const word = Array.from(g.name.toUpperCase());
-  const cut = { mihenk: 5, trade: 4, son: 6, bim: 4, alvera: 3 }[key];
-  const half = [esc(word.slice(0, cut).join('')), esc(word.slice(cut).join(''))];
+  const cut = { mihenk: 5, trade: 4, son: 6, stove: 7, sparkle: 8, bim: 4, alvera: 3 }[key];
+  // A space at the seam would collapse; keep it as a no-break space so two-word names stay apart.
+  const half = [esc(word.slice(0, cut).join('').replace(/ /g, '\u00a0')), esc(word.slice(cut).join('').replace(/ /g, '\u00a0'))];
   return `
-      <article class="game world-${key}" aria-labelledby="g-${key}"${data}>
+      <article class="game world-${key}${g.wide ? ' is-wide' : ''}" aria-labelledby="g-${key}"${data}>
         <div class="stage">
           ${key === 'son' ? `<div class="embers" aria-hidden="true">${EMBERS}</div>` : FX[key] ? `<div class="fx fx-${key}" aria-hidden="true">${FX[key]}</div>` : ''}
           <div class="pane pane-l">${leftPane}</div>
@@ -371,6 +416,8 @@ ${t.lang === 'en' ? `    <script>try{var l=localStorage.getItem('lumoza-lang');i
 ${stage(t, 'mihenk')}
 ${stage(t, 'trade')}
 ${stage(t, 'son')}
+${stage(t, 'stove')}
+${stage(t, 'sparkle')}
       </section>
 
       <section class="dev" aria-labelledby="dev-title">

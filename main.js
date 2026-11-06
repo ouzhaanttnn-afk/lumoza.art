@@ -17,7 +17,11 @@ for (const game of document.querySelectorAll('.game[data-screens]')) {
   live.className = 'visually-hidden';
   live.setAttribute('aria-live', 'polite');
   game.querySelector('.actions').append(live);
-  const pair = () => document.documentElement.lang === 'tr' ? `${index + 1}. ve ${((index + 1) % screens.length) + 1}. ekran, toplam ${screens.length}` : `Screens ${index + 1} and ${((index + 1) % screens.length) + 1} of ${screens.length}`;
+  const pair = () => {
+    const shown = shots.map((_, i) => ((index + i) % screens.length) + 1);
+    const list = shown.slice(0, -1).join(', ') + (document.documentElement.lang === 'tr' ? ' ve ' : ' and ') + shown.at(-1);
+    return document.documentElement.lang === 'tr' ? `${list}. ekran, toplam ${screens.length}` : `Screens ${list} of ${screens.length}`;
+  };
   // Fetch the other screens only when someone shows interest in the button.
   const warm = () => { for (const s of screens) new Image().src = s.src; };
   button.addEventListener('pointerenter', warm, { once: true });

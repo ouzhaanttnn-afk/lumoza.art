@@ -143,11 +143,18 @@ button{font:inherit;color:inherit}
 .world-son{--pl:#0f5262;--pr:#963f16;--tone:#ffd2a8}
 .world-bim{--pl:#173a73;--pr:#0f2b57;--tone:#ffb067}
 .world-alvera{--pl:#6b4a35;--pr:#4d3425;--tone:#f1d9a8}
+.world-stove{--pl:#5a2a1e;--pr:#43201a;--tone:#ffcf86}
+.world-sparkle{--pl:#1f7891;--pr:#175f74;--tone:#fff1c2}
 .pane{position:relative;top:-20svh;height:140svh;display:flex;align-items:flex-start;justify-content:center;padding-top:calc(20svh + 11svh)}
 .pane-l{background:var(--pl)}
 .pane-r{background:var(--pr)}
 .shot{height:52svh;min-height:340px;width:auto;aspect-ratio:540/1169;border-radius:22px;object-fit:cover;transition:opacity .25s}
-.shot.is-out{opacity:0}
+.shot.is-out,.shot-land.is-out{opacity:0}
+/* Landscape games: two screens stacked in each pane, kept clear of the copy in the middle columns. */
+.is-wide .pane{flex-direction:column;justify-content:flex-start;gap:16px}
+.is-wide .pane-l{align-items:flex-start;padding-left:var(--m)}
+.is-wide .pane-r{align-items:flex-end;padding-right:var(--m)}
+.shot-land{position:relative;z-index:2;display:block;width:min(100%,calc(4*var(--col) + 3*var(--m)),calc((52svh - 16px)*1.081));height:auto;aspect-ratio:960/444;border-radius:14px;object-fit:cover;transition:opacity .25s}
 .world-alvera .pane-l{justify-content:flex-start;padding-left:var(--m)}
 .world-alvera .pane-r{justify-content:flex-end;padding-right:var(--m)}
 .shot-wide{height:auto;width:min(100%,440px);min-height:0;aspect-ratio:1000/625;margin-top:6svh;border-radius:14px;object-fit:cover}
@@ -196,6 +203,12 @@ button{font:inherit;color:inherit}
 @keyframes tick{0%{transform:translateY(0);opacity:0}12%{opacity:.9}70%{opacity:.6}100%{transform:translateY(-95svh);opacity:0}}
 /* Alvera: four-point sparkles flash where a stone would catch the light. */
 .fx-alvera span{top:var(--y);width:calc(var(--s)*1.6);height:calc(var(--s)*1.6);background:#fff6df;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);filter:drop-shadow(0 0 8px #f1d9a8);animation:glint calc(var(--t)*.45) ease-in-out var(--d) infinite} /* taste-skill-ignore */
+/* Little Stove: warm motes hang in the dark like light from the stove. */
+.fx-stove span{top:var(--y);width:calc(var(--s)*.55);height:calc(var(--s)*.55);border-radius:50%;background:#ffcf86;box-shadow:0 0 10px 3px #ff9a3c77;animation:mote calc(var(--t)*.8) ease-in-out var(--d) infinite alternate} /* taste-skill-ignore: the stove's glow is the game's subject */
+@keyframes mote{0%{transform:translate(0,0);opacity:.1}50%{opacity:.85}100%{transform:translate(calc(var(--dx)*.6),-48px);opacity:.15}}
+/* Sparkle Fleet: soap bubbles rise from the deck and pop near the top. */
+.fx-sparkle span{bottom:-40px;width:calc(var(--s)*1.7);height:calc(var(--s)*1.7);border-radius:50%;background:radial-gradient(circle at 32% 30%,#ffffffee 0 14%,#ffffff26 32%,#ffffff12 62%,#ffffff59 100%);animation:bubble var(--t) ease-in var(--d) infinite} /* taste-skill-ignore: soap bubbles are the game's subject */
+@keyframes bubble{0%{transform:translate(0,0) scale(.6);opacity:0}10%{opacity:.9}85%{opacity:.75}100%{transform:translate(var(--dx),-100svh) scale(1.15);opacity:0}}
 @keyframes glint{0%,55%,100%{transform:scale(0) rotate(0);opacity:0}70%{transform:scale(1.2) rotate(45deg);opacity:1}85%{transform:scale(.5) rotate(90deg);opacity:.7}}
 
 /* In development */
@@ -284,6 +297,9 @@ button{font:inherit;color:inherit}
   .info{left:var(--m);right:var(--m);width:auto;transform:none;top:calc(55svh + var(--display)*.9 + 20px);bottom:auto}
   .tear{top:55svh}
   .shot,.icon-lg{height:40svh}
+  .shot-land{width:min(100%,calc((40svh - 16px)*1.081))}
+  .is-wide .pane-l{padding-right:8px}
+  .is-wide .pane-r{padding-left:8px}
   .world-son .icon-lg{height:min(40svh,320px);width:min(40svh,320px);min-height:240px;min-width:240px}
   .actions{bottom:2.5svh}
 }
@@ -332,6 +348,9 @@ button{font:inherit;color:inherit}
   .email,.contact-side{grid-column:1}
   .contact-side{margin-top:1.5rem}
   .shot-wide{width:min(88%,176px);height:27svh;min-height:200px;aspect-ratio:auto;margin-top:0;object-position:72% 50%}
+  .is-wide .pane-l,.is-wide .pane-r{align-items:center;padding-inline:0}
+  .is-wide .shot-land+.shot-land{display:none}
+  .shot-land{width:min(88%,176px);height:27svh;min-height:200px;aspect-ratio:auto}
   .tear{top:41svh}
   .info{top:calc(41svh + var(--display)*.9 + 16px);gap:.4rem}
   .actions{bottom:2.5svh}
@@ -351,6 +370,8 @@ button{font:inherit;color:inherit}
   .pane-l,.pane-r{grid-row:1}
   .shot{height:auto;width:min(56%,200px);min-height:0;aspect-ratio:540/1169}
   .world-son .icon-lg{height:auto;width:min(56%,200px);min-width:0;min-height:0}
+  .shot-land{width:100%;height:auto;aspect-ratio:960/444;min-height:0}
+  .is-wide .pane{gap:var(--m)}
   .tear{position:relative;top:auto;grid-column:1/-1;grid-row:2;height:auto;padding:.5rem var(--m);display:flex;justify-content:center;animation:none}
   .tear span{position:static;animation:none}
   .info{position:static;grid-column:1/-1;grid-row:3;width:auto;transform:none;padding:0 var(--m)}
