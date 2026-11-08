@@ -27,3 +27,8 @@ Added 2026-11-06 (both games are coming soon):
 - `../screens/stove-2/4/6.webp`: the game's own chapter art, `godot/assets/ui/bolum3.jpg`, `bolum4.jpg`, `bolum2.jpg`, cropped to the landscape frame.
 - `sparkle-fleet-icon.webp`: the App Store icon from the Sparkle Fleet Xcode project (release `build-2` of `ouzhaanttnn-afk/sparkle-fleet-ios`, `Icon-Store-1024.png`; app 6831298282, Turkish name Son Vapur).
 - `../screens/sparkle-1…4.webp`: in-game screens of the Unity build, taken by the owner's Windows session that tests the game (Turkish interface).
+
+Added 2026-11-08 (the dark room redesign):
+
+- `../screens/hearth-play.mp4` and `hearth-play.webp`: Hearthwalker's own press-kit gameplay clip and poster (`ouzhaanttnn-afk/Son-ocak-`, `press/gameplay.mp4`), re-encoded at 540×960 without sound.
+- `../screens/ankara-dusk.webp`: "Ankara by night 2013" by OscarKosy, CC BY-SA 3.0, via Wikimedia Commons (https://commons.wikimedia.org/w/index.php?curid=26207883), converted to WebP. Credited in the page footer.

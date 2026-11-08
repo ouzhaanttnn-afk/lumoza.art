@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Lumoza — independent AI-native game and product studio.",
+  "description": "Lumoza Studio — a tiny game studio in Ankara.",
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "build": "node scripts/build.mjs",

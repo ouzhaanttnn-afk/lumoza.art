@@ -25,12 +25,18 @@ const copy = {
     locale: 'en_US', otherLocale: 'tr_TR',
     skip: 'Skip to content', homeAria: 'Lumoza, back to top', navAria: 'Main navigation',
     nav: { games: 'Games', studio: 'Studio', contact: 'Contact' },
-    h1: 'Lumoza Studio makes little worlds for your phone',
+    h1: 'Lumoza Studio',
+    heroLine: 'Little worlds for your phone, made by a tiny studio in Ankara.',
+    outTitle: 'Out now', soonTitle: 'Coming soon',
+    contactText: 'We read every email, and we love hearing what you played.', contactAction: 'Write to us',
+    photoAlt: 'Ankara at dusk: lit windows and a lakeside pavilion in a city park',
+    photoCredit: 'Photo of Ankara: “Ankara by night 2013” by OscarKosy, CC BY-SA 3.0, via Wikimedia Commons.',
+    footerLine: 'Lumoza Studio, a tiny game studio in Ankara',
     lead: 'A tiny studio in Ankara. We make phone games you can sink into: a goldsmith’s counter, a secondhand market, a hearth that walks.',
     headline: [['Lumoza', ''], ['icon', 'mihenkaynak-icon'], ['makes', ''], ['little', 'rose'], ['icon', 'tradeup-icon'], ['worlds.', 'teal']],
     marquee: 'Our games',
-    news: { tag: 'New', text: 'Hearthwalker is out on the App Store' },
-    seeGames: 'Have a look', newTab: ' (opens in a new tab)',
+    news: { tag: 'New', text: 'Hearthwalker is out' },
+    seeGames: 'See the games', newTab: ' (opens in a new tab)',
     heroArt: 'The MİHENKAYNAK loading screen with the gold logo on a purple jeweller’s counter.',
     gamesTitle: 'Our games',
     games: {
@@ -55,7 +61,7 @@ const copy = {
         status: 'On the App Store since 5 November 2026.',
         text: 'You are a living hearth, born in an Anatolian tile workshop. Walk to gather embers, stop to guard, then send a wave of fire through the ash. Twelve maps, 57 powers, ten hearths.',
         tags: ['Action', 'Survival', 'iOS'], facts: 'iOS · Action, strategy · English, Turkish and three more · First six maps free, no ads',
-        store: 'View on the App Store', href: STORE.son, shots: shots('hearth', 6),
+        store: 'View on the App Store', href: STORE.son, shots: shots('hearth', 6), video: { src: '/assets/screens/hearth-play.mp4', poster: '/assets/screens/hearth-play.webp', alt: 'A short clip of Hearthwalker being played' },
         alts: ['The hearth sending a wave of fire into a horde of ash creatures', 'A tile guardian blocking the road on one of the twelve maps', 'Choosing a power such as Ember Stove or Forked Ember', 'The map picker with twelve maps from Ash Forest to the Mother Hearth', 'The Son Ocak home screen with the hearth, its rank and the Endless Road', 'A late run with cracks of fire across the ground']
       },
       stove: {
@@ -84,7 +90,7 @@ const copy = {
         alts: ['The mission dashboard with chapters and the first mission', 'The first mission with a 2D floor plan and a 3D model', 'A room-boundary mission with wall height and thickness fields', 'The mission guide with a Revit path and hints']
       }
     },
-    heroStage: 'The Lumoza logo on a card that swings from a cord, over a colour that slowly changes.',
+    heroStage: 'The Lumoza logo on a card that hangs from a cord like a lamp in a dark room.',
     webTitle: 'On the web',
     web: {
       id: 'alvera', name: 'Alvera', tagline: 'Value is timeless.',
@@ -113,7 +119,7 @@ const copy = {
     ],
     founder: 'Oğuzhan Alper Tosun', founderRole: 'Founder, designs the games',
     wallLabel: 'Our games', wallOut: 'out now', wallNext: 'coming soon',
-    contactTitle: 'Say hello. We read every email.',
+    contactTitle: 'Say hello.',
     city: 'Ankara, Türkiye', top: 'Back to top',
     footerPlaces: 'Write to us', footerGames: 'Games', footerSite: 'Site',
     footerLinks: { mihenk: 'MİHENKAYNAK on the App Store', trade: 'TradeUp on the App Store', son: 'Hearthwalker on the App Store' },
@@ -128,12 +134,18 @@ const copy = {
     locale: 'tr_TR', otherLocale: 'en_US',
     skip: 'İçeriğe geç', homeAria: 'Lumoza, başa dön', navAria: 'Ana gezinme',
     nav: { games: 'Oyunlar', studio: 'Stüdyo', contact: 'İletişim' },
-    h1: 'Lumoza Studio telefonun için küçük dünyalar kurar',
+    h1: 'Lumoza Studio',
+    heroLine: 'Telefonun için küçük dünyalar. Ankara’da küçük bir stüdyo yapıyor.',
+    outTitle: 'Yayında', soonTitle: 'Yakında',
+    contactText: 'Her e-postayı okuyoruz; ne oynadığını duymak hoşumuza gider.', contactAction: 'Bize yaz',
+    photoAlt: 'Akşamüstü Ankara: bir şehir parkında göl kenarında ışıklı pencereler ve bir köşk',
+    photoCredit: 'Ankara fotoğrafı: “Ankara by night 2013”, OscarKosy, CC BY-SA 3.0, Wikimedia Commons.',
+    footerLine: 'Lumoza Studio, Ankara’da küçük bir oyun stüdyosu',
     lead: 'Ankara’da küçük bir stüdyoyuz. İçinde kaybolacağın telefon oyunları yapıyoruz: bir kuyumcu tezgâhı, bir ikinci el pazarı, yürüyen bir ocak.',
     headline: [['Lumoza', ''], ['icon', 'mihenkaynak-icon'], ['küçük', 'rose'], ['icon', 'tradeup-icon'], ['dünyalar', 'teal'], ['kurar.', '']],
     marquee: 'Oyunlarımız',
-    news: { tag: 'Yeni', text: 'Hearthwalker App Store’da çıktı' },
-    seeGames: 'Bir göz at', newTab: ' (yeni sekmede açılır)',
+    news: { tag: 'Yeni', text: 'Hearthwalker çıktı' },
+    seeGames: 'Oyunlara bak', newTab: ' (yeni sekmede açılır)',
     heroArt: 'Mor bir kuyumcu tezgâhında altın logolu MİHENKAYNAK açılış ekranı.',
     gamesTitle: 'Oyunlarımız',
     games: {
@@ -158,7 +170,7 @@ const copy = {
         status: '5 Kasım 2026’dan beri App Store’da.',
         text: 'Anadolu’da bir çini atölyesinde doğmuş canlı bir ocaksın. Yürüyüp köz topla, durup korun, sonra ateş dalgasını külün içine gönder. 12 harita, 57 güç, 10 ocak.',
         tags: ['Aksiyon', 'Hayatta kalma', 'iOS'], facts: 'iOS · Aksiyon, strateji · Türkçe, İngilizce ve üç dil daha · İlk altı harita ücretsiz, reklamsız',
-        store: 'App Store’da görüntüle', href: STORE.son, shots: shots('hearth', 6),
+        store: 'App Store’da görüntüle', href: STORE.son, shots: shots('hearth', 6), video: { src: '/assets/screens/hearth-play.mp4', poster: '/assets/screens/hearth-play.webp', alt: 'Hearthwalker’dan kısa bir oynanış videosu' },
         alts: ['Ocağın kül yaratıklarından oluşan sürüye ateş dalgası göndermesi', 'On iki haritadan birinde yolu kesen bir çini muhafızı', 'Köz Sobası veya Çatallı Köz gibi bir güç seçimi', 'Kül Ormanı’ndan Ana Ocak’a on iki haritalık harita seçimi', 'Ocak, rütbesi ve Sonsuz Yol ile Son Ocak ana ekranı', 'Yerde ateş çatlaklarıyla ilerlemiş bir oyun']
       },
       stove: {
@@ -187,7 +199,7 @@ const copy = {
         alts: ['Bölümler ve ilk görevle görev paneli', '2B kat planı ve 3B modelle ilk görev', 'Duvar yüksekliği ve kalınlığı alanlarıyla oda sınırı görevi', 'Revit yolu ve ipuçlarıyla görev rehberi']
       }
     },
-    heroStage: 'Bir ipte sallanan kartın üstünde Lumoza logosu; arkasındaki renk yavaşça değişiyor.',
+    heroStage: 'Karanlık bir odada lamba gibi ipten sarkan, Lumoza logolu bir kart.',
     webTitle: 'Web’de',
     web: {
       id: 'alvera', name: 'Alvera', tagline: 'Değer zamansızdır.',
@@ -216,7 +228,7 @@ const copy = {
     ],
     founder: 'Oğuzhan Alper Tosun', founderRole: 'Kurucu, oyunları tasarlıyor',
     wallLabel: 'Oyunlarımız', wallOut: 'yayında', wallNext: 'yakında',
-    contactTitle: 'Merhaba de. Her e-postayı okuyoruz.',
+    contactTitle: 'Merhaba de.',
     city: 'Ankara, Türkiye', top: 'Başa dön',
     footerPlaces: 'Bize yazın', footerGames: 'Oyunlar', footerSite: 'Site',
     footerLinks: { mihenk: 'MİHENKAYNAK, App Store’da', trade: 'TradeUp, App Store’da', son: 'Hearthwalker, App Store’da' },
@@ -241,48 +253,52 @@ const particles = (n, seed) => Array.from({ length: n }, (_, i) => {
   const x = (k * 37 + 11) % 100, y = (k * 53 + 7) % 90, s = [6, 9, 12, 8, 14, 10][i % 6], t = 7 + ((k * 7) % 7), d = -((k * 1.37) % t), dx = ((k * 23) % 80) - 40, r = (k * 47) % 360;
   return `<span style="--x:${x}%;--y:${y}%;--s:${s}px;--t:${t}s;--d:${d.toFixed(2)}s;--dx:${dx}px;--r:${r}deg"></span>`;
 }).join('');
-const FX = { mihenk: particles(26, 1), trade: particles(22, 3), alvera: particles(30, 5), stove: particles(24, 7), sparkle: particles(22, 11) };
+const FX = { mihenk: particles(26, 1), trade: particles(22, 3), alvera: particles(30, 5), stove: particles(24, 7), sparkle: particles(22, 11), hero: particles(16, 13) };
 
-function stage(t, key, o) {
+// Each game is a lit window in the dark room: its own colour, its own light, its real screens.
+const FLIP = new Set(['trade', 'sparkle']);
+function exhibit(t, key) {
   const g = key === 'alvera' ? t.web : t.games[key];
-  // Landscape games show four screens, two stacked in each pane.
-  const land = (src, i) => `<img class="shot-land" data-shot src="${src}" alt="${esc(g.alts[i])}" width="960" height="444" loading="lazy" decoding="async">`;
   const screens = g.shots || g.wide;
-  const left = screens ? `<img class="shot" data-shot src="${screens[0]}" alt="${esc(g.alts[0])}" width="540" height="1169" loading="lazy" decoding="async">` : '';
-  const right = screens ? `<img class="shot" data-shot src="${screens[1]}" alt="${esc(g.alts[1])}" width="540" height="1169" loading="lazy" decoding="async">` : '';
-  const data = screens ? ` data-screens='${JSON.stringify(screens.map((src, i) => ({ src, alt: g.alts[i] })))}'` : '';
-  const pic = (x) => `<img class="${x.cls}" src="${x.src}" alt="${esc(x.alt)}" width="${x.w}" height="${x.h}" loading="lazy" decoding="async">`;
-  const leftPane = g.wide ? land(g.wide[0], 0) + land(g.wide[1], 1) : key === 'alvera' ? pic(g.pics[0]) : key === 'son' && !screens
-    ? `<img class="icon-lg" src="/assets/games/son-ocak-icon.webp" alt="${esc(g.iconAlt)}" width="512" height="512" loading="lazy" decoding="async">`
-    : left;
-  const rightPane = g.wide ? land(g.wide[2], 2) + land(g.wide[3], 3) : key === 'alvera' ? pic(g.pics[1]) : key === 'son' && !screens ? `<p class="pane-note">${esc(g.pane)}</p>` : right;
-  const sub = g.sub ? `<p class="sub" lang="tr">${esc(g.sub)}</p>` : '';
+  const phone = (src, i) => `<img class="frame" data-shot src="${src}" alt="${esc(g.alts[i])}" width="540" height="1169" loading="lazy" decoding="async">`;
+  const land = (src, i, cls = '') => `<img class="frame-land${cls}" data-shot src="${src}" alt="${esc(g.alts[i])}" width="960" height="444" loading="lazy" decoding="async">`;
+  let media;
+  if (key === 'alvera') {
+    media = `<div class="media media-web"><img class="frame-web" src="${g.pics[0].src}" alt="${esc(g.pics[0].alt)}" width="1000" height="625" loading="lazy" decoding="async"><img class="frame" src="${g.pics[1].src}" alt="${esc(g.pics[1].alt)}" width="390" height="844" loading="lazy" decoding="async"></div>`;
+  } else if (g.wide) {
+    media = `<div class="media media-land">${land(g.wide[0], 0, ' is-big')}${land(g.wide[1], 1)}${land(g.wide[2], 2)}</div>`;
+  } else if (g.video) {
+    media = `<div class="media media-phone">${phone(g.shots[0], 0)}<video class="frame" src="${g.video.src}" poster="${g.video.poster}" width="540" height="960" muted loop playsinline autoplay preload="metadata" aria-label="${esc(g.video.alt)}"></video>${phone(g.shots[1], 1)}</div>`;
+  } else {
+    media = `<div class="media media-phone">${phone(g.shots[0], 0)}${phone(g.shots[1], 1)}${phone(g.shots[2], 2)}</div>`;
+  }
+  const slots = key === 'alvera' ? 0 : g.wide ? 3 : g.video ? 2 : 3;
+  const data = slots && screens.length > slots ? ` data-screens='${JSON.stringify(screens.map((src, i) => ({ src, alt: g.alts[i] })))}'` : '';
   const actions = [];
   if (g.href) actions.push(ext(g.href, esc(g.store), t, 'button'));
   if (g.launch) actions.push(`<a class="button" href="mailto:${EMAIL}?subject=${encodeURIComponent(g.launchSubject)}">${esc(g.launch)}</a>`);
-  if (screens && screens.length > (g.wide ? 4 : 2)) actions.push(`<button class="next" type="button" data-next aria-label="${esc(t.nextAria)}">${esc(t.next)}</button>`);
+  if (data) actions.push(`<button class="next" type="button" data-next aria-label="${esc(t.nextAria)}">${esc(t.next)}</button>`);
   const word = Array.from(g.name.toUpperCase());
-  const cut = { mihenk: 5, trade: 4, son: 6, stove: 7, sparkle: 8, bim: 4, alvera: 3 }[key];
+  const cut = { mihenk: 5, trade: 4, son: 6, stove: 7, sparkle: 8, alvera: 3 }[key];
   // A space at the seam would collapse; keep it as a no-break space so two-word names stay apart.
-  const half = [esc(word.slice(0, cut).join('').replace(/ /g, '\u00a0')), esc(word.slice(cut).join('').replace(/ /g, '\u00a0'))];
+  const half = [word.slice(0, cut).join(''), word.slice(cut).join('')].map(h => esc(h.replace(/ /g, ' ')));
+  const fx = key === 'son' ? `<div class="embers" aria-hidden="true">${EMBERS}</div>` : FX[key] ? `<div class="fx fx-${key}" aria-hidden="true">${FX[key]}</div>` : '';
   return `
-      <article class="game world-${key}${g.wide ? ' is-wide' : ''}" aria-labelledby="g-${key}"${data}>
-        <div class="stage">
-          ${key === 'son' ? `<div class="embers" aria-hidden="true">${EMBERS}</div>` : FX[key] ? `<div class="fx fx-${key}" aria-hidden="true">${FX[key]}</div>` : ''}
-          <div class="pane pane-l">${leftPane}</div>
-          <div class="pane pane-r">${rightPane}</div>
-          <div class="info">
-            ${sub}
-            ${g.tags ? `<ul class="tags">${g.tags.map((tag, i) => `<li class="tag tag-${i % 3}">${esc(tag)}</li>`).join('')}</ul>` : ''}
-            <p class="status">${esc(g.status)}</p>
-            <p class="tagline">${esc(g.tagline)}</p>
-            <p class="text">${esc(g.text)}</p>
-            <p class="facts glass">${esc(g.facts)}</p>
+        <article class="exhibit world-${key}${FLIP.has(key) ? ' is-flip' : ''}${g.wide ? ' is-land' : ''}" aria-labelledby="g-${key}"${data}>
+          <h3 class="tear" id="g-${key}" aria-label="${esc(g.name)}"><span class="tear-a" aria-hidden="true">${half[0]}</span><span class="tear-b" aria-hidden="true">${half[1]}</span></h3>
+          <div class="window">
+            ${fx}
+            ${media}
+            <div class="info">
+              ${g.sub ? `<p class="sub" lang="tr">${esc(g.sub)}</p>` : ''}
+              ${g.tags ? `<ul class="tags">${g.tags.map((tag, i) => `<li class="tag tag-${i % 3}">${esc(tag)}</li>`).join('')}</ul>` : ''}
+              <p class="tagline">${esc(g.tagline)}</p>
+              <p class="text">${esc(g.text)}</p>
+              <p class="facts glass">${esc(g.status)} ${esc(g.facts)}</p>
+              <div class="actions">${actions.join('')}</div>
+            </div>
           </div>
-          <h3 class="tear" id="g-${key}" aria-label="${esc(g.name.toUpperCase())}"><span class="tear-a" aria-hidden="true">${half[0]}</span><span class="tear-b" aria-hidden="true">${half[1]}</span></h3>
-          <div class="actions">${actions.join('\n            ')}</div>
-        </div>
-      </article>`;
+        </article>`;
 }
 
 function render(t) {
@@ -300,8 +316,8 @@ function render(t) {
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light">
-    <meta name="theme-color" content="#f3f5fb">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#2f2826">
     <meta name="apple-itunes-app" content="app-id=${NEWEST_APP}">
     <title>${esc(t.title)}</title>
     <meta name="description" content="${esc(t.description)}">
@@ -347,54 +363,49 @@ ${t.lang === 'en' ? `    <script>try{var l=localStorage.getItem('lumoza-lang');i
     </header>
 
     <main id="main">
-      <div class="run">
-
-        <section class="panel hero" aria-label="${esc(t.h1)}">
-          <div class="hero-copy">
-            <h1 class="hero-title" aria-label="${esc(t.h1)}">${t.headline.map(([w, c]) => w === 'icon'
-              ? `<span class="hl-icon" aria-hidden="true"><span class="paren">(</span><img src="/assets/games/${c}.webp" alt="" width="512" height="512" decoding="async"><span class="paren">)</span></span>`
-              : `<span class="hl-word${c ? ' hl-' + c : ''}" aria-hidden="true">${esc(w)}</span>`).join(' ')}</h1>
-            <p class="lead">${esc(t.lead)}</p>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="fx fx-stove fx-hero" aria-hidden="true">${FX.hero}</div>
+        <div class="hero-stage" role="img" aria-label="${esc(t.heroStage)}">
+          <div class="badge"><span class="cord"></span><span class="clip"></span><span class="card"><span class="card-slot"></span><svg class="card-logo" viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" rx="115" fill="#B87076"/><path d="M170 116 V334 Q170 374 210 374 H356" fill="none" stroke="#f4ece0" stroke-width="80" stroke-linecap="round" stroke-linejoin="round"/><path class="card-spark" d="M330 136 C335 200 346 211 410 216 C346 221 335 232 330 296 C325 232 314 221 250 216 C314 211 325 200 330 136 Z" fill="#70B8A9"/></svg><span class="card-name">Lumoza</span><span class="card-line">Ankara · 2026</span><span class="card-games">${['mihenkaynak-icon', 'tradeup-icon', 'son-ocak-icon', 'little-stove-icon', 'sparkle-fleet-icon'].map(i => `<img src="/assets/games/${i}.webp" alt="" width="512" height="512" decoding="async">`).join('')}</span></span></div>
+        </div>
+        <div class="rail">
+          <h1 id="hero-title">${esc(t.h1)}</h1>
+          <p class="rail-line">${esc(t.heroLine)}</p>
+          <div class="rail-actions">
+            <a class="news" href="${STORE.son}" target="_blank" rel="noopener noreferrer"><img src="/assets/games/son-ocak-icon.webp" alt="" width="28" height="28" decoding="async"><span><strong>${esc(t.news.tag)}:</strong> ${esc(t.news.text)}</span><span class="visually-hidden">${esc(t.newTab)}</span></a>
             <a class="button" href="#games">${esc(t.seeGames)}</a>
-            <a class="news" href="${STORE.son}" target="_blank" rel="noopener noreferrer"><img src="/assets/games/son-ocak-icon.webp" alt="" width="28" height="28" decoding="async"><span class="news-tag">${esc(t.news.tag)}</span><span>${esc(t.news.text)}</span><span class="visually-hidden">${esc(t.newTab)}</span></a>
           </div>
-          <div class="hero-stage" role="img" aria-label="${esc(t.heroStage)}">
-            <span class="blob blob-a"></span><span class="blob blob-b"></span>
-            <div class="badge"><span class="cord"></span><span class="clip"></span><span class="card"><span class="card-slot"></span><svg class="card-logo" viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" rx="115" fill="#B87076"/><path d="M170 116 V334 Q170 374 210 374 H356" fill="none" stroke="#f4ece0" stroke-width="80" stroke-linecap="round" stroke-linejoin="round"/><path class="card-spark" d="M330 136 C335 200 346 211 410 216 C346 221 335 232 330 296 C325 232 314 221 250 216 C314 211 325 200 330 136 Z" fill="#70B8A9"/></svg><span class="card-name">Lumoza</span><span class="card-line">Ankara · 2026</span><span class="card-games">${['mihenkaynak-icon', 'tradeup-icon', 'son-ocak-icon', 'street-striker-icon'].map(i => `<img src="/assets/games/${i}.webp" alt="" width="512" height="512" decoding="async">`).join('')}</span></span></div>
-          </div>
-        </section>
-
-      </div>
-
-      <section class="work" id="games" aria-labelledby="games-title">
-        <h2 class="visually-hidden" id="games-title">${esc(t.gamesTitle)}</h2>
-        <div class="marquee" aria-hidden="true"><div class="marquee-track">${Array.from({ length: 6 }, () => `<span>${esc(t.marquee.toUpperCase())}</span><span class="star">*</span>`).join('')}</div></div>
-${stage(t, 'mihenk')}
-${stage(t, 'trade')}
-${stage(t, 'son')}
-${stage(t, 'stove')}
-${stage(t, 'sparkle')}
-      </section>
-
-      <section class="dev" aria-labelledby="dev-title">
-        <h2 id="dev-title">${esc(t.devTitle)}</h2>
-        <div class="dev-grid">
-          ${t.dev.map(d => `<article class="dev-card dev-${d.id}" aria-labelledby="d-${d.id}">
-            <img src="/assets/games/${d.icon}.webp" alt="" width="${d.id === 'tray' ? 192 : 512}" height="${d.id === 'tray' ? 192 : 512}" loading="lazy" decoding="async">
-            <div>
-              <h3 id="d-${d.id}">${esc(d.name)}</h3>
-              <p class="genre">${esc(d.genre)}</p>
-              ${d.pill ? `<p class="tag tag-pill">${esc(d.pill)}</p>` : ''}
-              <p>${esc(d.text)}</p>
-              ${d.link ? ext(d.link, esc(d.linkText), t, 'text-link') : ''}
-            </div>
-          </article>`).join('\n          ')}
         </div>
       </section>
 
-      <section class="work work-web" aria-labelledby="web-title">
-        <h2 class="work-title" id="web-title">${esc(t.webTitle)}</h2>
-${stage(t, 'alvera')}
+      <section class="room" id="games" aria-labelledby="out-title">
+        <h2 class="room-title" id="out-title">${esc(t.outTitle)}</h2>
+${exhibit(t, 'mihenk')}
+${exhibit(t, 'trade')}
+${exhibit(t, 'son')}
+      </section>
+
+      <section class="room" aria-labelledby="soon-title">
+        <h2 class="room-title" id="soon-title">${esc(t.soonTitle)}</h2>
+${exhibit(t, 'stove')}
+${exhibit(t, 'sparkle')}
+      </section>
+
+      <section class="room oven" aria-labelledby="dev-title">
+        <h2 class="room-title" id="dev-title">${esc(t.devTitle)}</h2>
+        <ul class="oven-list">
+          ${t.dev.map(d => `<li class="oven-row">
+            <img src="/assets/games/${d.icon}.webp" alt="" width="${d.id === 'tray' ? 192 : 512}" height="${d.id === 'tray' ? 192 : 512}" loading="lazy" decoding="async">
+            <div class="oven-name"><h3>${esc(d.name)}</h3><p>${esc(d.text)}</p></div>
+            <p class="oven-genre">${esc(d.genre)}</p>
+            <p class="oven-status">${esc(d.pill)}</p>
+          </li>`).join('\n          ')}
+        </ul>
+      </section>
+
+      <section class="room" aria-labelledby="web-title">
+        <h2 class="room-title" id="web-title">${esc(t.webTitle)}</h2>
+${exhibit(t, 'alvera')}
       </section>
 
       <section class="studio" id="studio" aria-labelledby="studio-title">
@@ -420,36 +431,28 @@ ${stage(t, 'alvera')}
       </section>
 
       <section class="contact" id="contact" aria-labelledby="contact-title">
-        <h2 id="contact-title">${esc(t.contactTitle)}</h2>
-        <a class="email" href="mailto:${EMAIL}"><span>${EMAIL.split('@')[0]}@</span><span>${EMAIL.split('@')[1]}</span></a>
+        <img class="contact-photo" src="/assets/screens/ankara-dusk.webp" alt="${esc(t.photoAlt)}" width="1600" height="1041" loading="lazy" decoding="async">
+        <div class="visit-card">
+          <h2 id="contact-title">${esc(t.contactTitle)}</h2>
+          <p>${esc(t.contactText)}</p>
+          <a class="visit-email" href="mailto:${EMAIL}">${EMAIL}</a>
+          <p class="visit-city">${esc(t.city)}</p>
+          <a class="button visit-button" href="mailto:${EMAIL}">${esc(t.contactAction)}</a>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p class="footer-name" aria-hidden="true">Lumoza</p>
-      <div class="footer-grid">
-        <div class="footer-places">
-          <p class="footer-label">${esc(t.footerPlaces)}</p>
-          <a href="mailto:${EMAIL}">${EMAIL}</a>
-          <p>${esc(t.city)}</p>
-        </div>
-        <nav class="footer-links" aria-label="${esc(t.footerGames)}">
-          <p class="footer-label">${esc(t.footerGames)}</p>
-          ${ext(STORE.mihenk, esc(t.footerLinks.mihenk), t)}
-          ${ext(STORE.trade, esc(t.footerLinks.trade), t)}
-          ${ext(STORE.son, esc(t.footerLinks.son), t)}
-        </nav>
-        <nav class="footer-links" aria-label="${esc(t.footerSite)}">
-          <p class="footer-label">${esc(t.footerSite)}</p>
-          <a href="#games">${esc(t.nav.games)}</a>
-          <a href="#studio">${esc(t.nav.studio)}</a>
-          <a href="${t.other.href}" hreflang="${t.other.lang}" lang="${t.other.lang}">${esc(t.other.label)}</a>
-        </nav>
-      </div>
-      <div class="footer-legal">
-        <p>${esc(t.legal)}</p>
-        <a class="to-top" href="#top">${esc(t.top)}</a>
-      </div>
+      <p class="footer-what">${esc(t.footerLine)}</p>
+      <nav class="footer-links" aria-label="${esc(t.footerSite)}">
+        <a href="#games">${esc(t.nav.games)}</a>
+        <a href="#studio">${esc(t.nav.studio)}</a>
+        <a href="#contact">${esc(t.nav.contact)}</a>
+        <a href="${t.other.href}" hreflang="${t.other.lang}" lang="${t.other.lang}">${esc(t.other.label)}</a>
+        <a href="#top">${esc(t.top)}</a>
+      </nav>
+      <p class="footer-legal">${esc(t.legal)}</p>
+      <p class="footer-credit">${esc(t.photoCredit)}</p>
     </footer>
     <script defer src="/assets/vendor/gsap.min.js"></script>
     <script defer src="/assets/vendor/ScrollTrigger.min.js"></script>

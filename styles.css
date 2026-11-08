@@ -9,8 +9,8 @@
   --rose:#B87076;--terra:#B88370;--blue:#709FB8;--teal:#70B8A9;--taupe:#635854;
   --rose-t:#e7a3a8;--terra-t:#e2ad98;--blue-t:#9cc6dc;--teal-t:#9ad7c9;
   --sans:"Instrument Sans",system-ui,Arial,sans-serif;--display-face:"Clash Display","Instrument Sans",system-ui,sans-serif;
-  --display:clamp(2.6rem,10vw,9.5rem);--h2:clamp(1.75rem,2.4vw,2.25rem);--lead:clamp(1.1875rem,1.6vw,1.375rem);--body:1.0625rem;--small:.875rem;
-  --m:clamp(16px,2.2vw,32px);--gap:clamp(56px,7vw,104px);
+  --display:clamp(2rem,8.6vw,8.5rem);--title:clamp(2.5rem,5.4vw,5.25rem);--h3:clamp(1.25rem,2vw,1.75rem);--h2:clamp(1.75rem,2.4vw,2.25rem);--lead:clamp(1.1875rem,1.6vw,1.375rem);--body:1.0625rem;--small:.875rem;
+  --m:clamp(16px,2.2vw,32px);--gap:clamp(120px,14vw,200px);
   --col:calc((100vw - 13*var(--m))/12)
 }
 *{box-sizing:border-box}
@@ -19,8 +19,8 @@ body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--body)/1.55 va
 ::selection{background:var(--sulfur);color:var(--on)}
 a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
 a:focus-visible,button:focus-visible{outline:3px solid var(--sulfur);outline-offset:3px;scroll-margin-top:104px}
-.text-link:focus-visible,.footer-links a:focus-visible,.footer-places a:focus-visible{border-radius:4px}
-.stage a:focus-visible,.stage button:focus-visible,.dev-card a:focus-visible,.site-footer a:focus-visible,.hero-stage a:focus-visible{outline-color:#fff}
+.text-link:focus-visible,.footer-links a:focus-visible{border-radius:4px}
+.window a:focus-visible,.window button:focus-visible{outline-color:#fff}
 @media(prefers-reduced-motion:no-preference){.button:active,.next:active,.text-link:active,.bar-nav a:active{transform:scale(.97)}}
 img{display:block;max-width:100%;height:auto}
 h1,h2,h3,p,ul,figure{margin:0;padding:0}
@@ -52,52 +52,25 @@ button{font:inherit;color:inherit}
 .bar-nav .bar-mark{min-width:44px;justify-content:center}
 .bar-lang{background:#1d17150f}
 
-.run{position:relative}
-.panel{position:relative}
-
-/* Hero: the name on the left, a live stage of the games on the right whose colour walks through each game's world. */
-.hero{display:grid;grid-template-columns:1fr 1fr;min-height:clamp(520px,82svh,720px);background:var(--bg);overflow:hidden}
-.hero-copy{position:relative;z-index:2;grid-column:1;align-self:center;padding:8svh var(--m);display:flex;flex-direction:column;align-items:flex-start;gap:1.25rem}
-.hero-title{font-size:min(7.4vw,15svh);font-weight:700;letter-spacing:-.05em;line-height:.98;margin-bottom:.5rem;max-width:11ch}
-.hl-word{display:inline}
-.hl-rose{color:var(--rose-t)}
-.hl-teal{color:var(--teal-t)}
-.hl-icon{display:inline-flex;align-items:center;gap:.06em;vertical-align:-.08em;font-weight:300;color:var(--muted)}
-.hl-icon img{width:.78em;height:.78em;border-radius:22%;animation:bob 3.2s ease-in-out infinite}
-.hl-icon:nth-of-type(2) img{animation-delay:-1.6s}
-@keyframes bob{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-.08em) rotate(6deg)}}
-.lead{font-size:var(--lead);line-height:1.5;max-width:34ch}
-.news{display:inline-flex;align-items:center;gap:.6rem;min-height:44px;padding:.3rem 1rem .3rem .35rem;border-radius:999px;background:var(--surface);font-size:var(--small);font-weight:500;transition:background .2s,color .2s}
-.news img{width:28px;height:28px;border-radius:22.5%}
-.news-tag{padding:.1rem .55rem;border-radius:999px;background:var(--terra-t);color:var(--on);font-weight:600}
-.news:hover{background:var(--sulfur);color:var(--on)}
-.news:focus-visible{border-radius:999px}
-.hero-stage{position:relative;grid-column:2;overflow:hidden;background:var(--rose);animation:world 28s ease-in-out infinite}
-.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;pointer-events:none} /* taste-skill-ignore: owner asked for a livelier hero */
-.blob-a{width:46%;aspect-ratio:1;left:-8%;top:6%;background:#f4ece0;animation:drift 19s ease-in-out infinite}
-.blob-b{width:52%;aspect-ratio:1;right:-12%;bottom:-6%;background:#635854;animation:drift 23s ease-in-out infinite reverse}
 /* A card hangs from a cord and swings, like a badge on a lanyard. */
-.badge{position:absolute;left:50%;top:0;width:min(46%,340px);margin-left:calc(min(46%,340px)/-2);z-index:3;transform-origin:50% 0;animation:swing 5.5s ease-in-out infinite}
-.cord{display:block;width:3px;height:clamp(60px,16svh,150px);margin:0 auto;background:var(--on);border-radius:2px}
-.clip{display:block;width:30px;height:18px;margin:-2px auto 0;border:3px solid var(--on);border-radius:10px 10px 4px 4px}
-/* The card is a pane of Liquid Glass: the stage's colour shows through, a bright rim catches the light, a sheen passes over it. */
-.card{position:relative;display:flex;flex-direction:column;align-items:center;gap:.35rem;margin-top:-4px;padding:clamp(18px,2.2vw,26px) clamp(14px,2vw,24px) clamp(16px,2vw,22px);border-radius:30px;color:var(--on);overflow:hidden;background:linear-gradient(150deg,#ffffff8c 0%,#ffffff40 45%,#ffffff26 100%);border:1px solid #ffffffb3;box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 #ffffff59,inset 0 0 0 1px #ffffff26,0 24px 50px -24px #1d171599;-webkit-backdrop-filter:blur(22px) saturate(1.9) brightness(1.06);backdrop-filter:blur(22px) saturate(1.9) brightness(1.06)} /* taste-skill-ignore: the owner asked for a Liquid Glass card; it hangs and moves, so it carries a shadow */
+.badge{position:absolute;left:50%;top:0;width:var(--card-w);margin-left:calc(var(--card-w)/-2);z-index:3;transform-origin:50% 0;animation:swing 5.5s ease-in-out infinite}
+.cord{display:block;width:3px;height:clamp(60px,16svh,150px);margin:0 auto;background:var(--muted);border-radius:2px}
+.clip{display:block;width:30px;height:18px;margin:-2px auto 0;border:3px solid var(--muted);border-radius:10px 10px 4px 4px}
+/* The card is the lamp of the dark room: a lit pane of cream glass with a bright rim and a sheen passing over it. */
+.card{position:relative;display:flex;flex-direction:column;align-items:center;gap:.35rem;margin-top:-4px;padding:clamp(18px,2.2vw,26px) clamp(14px,2vw,24px) clamp(16px,2vw,22px);border-radius:30px;color:var(--on);overflow:hidden;background:#f4ece0;border:1px solid #ffffffb3;box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 #ffffff59,inset 0 0 0 1px #ffffff26,0 24px 50px -24px #1d171599;-webkit-backdrop-filter:blur(22px) saturate(1.9) brightness(1.06);backdrop-filter:blur(22px) saturate(1.9) brightness(1.06)} /* taste-skill-ignore: the owner asked for a Liquid Glass card; it hangs and moves, so it carries a shadow */
 .card::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;pointer-events:none;background:linear-gradient(135deg,#fff 0%,#ffffff00 30%,#ffffff00 65%,#ffffffcc 100%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)} /* taste-skill-ignore: glass rim */
 .card::after{content:"";position:absolute;top:-60%;left:-80%;width:60%;height:220%;pointer-events:none;background:linear-gradient(100deg,#ffffff00,#ffffff66 45%,#ffffff00 60%);transform:rotate(18deg);animation:sheen 6.5s ease-in-out infinite} /* taste-skill-ignore */
 @keyframes sheen{0%,62%{left:-80%}88%,100%{left:140%}}
 .card-slot{display:block;width:44px;height:9px;margin-bottom:.55rem;border-radius:999px;background:#1d171538;box-shadow:inset 0 1px 2px #1d171566} /* taste-skill-ignore: punched slot */
 .card-logo{display:block;width:100%;height:auto;filter:drop-shadow(0 10px 18px #1d171540)} /* taste-skill-ignore */
 .card img{width:100%;height:auto;border-radius:22.5%}
-.hero-title,.marquee-track,.tear,.wall-count strong,.email,.footer-name,.card-name{font-family:var(--display-face);letter-spacing:-.015em}
-.card-name{font-size:clamp(1.35rem,2.2vw,1.9rem);font-weight:600;margin-top:.55rem;line-height:1}
+.card-name{font-family:var(--display-face);letter-spacing:-.015em}
+.card-name{font-size:var(--h3);font-weight:600;margin-top:.55rem;line-height:1}
 .card-line{font-size:var(--small);color:#1d1715cc}
 .card-games{display:flex;gap:6px;margin-top:.6rem}
 .card .card-games img{width:30px;height:30px;border-radius:8px;box-shadow:0 0 0 1.5px #ffffffb3} /* taste-skill-ignore */
 .badge:hover{animation-duration:2.2s}
 @keyframes swing{0%,100%{transform:rotate(5deg)}50%{transform:rotate(-5deg)}}
-@keyframes world{0%,100%{background-color:#B87076}25%{background-color:#709FB8}50%{background-color:#70B8A9}75%{background-color:#B88370}}
-@keyframes drift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(8%,10%) scale(1.15)}}
-@keyframes float{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-14px) rotate(var(--r,0deg))}}
 
 /* With Matter.js running, the card is placed by the physics and the cord is drawn as a line. */
 .hero-stage.is-physics .badge{inset:0;width:auto;margin:0;animation:none;transform:none}
@@ -105,69 +78,76 @@ button{font:inherit;color:inherit}
 .hero-stage.is-physics .card{position:absolute;left:0;top:0;margin:0;cursor:grab;touch-action:none;user-select:none;will-change:transform}
 .hero-stage.is-physics .card.is-grabbed{cursor:grabbing}
 .cord-line{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;overflow:visible}
-.cord-line line{stroke:var(--on);stroke-width:3;stroke-linecap:round}
+.cord-line line{stroke:var(--muted);stroke-width:3;stroke-linecap:round}
 .card-spark{transform-box:fill-box;transform-origin:center;animation:glimmer 3.4s ease-in-out infinite}
 @keyframes glimmer{0%,70%,100%{transform:scale(1) rotate(0)}80%{transform:scale(1.25) rotate(45deg)}90%{transform:scale(.9) rotate(80deg)}}
 
+/* The dark room: one warm dark ground from top to bottom. The only light comes from the things in it:
+   the hanging card, each game's window in its own colour, and the city at dusk. */
+.hero,.room,.studio,.site-footer{background:var(--bg)}
 
-/* Games: a flat field in each game's own colour, two real screens, the name torn at the seam. */
-.work{position:relative;padding-top:0}
-.marquee{overflow:hidden;margin-top:clamp(110px,11vw,160px);padding:0 0 clamp(20px,2.5vw,36px);white-space:nowrap}
-.marquee-track{display:inline-flex;align-items:center;gap:.35em;font-size:clamp(3.5rem,9vw,8.5rem);font-weight:700;letter-spacing:-.04em;line-height:1;color:var(--ink);animation:marquee 28s linear infinite}
-.marquee-track .star{color:var(--blue-t);font-size:1em;transform:translateY(.18em)}
-.marquee-track span:nth-child(4n+1){color:var(--ink)}
-.marquee-track span:nth-child(4n+3){color:var(--rose-t)}
-@keyframes marquee{to{transform:translateX(-50%)}}
-.work-title{margin-top:clamp(88px,9vw,128px);padding:0 var(--m) clamp(20px,2.5vw,32px);font-size:var(--h2);font-weight:600;letter-spacing:-.03em;line-height:1.15;background:var(--bg)}
-.game{position:relative;height:106svh;view-timeline:--g block;--pl:#141a36;--pr:#141a36;--tone:#fff}
-.stage{position:sticky;top:0;height:100svh;min-height:680px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;color:#fff}
-.world-mihenk{--pl:#4a2266;--pr:#3b1a52;--tone:#f1c98f}
-.world-trade{--pl:#17612e;--pr:#114d24;--tone:#c9ec7e}
-.world-son{--pl:#0f5262;--pr:#963f16;--tone:#ffd2a8}
-.world-bim{--pl:#173a73;--pr:#0f2b57;--tone:#ffb067}
-.world-alvera{--pl:#6b4a35;--pr:#4d3425;--tone:#f1d9a8}
-.world-stove{--pl:#5a2a1e;--pr:#43201a;--tone:#ffcf86}
-.world-sparkle{--pl:#1f7891;--pr:#175f74;--tone:#fff1c2}
-.pane{position:relative;top:-20svh;height:140svh;display:flex;align-items:flex-start;justify-content:center;padding-top:calc(20svh + 11svh)}
-.pane-l{background:var(--pl)}
-.pane-r{background:var(--pr)}
-.shot{height:52svh;min-height:340px;width:auto;aspect-ratio:540/1169;border-radius:22px;object-fit:cover;transition:opacity .25s}
-.shot.is-out,.shot-land.is-out{opacity:0}
-/* Landscape games: two screens stacked in each pane, kept clear of the copy in the middle columns. */
-.is-wide .pane{flex-direction:column;justify-content:flex-start;gap:16px}
-.is-wide .pane-l{align-items:flex-start;padding-left:var(--m)}
-.is-wide .pane-r{align-items:flex-end;padding-right:var(--m)}
-.shot-land{position:relative;z-index:2;display:block;width:min(100%,calc(4*var(--col) + 3*var(--m)),calc((52svh - 16px)*1.081));height:auto;aspect-ratio:960/444;border-radius:14px;object-fit:cover;transition:opacity .25s}
-.world-alvera .pane-l{justify-content:flex-start;padding-left:var(--m)}
-.world-alvera .pane-r{justify-content:flex-end;padding-right:var(--m)}
-.shot-wide{height:auto;width:min(100%,440px);min-height:0;aspect-ratio:1000/625;margin-top:6svh;border-radius:14px;object-fit:cover}
-.icon-lg{height:52svh;min-height:340px;width:auto;aspect-ratio:1;border-radius:22%;object-fit:cover}
-.pane-note{align-self:center;max-width:16ch;margin:0;font-size:var(--h2);font-weight:600;letter-spacing:-.03em;line-height:1.15;color:var(--tone)}
-.tear{z-index:3;position:absolute;left:0;right:0;top:66svh;height:calc(var(--display)*.9);margin:0;font-size:var(--display);font-weight:700;letter-spacing:-.04em;line-height:.8;color:var(--tone);pointer-events:none}
+/* Hero: the card hangs like a lamp; the name, one sentence and the actions sit on a rail beneath it. */
+.hero{--card-w:clamp(190px,19vw,280px);position:relative;display:grid;grid-template-rows:minmax(0,1fr) auto;min-height:max(640px,100svh);overflow:hidden}
+.hero-stage{position:relative;grid-row:1;min-height:56svh}
+.fx-hero{z-index:0}
+.rail{position:relative;z-index:2;grid-row:2;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--m);align-items:end;padding:24px var(--m) clamp(32px,6svh,64px)}
+.rail h1{grid-column:1/6;font-family:var(--display-face);font-size:var(--title);font-weight:600;letter-spacing:-.035em;line-height:.92}
+.rail-line{grid-column:6/10;font-size:var(--lead);line-height:1.45;max-width:30ch}
+.rail-actions{grid-column:10/13;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+.news span{white-space:nowrap}
+.news{display:inline-flex;align-items:center;gap:.6rem;min-height:44px;padding:.3rem 1rem .3rem .35rem;border-radius:999px;background:var(--surface);font-size:var(--small);transition:background .2s,color .2s}
+.news img{width:28px;height:28px;border-radius:22.5%}
+.news strong{font-weight:600;color:var(--terra-t)}
+.news:hover,.news:hover strong{background:var(--sulfur);color:var(--on)}
+.news:focus-visible{border-radius:999px}
+
+/* Rooms: a heading, then the lit windows. */
+.room{padding:var(--gap) var(--m) 0}
+.room-title,.studio h2{font-family:var(--display-face);font-size:var(--title);font-weight:600;letter-spacing:-.03em;line-height:1}
+.room-title{margin-bottom:clamp(28px,3vw,40px)}
+
+/* A game: its name torn at the seam above a window in its own colour. */
+.exhibit{position:relative;overflow-x:clip;view-timeline:--t block;--pl:#141a36;--tone:#fff}
+.exhibit+.exhibit{margin-top:clamp(72px,8vw,128px)}
+.world-mihenk{--pl:#4a2266;--tone:#f1c98f}
+.world-trade{--pl:#17612e;--tone:#c9ec7e}
+.world-son{--pl:#0f5262;--tone:#ffd2a8}
+.world-stove{--pl:#5a2a1e;--tone:#ffcf86}
+.world-sparkle{--pl:#1f7891;--tone:#fff1c2}
+.world-alvera{--pl:#6b4a35;--tone:#f1d9a8}
+.tear{position:relative;z-index:3;height:calc(var(--display)*.8);margin:0 0 calc(var(--display)*-.3);font-family:var(--display-face);font-size:var(--display);font-weight:600;letter-spacing:-.035em;line-height:.8;color:var(--tone);pointer-events:none}
 .tear span{position:absolute;top:0;white-space:nowrap}
 .tear-a{right:50%}
 .tear-b{left:50%}
-.info{z-index:3;position:absolute;left:calc(var(--m) + 4*(var(--col) + var(--m)));top:11svh;width:calc(4*var(--col) + 3*var(--m));display:flex;flex-direction:column;align-items:flex-start;gap:.6rem}
+.window{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,72px);align-items:center;padding:clamp(64px,8vw,120px) clamp(24px,4vw,64px) clamp(32px,4vw,64px);border-radius:28px;background:var(--pl);color:#fff}
+.is-flip .media{order:2}
+.media{position:relative;z-index:2;min-width:0}
+.media-phone{display:flex;justify-content:center;align-items:flex-end;gap:clamp(10px,1.4vw,20px)}
+.frame{display:block;width:31%;height:auto;aspect-ratio:540/1169;border-radius:18px;object-fit:cover;transition:opacity .25s}
+.media-phone .frame:nth-child(2){transform:translateY(-32px)}
+.media-land{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.frame-land{display:block;width:100%;height:auto;aspect-ratio:960/444;border-radius:14px;object-fit:cover;transition:opacity .25s}
+.frame-land.is-big{grid-column:1/-1}
+.media-web{display:flex;align-items:flex-end;gap:16px}
+.frame-web{flex:3;min-width:0;width:100%;height:auto;aspect-ratio:1000/625;border-radius:14px;object-fit:cover}
+.media-web .frame{flex:1;min-width:0;aspect-ratio:390/844}
+.is-out{opacity:0}
+.info{position:relative;z-index:2;display:flex;flex-direction:column;align-items:flex-start;gap:.75rem;max-width:46ch}
 .info .sub{font-size:var(--small);color:#ffffffd9}
-.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.35rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem}
 .tag{display:inline-flex;align-items:center;min-height:28px;padding:.15rem .75rem;border-radius:999px;font-size:var(--small);font-weight:600;color:var(--on);background:var(--ink)}
 .tag-1{background:var(--blue-t)}
 .tag-2{background:var(--rose-t)}
-.tag-pill{align-self:flex-start;background:var(--ink)}
-.info .status{font-size:var(--small);color:#ffffffd9}
-.info .tagline{font-size:var(--lead);font-weight:600;letter-spacing:-.02em;color:var(--tone);line-height:1.25}
-.info .text{font-size:var(--body);line-height:1.5}
-.facts{margin-top:.5rem;padding:.8rem 1.1rem;border-radius:18px;font-size:var(--small);line-height:1.4;color:#fff}
-.actions{z-index:3;position:absolute;left:0;right:0;bottom:5svh;padding-inline:var(--m);display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.5rem 1.25rem}
+.tagline{font-size:var(--lead);font-weight:600;letter-spacing:-.02em;line-height:1.25;color:var(--tone)}
+.text{font-size:var(--body);line-height:1.55}
+.facts{border:0;padding:.8rem 1.1rem;border-radius:16px;font-size:var(--small);line-height:1.45;color:#fff}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.25rem;margin-top:.5rem}
+.window .button{background:#fff;color:var(--on)}
+.window .button:hover{background:var(--sulfur)}
 .next{min-height:44px;padding:.4rem 1rem;border:0;border-bottom:3px solid var(--tone);background:none;font-size:var(--body);font-weight:500;cursor:pointer;transition:background .2s,color .2s}
 .next:hover{background:var(--sulfur);color:var(--on)}
-.stage .text-link{color:#fff}
-.stage .button{background:#fff;color:var(--on)}
-.stage .button:hover{background:var(--sulfur)}
-.stage .text-link:hover,.dev-card .text-link:hover,.contact .text-link:hover{color:var(--on)}
-.world-son .icon-lg{height:min(46svh,360px);width:min(46svh,360px);min-height:300px;min-width:300px}
 
-/* Hearthwalker: embers rise from the bottom of the stage, behind everything, and a low glow breathes under them. */
+/* Hearthwalker: embers rise from the bottom of its window, behind everything, and a low glow breathes under them. */
 .embers{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
 .embers::before{content:"";position:absolute;left:-10%;right:-10%;bottom:-25%;height:70%;background:radial-gradient(ellipse at 50% 100%,#ff6a1aee,#ff8a3d88 30%,#ff8a3d00 70%);animation:hearth 3.6s ease-in-out infinite} /* taste-skill-ignore: the fire glow is the game's own subject */
 .embers span{position:absolute;left:var(--x);bottom:-14px;width:var(--s);height:var(--s);border-radius:50%;background:radial-gradient(circle,#fff1c9 0 30%,#ffb35c 60%,#ff7a2a);box-shadow:0 0 10px 3px #ff8a3dcc,0 0 26px 8px #ff6a1a55;opacity:0;animation:ember var(--t) linear var(--d) infinite} /* taste-skill-ignore */
@@ -177,7 +157,6 @@ button{font:inherit;color:inherit}
 /* Ambient layers for the other worlds (the owner asked for one per game after the embers). Behind the copy, off under reduced motion. */
 .fx{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
 .fx span{position:absolute;left:var(--x);opacity:0}
-.stage .shot,.stage .icon-lg,.pane-note{position:relative;z-index:2}
 /* MİHENKAYNAK: flakes of gold leaf drift down and turn in the light. */
 .fx-mihenk span{top:-20px;width:calc(var(--s)*.7);height:calc(var(--s)*1.1);border-radius:2px;background:linear-gradient(135deg,#fff0c2,#e2b45f 45%,#a8762f);box-shadow:0 0 10px #f1c98f88;animation:leaf var(--t) linear var(--d) infinite} /* taste-skill-ignore: gold leaf is the game's subject */
 @keyframes leaf{0%{transform:translate(0,0) rotate(var(--r)) rotateY(0);opacity:0}10%{opacity:.95}85%{opacity:.8}100%{transform:translate(var(--dx),105svh) rotate(calc(var(--r) + 260deg)) rotateY(540deg);opacity:0}}
@@ -192,165 +171,117 @@ button{font:inherit;color:inherit}
 /* Sparkle Fleet: soap bubbles rise from the deck and pop near the top. */
 .fx-sparkle span{bottom:-40px;width:calc(var(--s)*1.7);height:calc(var(--s)*1.7);border-radius:50%;background:radial-gradient(circle at 32% 30%,#ffffffee 0 14%,#ffffff26 32%,#ffffff12 62%,#ffffff59 100%);animation:bubble var(--t) ease-in var(--d) infinite} /* taste-skill-ignore: soap bubbles are the game's subject */
 @keyframes bubble{0%{transform:translate(0,0) scale(.6);opacity:0}10%{opacity:.9}85%{opacity:.75}100%{transform:translate(var(--dx),-100svh) scale(1.15);opacity:0}}
-@keyframes glint{0%,55%,100%{transform:scale(0) rotate(0);opacity:0}70%{transform:scale(1.2) rotate(45deg);opacity:1}85%{transform:scale(.5) rotate(90deg);opacity:.7}}
+@keyframes glint{0%,55%,100%{transform:scale(.3) rotate(0);opacity:0}70%{transform:scale(1.2) rotate(45deg);opacity:1}85%{transform:scale(.5) rotate(90deg);opacity:.7}}
 
-/* In development */
-.dev{background:var(--bg)}
-.dev h2{padding:clamp(56px,6vw,88px) var(--m) clamp(24px,3vw,40px);font-size:var(--h2);font-weight:600;letter-spacing:-.03em;line-height:1.15}
-.dev-grid{display:grid;grid-template-columns:repeat(3,1fr)}
-.dev-bim{background:#173a73}
-.dev-card{position:relative;padding:clamp(32px,4vw,56px) var(--m);display:flex;flex-direction:column;gap:1.75rem;color:#fff}
-.dev-street{background:#33205e}
-.dev-tray{background:#8e4a1d}
-.dev-card img{width:128px;height:128px;border-radius:28px}
-.dev-card>div{display:flex;flex-direction:column;align-items:flex-start;gap:.5rem;max-width:44ch}
-.dev-card h3{font-size:var(--h2);font-weight:600;letter-spacing:-.03em;line-height:1.15}
-.dev-card .genre{font-size:var(--small);color:#ffffffd9}
-.dev-card .text-link{color:#fff;margin-top:.5rem}
 
-/* Studio */
-.studio{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--m);padding-block:var(--gap) 0;padding-left:var(--m);background:var(--bg)}
-.studio-copy{grid-column:1/7;display:flex;flex-direction:column;gap:1.75rem;padding-bottom:var(--gap)}
-.studio h2{font-size:var(--h2);font-weight:600;letter-spacing:-.03em;line-height:1.15}
+/* Still in the oven: a line-up, one type size, no boxes. */
+.oven-list{display:flex;flex-direction:column}
+.oven-row{display:grid;grid-template-columns:72px minmax(0,2.2fr) minmax(0,1fr) minmax(0,1fr);gap:var(--m);align-items:center;padding:20px 0}
+.oven-row img{width:72px;height:72px;border-radius:22.5%;transition:transform .3s}
+.oven-row:hover img{transform:rotate(-5deg) scale(1.06)}
+.oven-name h3,.oven-genre,.oven-status{font-size:var(--h3);font-weight:500;letter-spacing:-.02em;line-height:1.2}
+.oven-name p{margin-top:.3rem;max-width:56ch;color:var(--muted)}
+.oven-status{text-align:right;color:var(--teal-t)}
+
+/* Studio: who we are on the left, the games so far as a wall of icons on the right. */
+.studio{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--m);align-items:center;padding:var(--gap) var(--m) 0}
+.studio-copy{grid-column:1/7;display:flex;flex-direction:column;gap:1.75rem}
 .statement{font-size:var(--lead);max-width:40ch;line-height:1.5}
-.principles{display:flex;flex-direction:column;gap:1.5rem;max-width:44ch;margin-top:.5rem}
+.principles{display:flex;flex-direction:column;gap:1.5rem;max-width:44ch}
 .principles h3{font-size:var(--body);font-weight:600;letter-spacing:-.02em}
-.principles p{color:var(--muted);margin-top:.15rem}
+.principles p{margin-top:.15rem}
 .founder{display:flex;flex-direction:column;line-height:1.4}
 .founder span{color:var(--muted);font-size:var(--small)}
-.studio-wall{grid-column:7/13;align-self:start;min-width:0;margin-bottom:var(--gap);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,24px);padding:clamp(24px,3vw,48px);margin-right:var(--m);background:var(--terra);border-radius:32px}
+.studio-wall{grid-column:8/13;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,24px);padding:clamp(20px,2.6vw,40px);border-radius:28px;background:var(--surface)}
 .studio-wall li{aspect-ratio:1;display:grid;place-items:center}
 .studio-wall img{width:100%;height:100%;object-fit:cover;border-radius:22.5%;transition:transform .3s}
 .studio-wall li:hover img{transform:rotate(-4deg) scale(1.05)}
 .wall-logo img{transform:scale(1.08)}
-.wall-count{display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:.25rem;border-radius:22.5%;background:#1d17151f;color:var(--on);text-align:center}
-.wall-count strong{font-size:clamp(2.5rem,5vw,4.5rem);font-weight:700;letter-spacing:-.05em;line-height:.9}
+.wall-count{display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:.25rem;border-radius:22.5%;background:#f4ece014;text-align:center}
+.wall-count strong{font-family:var(--display-face);font-size:var(--title);font-weight:600;letter-spacing:-.04em;line-height:.9;color:var(--tone,var(--terra-t))}
 .wall-count span{font-size:var(--small);padding-inline:.5rem;overflow-wrap:anywhere}
 
-/* Contact: the address is the display type. */
-.contact{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--m);align-items:end;padding:var(--m) var(--m) clamp(120px,11vw,160px);background:var(--rose);color:var(--on)}
-.contact h2{grid-column:1/-1;max-width:30ch;font-size:var(--lead);font-weight:500;line-height:1.4;padding-top:calc(var(--m) + 4rem)}
-.contact .text-link{color:var(--on)}
-.email{grid-column:1/9;padding-top:clamp(40px,5vw,72px);font-size:var(--display);font-weight:600;letter-spacing:-.05em;line-height:.95;transition:color .2s}
-.email span{display:block}
-.email:hover{color:var(--ink)}
+/* Contact: Ankara at dusk, and a card to write from. */
+.contact{position:relative;margin-top:var(--gap);min-height:max(560px,92svh)}
+.contact-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.82) contrast(1.05)}
+.visit-card{position:absolute;top:clamp(32px,8svh,72px);right:var(--m);width:min(400px,calc(100% - 2*var(--m)));display:flex;flex-direction:column;align-items:flex-start;gap:.7rem;padding:32px;border-radius:24px;background:var(--ink);color:var(--on)}
+.visit-card h2{font-family:var(--display-face);font-size:var(--h3);font-weight:600;letter-spacing:-.03em;line-height:1}
+.visit-email{display:inline-flex;align-items:center;min-height:44px;font-size:var(--lead);font-weight:600;border-bottom:2px solid currentColor;overflow-wrap:anywhere;transition:background .2s}
+.visit-email:hover{background:var(--sulfur)}
+.visit-city{color:#1d1715cc;font-size:var(--small)}
+.visit-button{align-self:stretch;margin-top:.5rem;background:var(--on);color:var(--ink)}
+.visit-button:hover{background:var(--sulfur);color:var(--on)}
 .contact a:focus-visible{outline-color:var(--on)}
 
-/* Footer */
-.site-footer{background:var(--taupe);color:#fff;padding:var(--m)}
-.footer-name{margin:0;font-size:25.6vw;font-weight:700;letter-spacing:-.06em;line-height:.8;padding-top:2.5vw;white-space:nowrap}
-.footer-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--m);margin-top:40px;align-items:start}
-.footer-places{grid-column:1/6;display:flex;flex-direction:column;gap:.25rem}
-.footer-places a{font-size:var(--h2);font-weight:600;letter-spacing:-.03em;overflow-wrap:anywhere}
-.footer-links{display:flex;flex-direction:column;gap:.1rem;font-size:var(--body)}
-.footer-links:nth-of-type(1){grid-column:7/10}
-.footer-links:nth-of-type(2){grid-column:10/13}
-.footer-label{font-size:var(--small);font-weight:500;color:#ffffffb3;margin-bottom:.5rem}
-.footer-links a,.footer-places a{display:inline-flex;align-items:center;min-height:44px;transition:color .2s}
-.footer-links a:hover,.footer-places a:hover{color:var(--sulfur)}
-.footer-places p{color:#ffffffd9}
-.footer-legal{margin-top:48px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 2rem;font-size:var(--small);color:#ffffffb3}
-.to-top{display:inline-flex;align-items:center;min-height:44px;border-bottom:2px solid currentColor;color:#fff;transition:background .2s,color .2s}
-.to-top:hover{background:var(--sulfur);color:var(--on)}
+/* Footer: one quiet line. */
+.site-footer{display:grid;grid-template-columns:1fr auto 1fr;gap:12px 24px;align-items:baseline;padding:clamp(96px,20svh,200px) var(--m) 30px;font-size:var(--small);color:var(--muted)}
+.footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:0 24px}
+.footer-links a{display:inline-flex;align-items:center;min-height:44px;color:var(--ink);transition:color .2s}
+.footer-links a:hover{color:var(--sulfur)}
+.footer-legal{text-align:right}
+.footer-credit{grid-column:1/-1;font-size:var(--small)}
 
-/* Motion: entrances tied to the scroll, torn names, nothing hidden if unsupported. */
-@keyframes rise{from{opacity:0;transform:translateY(28px)}}
-@keyframes lift{from{transform:translateY(12svh)}50%{transform:none}to{transform:translateY(-12svh)}}
-@keyframes drop{from{transform:translateY(-12svh)}50%{transform:none}to{transform:translateY(12svh)}}
-@keyframes lift-title{from{transform:translateY(10svh)}50%{transform:none}to{transform:translateY(-10svh)}}
-@keyframes drop-title{from{transform:translateY(-10svh)}50%{transform:none}to{transform:translateY(10svh)}}
-@keyframes arrive{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-.hero-copy>:not(.hero-title){animation:arrive .6s cubic-bezier(.2,.7,.2,1) both}
-.hero-copy>.lead{animation-delay:.06s}
-.hero-copy>.button{animation-delay:.12s}
-.hero-copy>.news{animation-delay:.15s}
-@supports (animation-timeline:view()){
-  .pane-l{animation:lift linear both;animation-timeline:--g;animation-range:cover 0% cover 100%}
-  .pane-r{animation:drop linear both;animation-timeline:--g;animation-range:cover 0% cover 100%}
-  .tear-a{animation:lift-title linear both;animation-timeline:--g;animation-range:cover 0% cover 100%}
-  .tear-b{animation:drop-title linear both;animation-timeline:--g;animation-range:cover 0% cover 100%}
-  .dev-card,.principles li,.statement,.studio h2,.contact h2{animation:rise linear forwards;animation-timeline:view();animation-range:entry 0% entry 45%}
-}
-
-@media(max-width:1100px){
-  .info{left:var(--m);right:var(--m);width:auto;transform:none;top:calc(55svh + var(--display)*.9 + 20px);bottom:auto}
-  .tear{top:55svh}
-  .shot,.icon-lg{height:40svh}
-  .shot-land{width:min(100%,calc((40svh - 16px)*1.081))}
-  .is-wide .pane-l{padding-right:8px}
-  .is-wide .pane-r{padding-left:8px}
-  .world-son .icon-lg{height:min(40svh,320px);width:min(40svh,320px);min-height:240px;min-width:240px}
-  .actions{bottom:2.5svh}
-}
-@media(max-width:900px){
-  .hero{display:flex;flex-direction:column;min-height:0}
-  .hero-copy{padding:96px var(--m) 32px}
-  .hero-title{font-size:min(11vw,12svh);max-width:none}
-  .hero-stage{width:100%;height:52svh;min-height:360px}
-  .badge{width:min(34%,220px);margin-left:calc(min(34%,220px)/-2)}
-  .hero-title{font-size:min(10vw,22svh)}
-  .studio{grid-template-columns:minmax(0,1fr);padding-left:0}
-  .studio-copy{grid-column:1;padding-inline:var(--m)}
-  .studio-wall{grid-column:1;margin:0 var(--m) var(--gap)}
-  .dev-grid{grid-template-columns:1fr}
-  .footer-places{grid-column:1/13;margin-bottom:2rem}
-  .footer-links:nth-of-type(1){grid-column:1/7}
-  .footer-links:nth-of-type(2){grid-column:7/13}
-}
-@media(max-width:640px){
-  .bar-nav a[href="#studio"]{display:none}
-  .bar-nav a{padding-inline:.6rem}
-  .bar-nav{padding:.3rem .4rem}
-  .hero{display:flex;flex-direction:column;min-height:0}
-  .hero-copy{padding:88px var(--m) 32px;gap:1.1rem}
-  .hero-title{font-size:min(24vw,16svh)}
-  .hero-stage{grid-column:auto;width:100%;height:46svh;min-height:330px}
-  .badge{width:min(40%,170px);margin-left:calc(min(40%,170px)/-2)}
-  .cord{height:40px}
-  .card{border-radius:20px;padding:10px 10px 12px}
-  .card-slot{width:28px;height:6px;margin-bottom:.35rem}
-  .card-games{display:none}
-  .card-name{font-size:1rem}
-  .card-line{display:none}
-  .hero-title{font-size:min(13vw,10svh);max-width:none}
-  .stage{min-height:720px}
-  .pane{padding-top:calc(20svh + 11svh)}
-  .shot{width:min(88%,176px);height:27svh;min-height:200px;aspect-ratio:auto;object-fit:cover;object-position:50% 18%}
-  .world-son .icon-lg{height:27svh;width:27svh;min-height:200px;min-width:200px;max-width:88%}
-  .tear-a,.tear-b{animation:none!important}
-  .contact{grid-template-columns:1fr}
-  .email{grid-column:1}
-  .shot-wide{width:min(88%,176px);height:27svh;min-height:200px;aspect-ratio:auto;margin-top:0;object-position:72% 50%}
-  .is-wide .pane-l,.is-wide .pane-r{align-items:center;padding-inline:0}
-  .is-wide .shot-land+.shot-land{display:none}
-  .shot-land{width:min(88%,176px);height:27svh;min-height:200px;aspect-ratio:auto}
-  .tear{top:41svh}
-  .info{top:calc(41svh + var(--display)*.9 + 16px);gap:.4rem}
-  .actions{bottom:2.5svh}
-  .info .text{font-size:1rem}
-  .footer-name{font-size:21vw}
-  .footer-grid{margin-top:48px}
-  .footer-links:nth-of-type(1),.footer-links:nth-of-type(2){grid-column:1/13;margin-top:1rem}
-}
 .notfound{min-height:100svh;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:1.5rem;padding:var(--m)}
 .notfound h1{font-size:var(--display);font-weight:700;letter-spacing:-.05em;line-height:.9;max-width:12ch}
 
-/* Short viewports (landscape phones, big zoom): no pinned stage; each game reads as a plain stack. */
-@media(max-height:640px){
-  .game{height:auto}
-  .stage{position:relative;height:auto;min-height:0;grid-template-rows:auto auto auto auto;padding-bottom:var(--m);background:var(--pl)}
-  .pane{top:0;height:auto;padding:var(--m)}
-  .pane-l,.pane-r{grid-row:1}
-  .shot{height:auto;width:min(56%,200px);min-height:0;aspect-ratio:540/1169}
-  .world-son .icon-lg{height:auto;width:min(56%,200px);min-width:0;min-height:0}
-  .shot-land{width:100%;height:auto;aspect-ratio:960/444;min-height:0}
-  .is-wide .pane{gap:var(--m)}
-  .tear{position:relative;top:auto;grid-column:1/-1;grid-row:2;height:auto;padding:.5rem var(--m);display:flex;justify-content:center;animation:none}
-  .tear span{position:static;animation:none}
-  .info{position:static;grid-column:1/-1;grid-row:3;width:auto;transform:none;padding:0 var(--m)}
-  .actions{position:static;grid-column:1/-1;grid-row:4;padding:var(--m) var(--m) 0}
-  .panel{min-height:max(100svh,560px)}
-  .pane,.tear-a,.tear-b{animation:none!important}
+/* Motion: entrances tied to the scroll, the torn names drifting apart. Nothing is hidden where this is unsupported. */
+@keyframes rise{from{opacity:0;transform:translateY(28px)}}
+/* The two halves of a name meet while it crosses the middle of the screen and part again on either side. */
+@keyframes part-a{from{transform:translateX(-4vw)}45%,55%{transform:none}to{transform:translateX(-4vw)}}
+@keyframes part-b{from{transform:translateX(4vw)}45%,55%{transform:none}to{transform:translateX(4vw)}}
+@keyframes arrive{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.rail>*{animation:arrive .7s cubic-bezier(.2,.7,.2,1) both}
+.rail-line{animation-delay:.08s}
+.rail-actions{animation-delay:.16s}
+@supports (animation-timeline:view()){
+  .tear-a{animation:part-a linear both;animation-timeline:--t;animation-range:cover 0% cover 100%}
+  .tear-b{animation:part-b linear both;animation-timeline:--t;animation-range:cover 0% cover 100%}
+  .room-title,.window .media,.window .info,.oven-row,.studio-copy>*,.studio-wall li,.visit-card{animation:rise linear forwards;animation-timeline:view();animation-range:entry 0% entry 40%}
+  .window .info{animation-range:entry 10% entry 50%}
+}
+
+@media(max-width:1100px){
+  .rail h1{grid-column:1/7}
+  .rail-line{grid-column:7/13}
+  .rail-actions{grid-column:1/-1;flex-direction:row;justify-content:flex-start;align-items:center;margin-top:24px}
+  .window{grid-template-columns:1fr;padding-top:clamp(56px,10vw,96px)}
+  .is-flip .media{order:0}
+  .media-phone{max-width:640px;margin-inline:auto;width:100%}
+  .info{max-width:60ch}
+  .studio-copy{grid-column:1/-1}
+  .studio-wall{grid-column:1/-1;margin-top:48px;max-width:560px}
+}
+@media(max-width:640px){
+  .hero{--card-w:min(52vw,220px);min-height:0}
+  .hero-stage{min-height:max(360px,50svh)}
+  .rail{display:flex;flex-direction:column;align-items:flex-start;gap:16px;padding-top:8px}
+  .rail h1{font-size:clamp(2.5rem,13vw,3.5rem)}
+  .rail-actions{flex-direction:column;align-items:stretch;align-self:stretch;margin-top:8px}
+  .rail-actions .button{order:-1}
+  .bar-nav a[href="#studio"]{display:none}
+  .bar-nav a{padding-inline:.6rem}
+  .bar-nav{padding:.3rem .4rem}
+  .card{border-radius:20px;padding:10px 10px 12px}
+  .card-slot{width:28px;height:6px;margin-bottom:.35rem}
+  .card-games{display:none}
+  .card-name{display:none}
+  .card-line{display:none}
+  .window{padding:56px 16px 24px;border-radius:22px}
+  .media-phone{gap:8px}
+  .frame{border-radius:12px}
+  .media-phone .frame:nth-child(2){transform:translateY(-16px)}
+  .frame-land{border-radius:10px}
+  .media-land{gap:8px}
+  .oven-row{grid-template-columns:56px minmax(0,1fr);gap:4px 14px;align-items:start}
+  .oven-row img{width:56px;height:56px;grid-row:span 3}
+  .oven-name h3{font-size:1.375rem}
+  .oven-genre,.oven-status{grid-column:2;font-size:1rem;text-align:left}
+  .contact{min-height:0;display:flex;flex-direction:column}
+  .contact-photo{position:static;height:60svh;min-height:320px}
+  .visit-card{position:relative;top:auto;right:auto;width:auto;margin:-80px 16px 0}
+  .site-footer{grid-template-columns:1fr;gap:8px}
+  .footer-links{justify-content:flex-start}
+  .footer-legal{text-align:left}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -358,11 +289,7 @@ button{font:inherit;color:inherit}
 }
 @media(prefers-reduced-transparency:reduce){
   .glass{-webkit-backdrop-filter:none;backdrop-filter:none;background:#ffffff22} /* taste-skill-ignore */
-  .bar-nav{-webkit-backdrop-filter:none;backdrop-filter:none;background:#fff} /* taste-skill-ignore */
 }
 @media print{
-  .bar{display:none}
-  .game{height:auto}
-  .stage{position:static;height:auto;display:block}
-  .pane{display:none}
+  .bar,.hero-stage,.fx,.embers,video{display:none}
 }

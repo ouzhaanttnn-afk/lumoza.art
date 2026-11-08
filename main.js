@@ -45,6 +45,9 @@ for (const game of document.querySelectorAll('.game[data-screens]')) {
 // Motion layer. Every part checks its library and reduced motion first, so the page
 // still works, unchanged, when a script fails to load or the visitor prefers less motion.
 const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// The one moving picture (Hearthwalker being played) stays on its first frame for visitors who prefer less motion.
+if (calm) for (const v of document.querySelectorAll('video[autoplay]')) { v.removeAttribute('autoplay'); v.pause(); }
 const finePointer = matchMedia('(pointer: fine)').matches;
 
 // Smooth wheel scrolling on desktop (Lenis). Touch scrolling stays native.
@@ -55,27 +58,20 @@ if (!calm && finePointer && window.Lenis) {
   requestAnimationFrame(raf);
 }
 
-// GSAP: the torn game titles and entrances where the browser has no CSS scroll timelines
-// (Chrome and Safari 26 do them in CSS; this covers Firefox), plus a marquee that speeds up with the scroll.
+// GSAP: the torn game titles where the browser has no CSS scroll timelines
+// (Chrome and Safari 26 do them in CSS; this covers Firefox).
 if (!calm && window.gsap && window.ScrollTrigger) {
   const { gsap, ScrollTrigger } = window;
   gsap.registerPlugin(ScrollTrigger);
   if (lenis) lenis.on('scroll', ScrollTrigger.update);
   if (!CSS.supports('animation-timeline', 'view()')) {
-    for (const game of document.querySelectorAll('.game')) {
+    for (const game of document.querySelectorAll('.exhibit')) {
       const tl = gsap.timeline({ scrollTrigger: { trigger: game, start: 'top bottom', end: 'bottom top', scrub: true } });
-      tl.fromTo(game.querySelector('.tear-a'), { y: '10svh' }, { y: '-10svh', ease: 'none' }, 0)
-        .fromTo(game.querySelector('.tear-b'), { y: '-10svh' }, { y: '10svh', ease: 'none' }, 0)
-        .fromTo(game.querySelector('.pane-l'), { y: '12svh' }, { y: '-12svh', ease: 'none' }, 0)
-        .fromTo(game.querySelector('.pane-r'), { y: '-12svh' }, { y: '12svh', ease: 'none' }, 0);
+      tl.fromTo(game.querySelector('.tear-a'), { x: '-4vw' }, { x: 0, ease: 'none', duration: 0.45 }, 0)
+        .to(game.querySelector('.tear-a'), { x: '-4vw', ease: 'none', duration: 0.45 }, 0.55)
+        .fromTo(game.querySelector('.tear-b'), { x: '4vw' }, { x: 0, ease: 'none', duration: 0.45 }, 0)
+        .to(game.querySelector('.tear-b'), { x: '4vw', ease: 'none', duration: 0.45 }, 0.55);
     }
-  }
-  const track = document.querySelector('.marquee-track');
-  if (track) {
-    let boost = 0;
-    ScrollTrigger.create({ onUpdate: (self) => { boost = Math.min(4, Math.abs(self.getVelocity()) / 600); } });
-    const anim = track.getAnimations ? track.getAnimations()[0] : null;
-    gsap.ticker.add(() => { if (anim) anim.playbackRate = 1 + boost; boost *= 0.92; });
   }
 }
 
