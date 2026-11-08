@@ -86,7 +86,7 @@ button{font:inherit;color:inherit}
    the hanging card, each game's window in its own colour, and the city at dusk. */
 .hero,.room,.studio,.site-footer{background:var(--bg)}
 
-/* Hero: the card hangs like a lamp; the name, one sentence and the actions sit on a rail beneath it. */
+/* Hero: the card hangs like a lamp; the name and the two actions sit centred beneath it. */
 .hero{--card-w:clamp(150px,min(13vw,24svh),220px);--stage-h:calc(var(--card-w)*1.6 + clamp(48px,9svh,100px) + 80px);position:relative;display:grid;grid-template-rows:auto auto;overflow:hidden}
 .hero-stage{position:relative;grid-row:1;height:var(--stage-h)}
 /* The games hang on either side of the card, each on its own cord, swaying out of step. */
@@ -98,10 +98,10 @@ button{font:inherit;color:inherit}
 .hang a:hover img{transform:scale(1.08) rotate(-4deg)}
 @keyframes sway{from{transform:rotate(4deg)}to{transform:rotate(-4deg)}}
 .fx-hero{z-index:0}
-.rail{position:relative;z-index:2;grid-row:2;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--m);align-items:end;padding:8px var(--m) 0}
-.rail h1{grid-column:1/6;font-family:var(--display-face);font-size:var(--title);font-weight:600;letter-spacing:-.035em;line-height:.92}
-.rail-line{grid-column:6/10;font-size:var(--lead);line-height:1.45;max-width:30ch}
-.rail-actions{grid-column:10/13;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+.rail{position:relative;z-index:2;grid-row:2;display:flex;flex-direction:column;align-items:center;gap:20px;padding:8px var(--m) 0;text-align:center}
+.rail h1{font-family:var(--display-face);font-size:var(--title);font-weight:600;letter-spacing:-.035em;line-height:.92}
+.rail-actions{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px}
+.rail-actions .button{order:-1}
 .news span{white-space:nowrap}
 .news{display:inline-flex;align-items:center;gap:.6rem;min-height:44px;padding:.3rem 1rem .3rem .35rem;border-radius:999px;background:var(--surface);font-size:var(--small);transition:background .2s,color .2s}
 .news img{width:28px;height:28px;border-radius:22.5%}
@@ -245,8 +245,7 @@ button{font:inherit;color:inherit}
 .media>:nth-child(3){--fall:-32svh}
 @keyframes arrive{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 .rail>*{animation:arrive .7s cubic-bezier(.2,.7,.2,1) both}
-.rail-line{animation-delay:.08s}
-.rail-actions{animation-delay:.16s}
+.rail-actions{animation-delay:.1s}
 @supports (animation-timeline:view()){
   .tear-a{animation:part-a linear both;animation-timeline:--t;animation-range:cover 0% cover 100%}
   .tear-b{animation:part-b linear both;animation-timeline:--t;animation-range:cover 0% cover 100%}
@@ -256,9 +255,6 @@ button{font:inherit;color:inherit}
 }
 
 @media(max-width:1100px){
-  .rail h1{grid-column:1/7}
-  .rail-line{grid-column:7/13}
-  .rail-actions{grid-column:1/-1;flex-direction:row;justify-content:flex-start;align-items:center;margin-top:24px}
   .window{grid-template-columns:1fr;padding-top:clamp(56px,10vw,96px)}
   .is-flip .media{order:0}
   .media-phone{max-width:640px;margin-inline:auto;width:100%}
@@ -273,10 +269,7 @@ button{font:inherit;color:inherit}
   .hang{--size:calc(var(--card-w)*.3)}
   .hang:nth-child(2){left:11%}
   .hang:nth-child(6){left:89%}
-  .rail{display:flex;flex-direction:column;align-items:flex-start;gap:16px;padding-top:8px}
   .rail h1{font-size:clamp(2.5rem,13vw,3.5rem)}
-  .rail-actions{flex-direction:column;align-items:stretch;align-self:stretch;margin-top:8px}
-  .rail-actions .button{order:-1}
   .bar-nav a[href="#studio"]{display:none}
   .bar-nav a{padding-inline:.6rem}
   .bar-nav{padding:.3rem .4rem}

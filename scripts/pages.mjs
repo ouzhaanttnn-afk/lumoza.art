@@ -26,7 +26,6 @@ const copy = {
     skip: 'Skip to content', homeAria: 'Lumoza, back to top', navAria: 'Main navigation',
     nav: { games: 'Games', studio: 'Studio', contact: 'Contact' },
     h1: 'Lumoza Studio',
-    heroLine: 'Little worlds for your phone, made by a tiny studio in Ankara.',
     outTitle: 'Out now', soonTitle: 'Coming soon',
     contactText: 'We read every email, and we love hearing what you played.', contactAction: 'Write to us',
     photoAlt: 'Ankara at dusk: lit windows and a lakeside pavilion in a city park',
@@ -135,7 +134,6 @@ const copy = {
     skip: 'İçeriğe geç', homeAria: 'Lumoza, başa dön', navAria: 'Ana gezinme',
     nav: { games: 'Oyunlar', studio: 'Stüdyo', contact: 'İletişim' },
     h1: 'Lumoza Studio',
-    heroLine: 'Telefonun için küçük dünyalar. Ankara’da küçük bir stüdyo yapıyor.',
     outTitle: 'Yayında', soonTitle: 'Yakında',
     contactText: 'Her e-postayı okuyoruz; ne oynadığını duymak hoşumuza gider.', contactAction: 'Bize yaz',
     photoAlt: 'Akşamüstü Ankara: bir şehir parkında göl kenarında ışıklı pencereler ve bir köşk',
@@ -384,7 +382,6 @@ ${t.lang === 'en' ? `    <script>try{var l=localStorage.getItem('lumoza-lang');i
         </div>
         <div class="rail">
           <h1 id="hero-title">${esc(t.h1)}</h1>
-          <p class="rail-line">${esc(t.heroLine)}</p>
           <div class="rail-actions">
             <a class="news" href="${STORE.son}" target="_blank" rel="noopener noreferrer"><img src="/assets/games/son-ocak-icon.webp" alt="" width="28" height="28" decoding="async"><span><strong>${esc(t.news.tag)}:</strong> ${esc(t.news.text)}</span><span class="visually-hidden">${esc(t.newTab)}</span></a>
             <a class="button" href="#games">${esc(t.seeGames)}</a>
