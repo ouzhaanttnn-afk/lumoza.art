@@ -255,6 +255,19 @@ const particles = (n, seed) => Array.from({ length: n }, (_, i) => {
 }).join('');
 const FX = { mihenk: particles(26, 1), trade: particles(22, 3), alvera: particles(30, 5), stove: particles(24, 7), sparkle: particles(22, 11), hero: particles(16, 13) };
 
+// The games hang around the Lumoza card like smaller lamps, each on its own cord; each one leads to its window.
+const HANG = [
+  { id: 'trade', icon: 'tradeup-icon', x: 9, c: 0.35, s: 0.42, t: 5.2, d: -1.1 },
+  { id: 'mihenk', icon: 'mihenkaynak-icon', x: 22, c: 0.72, s: 0.5, t: 6.4, d: -3.0, keep: true },
+  { id: 'son', icon: 'son-ocak-icon', x: 35, c: 0.18, s: 0.46, t: 4.6, d: -2.2 },
+  { id: 'stove', icon: 'little-stove-icon', x: 65, c: 0.22, s: 0.48, t: 5.8, d: -0.4 },
+  { id: 'street', icon: 'street-striker-icon', x: 78, c: 0.44, s: 0.4, t: 4.9, d: -3.6, href: '#dev-title', name: 'Street Striker: Zero to Legend' },
+  { id: 'sparkle', icon: 'sparkle-fleet-icon', x: 91, c: 0.78, s: 0.5, t: 6.9, d: -1.8, keep: true }
+];
+const hangers = (t) => `<ul class="hangers" aria-label="${esc(t.nav.games)}">
+          ${HANG.map(h => `<li class="hang${h.keep ? ' is-keep' : ''}" style="--x:${h.x}%;--c:${h.c};--s:${h.s};--t:${h.t}s;--d:${h.d}s"><a href="${h.href || `#g-${h.id}`}" aria-label="${esc(h.name || t.games[h.id].name)}"><span class="hang-cord"></span><img src="/assets/games/${h.icon}.webp" alt="" width="512" height="512" decoding="async"></a></li>`).join('\n          ')}
+        </ul>`;
+
 // Each game is a lit window in the dark room: its own colour, its own light, its real screens.
 const FLIP = new Set(['trade', 'sparkle']);
 function exhibit(t, key) {
@@ -365,6 +378,7 @@ ${t.lang === 'en' ? `    <script>try{var l=localStorage.getItem('lumoza-lang');i
     <main id="main">
       <section class="hero" aria-labelledby="hero-title">
         <div class="fx fx-stove fx-hero" aria-hidden="true">${FX.hero}</div>
+        ${hangers(t)}
         <div class="hero-stage" role="img" aria-label="${esc(t.heroStage)}">
           <div class="badge"><span class="cord"></span><span class="clip"></span><span class="card"><span class="card-slot"></span><svg class="card-logo" viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" rx="115" fill="#B87076"/><path d="M170 116 V334 Q170 374 210 374 H356" fill="none" stroke="#f4ece0" stroke-width="80" stroke-linecap="round" stroke-linejoin="round"/><path class="card-spark" d="M330 136 C335 200 346 211 410 216 C346 221 335 232 330 296 C325 232 314 221 250 216 C314 211 325 200 330 136 Z" fill="#70B8A9"/></svg><span class="card-name">Lumoza</span><span class="card-line">Ankara · 2026</span><span class="card-games">${['mihenkaynak-icon', 'tradeup-icon', 'son-ocak-icon', 'little-stove-icon', 'sparkle-fleet-icon'].map(i => `<img src="/assets/games/${i}.webp" alt="" width="512" height="512" decoding="async">`).join('')}</span></span></div>
         </div>

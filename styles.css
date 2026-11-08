@@ -87,10 +87,18 @@ button{font:inherit;color:inherit}
 .hero,.room,.studio,.site-footer{background:var(--bg)}
 
 /* Hero: the card hangs like a lamp; the name, one sentence and the actions sit on a rail beneath it. */
-.hero{--card-w:clamp(170px,13vw,220px);position:relative;display:grid;grid-template-rows:minmax(0,1fr) auto;min-height:clamp(560px,78svh,760px);overflow:hidden}
-.hero-stage{position:relative;grid-row:1;min-height:44svh}
+.hero{--card-w:clamp(150px,min(13vw,24svh),220px);--stage-h:calc(var(--card-w)*1.6 + clamp(48px,9svh,100px) + 80px);position:relative;display:grid;grid-template-rows:auto auto;overflow:hidden}
+.hero-stage{position:relative;grid-row:1;height:var(--stage-h)}
+/* The games hang on either side of the card, each on its own cord, swaying out of step. */
+.hangers{position:absolute;top:0;left:0;right:0;height:var(--stage-h);z-index:1;pointer-events:none}
+.hang{--size:calc(var(--card-w)*var(--s));position:absolute;top:0;left:var(--x);width:var(--size);margin-left:calc(var(--size)/-2);transform-origin:50% 0;animation:sway var(--t) ease-in-out var(--d) infinite alternate}
+.hang a{display:flex;flex-direction:column;align-items:center;pointer-events:auto;border-radius:22.5%}
+.hang-cord{display:block;width:2px;height:calc(var(--c)*(var(--stage-h) - var(--size) - 40px) + 24px);background:var(--muted);opacity:.75}
+.hang img{width:var(--size);height:var(--size);border-radius:22.5%;transition:transform .3s}
+.hang a:hover img{transform:scale(1.08) rotate(-4deg)}
+@keyframes sway{from{transform:rotate(4deg)}to{transform:rotate(-4deg)}}
 .fx-hero{z-index:0}
-.rail{position:relative;z-index:2;grid-row:2;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--m);align-items:end;padding:24px var(--m) clamp(32px,6svh,64px)}
+.rail{position:relative;z-index:2;grid-row:2;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--m);align-items:end;padding:8px var(--m) 0}
 .rail h1{grid-column:1/6;font-family:var(--display-face);font-size:var(--title);font-weight:600;letter-spacing:-.035em;line-height:.92}
 .rail-line{grid-column:6/10;font-size:var(--lead);line-height:1.45;max-width:30ch}
 .rail-actions{grid-column:10/13;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
@@ -103,6 +111,7 @@ button{font:inherit;color:inherit}
 
 /* Rooms: a heading, then the lit windows. */
 .room{padding:var(--gap) var(--m) 0}
+.hero+.room{padding-top:clamp(72px,7vw,112px)}
 .room-title,.studio h2{font-family:var(--display-face);font-size:var(--title);font-weight:600;letter-spacing:-.03em;line-height:1}
 .room-title{margin-bottom:clamp(28px,3vw,40px)}
 
@@ -258,8 +267,12 @@ button{font:inherit;color:inherit}
   .studio-wall{grid-column:1/-1;margin-top:48px;max-width:560px}
 }
 @media(max-width:640px){
-  .hero{--card-w:min(52vw,220px);min-height:0}
-  .hero-stage{min-height:max(360px,50svh)}
+  .hero{--card-w:min(44vw,190px);min-height:0}
+  .hero{--stage-h:calc(var(--card-w)*1.1 + 110px)}
+  .hang:not(.is-keep){display:none}
+  .hang{--size:calc(var(--card-w)*.3)}
+  .hang:nth-child(2){left:11%}
+  .hang:nth-child(6){left:89%}
   .rail{display:flex;flex-direction:column;align-items:flex-start;gap:16px;padding-top:8px}
   .rail h1{font-size:clamp(2.5rem,13vw,3.5rem)}
   .rail-actions{flex-direction:column;align-items:stretch;align-self:stretch;margin-top:8px}
