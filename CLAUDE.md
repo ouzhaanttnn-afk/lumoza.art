@@ -31,7 +31,8 @@ Details, versions and test results: `docs/design-skills.md`.
 - Own-game promotion (asked 2026-11-05): the newest game gets Apple's Smart App Banner (`NEWEST_APP` in `scripts/pages.mjs`) and a small "New" link under the hero button (`news` copy). When the next game ships, update both. No third-party ads.
 - Landscape games (Little Stove, Sparkle Fleet; added 2026-11-06) use `wide:` instead of `shots:` and show four screens, two stacked per pane (`.is-wide`, `.shot-land`). Little Stove's in-game screens exist in English and Turkish (`{lang}` in the file name); Sparkle Fleet's are Turkish only.
 - The owner wants the site to stay compact: one page per language, short scroll. Do not add sections, pages (game pages, press kit) or new libraries unless asked.
-- AI stays a small mention (the studio sentence, one principle, page descriptions). Never in headlines.
+- No AI on the page (owner, 2026-11-08: the site felt bland and cringe; AI was removed from the copy, the principles and the page descriptions). Do not add it back unless asked.
+- Voice (since 2026-11-08): plain, warm and a little playful, short sentences, "tiny studio", "little worlds". No corporate lines ("design with intent", "a person makes every decision"). The iOS shelf and the hero store links were removed as repeats; each game's stage carries its own button.
 - Every page change ships in English and Turkish.
 - Gates before pushing: `npm run check`, `node .claude/skills/design-taste-frontend/scripts/lint.mjs index.html styles.css main.js`, and the inspector (needs Chrome; as root set `CHROME_PATH` to a wrapper that adds `--no-sandbox`).
 - Impeccable hooks are not installed on purpose. Do not run `/impeccable init` unless asked.

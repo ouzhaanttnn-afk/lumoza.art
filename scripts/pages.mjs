@@ -18,39 +18,26 @@ const shots = (name, count) => Array.from({ length: count }, (_, i) => `/assets/
 const copy = {
   en: {
     lang: 'en', path: '/', other: { href: '/tr/', label: 'Türkçe', lang: 'tr', aria: 'Siteyi Türkçe görüntüle' },
-    title: 'Lumoza Studio — Independent games from Ankara',
-    description: 'Lumoza Studio makes independent games in Ankara, Türkiye, building with design, code and AI. MİHENKAYNAK, TradeUp and Hearthwalker are on the App Store.',
-    ogDescription: 'Independent games and digital products built with design, code and AI. Based in Ankara, Türkiye.',
-    ogAlt: 'Lumoza Studio — independent games, built with care.',
+    title: 'Lumoza Studio — Little games from Ankara',
+    description: 'Lumoza Studio is a tiny game studio in Ankara, Türkiye. MİHENKAYNAK, TradeUp and Hearthwalker are on the App Store, with more on the way.',
+    ogDescription: 'Little phone games from a tiny studio in Ankara, Türkiye.',
+    ogAlt: 'Lumoza Studio — little games from Ankara.',
     locale: 'en_US', otherLocale: 'tr_TR',
     skip: 'Skip to content', homeAria: 'Lumoza, back to top', navAria: 'Main navigation',
     nav: { games: 'Games', studio: 'Studio', contact: 'Contact' },
-    h1: 'Lumoza Studio, independent games from Ankara',
-    lead: 'Lumoza Studio makes independent games in Ankara, Türkiye. Three of our games are on the App Store, and more are on the way.',
-    headline: [['Lumoza', ''], ['icon', 'mihenkaynak-icon'], ['makes', ''], ['games', 'rose'], ['icon', 'tradeup-icon'], ['with', ''], ['care.', 'teal']],
+    h1: 'Lumoza Studio makes little worlds for your phone',
+    lead: 'A tiny studio in Ankara. We make phone games you can sink into: a goldsmith’s counter, a secondhand market, a hearth that walks.',
+    headline: [['Lumoza', ''], ['icon', 'mihenkaynak-icon'], ['makes', ''], ['little', 'rose'], ['icon', 'tradeup-icon'], ['worlds.', 'teal']],
     marquee: 'Our games',
     news: { tag: 'New', text: 'Hearthwalker is out on the App Store' },
-    seeGames: 'See our games', newTab: ' (opens in a new tab)',
-    heroLinks: [
-      { href: STORE.mihenk, text: 'MİHENKAYNAK on the App Store' },
-      { href: STORE.trade, text: 'TradeUp on the App Store' }
-    ],
+    seeGames: 'Have a look', newTab: ' (opens in a new tab)',
     heroArt: 'The MİHENKAYNAK loading screen with the gold logo on a purple jeweller’s counter.',
-    shelfTitle: 'Our iOS games', shelfLead: 'Three games are out. Three more are coming soon.',
-    shelf: [
-      { icon: 'mihenkaynak-icon', name: 'MİHENKAYNAK', line: 'Goldsmith shop simulation', action: 'View', href: STORE.mihenk, aria: 'View MİHENKAYNAK on the App Store' },
-      { icon: 'tradeup-icon', name: 'TradeUp: Zero to Home', line: 'Secondhand trading simulation', action: 'View', href: STORE.trade, aria: 'View TradeUp: Zero to Home on the App Store' },
-      { icon: 'son-ocak-icon', name: 'Hearthwalker', line: 'Action survival game', action: 'View', href: STORE.son, aria: 'View Hearthwalker on the App Store' },
-      { icon: 'street-striker-icon', name: 'Street Striker: Zero to Legend', line: 'Arcade RPG', action: 'Coming soon' },
-      { icon: 'little-stove-icon', name: 'Little Stove: Cozy Dungeon', line: 'Cozy roguelite', action: 'Coming soon' },
-      { icon: 'sparkle-fleet-icon', name: 'Sparkle Fleet', line: 'Ferry cleaning game', action: 'Coming soon' }
-    ],
     gamesTitle: 'Our games',
     games: {
       mihenk: {
         id: 'mihenk', name: 'MİHENKAYNAK', tagline: 'Weigh the gold. Read the customer.',
         status: 'On the App Store since 14 September 2026.',
-        text: 'A portrait goldsmith shop simulation. Test and weigh gold, bargain with customers whose patience and budgets differ, and grow your shop’s reputation in a market where gold and currency prices move.',
+        text: 'Run a little goldsmith’s shop. Test and weigh the gold, haggle with every customer and make a name for yourself in a market where prices never sit still.',
         facts: 'iOS · Simulation · Turkish and English · Free, with optional upgrades', tags: ['Simulation', 'iOS', 'Android soon'],
         store: 'View on the App Store', shots: shots('mihenk', 7), href: STORE.mihenk,
         alts: ['A customer asks for 7.5 grams of gold at the counter', 'The shop dashboard with cash, risks and the day’s sales', 'The finance view with cash, profit and stock lines', 'A restock dialog listing gram gold and Turkish gold coins', 'The stock list with price, margin and sell-through for each piece', 'The workshop with repairs and custom engraving orders', 'The market view with premium packs']
@@ -58,7 +45,7 @@ const copy = {
       trade: {
         id: 'trade', name: 'TradeUp', tagline: 'Read the market. Trade your way up.',
         status: 'On the App Store since 14 October 2026.',
-        text: 'Compare listings by price, condition, interest and seller behaviour. Bargain with two offers, prepare and relist what you buy, and work toward one of five homes in a secondhand market that keeps moving.',
+        text: 'Start with almost nothing in a busy secondhand market. Spot the good deals, haggle, fix things up, sell them on and climb all the way to a home of your own.',
         facts: 'iOS · Strategy, simulation · Turkish and English · Free, with optional upgrades', tags: ['Strategy', 'Simulation', 'iOS'],
         store: 'View on the App Store', shots: shots('trade', 5), href: STORE.trade,
         alts: ['The live market with listings, prices and a filter bar', 'The portfolio with items prepared for sale', 'The path to a first home with savings and house options', 'An item story with a haggle slider and a seller offer', 'Choosing a character and a career style']
@@ -66,7 +53,7 @@ const copy = {
       son: {
         id: 'son', name: 'Hearthwalker', sub: 'Son Ocak', tagline: 'You don’t carry the fire. You are the fire.',
         status: 'On the App Store since 5 November 2026.',
-        text: 'You are a living hearth from an Anatolian tile workshop. Walk to gather embers, stop to raise your guard, walk on to send the wave into the horde of ash, across 12 maps with 57 powers and 10 hearths.',
+        text: 'You are a living hearth, born in an Anatolian tile workshop. Walk to gather embers, stop to guard, then send a wave of fire through the ash. Twelve maps, 57 powers, ten hearths.',
         tags: ['Action', 'Survival', 'iOS'], facts: 'iOS · Action, strategy · English, Turkish and three more · First six maps free, no ads',
         store: 'View on the App Store', href: STORE.son, shots: shots('hearth', 6),
         alts: ['The hearth sending a wave of fire into a horde of ash creatures', 'A tile guardian blocking the road on one of the twelve maps', 'Choosing a power such as Ember Stove or Forked Ember', 'The map picker with twelve maps from Ash Forest to the Mother Hearth', 'The Son Ocak home screen with the hearth, its rank and the Endless Road', 'A late run with cracks of fire across the ground']
@@ -74,7 +61,7 @@ const copy = {
       stove: {
         id: 'stove', name: 'Little Stove', sub: 'Ocakçı', tagline: 'Keep the little stove burning.',
         status: 'Coming soon to the App Store.',
-        text: 'Carry a living stove from the bottom of the earth up to the surface. Gather coal in the dark, get back before the fire goes out and hold the light against what lives down there, across five chapters and 25 floors with a boss at the end of each chapter.',
+        text: 'Carry a living stove up from the bottom of the earth. Grab coal in the dark, hurry back before the fire goes out and keep the light alive across five chapters.',
         tags: ['Roguelite', 'Cozy', 'iOS'], facts: 'iPhone · Roguelite, action · English and Turkish · First chapter free, no ads',
         launch: 'Tell me at launch', launchSubject: 'Little Stove launch',
         wide: wide(['stove-1-{lang}', 'stove-2', 'stove-3-{lang}', 'stove-4', 'stove-5-{lang}', 'stove-6'], 'en'),
@@ -83,7 +70,7 @@ const copy = {
       sparkle: {
         id: 'sparkle', name: 'Sparkle Fleet', sub: 'Son Vapur', tagline: 'Every old ferry deserves to shine again.',
         status: 'Coming soon to the App Store, in testing on TestFlight.',
-        text: 'A first-person cleaning game aboard old passenger ferries. Scrape, brush and pressure-wash the decks and the saloon, empty your hopper, buy better tools in the workshop and send every ferry back out to sea.',
+        text: 'Scrape, brush and pressure-wash old passenger ferries until they gleam. Earn better tools in the workshop and send each ferry back out to sea. Strangely relaxing.',
         tags: ['Cleaning', 'Relaxing', 'iOS'], facts: 'iPhone · Cleaning simulation · Turkish · Played in landscape',
         launch: 'Tell me at launch', launchSubject: 'Sparkle Fleet launch',
         wide: wide(['sparkle-1', 'sparkle-2', 'sparkle-3', 'sparkle-4'], 'en'),
@@ -102,7 +89,7 @@ const copy = {
     web: {
       id: 'alvera', name: 'Alvera', tagline: 'Value is timeless.',
       status: 'Online at alverakuyumculuk.com.',
-      text: 'A website for a jewellery store in Mamak, Ankara: its gold and diamond collection, today’s gold prices with a gram calculator, the store’s details, and a panel where the shop manages its own catalogue.',
+      text: 'A website for a jewellery shop in Mamak, Ankara: the collection, today’s gold prices with a gram calculator, and a small panel where the shop updates its own catalogue.',
       facts: 'Website · Ankara, Mamak · Turkish', tags: ['Website', 'Catalogue panel', 'Gold prices'],
       store: 'Visit alverakuyumculuk.com', href: 'https://www.alverakuyumculuk.com/',
       pics: [
@@ -111,62 +98,49 @@ const copy = {
       ]
     },
     next: 'Next screens', nextAria: 'Show the next screens',
-    devTitle: 'In development',
+    devTitle: 'Still in the oven',
     dev: [
-      { id: 'bim', icon: 'bimquest-icon', name: 'BIMQUEST', pill: 'In TestFlight', genre: 'Educational game', text: 'A mobile game that teaches Revit through play: seven chapters from BIM basics to views and documentation, with a live 2D plan and a 3D model to build.' },
-      { id: 'street', icon: 'street-striker-icon', name: 'Street Striker: Zero to Legend', pill: 'Coming soon', genre: 'Arcade RPG', text: 'Street fighting meets RPG progression, with equipment, training and roguelite skills shaping each fight.' },
-      { id: 'tray', icon: 'trayful-icon', name: 'Trayful Café', pill: 'In development', genre: 'Physics puzzle', text: 'One tray, one clamp and 24 café puzzles. Balance your ingredients and choose the order of every delivery.' }
+      { id: 'bim', icon: 'bimquest-icon', name: 'BIMQUEST', pill: 'In TestFlight', genre: 'Educational game', text: 'Learn Revit by playing: seven chapters, a live 2D plan and a 3D model you build yourself.' },
+      { id: 'street', icon: 'street-striker-icon', name: 'Street Striker: Zero to Legend', pill: 'Coming soon', genre: 'Arcade RPG', text: 'Street fights with RPG progression: gear up, train and pick roguelite skills between fights.' },
+      { id: 'tray', icon: 'trayful-icon', name: 'Trayful Café', pill: 'In development', genre: 'Physics puzzle', text: 'One tray, one clamp, 24 café puzzles. Balance every order and get each delivery there in one piece.' }
     ],
-    studioTitle: 'A small studio in Ankara.',
-    studioLead: 'We design, build and ship our own games, and a person makes every decision.',
+    studioTitle: 'Hi, we’re Lumoza.',
+    studioLead: 'A tiny studio in Ankara. We make the kind of small games we’d happily play on the bus home.',
     principles: [
-      { h: 'Design with intent', p: 'Start with the experience. Give each idea a clear purpose, a considered form and a reason to exist.' },
-      { h: 'Build with care', p: 'Turn ideas into working games and digital products. Test, refine and pay attention to the details.' },
-      { h: 'Explore with AI', p: 'Use AI to explore possibilities and support iteration, with human judgment guiding the work.' }
+      { h: 'Small worlds', p: 'A goldsmith’s counter, a secondhand market, a hearth that walks. Each game is one small place you can learn in a minute.' },
+      { h: 'Free to try', p: 'Every game is free to download, and you decide whether you want more.' },
+      { h: 'Played a lot', p: 'We play every build on a real phone and keep fixing it until it feels right.' }
     ],
-    founder: 'Oğuzhan Alper Tosun', founderRole: 'Founder and product designer',
-    wallLabel: 'Our games so far', wallOut: 'on the App Store', wallNext: 'on the way',
-    contactTitle: 'Press, partnerships or a question about our games? Write to us.',
+    founder: 'Oğuzhan Alper Tosun', founderRole: 'Founder, designs the games',
+    wallLabel: 'Our games', wallOut: 'out now', wallNext: 'coming soon',
+    contactTitle: 'Say hello. We read every email.',
     city: 'Ankara, Türkiye', top: 'Back to top',
-    footerPlaces: 'Reach the studio', footerGames: 'Games', footerSite: 'Site',
+    footerPlaces: 'Write to us', footerGames: 'Games', footerSite: 'Site',
     footerLinks: { mihenk: 'MİHENKAYNAK on the App Store', trade: 'TradeUp on the App Store', son: 'Hearthwalker on the App Store' },
     legal: '© 2026 Lumoza Studio. Revit is a trademark of Autodesk, Inc. BIMQUEST is an independent project.'
   },
   tr: {
     lang: 'tr', path: '/tr/', other: { href: '/', label: 'English', lang: 'en', aria: 'View this site in English' },
-    title: 'Lumoza Studio — Ankara’dan bağımsız oyunlar',
-    description: 'Lumoza Studio, Ankara merkezli bağımsız bir oyun stüdyosudur; tasarım, kod ve yapay zekâyla geliştirir. MİHENKAYNAK, TradeUp ve Hearthwalker App Store’da.',
-    ogDescription: 'Tasarım, kod ve yapay zekâyla geliştirilen bağımsız oyunlar ve dijital ürünler. Ankara, Türkiye.',
-    ogAlt: 'Lumoza Studio — özenle yapılmış bağımsız oyunlar.',
+    title: 'Lumoza Studio — Ankara’dan küçük oyunlar',
+    description: 'Lumoza Studio, Ankara’da küçük bir oyun stüdyosu. MİHENKAYNAK, TradeUp ve Hearthwalker App Store’da, yenileri yolda.',
+    ogDescription: 'Ankara’daki küçük bir stüdyodan telefon oyunları.',
+    ogAlt: 'Lumoza Studio — Ankara’dan küçük oyunlar.',
     locale: 'tr_TR', otherLocale: 'en_US',
     skip: 'İçeriğe geç', homeAria: 'Lumoza, başa dön', navAria: 'Ana gezinme',
     nav: { games: 'Oyunlar', studio: 'Stüdyo', contact: 'İletişim' },
-    h1: 'Lumoza Studio, Ankara’dan bağımsız oyunlar',
-    lead: 'Lumoza Studio, Ankara’da bağımsız oyunlar yapıyor. Oyunlarımızdan üçü App Store’da, yenileri yolda.',
-    headline: [['Lumoza', ''], ['icon', 'mihenkaynak-icon'], ['özenle', 'teal'], ['icon', 'tradeup-icon'], ['oyun', 'rose'], ['yapar.', '']],
+    h1: 'Lumoza Studio telefonun için küçük dünyalar kurar',
+    lead: 'Ankara’da küçük bir stüdyoyuz. İçinde kaybolacağın telefon oyunları yapıyoruz: bir kuyumcu tezgâhı, bir ikinci el pazarı, yürüyen bir ocak.',
+    headline: [['Lumoza', ''], ['icon', 'mihenkaynak-icon'], ['küçük', 'rose'], ['icon', 'tradeup-icon'], ['dünyalar', 'teal'], ['kurar.', '']],
     marquee: 'Oyunlarımız',
     news: { tag: 'Yeni', text: 'Hearthwalker App Store’da çıktı' },
-    seeGames: 'Oyunlarımızı keşfet', newTab: ' (yeni sekmede açılır)',
-    heroLinks: [
-      { href: STORE.mihenk, text: 'MİHENKAYNAK, App Store’da' },
-      { href: STORE.trade, text: 'TradeUp, App Store’da' }
-    ],
+    seeGames: 'Bir göz at', newTab: ' (yeni sekmede açılır)',
     heroArt: 'Mor bir kuyumcu tezgâhında altın logolu MİHENKAYNAK açılış ekranı.',
-    shelfTitle: 'iOS oyunlarımız', shelfLead: 'Üç oyun yayında. Üçü daha yakında geliyor.',
-    shelf: [
-      { icon: 'mihenkaynak-icon', name: 'MİHENKAYNAK', line: 'Kuyumcu dükkânı simülasyonu', action: 'Görüntüle', href: STORE.mihenk, aria: 'MİHENKAYNAK’ı App Store’da görüntüle' },
-      { icon: 'tradeup-icon', name: 'TradeUp: Zero to Home', line: 'İkinci el ticaret simülasyonu', action: 'Görüntüle', href: STORE.trade, aria: 'TradeUp: Zero to Home’u App Store’da görüntüle' },
-      { icon: 'son-ocak-icon', name: 'Hearthwalker', line: 'Aksiyon, hayatta kalma oyunu', action: 'Görüntüle', href: STORE.son, aria: 'Hearthwalker’ı App Store’da görüntüle' },
-      { icon: 'street-striker-icon', name: 'Street Striker: Zero to Legend', line: 'Arcade RPG', action: 'Yakında' },
-      { icon: 'little-stove-icon', name: 'Little Stove: Cozy Dungeon', line: 'Sıcacık bir roguelite', action: 'Yakında' },
-      { icon: 'sparkle-fleet-icon', name: 'Sparkle Fleet', line: 'Vapur temizleme oyunu', action: 'Yakında' }
-    ],
     gamesTitle: 'Oyunlarımız',
     games: {
       mihenk: {
         id: 'mihenk', name: 'MİHENKAYNAK', tagline: 'Altını tart. Müşteriyi oku.',
         status: '14 Eylül 2026’dan beri App Store’da.',
-        text: 'Dikey oynanan bir kuyumcu dükkânı simülasyonu. Altını test et ve tart, sabrı ve bütçesi farklı müşterilerle pazarlık et, altın ve döviz fiyatlarının oynadığı bir piyasada dükkânının itibarını büyüt.',
+        text: 'Küçük bir kuyumcu dükkânı işlet. Altını test et, tart, her müşteriyle pazarlık yap ve fiyatların hiç durmadığı bir piyasada adını duyur.',
         facts: 'iOS · Simülasyon · Türkçe ve İngilizce · Ücretsiz, isteğe bağlı paketlerle', tags: ['Simülasyon', 'iOS', 'Android yakında'],
         store: 'App Store’da görüntüle', shots: shots('mihenk', 7), href: STORE.mihenk,
         alts: ['Tezgâhta 7,5 gram altın isteyen bir müşteri', 'Nakit, riskler ve günün satışlarıyla dükkân paneli', 'Nakit, kâr ve stok satırlarıyla finans ekranı', 'Gram altın ve ziynet altınlarını listeleyen stok temin penceresi', 'Her parçanın fiyatı, marjı ve satış hızıyla stok listesi', 'Tamir ve özel gravür siparişleriyle atölye', 'Premium paketlerin göründüğü market ekranı']
@@ -174,7 +148,7 @@ const copy = {
       trade: {
         id: 'trade', name: 'TradeUp', tagline: 'Piyasayı oku. Basamak basamak yüksel.',
         status: '14 Ekim 2026’dan beri App Store’da.',
-        text: 'İlanları fiyat, kondisyon, ilgi ve satıcı davranışına göre karşılaştır. İki teklif hakkıyla pazarlık et, aldıklarını hazırla ve yeniden listele; durmadan akan bir ikinci el pazarında beş evden birine ulaş.',
+        text: 'Hareketli bir ikinci el pazarına neredeyse sıfırdan gir. İyi fırsatları yakala, pazarlık et, eşyaları toparlayıp yeniden sat ve kendi evine kadar yüksel.',
         facts: 'iOS · Strateji, simülasyon · Türkçe ve İngilizce · Ücretsiz, isteğe bağlı paketlerle', tags: ['Strateji', 'Simülasyon', 'iOS'],
         store: 'App Store’da görüntüle', shots: shots('trade', 5), href: STORE.trade,
         alts: ['İlanlar, fiyatlar ve filtre çubuğuyla canlı pazar', 'Satışa hazırlanan ürünlerle portföy', 'Birikim ve ev seçenekleriyle ilk eve giden yol', 'Pazarlık çubuğu ve satıcı teklifiyle bir ürünün hikâyesi', 'Karakter ve kariyer tarzı seçimi']
@@ -182,7 +156,7 @@ const copy = {
       son: {
         id: 'son', name: 'Hearthwalker', sub: 'Son Ocak', tagline: 'Ateşi taşımıyorsun. Ateş sensin.',
         status: '5 Kasım 2026’dan beri App Store’da.',
-        text: 'Anadolu çini atölyesinden çıkmış canlı bir ocaksın. Yürüyerek köz topla, durup korun, yeniden yürüyüp dalgayı kül sürüsüne gönder: 12 harita, 57 güç ve 10 ocak.',
+        text: 'Anadolu’da bir çini atölyesinde doğmuş canlı bir ocaksın. Yürüyüp köz topla, durup korun, sonra ateş dalgasını külün içine gönder. 12 harita, 57 güç, 10 ocak.',
         tags: ['Aksiyon', 'Hayatta kalma', 'iOS'], facts: 'iOS · Aksiyon, strateji · Türkçe, İngilizce ve üç dil daha · İlk altı harita ücretsiz, reklamsız',
         store: 'App Store’da görüntüle', href: STORE.son, shots: shots('hearth', 6),
         alts: ['Ocağın kül yaratıklarından oluşan sürüye ateş dalgası göndermesi', 'On iki haritadan birinde yolu kesen bir çini muhafızı', 'Köz Sobası veya Çatallı Köz gibi bir güç seçimi', 'Kül Ormanı’ndan Ana Ocak’a on iki haritalık harita seçimi', 'Ocak, rütbesi ve Sonsuz Yol ile Son Ocak ana ekranı', 'Yerde ateş çatlaklarıyla ilerlemiş bir oyun']
@@ -190,7 +164,7 @@ const copy = {
       stove: {
         id: 'stove', name: 'Little Stove', sub: 'Ocakçı', tagline: 'Küçük ocağı söndürme.',
         status: 'Yakında App Store’da.',
-        text: 'Yaşayan bir ocağı yerin dibinden yüzeye taşı. Karanlıkta kömür topla, ateş sönmeden geri dön ve aşağıda yaşayanlara karşı ışığı koru: beş bölüm, 25 kat ve her bölümün sonunda bir boss.',
+        text: 'Yaşayan bir ocağı yerin dibinden yukarı taşı. Karanlıkta kömür kap, ateş sönmeden geri koş ve beş bölüm boyunca ışığı yaşat.',
         tags: ['Roguelite', 'Sıcacık', 'iOS'], facts: 'iPhone · Roguelite, aksiyon · Türkçe ve İngilizce · İlk bölüm ücretsiz, reklamsız',
         launch: 'Çıkınca haber ver', launchSubject: 'Little Stove çıkış haberi',
         wide: wide(['stove-1-{lang}', 'stove-2', 'stove-3-{lang}', 'stove-4', 'stove-5-{lang}', 'stove-6'], 'tr'),
@@ -199,7 +173,7 @@ const copy = {
       sparkle: {
         id: 'sparkle', name: 'Sparkle Fleet', sub: 'Son Vapur', tagline: 'Her eski vapur yeniden parlamayı hak eder.',
         status: 'Yakında App Store’da, TestFlight’ta test ediliyor.',
-        text: 'Eski yolcu vapurlarında geçen birinci şahıs bir temizlik oyunu. Güverteyi ve salonu kazı, fırçala, basınçlı suyla yıka; hazneni boşalt, atölyede daha iyi aletler al ve her vapuru yeniden denize gönder.',
+        text: 'Eski yolcu vapurlarını pırıl pırıl olana kadar kazı, fırçala, basınçlı suyla yıka. Atölyede daha iyi aletler kazan, her vapuru yeniden denize gönder. Tuhaf biçimde rahatlatıcı.',
         tags: ['Temizlik', 'Rahatlatıcı', 'iOS'], facts: 'iPhone · Temizlik simülasyonu · Türkçe · Yatay oynanır',
         launch: 'Çıkınca haber ver', launchSubject: 'Sparkle Fleet çıkış haberi',
         wide: wide(['sparkle-1', 'sparkle-2', 'sparkle-3', 'sparkle-4'], 'tr'),
@@ -218,7 +192,7 @@ const copy = {
     web: {
       id: 'alvera', name: 'Alvera', tagline: 'Değer zamansızdır.',
       status: 'alverakuyumculuk.com’da yayında.',
-      text: 'Ankara Mamak’taki bir kuyumcu dükkânı için web sitesi: altın ve pırlanta seçkisi, gram hesaplayıcılı güncel altın fiyatları, mağaza bilgileri ve dükkânın kendi kataloğunu yönettiği bir panel.',
+      text: 'Mamak’taki bir kuyumcu için web sitesi: koleksiyon, gram hesaplayıcılı güncel altın fiyatları ve dükkânın kendi kataloğunu güncellediği küçük bir panel.',
       facts: 'Web sitesi · Ankara, Mamak · Türkçe', tags: ['Web sitesi', 'Katalog paneli', 'Altın fiyatları'],
       store: 'alverakuyumculuk.com’u ziyaret et', href: 'https://www.alverakuyumculuk.com/',
       pics: [
@@ -227,24 +201,24 @@ const copy = {
       ]
     },
     next: 'Sonraki ekranlar', nextAria: 'Sonraki ekranları göster',
-    devTitle: 'Geliştirme aşamasında',
+    devTitle: 'Fırında pişenler',
     dev: [
-      { id: 'bim', icon: 'bimquest-icon', name: 'BIMQUEST', pill: 'TestFlight’ta', genre: 'Eğitici oyun', text: 'Revit’i oyun oynayarak öğreten bir mobil oyun: BIM temellerinden görünüm ve dokümantasyona yedi bölüm; kurabileceğin canlı bir 2B plan ve 3B model.' },
-      { id: 'street', icon: 'street-striker-icon', name: 'Street Striker: Zero to Legend', pill: 'Yakında', genre: 'Arcade RPG', text: 'Sokak dövüşü, RPG ilerlemesiyle buluşuyor; ekipman, antrenman ve roguelite yetenekler her dövüşü şekillendiriyor.' },
-      { id: 'tray', icon: 'trayful-icon', name: 'Trayful Café', pill: 'Geliştiriliyor', genre: 'Fizik bulmacası', text: 'Tek tepsi, tek kıskaç ve 24 kafe bulmacası. Malzemelerini dengele, her siparişin sırasını sen seç.' }
+      { id: 'bim', icon: 'bimquest-icon', name: 'BIMQUEST', pill: 'TestFlight’ta', genre: 'Eğitici oyun', text: 'Revit’i oynayarak öğren: yedi bölüm, canlı bir 2B plan ve kendi kuracağın bir 3B model.' },
+      { id: 'street', icon: 'street-striker-icon', name: 'Street Striker: Zero to Legend', pill: 'Yakında', genre: 'Arcade RPG', text: 'RPG ilerlemeli sokak dövüşleri: donan, antrenman yap, dövüşler arasında roguelite yetenekler seç.' },
+      { id: 'tray', icon: 'trayful-icon', name: 'Trayful Café', pill: 'Geliştiriliyor', genre: 'Fizik bulmacası', text: 'Tek tepsi, tek kıskaç, 24 kafe bulmacası. Siparişi dengele, her teslimatı tek parça ulaştır.' }
     ],
-    studioTitle: 'Ankara’da küçük bir stüdyo.',
-    studioLead: 'Kendi oyunlarımızı tasarlıyor, geliştiriyor ve yayınlıyoruz; her kararı bir insan veriyor.',
+    studioTitle: 'Merhaba, biz Lumoza.',
+    studioLead: 'Ankara’da küçük bir stüdyoyuz. Eve dönerken otobüste seve seve oynayacağımız küçük oyunlar yapıyoruz.',
     principles: [
-      { h: 'Amaçla tasarla', p: 'Deneyimle başla. Her fikre net bir amaç, düşünülmüş bir biçim ve var olmak için bir neden ver.' },
-      { h: 'Özenle geliştir', p: 'Fikirleri çalışan oyunlara ve dijital ürünlere dönüştür. Test et, iyileştir, ayrıntılara dikkat et.' },
-      { h: 'Yapay zekâyla keşfet', p: 'Olasılıkları keşfetmek ve denemeleri hızlandırmak için yapay zekâyı kullan; yönü insan kararı belirlesin.' }
+      { h: 'Küçük dünyalar', p: 'Bir kuyumcu tezgâhı, bir ikinci el pazarı, yürüyen bir ocak. Her oyun bir dakikada öğrenilen küçük bir yer.' },
+      { h: 'Denemesi ücretsiz', p: 'Her oyunu ücretsiz indirirsin; devamını isteyip istemediğine sen karar verirsin.' },
+      { h: 'Bol bol oynandı', p: 'Her sürümü gerçek bir telefonda oynuyor, içimize sinene kadar düzeltiyoruz.' }
     ],
-    founder: 'Oğuzhan Alper Tosun', founderRole: 'Kurucu ve ürün tasarımcısı',
-    wallLabel: 'Şimdiye kadarki oyunlarımız', wallOut: 'App Store’da', wallNext: 'yolda',
-    contactTitle: 'Basın, iş birliği ya da oyunlarımızla ilgili bir soru mu? Bize yazın.',
+    founder: 'Oğuzhan Alper Tosun', founderRole: 'Kurucu, oyunları tasarlıyor',
+    wallLabel: 'Oyunlarımız', wallOut: 'yayında', wallNext: 'yakında',
+    contactTitle: 'Merhaba de. Her e-postayı okuyoruz.',
     city: 'Ankara, Türkiye', top: 'Başa dön',
-    footerPlaces: 'Stüdyoya ulaşın', footerGames: 'Oyunlar', footerSite: 'Site',
+    footerPlaces: 'Bize yazın', footerGames: 'Oyunlar', footerSite: 'Site',
     footerLinks: { mihenk: 'MİHENKAYNAK, App Store’da', trade: 'TradeUp, App Store’da', son: 'Hearthwalker, App Store’da' },
     legal: '© 2026 Lumoza Studio. Revit, Autodesk, Inc.’in ticari markasıdır. BIMQUEST bağımsız bir projedir.'
   }
@@ -383,9 +357,6 @@ ${t.lang === 'en' ? `    <script>try{var l=localStorage.getItem('lumoza-lang');i
             <p class="lead">${esc(t.lead)}</p>
             <a class="button" href="#games">${esc(t.seeGames)}</a>
             <a class="news" href="${STORE.son}" target="_blank" rel="noopener noreferrer"><img src="/assets/games/son-ocak-icon.webp" alt="" width="28" height="28" decoding="async"><span class="news-tag">${esc(t.news.tag)}</span><span>${esc(t.news.text)}</span><span class="visually-hidden">${esc(t.newTab)}</span></a>
-            <ul class="hero-links">
-              ${t.heroLinks.map(l => `<li>${ext(l.href, esc(l.text), t, 'text-link')}</li>`).join('\n              ')}
-            </ul>
           </div>
           <div class="hero-stage" role="img" aria-label="${esc(t.heroStage)}">
             <span class="blob blob-a"></span><span class="blob blob-b"></span>
@@ -393,21 +364,6 @@ ${t.lang === 'en' ? `    <script>try{var l=localStorage.getItem('lumoza-lang');i
           </div>
         </section>
 
-        <section class="panel shelf" aria-labelledby="shelf-title">
-          <div class="shelf-head">
-            <h2 id="shelf-title">${esc(t.shelfTitle)}</h2>
-            <p class="lead">${esc(t.shelfLead)}</p>
-          </div>
-          <div class="shelf-field">
-          <ul class="shelf-list">
-            ${t.shelf.map(s => `<li>
-              <img src="/assets/games/${s.icon}.webp" alt="" width="512" height="512" loading="lazy" decoding="async">
-              <div class="shelf-text"><strong>${esc(s.name)}</strong><span>${esc(s.line)}</span></div>
-              ${s.href ? ext(s.href, esc(s.action), t, 'button', s.aria) : `<span class="shelf-soon">${esc(s.action)}</span>`}
-            </li>`).join('\n            ')}
-          </ul>
-          </div>
-        </section>
       </div>
 
       <section class="work" id="games" aria-labelledby="games-title">
@@ -456,22 +412,16 @@ ${stage(t, 'alvera')}
           <li class="wall-count"><strong>3</strong><span>${esc(t.wallOut)}</span></li>
           <li><img src="/assets/games/son-ocak-icon.webp" alt="Hearthwalker" width="512" height="512" loading="lazy" decoding="async"></li>
           <li class="wall-logo"><img src="/assets/brand/lumoza-app-icon-720.webp" alt="Lumoza" width="720" height="720" loading="lazy" decoding="async"></li>
-          <li><img src="/assets/games/bimquest-icon.webp" alt="BIMQUEST" width="512" height="512" loading="lazy" decoding="async"></li>
+          <li><img src="/assets/games/little-stove-icon.webp" alt="Little Stove" width="512" height="512" loading="lazy" decoding="async"></li>
           <li class="wall-count"><strong>3</strong><span>${esc(t.wallNext)}</span></li>
           <li><img src="/assets/games/street-striker-icon.webp" alt="Street Striker: Zero to Legend" width="512" height="512" loading="lazy" decoding="async"></li>
-          <li><img src="/assets/games/trayful-icon.webp" alt="Trayful Café" width="192" height="192" loading="lazy" decoding="async"></li>
+          <li><img src="/assets/games/sparkle-fleet-icon.webp" alt="Sparkle Fleet" width="512" height="512" loading="lazy" decoding="async"></li>
         </ul>
       </section>
 
       <section class="contact" id="contact" aria-labelledby="contact-title">
         <h2 id="contact-title">${esc(t.contactTitle)}</h2>
         <a class="email" href="mailto:${EMAIL}"><span>${EMAIL.split('@')[0]}@</span><span>${EMAIL.split('@')[1]}</span></a>
-        <div class="contact-side">
-          <p class="contact-city">${esc(t.city)}</p>
-          ${ext(STORE.mihenk, esc(t.footerLinks.mihenk), t, 'text-link')}
-          ${ext(STORE.trade, esc(t.footerLinks.trade), t, 'text-link')}
-          ${ext(STORE.son, esc(t.footerLinks.son), t, 'text-link')}
-        </div>
       </section>
     </main>
 

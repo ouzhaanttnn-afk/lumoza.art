@@ -72,8 +72,6 @@ button{font:inherit;color:inherit}
 .news-tag{padding:.1rem .55rem;border-radius:999px;background:var(--terra-t);color:var(--on);font-weight:600}
 .news:hover{background:var(--sulfur);color:var(--on)}
 .news:focus-visible{border-radius:999px}
-.hero-links{display:flex;flex-direction:column;align-items:flex-start;gap:.25rem}
-.hero-links .text-link{font-size:var(--small)}
 .hero-stage{position:relative;grid-column:2;overflow:hidden;background:var(--rose);animation:world 28s ease-in-out infinite}
 .blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;pointer-events:none} /* taste-skill-ignore: owner asked for a livelier hero */
 .blob-a{width:46%;aspect-ratio:1;left:-8%;top:6%;background:#f4ece0;animation:drift 19s ease-in-out infinite}
@@ -111,21 +109,6 @@ button{font:inherit;color:inherit}
 .card-spark{transform-box:fill-box;transform-origin:center;animation:glimmer 3.4s ease-in-out infinite}
 @keyframes glimmer{0%,70%,100%{transform:scale(1) rotate(0)}80%{transform:scale(1.25) rotate(45deg)}90%{transform:scale(.9) rotate(80deg)}}
 
-/* The shelf: light on the left, an indigo field on the right, so the white and ink text both read. */
-.shelf{display:grid;grid-template-columns:1fr 1fr;min-height:0;background:var(--surface)}
-.shelf-field{background:var(--teal);color:var(--on);display:flex;align-items:center;padding:clamp(40px,8svh,72px) var(--m) clamp(40px,8svh,72px) clamp(24px,4vw,64px)}
-.shelf-head{display:flex;flex-direction:column;justify-content:center;gap:1rem;padding:clamp(40px,8svh,72px) clamp(24px,4vw,64px) clamp(40px,8svh,72px) var(--m)}
-.shelf-head h2{font-size:var(--h2);font-weight:600;letter-spacing:-.03em;line-height:1.15}
-.shelf-list{flex:1;display:flex;flex-direction:column;gap:1.5rem;color:var(--on)}
-.shelf-list li{display:flex;align-items:center;gap:1.25rem}
-.shelf-list img{width:88px;height:88px;border-radius:22px;flex-shrink:0;transition:transform .3s}
-.shelf-list li:hover img{transform:rotate(-5deg) scale(1.06)}
-.shelf-text{display:flex;flex-direction:column;flex:1;min-width:0;line-height:1.35}
-.shelf-text strong{font-size:var(--body);font-weight:600;letter-spacing:-.02em}
-.shelf-text span{color:#1d1715cc;font-size:var(--small)}
-.shelf .button{background:var(--on);color:var(--ink)}
-.shelf .button:hover{background:var(--sulfur);color:var(--on)}
-.shelf-soon{font-size:var(--small);font-weight:600;color:var(--on);padding-inline:.5rem}
 
 /* Games: a flat field in each game's own colour, two real screens, the name torn at the seam. */
 .work{position:relative;padding-top:0}
@@ -251,9 +234,6 @@ button{font:inherit;color:inherit}
 .email{grid-column:1/9;padding-top:clamp(40px,5vw,72px);font-size:var(--display);font-weight:600;letter-spacing:-.05em;line-height:.95;transition:color .2s}
 .email span{display:block}
 .email:hover{color:var(--ink)}
-.contact-side{grid-column:9/13;display:flex;flex-direction:column;align-items:flex-start;gap:.25rem;padding-bottom:.6rem}
-.contact-city{font-size:var(--small);margin-bottom:.5rem}
-.contact-side .text-link{align-self:flex-start}
 .contact a:focus-visible{outline-color:var(--on)}
 
 /* Footer */
@@ -280,17 +260,16 @@ button{font:inherit;color:inherit}
 @keyframes lift-title{from{transform:translateY(10svh)}50%{transform:none}to{transform:translateY(-10svh)}}
 @keyframes drop-title{from{transform:translateY(-10svh)}50%{transform:none}to{transform:translateY(10svh)}}
 @keyframes arrive{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-.hero-copy>:not(.hero-title),.hero-links{animation:arrive .6s cubic-bezier(.2,.7,.2,1) both}
+.hero-copy>:not(.hero-title){animation:arrive .6s cubic-bezier(.2,.7,.2,1) both}
 .hero-copy>.lead{animation-delay:.06s}
 .hero-copy>.button{animation-delay:.12s}
 .hero-copy>.news{animation-delay:.15s}
-.hero-links{animation-delay:.18s}
 @supports (animation-timeline:view()){
   .pane-l{animation:lift linear both;animation-timeline:--g;animation-range:cover 0% cover 100%}
   .pane-r{animation:drop linear both;animation-timeline:--g;animation-range:cover 0% cover 100%}
   .tear-a{animation:lift-title linear both;animation-timeline:--g;animation-range:cover 0% cover 100%}
   .tear-b{animation:drop-title linear both;animation-timeline:--g;animation-range:cover 0% cover 100%}
-  .shelf-head>*,.shelf-list li,.dev-card,.principles li,.statement,.studio h2,.contact h2{animation:rise linear forwards;animation-timeline:view();animation-range:entry 0% entry 45%}
+  .dev-card,.principles li,.statement,.studio h2,.contact h2{animation:rise linear forwards;animation-timeline:view();animation-range:entry 0% entry 45%}
 }
 
 @media(max-width:1100px){
@@ -326,8 +305,6 @@ button{font:inherit;color:inherit}
   .hero-copy{padding:88px var(--m) 32px;gap:1.1rem}
   .hero-title{font-size:min(24vw,16svh)}
   .hero-stage{grid-column:auto;width:100%;height:46svh;min-height:330px}
-  .shelf{grid-template-columns:1fr}
-  .shelf-head,.shelf-field{padding:40px var(--m)}
   .badge{width:min(40%,170px);margin-left:calc(min(40%,170px)/-2)}
   .cord{height:40px}
   .card{border-radius:20px;padding:10px 10px 12px}
@@ -336,17 +313,13 @@ button{font:inherit;color:inherit}
   .card-name{font-size:1rem}
   .card-line{display:none}
   .hero-title{font-size:min(13vw,10svh);max-width:none}
-  .shelf-list img{width:64px;height:64px;border-radius:16px}
-  .shelf-list li{gap:.9rem}
-  .shelf .button{padding-inline:1.1rem}
   .stage{min-height:720px}
   .pane{padding-top:calc(20svh + 11svh)}
   .shot{width:min(88%,176px);height:27svh;min-height:200px;aspect-ratio:auto;object-fit:cover;object-position:50% 18%}
   .world-son .icon-lg{height:27svh;width:27svh;min-height:200px;min-width:200px;max-width:88%}
   .tear-a,.tear-b{animation:none!important}
   .contact{grid-template-columns:1fr}
-  .email,.contact-side{grid-column:1}
-  .contact-side{margin-top:1.5rem}
+  .email{grid-column:1}
   .shot-wide{width:min(88%,176px);height:27svh;min-height:200px;aspect-ratio:auto;margin-top:0;object-position:72% 50%}
   .is-wide .pane-l,.is-wide .pane-r{align-items:center;padding-inline:0}
   .is-wide .shot-land+.shot-land{display:none}
