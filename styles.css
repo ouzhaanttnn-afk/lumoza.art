@@ -125,7 +125,7 @@ button{font:inherit;color:inherit}
 .world-sparkle{--pl:#1f7891;--tone:#fff1c2}
 .world-ebru{--pl:#8a2f3a;--tone:#ffd98a}
 .world-lamp{--pl:#26324d;--tone:#ffcf70}
-.world-cat{--pl:#b05a26;--tone:#fff0c9}
+.world-cat{--pl:#2f5d8c;--tone:#ffc98a}
 .world-alvera{--pl:#6b4a35;--tone:#f1d9a8}
 .tear{position:relative;z-index:3;height:calc(var(--display)*.8);margin:0 0 calc(var(--display)*-.3);font-family:var(--display-face);font-size:var(--display);font-weight:600;letter-spacing:-.035em;line-height:.8;color:var(--tone);pointer-events:none}
 .tear span{position:absolute;top:0;white-space:nowrap}
