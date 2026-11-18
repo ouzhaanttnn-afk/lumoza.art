@@ -32,3 +32,8 @@ Added 2026-11-08 (the dark room redesign):
 
 - `../screens/hearth-play.mp4` and `hearth-play.webp`: Hearthwalker's own press-kit gameplay clip and poster (`ouzhaanttnn-afk/Son-ocak-`, `press/gameplay.mp4`), re-encoded at 540×960 without sound.
 - `../screens/ankara-dusk.webp`: "Ankara by night 2013" by OscarKosy, CC BY-SA 3.0, via Wikimedia Commons (https://commons.wikimedia.org/w/index.php?curid=26207883), converted to WebP. Credited in the page footer.
+
+Updated 2026-11-18 from the App Store listings (artist 6808742430):
+
+- Icons for all seven released games (`mihenkaynak-icon`, `tradeup-icon`, `son-ocak-icon`, `little-stove-icon`, `sparkle-fleet-icon`, `ebru-atelier-icon`, `lamplighter-icon`) from the apps' public artwork.
+- `../screens/stove-1…6`, `sparkle-1…6`, `ebru-1…7`, `lamp-1…6`: the apps' own App Store screenshots (Little Stove 6831248272, Sparkle Fleet 6831298282, Ebru Atelier 6832235956, Lamplighter 6834639531). They replace the earlier captured Little Stove and Sparkle Fleet screens.

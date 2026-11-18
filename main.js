@@ -72,7 +72,7 @@ if (!calm && window.gsap && window.ScrollTrigger) {
         .fromTo(game.querySelector('.tear-b'), { x: '4vw' }, { x: 0, ease: 'none', duration: 0.45 }, 0)
         .to(game.querySelector('.tear-b'), { x: '4vw', ease: 'none', duration: 0.45 }, 0.55);
       [...game.querySelectorAll('.media > *')].forEach((el, i) => {
-        const fall = -(12 + i * 10) * innerHeight / 100;
+        const fall = -(innerWidth <= 640 ? 3 + i * 3 : 12 + i * 10) * innerHeight / 100;
         tl.fromTo(el, { y: fall }, { y: 0, ease: 'none', duration: 0.45 }, 0).to(el, { y: fall * -0.35, ease: 'none', duration: 0.45 }, 0.55);
       });
     }
