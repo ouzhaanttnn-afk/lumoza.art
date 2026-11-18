@@ -30,7 +30,7 @@ const copy = {
     skip: 'Skip to content', homeAria: 'Lumoza, back to top', navAria: 'Main navigation',
     nav: { games: 'Games', studio: 'Studio', contact: 'Contact' },
     h1: 'Lumoza Studio',
-    outTitle: 'Out now',
+    outTitle: 'Out now', soonTitle: 'Coming soon',
     contactText: 'We read every email, and we love hearing what you played.', contactAction: 'Write to us',
     photoAlt: 'Ankara at dusk: lit windows and a lakeside pavilion in a city park',
     photoCredit: 'Photo of Ankara: “Ankara by night 2013” by OscarKosy, CC BY-SA 3.0, via Wikimedia Commons.',
@@ -101,6 +101,15 @@ const copy = {
         store: 'View on the App Store', href: STORE.ebru, shots: shots('ebru', 7),
         alts: ['A finished level with three stars and a marbling painting', 'Mixing red and blue in the bowl to make purple', 'A chapter artwork revealed in the Ebru Gallery', 'The marbling collection, one painting per chapter', 'A harder level with hidden drops', 'The daily challenge with this week’s streak', 'The atelier shop with drop patterns']
       },
+      cat: {
+        id: 'cat', name: 'Cat Harbor', tear: 'CAT HARBOR', cut: 4, sub: 'Idle Tycoon', tagline: 'Hire the harbour cats. Bring Istanbul to life.',
+        status: 'In App Store review, out very soon.',
+        text: 'You are the hardest-working cat in Istanbul. Grab anchovies from the fishing boats, stock your stall, hire helper cats and bring five districts to life, from Karaköy to the Grand Bazaar.',
+        tags: ['Idle', 'Cozy', 'iOS'], facts: 'iPhone · Idle tycoon · Eight languages including Turkish · Free, with ads and optional purchases',
+        launch: 'Tell me at launch', launchSubject: 'Cat Harbor launch',
+        shots: wide(['cat-1-{lang}', 'cat-2-{lang}', 'cat-3-{lang}', 'cat-4-{lang}', 'cat-5-{lang}', 'cat-6-{lang}'], 'en'),
+        alts: ['Helper cats at the stalls on the snowy Karaköy quay', 'The Kadıköy market with simit and Turkish coffee', 'The colourful streets of Balat with pomegranate juice and flowers', 'The pier on the Princes’ Islands with roasted corn and ice cream', 'The Grand Bazaar with Turkish delight and mosaic lamps', 'The cat album with 22 cats and 20 outfits']
+      },
       bim: {
         id: 'bim', name: 'BIMQUEST', tagline: 'Learn Revit by playing.',
         status: 'In development, in testing on TestFlight.',
@@ -154,7 +163,7 @@ const copy = {
     skip: 'İçeriğe geç', homeAria: 'Lumoza, başa dön', navAria: 'Ana gezinme',
     nav: { games: 'Oyunlar', studio: 'Stüdyo', contact: 'İletişim' },
     h1: 'Lumoza Studio',
-    outTitle: 'Yayında',
+    outTitle: 'Yayında', soonTitle: 'Yakında',
     contactText: 'Her e-postayı okuyoruz; ne oynadığını duymak hoşumuza gider.', contactAction: 'Bize yaz',
     photoAlt: 'Akşamüstü Ankara: bir şehir parkında göl kenarında ışıklı pencereler ve bir köşk',
     photoCredit: 'Ankara fotoğrafı: “Ankara by night 2013”, OscarKosy, CC BY-SA 3.0, Wikimedia Commons.',
@@ -225,6 +234,15 @@ const copy = {
         store: 'App Store’da görüntüle', href: STORE.ebru, shots: shots('ebru', 7),
         alts: ['Üç yıldızla biten bir seviye ve bir ebru tablosu', 'Kasede kırmızıyla maviyi karıştırıp mor yapmak', 'Ebru Galerisi’nde ortaya çıkan bir bölüm tablosu', 'Her bölüme bir tablo düşen ebru koleksiyonu', 'Gizli damlalarla daha zor bir seviye', 'Bu haftanın serisiyle günlük meydan okuma', 'Damla desenleriyle atölye dükkânı']
       },
+      cat: {
+        id: 'cat', name: 'Kedi Limanı', tear: 'KEDİ LİMANI', cut: 5, sub: 'İstanbul', subLang: 'tr', tagline: 'Kedileri işe al, İstanbul’u canlandır.',
+        status: 'App Store incelemesinde, çok yakında.',
+        text: 'İstanbul’un en çalışkan kedisisin. Balıkçı teknelerinden hamsileri topla, tezgâhını doldur, yardımcı kedileri işe al ve Karaköy’den Kapalıçarşı’ya beş semti canlandır.',
+        tags: ['Idle', 'Sıcacık', 'iOS'], facts: 'iPhone · Idle tycoon · Türkçe dahil sekiz dil · Ücretsiz, reklam ve isteğe bağlı satın almalarla',
+        launch: 'Çıkınca haber ver', launchSubject: 'Kedi Limanı çıkış haberi',
+        shots: wide(['cat-1-{lang}', 'cat-2-{lang}', 'cat-3-{lang}', 'cat-4-{lang}', 'cat-5-{lang}', 'cat-6-{lang}'], 'tr'),
+        alts: ['Karlı Karaköy rıhtımında tezgâhlarda yardımcı kediler', 'Simit ve Türk kahvesiyle Kadıköy çarşısı', 'Nar suyu ve çiçeklerle Balat’ın renkli sokakları', 'Közde mısır ve dondurmayla Adalar iskelesi', 'Lokum ve mozaik lambalarla Kapalıçarşı', '22 kedi ve 20 kıyafetle kedi albümü']
+      },
       bim: {
         id: 'bim', name: 'BIMQUEST', tagline: 'Revit’i oynayarak öğren.',
         status: 'Geliştirme aşamasında, TestFlight’ta test ediliyor.',
@@ -287,25 +305,26 @@ const particles = (n, seed) => Array.from({ length: n }, (_, i) => {
   const x = (k * 37 + 11) % 100, y = (k * 53 + 7) % 90, s = [6, 9, 12, 8, 14, 10][i % 6], t = 7 + ((k * 7) % 7), d = -((k * 1.37) % t), dx = ((k * 23) % 80) - 40, r = (k * 47) % 360;
   return `<span style="--x:${x}%;--y:${y}%;--s:${s}px;--t:${t}s;--d:${d.toFixed(2)}s;--dx:${dx}px;--r:${r}deg"></span>`;
 }).join('');
-const FX = { mihenk: particles(26, 1), trade: particles(22, 3), alvera: particles(30, 5), stove: particles(24, 7), sparkle: particles(22, 11), hero: particles(16, 13), ebru: particles(14, 17), lamp: particles(26, 19) };
+const FX = { mihenk: particles(26, 1), trade: particles(22, 3), alvera: particles(30, 5), stove: particles(24, 7), sparkle: particles(22, 11), hero: particles(16, 13), ebru: particles(14, 17), lamp: particles(26, 19), cat: particles(30, 23) };
 
 // The games hang around the Lumoza card like smaller lamps, each on its own cord; each one leads to its window.
 const HANG = [
-  { id: 'mihenk', icon: 'mihenkaynak-icon', x: 6, c: 0.4, s: 0.4, t: 5.2, d: -1.1, keep: true },
-  { id: 'trade', icon: 'tradeup-icon', x: 16, c: 0.78, s: 0.44, t: 6.4, d: -3.0 },
-  { id: 'son', icon: 'son-ocak-icon', x: 26, c: 0.2, s: 0.42, t: 4.6, d: -2.2 },
-  { id: 'ebru', icon: 'ebru-atelier-icon', x: 36, c: 0.56, s: 0.4, t: 5.7, d: -0.9 },
-  { id: 'stove', icon: 'little-stove-icon', x: 64, c: 0.24, s: 0.44, t: 5.8, d: -0.4 },
-  { id: 'lamp', icon: 'lamplighter-icon', x: 74, c: 0.66, s: 0.42, t: 6.1, d: -2.7 },
-  { id: 'street', icon: 'street-striker-icon', x: 84, c: 0.4, s: 0.38, t: 4.9, d: -3.6, href: '#dev-title', name: 'Street Striker: Zero to Legend' },
-  { id: 'sparkle', icon: 'sparkle-fleet-icon', x: 94, c: 0.82, s: 0.42, t: 6.9, d: -1.8, keep: true }
+  { id: 'mihenk', icon: 'mihenkaynak-icon', x: 5, c: 0.4, s: 0.38, t: 5.2, d: -1.1, keep: true },
+  { id: 'trade', icon: 'tradeup-icon', x: 13, c: 0.8, s: 0.42, t: 6.4, d: -3.0 },
+  { id: 'son', icon: 'son-ocak-icon', x: 21, c: 0.18, s: 0.4, t: 4.6, d: -2.2 },
+  { id: 'cat', icon: 'cat-harbor-icon', x: 29, c: 0.62, s: 0.42, t: 5.4, d: -4.1 },
+  { id: 'ebru', icon: 'ebru-atelier-icon', x: 37, c: 0.3, s: 0.38, t: 5.7, d: -0.9 },
+  { id: 'stove', icon: 'little-stove-icon', x: 63, c: 0.24, s: 0.42, t: 5.8, d: -0.4 },
+  { id: 'lamp', icon: 'lamplighter-icon', x: 72, c: 0.66, s: 0.4, t: 6.1, d: -2.7 },
+  { id: 'street', icon: 'street-striker-icon', x: 81, c: 0.36, s: 0.36, t: 4.9, d: -3.6, href: '#dev-title', name: 'Street Striker: Zero to Legend' },
+  { id: 'sparkle', icon: 'sparkle-fleet-icon', x: 91, c: 0.82, s: 0.42, t: 6.9, d: -1.8, keep: true }
 ];
 const hangers = (t) => `<ul class="hangers" aria-label="${esc(t.nav.games)}">
           ${HANG.map(h => `<li class="hang${h.keep ? ' is-keep' : ''}" style="--x:${h.x}%;--c:${h.c};--s:${h.s};--t:${h.t}s;--d:${h.d}s"><a href="${h.href || `#g-${h.id}`}" aria-label="${esc(h.name || t.games[h.id].name)}"><span class="hang-cord"></span><img src="/assets/games/${h.icon}.webp" alt="" width="512" height="512" decoding="async"></a></li>`).join('\n          ')}
         </ul>`;
 
 // Each game is a lit window in the dark room: its own colour, its own light, its real screens.
-const FLIP = new Set(['lamp', 'ebru', 'trade']);
+const FLIP = new Set(['lamp', 'ebru', 'trade', 'cat']);
 function exhibit(t, key) {
   const g = key === 'alvera' ? t.web : t.games[key];
   const screens = g.shots || g.wide;
@@ -328,7 +347,7 @@ function exhibit(t, key) {
   if (g.launch) actions.push(`<a class="button" href="mailto:${EMAIL}?subject=${encodeURIComponent(g.launchSubject)}">${esc(g.launch)}</a>`);
   if (data) actions.push(`<button class="next" type="button" data-next aria-label="${esc(t.nextAria)}">${esc(t.next)}</button>`);
   const word = Array.from(g.tear || g.name.toUpperCase());
-  const cut = { mihenk: 3, trade: 4, son: 6, stove: 7, sparkle: 8, ebru: 5, lamp: 4, alvera: 3 }[key];
+  const cut = g.cut ?? { mihenk: 3, trade: 4, son: 6, stove: 7, sparkle: 8, ebru: 5, lamp: 4, alvera: 3 }[key];
   // A space at the seam would collapse; keep it as a no-break space so two-word names stay apart.
   const half = [word.slice(0, cut).join(''), word.slice(cut).join('')].map(h => esc(h.replace(/ /g, ' ')));
   const fx = key === 'son' ? `<div class="embers" aria-hidden="true">${EMBERS}</div>` : FX[key] ? `<div class="fx fx-${key}" aria-hidden="true">${FX[key]}</div>` : '';
@@ -432,6 +451,11 @@ ${t.lang === 'en' ? `    <script>try{var l=localStorage.getItem('lumoza-lang');i
 ${['stove', 'lamp', 'sparkle', 'ebru', 'son', 'trade', 'mihenk'].map(k => exhibit(t, k)).join('\n')}
       </section>
 
+      <section class="room" aria-labelledby="soon-title">
+        <h2 class="room-title" id="soon-title">${esc(t.soonTitle)}</h2>
+${exhibit(t, 'cat')}
+      </section>
+
       <section class="room oven" aria-labelledby="dev-title">
         <h2 class="room-title" id="dev-title">${esc(t.devTitle)}</h2>
         <ul class="oven-list">
@@ -508,7 +532,7 @@ const NEWEST_APP = '6834639531';
 const UMAMI_ID = '3e47b2d9-33f6-4f79-bcc1-4573aa4d9d38';
 
 // Name the clicks worth counting: which game's store page, project sites, launch news, email, language.
-const GAME_OF = { id6808742428: 'mihenk', id6811362281: 'tradeup', id6818167497: 'hearthwalker', id6831248272: 'little-stove', id6831298282: 'sparkle-fleet', id6832235956: 'ebru-atelier', id6834639531: 'lamplighter' };
+const GAME_OF = { id6808742428: 'mihenk', id6811362281: 'tradeup', id6818167497: 'hearthwalker', id6831248272: 'little-stove', id6831298282: 'sparkle-fleet', id6832235956: 'ebru-atelier', id6834639531: 'lamplighter', id6835577811: 'cat-harbor' };
 function track(html, lang) {
   return html.replace(/<(a|button)\b([^>]*)>/g, (tag, name, attrs) => {
     if (attrs.includes('data-umami-event')) return tag;

@@ -37,3 +37,4 @@ Updated 2026-11-18 from the App Store listings (artist 6808742430):
 
 - Icons for all seven released games (`mihenkaynak-icon`, `tradeup-icon`, `son-ocak-icon`, `little-stove-icon`, `sparkle-fleet-icon`, `ebru-atelier-icon`, `lamplighter-icon`) from the apps' public artwork.
 - `../screens/stove-1…6`, `sparkle-1…6`, `ebru-1…7`, `lamp-1…6`: the apps' own App Store screenshots (Little Stove 6831248272, Sparkle Fleet 6831298282, Ebru Atelier 6832235956, Lamplighter 6834639531). They replace the earlier captured Little Stove and Sparkle Fleet screens.
+- `cat-harbor-icon.webp` and `../screens/cat-1…6-en|tr.webp` (2026-11-18): Cat Harbor / Kedi Limanı's own icon (`assets/icon/app_icon_1024.png`) and App Store screenshots (`store/screenshots/en|tr/`) from the owner's `ouzhaanttnn-afk/Deriver` repository.
